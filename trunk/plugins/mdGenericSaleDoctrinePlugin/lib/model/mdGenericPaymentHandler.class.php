@@ -322,6 +322,7 @@ class mdGenericPaymentHandler
         'PAYMENTACTION' => 'Sale',
         'CURRENCYCODE'  => 'USD'
     );
+    // 'CURRENCYCODE'  => 'EUR'
     $expressCheckout->addPaymentDetail($options);
 
     // Agrego los Items, van a ser 2, el aparato y la primera carga

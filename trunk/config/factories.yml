@@ -11,5 +11,5 @@ all:
           host:       smtp.gmail.com
           port:       465
           encryption: ssl
-          username:   mailer@mastodonte.net
-          password:   M4st0don
+          username:   rsantellan@gmail.com
+          password:   ro4321
