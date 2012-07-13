@@ -1,0 +1,14 @@
+sfExtraWidgets plugin
+==============
+
+This plugin is a complement of the symfony widgets. All widgets use the prototype javascript framework.
+		
+Depandencies
+---------------------
+
+sfPropuculosPlugin must be activated.
+
+Online documentation
+---------------------
+
+Go to [http://symfony.swisscenter.com/extrawidgets](http://symfony.swisscenter.com/extrawidgets)

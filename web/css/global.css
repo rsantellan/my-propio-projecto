@@ -1,0 +1,277 @@
+body {
+	background-color:#F5F5F5;
+	margin:0px;
+}
+.current {
+	color:#72D400;
+}
+.green {
+	color:#72D400 !important;
+}
+.green a {
+	color:#72D400 !important;
+}
+.conteiner {
+	margin:0 auto 0 auto; 
+	width:1020px; 
+}
+input {
+    border: 1px solid #000000;
+    float: left;
+	font-family: 'CourierRegular';
+}
+button {
+	cursor:pointer;
+}
+.blue {
+    color: #5569A8;
+}
+a:visited {
+	color:inherit;
+}
+img {
+	border: 0;
+}
+/*header*/
+.slogan {
+    font-family: 'BelloSmCp';
+    font-size: 22px;
+    line-height: 16px;
+	float:left;
+	margin-left:15px;
+}
+.logo {
+	float:left;
+	margin-top:15px;
+}
+.logo img {
+	float:left;
+}
+/*menu*/
+#menu {
+    float: right;
+    list-style: none outside none;
+    padding: 10px 0 0;
+	font-family: 'CourierRegular';
+	font-size:12px;
+}
+.logged {
+	background:url("../images/arrow-menu.png") no-repeat scroll 125px  8px transparent;
+	width:137px;
+}
+.redes-sociales, .banderas {
+    margin-top: 3px;
+}
+#menu li
+{
+	float: left;
+	padding: 0 0 10px 0;
+	position: relative;
+}
+
+#menu a {
+    height: 25px;
+    padding: 0 5px;
+	text-decoration:none;
+	color:#000;
+}
+
+*html #menu li a:hover /* IE6 */
+{
+	color: #fafafa;
+}
+
+#menu li:hover > ul
+{
+	display: block;
+}
+
+/* Sub-menu */
+
+#menu ul {
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    z-index: 99999;
+	display:none;
+	right:-60px;
+	top:22px;
+}
+#menu ul ul
+{
+  top: 0;
+  left: 150px;
+}
+.eur {
+	color:#72D400;
+}
+.eur ul {
+    left: -155px !important;
+    width: 400px !important;
+	font-size:11px;
+}
+.eur ul a {
+    padding: 0 !important;
+}
+#menu ul li {
+    display: inline;
+    margin: 0;
+    padding: 0 10px 0px 0px;
+}
+
+#menu ul li:last-child
+{   
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;    
+}
+
+#menu ul a {
+    display: inline;
+    width: 50px;
+}
+*html #menu ul a /* IE6 */
+{    
+	height: 10px;
+}
+
+*:first-child+html #menu ul a /* IE7 */
+{    
+	height: 10px;
+}
+/* Clear floated elements */
+#menu:after 
+{
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+
+* html #menu             { zoom: 1; } /* IE6 */
+*:first-child+html #menu { zoom: 1; } /* IE7 */
+
+/*end menu*/
+/*end header*/
+/*footer*/
+footer {
+	width:1020px;
+}
+footer a {
+	text-decoration:none;
+}
+footer li {
+	list-style:none;
+	display:inline;
+}
+footer ul li {
+	display:inline;
+	color:#FFF;
+	font-family: 'CourierRegular';
+	font-size:13px;
+}
+footer li a {
+	text-decoration:none;
+	color:#FFF;
+}
+.black {
+    float: left;
+    padding: 0;
+	width:1020px;
+	height:81px;
+	background:#000;
+}
+.black ul {
+    margin-bottom: 0;
+    margin-top: 7px;
+    padding-left: 23px;
+	color:#FFF;
+	display:inline;
+}
+.black ul li{
+	display:inline;
+}
+.black ul li a {
+	text-decoration:none;
+}
+.footer-right ul li a {
+	text-decoration:none;
+}
+.gettoknow {
+    font-family: 'BelloSmCp';
+	font-size:24px;
+}
+.line {
+	background:#000;
+	width:1020px;
+	float:left;
+	height:2px;
+	margin-top:5px;
+}
+.footer-left {
+	float:left;
+	width:300px;
+	margin-bottom: 15px;
+}
+.footer-left li {
+	color:#000;
+	font-size:12px;
+	float:left;
+	display:inline;
+}
+.footer-left img {
+	float:left;
+	margin-right:8px;
+	position:relative;
+	top:2px;
+}
+.footer-left ul {
+    float: left;
+    margin-bottom: 0;
+    padding-left: 23px;
+}
+.footer-left li a {
+    color: #000000;
+    float: left;
+    margin-right: 8px;
+    text-decoration: none;
+}
+.footer-right {
+	float:right;
+	width:700px;
+	margin-bottom: 15px;
+}
+.footer-right li {
+	color:#000;
+}
+.footer-right li a {
+	color:#000;
+}
+.footer-right ul {
+    float: right;
+    margin-bottom: 0;
+    padding-left: 23px;
+}
+.footer-right ul li {
+	display:inline;
+}
+.footer-right img {
+    float: right;
+    margin-left: 8px;
+	position:relative;
+	top:3px;
+}
+/*end footer*/
+/**/
+.title {
+    float: left;
+    font-family: 'CourierRegular';
+    font-size: 11px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 40px;
+}
+/**/

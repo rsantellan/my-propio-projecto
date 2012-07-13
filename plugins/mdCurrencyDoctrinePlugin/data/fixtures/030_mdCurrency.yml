@@ -1,0 +1,17 @@
+mdCurrency:
+  mdCurrency_euros:
+    Translation:
+      en:
+        name: Euros
+      es:
+        name: euros
+    symbol: '€'
+    code: EUR
+  mdCurrency_dolares:
+    Translation:
+      en:
+        name: Dolar
+      es:
+        name: Dolar
+    symbol: 'U$S'
+    code: USD

@@ -1,0 +1,472 @@
+/*contenet*/
+.content {
+    float: left;
+    width: 1020px;
+	list-style:none;
+	font-family: 'BelloSmCp';
+}
+.content li {
+	display:inline;
+	margin-right:7px;
+}
+.title {
+    float: left;
+    margin-top: 40px;
+	margin-bottom:10px;
+	font-family: 'CourierRegular';
+}
+.title-right {
+    float: right;
+}
+.title-right li{
+	display:list-item;
+}
+.main-content-up {
+	background:#FFF;
+	float:left;
+	width:1020px;
+	margin-bottom:5px;
+}
+.property-left {
+    float: left;
+    width: 65px;
+}
+.property-img {
+    float: left;
+	margin-right:10px;
+}
+.property-right {
+    float: left;
+    width: 121px;
+}
+.col-left {
+	float:left;
+	width:720px;
+}
+.perfil {
+	float:left;
+	width:670px;
+	margin-left:15px;
+	margin-bottom:15px;
+}
+.perfil img {
+	float:left;
+	margin-right:10px;
+}
+h1 {
+    color: #00B800;
+    font-size: 68px;
+    line-height: 70px;
+    margin: 0;
+}
+.info-profile {
+	font-family: 'BelloProRegular';
+}
+.datos {
+    float: left;
+	width:230px;
+	margin-top:5px;
+}
+.datos input{
+    float: right;
+}
+.save {
+    background: url("../images/botton-green.png") repeat scroll 0 0 transparent;
+    border: 0 none;
+    color: #FFFFFF;
+    float: left;
+    font-family: 'BelloProRegular';
+    font-size: 23px;
+    height: 62px;
+    margin-right: 5px;
+    margin-top: 6px;
+    position: relative;
+    width: 247px;
+}
+.properties {
+	float:left;
+	margin-bottom: 15px;
+    margin-left: 15px;
+}
+.properties img {
+    float: left;
+    margin-top: 8px;
+}
+.propiedad {
+	float:none;
+	font-family: 'BelloProRegular';
+	font-size:23px;
+	margin-left:30px;
+}
+.my-properties {
+    float: left;
+    margin-right: 7px;
+    width: 230px;
+}
+.my-properties img {
+	float:left;
+	margin-right:7px;
+	margin-top:5px;
+}
+.tipo {
+	float:left;
+	font-family: 'CourierRegular';
+	color:#72D400;
+	font-size:11px;
+	font-weight:bold;
+}
+.servicios {
+	float:left;
+	font-family: 'CourierRegular';
+	font-size:10px;
+}
+.buttons {
+    float: left;
+    margin-top: 10px;
+}
+.messages {
+    background: url("../images/description.png") repeat scroll 0 0 transparent;
+    border: 0 none;
+    color: #000000;
+    float: left;
+    font-family: 'BelloProRegular';
+    font-size: 23px;
+    height: 57px;
+    left: 13px;
+    margin-top: 4px;
+    position: relative;
+    width: 158px;
+	margin-right:5px;
+}
+.reviews {
+    background: url("../images/reviews.png") no-repeat scroll 0 0 transparent;
+    border: 0 none;
+    color: #000000;
+    float: left;
+    font-family: 'BelloProRegular';
+    font-size: 23px;
+    height: 57px;
+    left: 13px;
+    margin-top: 4px;
+    position: relative;
+    width: 127px;
+	margin-right:5px;
+}
+.current-messages {
+	background:#000;
+	color:#FFF;
+	border: 0 none;
+    float: left;
+    font-family: 'BelloProRegular';
+    font-size: 23px;
+    height: 51px;
+    left: 13px;
+    margin-top: 10px;
+    position: relative;
+    width: 144px;
+	margin-right:5px;
+}
+.current-reviews {
+	background:#000;
+	color:#FFF;
+	border: 0 none;
+    float: left;
+    font-family: 'BelloProRegular';
+    font-size: 23px;
+    height: 51px;
+    left: 13px;
+    margin-top: 10px;
+    position: relative;
+    width: 122px;
+	margin-right:5px;
+}
+.description-text {
+	float:left;
+	font-family: 'CourierRegular';
+	font-size:11px;
+	margin-left:15px;
+	margin-bottom:15px;
+}
+.description-text li {
+	display:list-item;
+}
+.comment {
+    border: 1px solid;
+    float: left;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    padding-left: 6px;
+    padding-right: 6px;
+}
+.comment-current {
+	border: 1px solid #00B800;
+}
+.img {
+	float:left;
+	margin-right:10px;
+	margin-top: 7px;
+}
+.name {
+	font-family: 'BelloSmCp';
+	font-size:19px;
+}
+.date {
+	font-size:10px;
+	font-family: 'CourierRegular';
+	color:#CCCCCC;
+}
+.col-right {
+    float: right;
+    width: 284px;
+}
+.propiedades {
+	background: url(../images/propiedades.png);
+	padding-left: 15px;
+	height:48px;
+}
+.reservacion {
+    font-size: 19px;
+    margin-bottom: 10px;
+    margin-left: 15px;
+}
+.reserved {
+    border-bottom: 1px solid;
+    float: left;
+    margin-left: 15px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+.reserved img {
+	float:left;
+	margin-right:10px
+}
+.visited {
+    font-size: 19px;
+    margin-bottom: 10px;
+    margin-left: 15px;
+}
+.visitados {
+    border-bottom: 1px solid;
+    float: left;
+    margin-left: 15px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+.visitados img {
+	float:left;
+	margin-right:10px
+}
+.comentario {
+	font-family:'CourierRegular';
+	font-size:11px;
+}
+/*responder msj*/
+.new-comment {
+    float: left;
+    font-family: 'BelloProRegular';
+    font-size: 15px;
+    margin-top: 19px;
+}
+textarea {
+    color: #72D400;
+    float: none;
+    height: 88px;
+    width: 667px;
+}
+.comment-sent {
+	float: left;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    padding-left: 6px;
+    padding-right: 6px;
+}
+.description-text-sent {
+    float: left;
+    font-family: 'CourierRegular';
+    font-size: 11px;
+	margin-top:15px;
+    margin-left: 15px;
+	border:1px solid;
+	padding:10px;
+}
+.comment-msj {
+    margin-left: 15px;
+    width: 690px;
+	border: 1px solid;
+    float: left;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    padding-left: 6px;
+    padding-right: 6px;
+}
+/*reviews*/
+.comment-review {
+    border-bottom: 1px solid;
+    float: left;
+    padding-bottom: 15px;
+    margin-top: 5px;
+    padding-left: 6px;
+    padding-right: 6px;
+}
+.gusta-nogusta {
+	float:right;
+}
+.gusta-nogusta img {
+	margin-left:10px;
+}
+/*end reviews*/
+
+/*tourist info */
+.pn-precio {
+    float: left;
+    font-family: 'CourierRegular';
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 30px;
+    margin-right: 85px;
+}
+.servicios {
+    margin-right: 20px;
+}
+.tourist {
+    float: left;
+    margin-bottom: 15px;
+    margin-left: 15px;
+    width: 670px;
+}
+.info-tourist {
+    color: #00B800;
+    font-size: 68px;
+    line-height: 70px;
+    margin: 0;
+}
+.info-tourist span {
+    color: #000000;
+    font-family: 'BelloScript';
+    font-size: 36px;
+}
+.ciudad {
+    float: left;
+    height: 100px;
+    margin-bottom: 35px;
+    width: 223px;
+}
+.ciudad img {
+    float: left;
+    margin-right: 10px;
+    margin-top: 8px;
+}
+.city {
+	font-size:16px;
+}
+.country {
+    font-family: 'CourierRegular';
+	font-size:12px;
+}
+.more a {
+	font-size:11px;
+    font-family: 'CourierRegular';
+	text-decoration:none;
+}
+/*book it*/
+.info-bookit li {
+	font-size:13px;
+	display:list-item;
+}
+.info-bookit ul {
+	padding:0px;
+}
+.info-bookit ul li {
+	list-style:none;
+}
+.info-bookit span {
+    font-family: 'CourierRegular';
+	font-size:11px;
+}
+.prezio {
+    font-family: 'CourierRegular';
+    font-size: 70px !important;
+    font-weight: bold;
+    line-height: 50px;
+}
+.line2 {
+    background: url("../images/line.png") repeat-x scroll 0 0 transparent;
+    float: left;
+    height: 6px;
+    margin-top: 15px;
+    width: 985px;
+}
+.campos-right {
+    float: left;
+    position: relative;
+    top: -2px;
+}
+.campos-right-left {
+    float: left;
+    margin-right: 10px;
+    width: 250px;
+}
+.campos-right-right {
+    float: right;
+    width: 250px;
+}
+.div-send {
+    float: left;
+    margin-top: 10px;
+		clear: both;
+}
+.campos-right li input {
+    color: #72D400;
+    float: none;
+    font-family: 'CourierRegular';
+    height: 29px;
+    width: 244px;
+}
+.send {
+    background: url("../images/botton-green.png") no-repeat scroll 0 0 transparent;
+    border: 0 none;
+    color: #FFFFFF;
+    font-family: 'BelloProRegular';
+    font-size: 23px;
+    height: 62px;
+    margin-bottom: 10px;
+    padding-left: 45px;
+    width: 247px;
+}
+.campos-right a {
+    font-family: 'CourierRegular';
+	font-size:11px;
+	text-decoration:none;
+}
+.div-send li {
+	margin-right:20px;
+}
+.div-send li input {
+	float:none;
+	width:15px;
+}
+.campos-right {
+	margin-top:20px;
+}
+.send-log ul li {
+    list-style: none outside none;
+}
+.send-log ul {
+    padding: 0;
+}
+.send-log li {
+    display: list-item;
+    font-size: 13px;
+}
+.send-log span {
+    font-family: 'CourierRegular';
+    font-size: 11px;
+}
+.send-log a {
+    font-family: 'CourierRegular';
+    font-size: 11px;
+}
+.div-send li {
+    margin-right: 20px;
+    display: inline;
+}

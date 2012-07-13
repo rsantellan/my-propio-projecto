@@ -1,0 +1,25 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           mdApartamento
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          md_apartamento
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        md_currency_id: { name: Moneda }
+      list:
+        display:        [activo, _imagen, =titulo, mdLocacion, tipo]
+        fields:
+          imagen: { name: Imagen }
+      filter:  ~
+      form:    ~
+      edit:    ~
+      new:     ~

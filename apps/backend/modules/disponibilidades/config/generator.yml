@@ -1,0 +1,34 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           mdDisponibilidad
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          md_disponibilidad
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  ~
+      list:
+        fields:
+          fecha_desde: { date_format: dd/MM/yyyy}        
+          fecha_hasta: { date_format: dd/MM/yyyy}          
+        display:        [fecha_desde, fecha_hasta]
+        object_actions:
+          _edit:         ~
+          _delete:       ~
+        actions:
+          _new:       ~
+        batch_actions: {}
+      filter:  ~
+      form:    ~
+      edit:
+        actions:
+          _delete:       ~
+          _save:         ~
+      new:     ~

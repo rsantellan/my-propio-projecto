@@ -1,0 +1,12 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/07-Databases
+
+all:
+  doctrine:
+    class: sfDoctrineDatabase
+    param:
+      dsn:      mysql:host=localhost;dbname=rentnchi_masto
+      username: rentnchi_masto
+      password: 0ts4m_1hcntn3r
+      attributes:
+        use_native_enum: true

@@ -1,0 +1,3 @@
+google-map-coordinates:
+  url:   /google-map-coordinates
+  param: { module: mdMap, action: saveCoordinates }

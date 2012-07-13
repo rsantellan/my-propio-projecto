@@ -1,0 +1,22 @@
+# Project files
+/cache/*
+/log/*
+/web/*_dev.php
+#/web/uploads/*
+/plugins/mastodontePlugin/web/js/mdConfig.js
+#apps/frontend/i18n/*
+#apps/backend/i18n/*
+/config/databases.yml
+/config/app.yml
+#/web/css/*
+
+
+# SCM files
+.arch-params
+.bzr
+_darcs
+.git
+.hg
+.monotone
+.svn
+CVS

@@ -1,0 +1,2 @@
+default:
+  javascripts:[../mdAuthDoctrinePlugin/js/mdAuthLogoutHandler.js]

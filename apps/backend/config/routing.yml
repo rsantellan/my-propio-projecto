@@ -1,0 +1,60 @@
+md_locacion_temporada:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                mdLocacionTemporada
+    module:               temporadas
+    prefix_path:          /temporadas
+    column:               id
+    with_wildcard_routes: true
+
+md_disponibilidad:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                mdDisponibilidad
+    module:               disponibilidades
+    prefix_path:          /disponibilidades
+    column:               id
+    with_wildcard_routes: true
+
+md_locacion:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                mdLocacion
+    module:               mdLocacion
+    prefix_path:          /mdLocacion
+    column:               id
+    with_wildcard_routes: true
+
+md_apartamento:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                mdApartamento
+    module:               mdApartamento
+    prefix_path:          /mdApartamento
+    column:               id
+    with_wildcard_routes: true
+
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/10-Routing
+
+# default rules
+temporada-new:
+  url:   /temporada/create
+  param: { module: temporadas, action: createAjax }
+  
+temporada-delete:
+  url:   /temporada/delete/:id
+  param: { module: temporadas, action: deleteAjax }  
+  
+homepage:
+  url:   /
+  param: { module: default, action: index }
+
+# generic rules
+# please, remove them by adding more specific rules
+default_index:
+  url:   /:module
+  param: { action: index }
+
+default:
+  url:   /:module/:action/*
