@@ -1,0 +1,1130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN" "http://www.oasis-open.org/committees/xliff/documents/xliff.dtd">
+<xliff version="1.0">
+  <file source-language="EN" target-language="es" datatype="plaintext" original="messages" date="2012-05-08T18:50:08Z" product-name="messages">
+    <header/>
+    <body>
+      <trans-unit id="1">
+        <source>Apartamento_cuartos</source>
+        <target>Habitaciones</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="2">
+        <source>Mail_Usuario Final Titulo</source>
+        <target>You have booked your apartment in Rent n´Chill</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="3">
+        <source>Mail_Usuario Final Cuerpo [url_reserva] [url_apartamento]</source>
+        <target>Your booking was made with success. You can see the apartment details  &lt;a href="[url_apartamento]"&gt;here&lt;/a&gt;.
+
+Nullam sed sodales est. Phasellus sed urna vel neque sodales cursus quis et tortor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus consequat tristique aliquet. Cras nec felis tempus nibh porta lobortis nec a purus. Praesent tincidunt, dui eu commodo euismod, nunc lacus porta urna, vel tempor est orci non tortor. Pellentesque in libero sed lorem suscipit vehicula eget vitae purus. Fusce ornare aliquam &lt;a href="[url_reserva]"&gt;reserva&lt;/a&gt;.</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="4">
+        <source>Mail_Usuario Final Asunto</source>
+        <target>Booking of apartment in[location] : [from] to [untill] </target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="5">
+        <source>Mail_Nombre del mail al usuario con confirmacion de pago</source>
+        <target>Rent n' Chill</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="6">
+        <source>Mail_Admin Final Titulo</source>
+        <target>New bookin type [type]</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Mail_Admin Final Cuerpo</source>
+        <target>Vestibulum commodo dapibus vulputate. Donec adipiscing, magna eu iaculis iaculis, dui mauris viverra magna, id condimentum sapien elit id ligula. Vivamus sit amet felis mi, vitae lacinia arcu. Praesent a enim ligula, a semper augue. Etiam nec felis nunc. Vivamus at fringilla orci. Sed tincidunt nunc venenatis lacus aliquet pulvinar elementum odio pellentesque. Proin iaculis, magna in dictum volutpat, lorem augue vestibulum augue, nec hendrerit nisi velit a orci. Mauris interdum elit et nisi eleifend suscipit. Vestibulum et fringilla magna. Aliquam molestie hendrerit libero. In hac habitasse platea dictumst. Sed vel diam eu felis porttitor tempor sed quis felis. Integer justo quam, iaculis ac ullamcorper et, faucibus at orci. Proin a est sit amet sapien blandit luctus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac tu.
+</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="8">
+        <source>Mail_Admin Final Locacion</source>
+        <target>City</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="9">
+        <source>Mail_Admin Final Apartamento</source>
+        <target>Apartment</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="10">
+        <source>Mail_Admin Final Usuario</source>
+        <target>User</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="11">
+        <source>Mail_Admin Final Email</source>
+        <target>Email</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="12">
+        <source>Mail_Admin Final Fecha</source>
+        <target>Dates</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="13">
+        <source>Mail_Admin Final Asunto</source>
+        <target>Booking of apartment type [type] in [location] : [from] to [untill] </target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="14">
+        <source>Mail_Admin ventas</source>
+        <target>Rent n' Chill</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="15">
+        <source>Mail_Comission Titulo</source>
+        <target>Your apartment has been booked</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="16">
+        <source>Mail_Comission Cuerpo [url_apartamento]</source>
+        <target> Vestibulum commodo dapibus vulputate. Donec adipiscing, magna eu iaculis iaculis, dui mauris viverra magna, id condimentum sapien elit id ligula. Vivamus sit amet felis mi, vitae lacinia arcu. Praesent a enim ligula, a semper augue. Etiam nec felis nunc. Vivamus at fringilla orci. Sed tincidunt nunc venenatis lacus aliquet pulvinar elementum odio pellentesque. Proin iaculis, magna in dictum volutpat, lorem augue vestibulum augue, nec hendrerit nisi velit a orci. Mauris interdum elit et nisi eleifend suscipit. Vestibulum et fringilla magna. Aliquam molestie hendrerit libero. In hac habitasse platea dictumst. Sed vel diam eu felis porttitor tempor sed quis felis. Integer justo quam, iaculis ac ullamcorper et, faucibus at orci. Proin a est sit amet sapien blandit luctus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis &lt;a href="[url_apartamento]"&gt;apartamento&lt;/a&gt;.
+</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="17">
+        <source>Mail_Comission Asunto</source>
+        <target>Booking of [apartment] : [from] to [untill] </target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="18">
+        <source>Global_GET TO KNOW</source>
+        <target>Visite</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="19">
+        <source>Global_About us</source>
+        <target>Sobre Rent n´Chill</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="20">
+        <source>Global_Sitemap</source>
+        <target>Mapa del sitio</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="21">
+        <source>Global_Newsleetter</source>
+        <target>Newsletter</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="22">
+        <source>Global_Safe server site</source>
+        <target>Safe server site</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="23">
+        <source>Global_Footer contact</source>
+        <target>Rent n´Chill - &lt;a href="mailto:info@rentandchill.com"&gt;info@rentandchill.com&lt;/a&gt; - (00598) 93702506 / 94563139 / 42773278 - Punta del Este, Uruguay</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="24">
+        <source>Global_Footer Payment Methods</source>
+        <target>Metodos de pago</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="25">
+        <source>Global_slogan</source>
+        <target>FIND A PLACE&lt;br /&gt; TO STAY&lt;br /&gt; AND CHILL</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="26">
+        <source>Usuario_Ver perfil</source>
+        <target>mi perfil</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="27">
+        <source>Usuario_Salir</source>
+        <target>salir</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="28">
+        <source>Global_LOG IN / SIGN UP</source>
+        <target>INGRESE / REGISTRESE</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="29">
+        <source>Global_HOW IT WORKS</source>
+        <target>COMO FUNCIONA ?</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="30">
+        <source>Global_TOURIST INFO</source>
+        <target>GUIA DE CIUDADES</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="31">
+        <source>Global_CONTACT</source>
+        <target>CONTACTO</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="32">
+        <source>Global_Link Twitter</source>
+        <target>#</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="33">
+        <source>Global_Link Facebook</source>
+        <target>#</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="34">
+        <source>Global_Choose currency</source>
+        <target>Moneda</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="35">
+        <source>Apartamento_Host</source>
+        <target>administrador</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="36">
+        <source>Apartamento_More info</source>
+        <target>mas info</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="37">
+        <source>Apartamento_Contact</source>
+        <target>Contacto</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="38">
+        <source>Search_Price range</source>
+        <target>Rango de precio</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="39">
+        <source>Search_Precio en</source>
+        <target>Moneda</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="40">
+        <source>Search_Filter by</source>
+        <target>Filtrar por</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="41">
+        <source>Search_Order by</source>
+        <target>Ordernar por</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="42">
+        <source>Apartamento_per night</source>
+        <target>por noche</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="43">
+        <source>Apartamento_search</source>
+        <target>buscar</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="44">
+        <source>Apartamento_guests</source>
+        <target>guests</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="45">
+        <source>Apartamento_Select photos</source>
+        <target>seleccionar las fotos</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="46">
+        <source>Global_Home</source>
+        <target>Inicio</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="47">
+        <source>Apartamento_Detalle navegacion</source>
+        <target>Property details</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="48">
+        <source>Apartamento_Back to results</source>
+        <target>Volver</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="49">
+        <source>Apartamento_HIGH SEASON</source>
+        <target>Temporada Alta</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="50">
+        <source>Apartamento_LOW SEASON</source>
+        <target>Temporada Baja</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="51">
+        <source>Apartamento_Editar</source>
+        <target>Editar</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="52">
+        <source>Apartamento_Description</source>
+        <target>Descripción</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="53">
+        <source>Apartamento_Maps</source>
+        <target>Mapa</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="54">
+        <source>Apartamento_Details</source>
+        <target>Detalles</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="55">
+        <source>Apartamento_Room type</source>
+        <target>Tipo de habitación   </target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="56">
+        <source>Apartamento_Bed type</source>
+        <target>Tipo de cama</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="57">
+        <source>Apartamento_Accommodates</source>
+        <target>Accommodates</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="58">
+        <source>Apartamento_Bedrooms</source>
+        <target>Bedrooms</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="59">
+        <source>Apartamento_Bathrooms</source>
+        <target>Baños</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="60">
+        <source>Apartamento_Extra people</source>
+        <target>Persona extra</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="61">
+        <source>Apartamento_Minimum Stay</source>
+        <target>Estadía mínima  </target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="62">
+        <source>Apartamento_Neighborhood</source>
+        <target>Barrio</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="63">
+        <source>Apartamento_Size</source>
+        <target>Tamaño</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="64">
+        <source>Apartamento_Amenities</source>
+        <target>Amenities</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="65">
+        <source>Apartamento_Editar navegacion</source>
+        <target>Editar propiedad</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="66">
+        <source>Apartamento_TITLE</source>
+        <target>Título </target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="67">
+        <source>Apartamento_SHORT DESCRIPTION</source>
+        <target>Descripción corta</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="68">
+        <source>Apartamento_CITY</source>
+        <target>Ciudad</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="69">
+        <source>Apartamento_Gallery</source>
+        <target>Galería</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="70">
+        <source>Apartamento_Map</source>
+        <target>Mapa</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="71">
+        <source>Apartamento_Per person</source>
+        <target>Por persona</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="72">
+        <source>Apartamento_Low season</source>
+        <target>Temporada baja</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="73">
+        <source>Apartamento_High season</source>
+        <target>Temporada alta</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="74">
+        <source>Apartamento_INSURANCE</source>
+        <target>Seguro</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="75">
+        <source>Apartamento_INSURANCE descripcion</source>
+        <target>Descripción del seguro</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="76">
+        <source>Apartamento_Submit</source>
+        <target>Enviar</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="77">
+        <source>Search_navegacion</source>
+        <target>Buscar</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="78">
+        <source>Submit_FullService Property submited</source>
+        <target>Has enviado tu propiedad!</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="79">
+        <source>Submit_FullService Texto</source>
+        <target>Nos has enviado la información de tu propiedad. Nuestro equipo se podrá en contacto contigo.</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="80">
+        <source>Submit_navegacion</source>
+        <target>Publicar propiedad</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="81">
+        <source>Submit_HOSTING</source>
+        <target>Publique su propiedad</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="82">
+        <source>Submit_Place select your hosting plan</source>
+        <target>Seleccione su hosting plan</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="83">
+        <source>Submit_Full Service</source>
+        <target>Servicio completo</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="84">
+        <source>Submit_Comission</source>
+        <target>Servicio simple</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="85">
+        <source>Submit_Property info</source>
+        <target>Info propiedad</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="86">
+        <source>Submit_TITLE</source>
+        <target>Título</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="87">
+        <source>Submit_PRECIO TEMPORADA ALTA</source>
+        <target>Precio temporada alta</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="88">
+        <source>Submit_Description</source>
+        <target>Descripción</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="89">
+        <source>Submit_Boton</source>
+        <target>Publique</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="90">
+        <source>Submit_CITY</source>
+        <target>Ciudad</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="91">
+        <source>Submit_PRECIO TEMPORADA BAJA</source>
+        <target>Precio temporada baja</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="92">
+        <source>Funcionamiento_navegacion</source>
+        <target>Como funciona</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="93">
+        <source>Funcionamiento_titulo</source>
+        <target>Como &lt;span style="font-size:36px; color:black; font-family:'BelloScript';"&gt;funciona&lt;/span&gt;</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="94">
+        <source>Funcionamiento_Find place</source>
+        <target>Encuentra tu sitio</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="95">
+        <source>Funcionamiento_FIND YOUR SPACE</source>
+        <target>Encuentra tu locación</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="96">
+        <source>Funcionamiento_Find text</source>
+        <target>Rapido y efectivo</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="97">
+        <source>Funcionamiento_bookIt</source>
+        <target>Como hago una reserva</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="98">
+        <source>Funcionamiento_bookIt text</source>
+        <target>Como reservar, paso a paso.</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="99">
+        <source>Funcionamiento_Search</source>
+        <target>Buscar</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="100">
+        <source>Funcionamiento_Hosting plans</source>
+        <target>Publique su propiedad</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="101">
+        <source>Funcionamiento_Full service</source>
+        <target>Servicio completo</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="102">
+        <source>Funcionamiento_Full service texto</source>
+        <target>Rent n´Chill se encargará de todo.</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="103">
+        <source>Funcionamiento_comission</source>
+        <target>Servicio Simple</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="104">
+        <source>Funcionamiento_comission texto</source>
+        <target>Publicite su propiedad.</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="105">
+        <source>Funcionamiento_Submit</source>
+        <target>Publicar</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="106">
+        <source>Funcionamiento_Full service modal</source>
+        <target>Rent n´Chill se encargará de todas las tareas de su propiedad. Olvídese de buscar clientes para la reserva de su apartamento, así como mantenimiento limpieza y lavandería. </target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="107">
+        <source>Funcionamiento_Comission</source>
+        <target>Servicio simple</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="108">
+        <source>Funcionamiento_Comission modal</source>
+        <target>Eligiendo esta modalidad usted podrá publicar su propiedad en nuestro portal, y usted de hará cargo de todos los servicios. Rent n´Chill solo le cobrará una pequeña comisión por los alquileres que sean realizados a través de nuestra web.</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="109">
+        <source>Home_find a place to stay</source>
+        <target>Encuentra donde quedarte</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="110">
+        <source>Global_submit your property</source>
+        <target>Publique su propiedad</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="111">
+        <source>Home_Texto1</source>
+        <target>&lt;p style="text-align: justify;"&gt;&lt;span style="font-family: 'courier new', courier; font-size: small;"&gt;&lt;strong&gt;Por qué utilizar el servicio de Rent n´Chill?&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;&lt;strong style="font-family: 'courier new', courier; font-size: small;"&gt;Rent n´Chill te ayuda a ganar dinero alquilando tu hogar.&lt;/strong&gt;&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;&lt;span style="font-size: small;"&gt;&lt;span style="font-family: 'courier new', courier;"&gt;&lt;strong&gt;&lt;span style="font-family: 'courier new', courier;"&gt;Públicar es gratis&lt;/span&gt;&lt;/strong&gt;&lt;strong&gt;¿&lt;/strong&gt;&lt;/span&gt;&lt;strong style="font-size: small;"&gt;&lt;span style="font-family: 'courier new', courier;"&gt;, &lt;/span&gt;&lt;/strong&gt;&lt;span style="font-family: 'courier new', courier;"&gt;sólo pagas una comisión por cada reserva confirmada.&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;&lt;span style="font-size: small;"&gt;&lt;strong&gt;&lt;span style="font-family: 'courier new', courier;"&gt;Transacciones online,&lt;/span&gt;&lt;/strong&gt;&lt;span style="font-family: 'courier new', courier;"&gt; gestionamos todos los pagos para garantizar que cobres puntualmente.&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;&lt;span style="font-size: small;"&gt;&lt;strong&gt;&lt;span style="font-family: 'courier new', courier;"&gt;Atención al cliente, &lt;/span&gt;&lt;/strong&gt;&lt;span style="font-family: 'courier new', courier;"&gt;estamos disponibles siempre que nos necesite, ante cualquier duda.&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;&lt;strong&gt;&lt;span style="font-size: small; font-family: 'courier new', courier;"&gt;Google, &lt;/span&gt;&lt;/strong&gt;&lt;span style="font-size: small; font-family: 'courier new', courier;"&gt;trabajamos con google para maximizar la difusión y las visitas a nuestra página de Rent n´Chill.&lt;/span&gt;&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;&lt;span style="font-size: small;"&gt;&lt;strong&gt;&lt;span style="font-family: 'courier new', courier;"&gt;Redes sociales,&lt;/span&gt;&lt;/strong&gt; &lt;span style="font-family: 'courier new', courier;"&gt;estamos conectados a redes sociales como facebook y twiter.&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="112">
+        <source>Home_Texto2</source>
+        <target>&lt;p style="text-align: justify;"&gt;&lt;strong style="font-size: 8px;"&gt;&lt;span style="font-size: small; font-family: 'courier new', courier;"&gt;Fotografo profesional, &lt;/span&gt;&lt;/strong&gt;&lt;span style="font-size: small; font-family: 'courier new', courier;"&gt;enviaremos un fotógrafo profesional sin ningún coste o muy poco.&lt;/span&gt;&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;&lt;span style="font-size: small;"&gt;&lt;strong&gt;&lt;span style="font-family: 'courier new', courier;"&gt;Calendario, &lt;/span&gt;&lt;/strong&gt;&lt;span style="font-family: 'courier new', courier;"&gt;gestiona tu disponibilidad y reservas de una forma sencilla.&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;&lt;span style="font-size: small;"&gt;&lt;strong&gt;&lt;span style="font-family: 'courier new', courier;"&gt;Política de cancelación, &lt;/span&gt;&lt;/strong&gt;&lt;span style="font-family: 'courier new', courier;"&gt;defenderemos por ti cualquier problema con nuestra política de cancelación.&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;&lt;span style="font-size: small;"&gt;&lt;strong&gt;&lt;span style="font-family: 'courier new', courier;"&gt;Precio flexible, &lt;/span&gt;&lt;/strong&gt;&lt;span style="font-family: 'courier new', courier;"&gt;adapta tus tarifas a la temporada desde tu cuenta.&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;&lt;span style="font-size: small;"&gt;&lt;strong&gt;&lt;span style="font-family: 'courier new', courier;"&gt;Anuncio en un click, &lt;/span&gt;&lt;/strong&gt;&lt;span style="font-family: 'courier new', courier;"&gt;pública y tu anuncio estará activo cuando quieras. &lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;&lt;span style="font-size: small;"&gt;&lt;strong&gt;&lt;span style="font-family: 'courier new', courier;"&gt;Traducciones, &lt;/span&gt;&lt;/strong&gt;&lt;span style="font-family: 'courier new', courier;"&gt;traducimos tu anuncio a varios idiomas, como inglés, portugués, español, etc.&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="113">
+        <source>Ciudad_Propierties</source>
+        <target>Propiedades</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="114">
+        <source>Apartamento_submit</source>
+        <target>Enviar</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="115">
+        <source>Apartamento_property</source>
+        <target>Propiedad</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="116">
+        <source>Ciudad_get to know</source>
+        <target>VISITE</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="117">
+        <source>Ciudad_navegacion</source>
+        <target>Visite</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="118">
+        <source>Ciudad_Info</source>
+        <target>Guía de ciudad</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="119">
+        <source>InfoTuristica_navegacion</source>
+        <target>Guía de ciudades</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="120">
+        <source>InfoTuristica_titulo</source>
+        <target>Guía de ciudades</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="121">
+        <source>InfoTuristica_More info</source>
+        <target>más info</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="122">
+        <source>InfoTuristica_Propierties</source>
+        <target>Propiedades</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="123">
+        <source>Login_titulo</source>
+        <target>Ingrese</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="124">
+        <source>Usuario_email</source>
+        <target>email</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="125">
+        <source>Usuario_clave</source>
+        <target>clave</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="126">
+        <source>Usuario_Forgot your password?</source>
+        <target>Olvide mi clave</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="127">
+        <source>Usuario_recordarme</source>
+        <target>recordarme</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="128">
+        <source>Login_boton</source>
+        <target>Ingrese</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="129">
+        <source>Usuario_Perfil navegacion</source>
+        <target>Perfil</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="130">
+        <source>Usuario_Nombre</source>
+        <target>Nombre</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="131">
+        <source>Usuario_Telefono</source>
+        <target>Telefono</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="132">
+        <source>Usuario_Pais</source>
+        <target>País</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="133">
+        <source>Usuario_Save</source>
+        <target>Salvar</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="134">
+        <source>Usuario_Properties</source>
+        <target>Propiedades</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="135">
+        <source>Usuario_Properties Reserved</source>
+        <target>Reservadas</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="136">
+        <source>Usuario_Properties Visited</source>
+        <target>Visitadas</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="137">
+        <source>Mensajes_Error</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="138">
+        <source>Usuario_nombre</source>
+        <target>nombre</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="139">
+        <source>Usuario_acepto los terminos</source>
+        <target/>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="140">
+        <source>Global_Terms of Service</source>
+        <target>Términos y condiciones</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="141">
+        <source>Usuario_apellido</source>
+        <target>apellido</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="142">
+        <source>Usuario_Already have an account</source>
+        <target>Ya tengo una cuenta</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="143">
+        <source>Usuario_Login link</source>
+        <target>ingresar</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="144">
+        <source>Usuario_pais</source>
+        <target>país</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="145">
+        <source>Usuario_Son estos datos correctos</source>
+        <target>Son estos datos correctos</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="146">
+        <source>Usuario_Cambiar usuario</source>
+        <target>Cambiar usuario</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="147">
+        <source>Usuario_Login titulo</source>
+        <target>Log &lt;span style="font-size:36px; color:black; font-family:'BelloScript';"&gt;in&lt;/span&gt;</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="148">
+        <source>Usuario_create free account</source>
+        <target>Create &lt;span style="font-size:36px; color:black; font-family:'BelloScript';"&gt;una&lt;/span&gt; cuenta</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="149">
+        <source>Usuario_Create</source>
+        <target>Crear</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="150">
+        <source>Reserva_Arrival</source>
+        <target>llegada</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="151">
+        <source>Reserva_Departure</source>
+        <target>partida</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="152">
+        <source>Reserva_Guests</source>
+        <target>personas</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="153">
+        <source>Reserva_subtotal</source>
+        <target>Sub-total</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="154">
+        <source>Reserva_Bookit</source>
+        <target>Reservar</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="155">
+        <source>Reserva_Done navegacion</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="156">
+        <source>Reserva_Done Titulo</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="157">
+        <source>Reserva_title</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="158">
+        <source>Reserva_description</source>
+        <target>Descripción</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="159">
+        <source>Reserva_city</source>
+        <target>Ciudad</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="160">
+        <source>Reserva_guests</source>
+        <target>Huéspedes</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="161">
+        <source>Reserva_nights</source>
+        <target>Noches</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="162">
+        <source>Reserva_total</source>
+        <target>Total</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="163">
+        <source>Reserva_Done What happend next?</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="164">
+        <source>Reserva_Done explicacion comission</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="165">
+        <source>Usuario_Contact</source>
+        <target>Contactar</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="166">
+        <source>Reserva_Done explicacion fullservice</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="167">
+        <source>Reserva_Done How it works</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="168">
+        <source>Global_Contact</source>
+        <target>Contacto</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="169">
+        <source>Reservas_navegacion</source>
+        <target>Mi Reserva</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="170">
+        <source>Reservas_titulo</source>
+        <target>Mi Reserva</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="171">
+        <source>Reservas_title</source>
+        <target>Nombre</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="172">
+        <source>Reservas_description</source>
+        <target>Descripción </target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="173">
+        <source>Reservas_city</source>
+        <target>Ciudad</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="174">
+        <source>Reservas_guests</source>
+        <target>Huéspedes </target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="175">
+        <source>Reservas_nights</source>
+        <target>Noches</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="176">
+        <source>Reservas_total</source>
+        <target>Total</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="177">
+        <source>Reservas_Payment title</source>
+        <target>Confirmación de Reserva</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="178">
+        <source>Reservas_Bookit</source>
+        <target>Reserve</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="179">
+        <source>Usuario_Login navegacion</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="180">
+        <source>Contacto_Navegacion</source>
+        <target>Contacto</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="181">
+        <source>Contacto_Titulo</source>
+        <target>Contacto</target>
+      </trans-unit>
+      <trans-unit id="182">
+        <source>Contacto_Enviar</source>
+        <target>enviar</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="183">
+        <source>Contacto_Hi!</source>
+        <target>Hola!</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="184">
+        <source>Contacto_Nombre</source>
+        <target>nombre</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="185">
+        <source>Contacto_Email</source>
+        <target>email</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="186">
+        <source>Contacto_Mensaje</source>
+        <target>mensaje</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="187">
+        <source>Contacto_Error Requerido</source>
+        <target>requerido</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="188">
+        <source>Contacto_Error Invalido</source>
+        <target>inválido</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="189">
+        <source>Funcionamiento_Buscar</source>
+        <target>Encuentra tu locación</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="190">
+        <source>Funcionamiento_Buscar modal</source>
+        <target>Para hacer su proceso de búsqueda más rápido y eficaz hemos puesto a su disposición una serie de filtros en los cuales podrá seleccionar la disponibilidad de nuestros calendarios para cada propiedad, el día de llegada y salida, el número de personas, así como cualquier otra petición. Nuestro sistema le contabilizará el precio total y le proporcionará el formulario de reserva on-line.
+</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="191">
+        <source>Funcionamiento_Reserva</source>
+        <target>Como hago una reserva?</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="192">
+        <source>Funcionamiento_Reserva modal</source>
+        <target>Paso 1. Comprobar disponibilidad de la propiedad
+Paso 2. Reservar
+Paso 3. Pagar
+Paso 4. Leer atentamente las condiciones de uso</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="193">
+        <source>Global_Terminos</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="194">
+        <source>Terminos_navegacion</source>
+        <target>Términos y condiciones</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="195">
+        <source>Terminos_Titulo</source>
+        <target>Términos y condiciones</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="196">
+        <source>Terminos_Texto</source>
+        <target>&lt;p&gt;&lt;span style="font-family: 'courier new', courier;"&gt;&lt;strong&gt;Sobre la reserva del apartamento&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span style="font-family: 'courier new', courier;"&gt;La reserva del apartamento se realiza&lt;strong&gt; mediante el pago del depósito de alquiler &lt;/strong&gt;de dicho apartamento. &lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style="font-family: 'courier new', courier;"&gt;El pago del 12,5% de la reserva debe realizarse &lt;strong&gt;vía tarjeta de crédito, paypal o telefonicamente.&lt;/strong&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style="font-family: 'courier new', courier;"&gt;Su reserva no será confirmada hasta que Rent n´Chill haya recibido el prepago &lt;strong&gt;del depósito de alquiler&lt;/strong&gt; y usted haya recibido un &lt;strong&gt;e-mail de confirmación &lt;/strong&gt;de Rent n´Chill.&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style="font-family: 'courier new', courier;"&gt;En el email de confirmación encontrará la dirección exacta del apartamento, detalles de contacto, importe restante a pagar y el resto de instrucciones para la llegada y salida.&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style="font-family: 'courier new', courier;"&gt;A su llegada, &lt;strong&gt;deberá pagar el importe restante del alquiler y la fianza de garantía&lt;/strong&gt;. La forma concreta de pago se detalla en el mail de confirmación de su reserva. Se puede pagar con tarjeta de crédito o efectivo.&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span style="font-family: 'courier new', courier;"&gt;&lt;strong&gt;Sobre el pago total del alquiler&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span style="font-family: 'courier new', courier;"&gt;El día de su llegada a su apartamento de alquiler, deberá &lt;strong&gt;abonar el balance del precio total del alquiler únicamente en efectivo.&lt;/strong&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style="font-family: 'courier new', courier;"&gt;Excepcionalmente hay algunos apartamentos para los cuales podrá pagar &lt;strong&gt;mediante tarjeta de crédito&lt;/strong&gt; añadiendo un 3% (Visa o MasterCard) o un 4% (American Express) al total. Para más detalles, por favor lea la descripción del apartamento.&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style="font-family: 'courier new', courier;"&gt;En otros casos, este pago puede hacerse &lt;strong&gt;mediante transferencia bancaria,&lt;/strong&gt; siempre que : &lt;/span&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span style="font-family: 'courier new', courier;"&gt;&lt;strong&gt;el importe neto&lt;/strong&gt; correspondiente sea recibido en nuestra cuenta bancaria una semana antes de su llegada&lt;strong&gt; (los costes de la transferencia van a cargo del cliente).&lt;/strong&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style="font-family: 'courier new', courier;"&gt;le hayamos confirmado por escrito que hemos recibido esa suma.&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span style="font-family: 'courier new', courier;"&gt;&lt;strong&gt;Sobre la cancelación del alquiler&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span style="font-family: 'courier new', courier;"&gt;Todas las cancelaciones o cambios tienen que realizarse por escrito vía e-mail o fax. No se aceptan cancelaciones o cambios por teléfono.&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style="font-family: 'courier new', courier;"&gt;&lt;strong&gt;Si el cliente cancela una reserva, sólo perderá el depósito de reserva ya pagado.&lt;/strong&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style="font-family: 'courier new', courier;"&gt;Si el cliente cancela una reserva pagada en su totalidad (el 100% de la estancia), hay un coste de cancelación que dependerá del número de días de antelación con respecto al período de inicio del alquiler. &lt;/span&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span style="font-family: 'courier new', courier;"&gt;&lt;strong&gt;Más de 90 días antes:&lt;/strong&gt; 25% del importe total.&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style="font-family: 'courier new', courier;"&gt;&lt;strong&gt;30-89 días antes:&lt;/strong&gt; 50% del importe total.&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style="font-family: 'courier new', courier;"&gt;&lt;strong&gt;Menos de 30 días antes:&lt;/strong&gt; 100% del importe total.&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;span style="font-family: 'courier new', courier;"&gt;Si el cliente &lt;strong&gt;cambia las fechas o el apartamento&lt;/strong&gt;, se entenderá como una nueva reserva y estará &lt;strong&gt;sujeta a las condiciones de cancelación.&lt;/strong&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style="font-family: 'courier new', courier;"&gt;Se recomienda &lt;strong&gt;contratar un seguro de cancelación de viajes.&lt;/strong&gt; Cualquier cancelación, incluyendo fuerzas mayores, estará sujeta a nuestra clara y sencilla política de cancelación aquí mencionada.&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style="font-family: 'courier new', courier;"&gt;El cliente autoriza a Rent n´Chill o al Propietario del apartamento reservado a realizar los cobros pertinentes a la tarjeta de crédito facilitada en el momento de reservar en caso de cancelación.&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style="font-family: 'courier new', courier;"&gt;Si Rent n´Chill fuera incapaz de proporcionar al cliente la propiedad que ha reservado, se reserva el derecho de transferirlo a una propiedad de características similares. Si no puede llegarse a ningún acuerdo, ambas partes contractuales están autorizadas a cancelar el contrato. En este caso Rent n´Chill, reembolsará al cliente todo el dinero pagado (excepto la parte correspondiente a los días de estancia ya realizados, si éste fuera el caso). Rent n´ Chill no se responsabilizará de futuras reclamaciones por parte del cliente.&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span style="font-family: 'courier new', courier;"&gt;&lt;strong&gt;Sobre la fianza en garantía&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: 'courier new', courier;"&gt;&lt;strong&gt;A su llegada se le pedirá que proporcione una fianza en garantía así como el número de una tarjeta de crédito válida para garantizar que el apartamento y su contenido se devuelven en buenas condiciones.&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: 'courier new', courier;"&gt;Por favor recuerde que al aceptar nuestros Términos y Condiciones, usted está de acuerdo en que cualquier daño causado por usted o sus compañeros se deducirá de su fianza y que usted también se responsabiliza por cualquier daño que exceda el importe de la fianza.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: 'courier new', courier;"&gt;&lt;strong&gt;Dependiendo del apartamento ofrecido, se pedirá a su llegada una fianza en garantía que va de 200 a 500 dólares $. Esta fianza en garantía tendrá que pagarse en efectivo o mediante tarjeta de crédito. Por favor vea su e-mail de confirmación para ver qué forma de pago se requiere.&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span style="font-family: 'courier new', courier;"&gt;Efectivo: Todas las fianzas de garantía pagadas en efectivo se reembolsarán por completo, en su check-out, después de la inspección del apartamento para comprobar que no haya sido dañado.&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style="font-family: 'courier new', courier;"&gt;Tarjeta de crédito: Todas las fianzas de garantía pagadas a través de tarjeta de crédito se reembolsarán a la misma tarjeta de crédito utilizada para el pago entre 4 y 7 días después de su salida siempre que el apartamento no haya sido dañado.&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span style="font-family: 'courier new', courier;"&gt;&lt;strong&gt;Sobre la llegada y salida&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: 'courier new', courier;"&gt;&lt;strong&gt;&lt;em&gt;Preparando su llegada&lt;/em&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span style="font-family: 'courier new', courier;"&gt;Por favor, asegúrese de que disponemos de &lt;strong&gt;su hora de llegada actualizada&lt;/strong&gt; a fin que podamos &lt;strong&gt;planear su check-in&lt;/strong&gt; y mantener a su persona de contacto informada sobre cualquier retraso o cambio.&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style="font-family: 'courier new', courier;"&gt;Su persona de contacto dispondrá de su número de teléfono y dirección de e-mail por si necesitara contactarle respecto a su hora llegada. Puede enviar esta información vía e-mail a info@friendlyrentals.com o teléfono al (+34) 93 268 80 51.&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style="font-family: 'courier new', courier;"&gt;Su e-mail de confirmación de llegada y salida dice claramente dónde encontrarse con su persona de contacto el día de su llegada.&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span style="font-family: 'courier new', courier;"&gt;&lt;strong&gt;&lt;em&gt;El día de llegada&lt;/em&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span style="font-family: 'courier new', courier;"&gt;&lt;strong&gt;Debe llamar a su persona de contacto a su llegada al aeropuerto&lt;/strong&gt; (o 1 hora antes de llegar a la ciudad de destino si viaja en coche) y entonces se le indicará si debe:&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt; 
+&lt;ul&gt;
+&lt;li&gt;&lt;span style="font-family: 'courier new', courier;"&gt;&lt;strong&gt;Ir a nuestra oficina&lt;/strong&gt;, donde nuestro departamento de check-in le recibirá y le dará sus instrucciones de check-in, llaves y direcciones.&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style="font-family: 'courier new', courier;"&gt;&lt;strong&gt;Ir al apartamento&lt;/strong&gt; donde nuestro agente de check-in le recibirá y le dará las llaves e instrucciones del apartamento.&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;span style="font-family: 'courier new', courier;"&gt;El apartamento estará disponible a partir de las 15:00hrs, pero siempre intentaremos acomodar a los clientes con llegadas tempranas lo antes posible. &lt;strong&gt;Es extremadamente importante que tengamos una hora de llegada actualizada. &lt;/strong&gt;No tener esta información provocara que usted tenga que esperar a su contacto y así como un retraso en su check-in.&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span style="font-family: 'courier new', courier;"&gt;&lt;strong&gt;Por favor recuerde: El check-in es entre las 15.00h y las 02.00h, para llegadas a partir de las 21:00hrs, hay un recargo de 30 dólares por el check-in.&lt;/strong&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span style="font-family: 'courier new', courier;"&gt;&lt;strong&gt;Sobre su salida del apartamento&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span style="font-family: 'courier new', courier;"&gt;&lt;strong&gt;Las salidas deben realizarse a las 11:00hrs o antes&lt;/strong&gt;. Cualquier salida no autorizada después de las 11:00hrs será penalizada.&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style="font-family: 'courier new', courier;"&gt;Si necesita una salida más tarde por favor pregunte si es posible cuando haga el check-in. Intentaremos acomodarle siempre que nuestra próxima llegada no sea temprano el mismo día. Si es posible, puede quedarse en el apartamento hasta las 18.00, pagando el 50% del precio del alquiler por noche. Cualquier salida después de las 18:00h estará sujeta al precio total por día.&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style="font-family: 'courier new', courier;"&gt;&lt;strong&gt;El día de su salida deberá dejar su apartamento ordenado y haber tirado la basura correctamente.&lt;/strong&gt; Por favor &lt;strong&gt;deje todos los juegos de llaves encima de la mesa y cierre la puerta tras si después de salir&lt;/strong&gt; y habiéndose previamente asegurado de que tiene todas sus pertenencias y que la puerta principal del edificio no está cerrada con llave.&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style="font-family: 'courier new', courier;"&gt;Bajo previo aviso, también podemos reservarle un taxi para su partida desde el apartamento.&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span style="font-family: 'courier new', courier;"&gt;&lt;strong&gt;Sobre la limpieza del apartamento&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span style="font-family: 'courier new', courier;"&gt;El apartamento deberá estar limpio antes de la llegada de cada cliente.&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style="font-family: 'courier new', courier;"&gt;Antes de irse, el cliente está obligado a dejar el apartamento en perfecto estado, habiendo tirado la basura correctamente y recogido el apartamento. Si no, se le cargará el coste de una limpieza adicional.&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span style="font-family: 'courier new', courier;"&gt;&lt;strong&gt;Sobre el número y la identidad de los huéspedes&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span style="font-family: 'courier new', courier;"&gt;El cliente informará a Rent n´Chill del número de huéspedes incluidos en la reserva.&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style="font-family: 'courier new', courier;"&gt;A menos que se haya acordado con Rent n´Chill de otra forma, &lt;strong&gt;solo el número de personas indicadas por el cliente cuando hizo la reserva&lt;/strong&gt;, será el autorizado para utilizar el apartamento.&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style="font-family: 'courier new', courier;"&gt;El número de personas que puede utilizar el apartamento no debe exceder el número de personas asignadas para cada apartamento,&lt;strong&gt; excepto en el caso de niños menores de dos años.&lt;/strong&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style="font-family: 'courier new', courier;"&gt;Las &lt;strong&gt;mascotas solo son permitidas si se ha concedido permiso&lt;/strong&gt; específicamente.&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style="font-family: 'courier new', courier;"&gt;En el momento en que se cometa alguna infracción de las obligaciones previamente mencionadas, Rent n´Chill por propios criterios tendrá el derecho de pedir al cliente que abandone el apartamento, y el cliente no tendrá derecho a reclamar ningún tipo de compensación.&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span style="font-family: 'courier new', courier;"&gt;&lt;strong&gt;Sobre el comportamiento&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span style="font-family: 'courier new', courier;"&gt;&lt;strong&gt;La música alta y las fiestas están prohibidas.&lt;/strong&gt; Los huéspedes que se alojen en un apartamento de Rent n´Chill deben saber que si se producen fiestas o se escucha música alta, o los vecinos se quejan y/o llaman a la policía, esto puede dar lugar a un desalojo inmediato sin importar la hora del día o noche.&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style="font-family: 'courier new', courier;"&gt;&lt;strong&gt;Las horas de descanso son de 22.00 PM a las 10.00 AM&lt;/strong&gt; &lt;/span&gt;&lt;br /&gt;&lt;span style="font-family: 'courier new', courier;"&gt; Apreciaremos en gran medida su colaboración en este tema y esperamos que entienda que estas normas son necesarias, ya que estas locaciones se encuentran casi siempre situadas en zonas residenciales donde viven personas que deben madrugar para trabajar, y el descanso nocturno del resto de residentes debe ser respetado.&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style="font-family: 'courier new', courier;"&gt;El cliente, al firmar el contrato de check-in, estará sujeto a un &lt;strong&gt;comportamiento correcto y decente por parte de todas las personas que le acompañen.&lt;/strong&gt; Si esta persona, o alguna de las personas que le acompaña no se comporta de forma adecuada y responsable, Rent n´ Chill tendrá el derecho de pedir al cliente y a las personas que le acompañan que abandonen el apartamento sin derecho a futuras reclamaciones ni a ningún tipo de compensación.&lt;/span&gt;&lt;br /&gt; &lt;br /&gt;&lt;span style="font-family: 'courier new', courier;"&gt; Esto también supondrá la pérdida del alquiler pre-pagado y de la fianza de garantía reembolsable.&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style="font-family: 'courier new', courier;"&gt;Recuerden también que al reservar con Rent n´Chill usted ya ha aceptado nuestros términos y condiciones, y consecuentemente se esperará que acate estas normas. También tendrá que firmar estas normas cuando haga su check-in el día de su llegada.&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span style="font-family: 'courier new', courier;"&gt;&lt;strong&gt;Sobre las responsabilidades&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span style="font-family: 'courier new', courier;"&gt;Ni Rent n´Chill ni el propietario de la propiedad serán responsables de ningún daño directo o indirecto que pueda producirse como consecuencia del uso que haya hecho el cliente del apartamento, incluyendo sin límite daños, seguro, pérdidas a causa de incendios, robos o comportamientos criminales.&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style="font-family: 'courier new', courier;"&gt;En caso de cualquier infracción de las obligaciones previamente mencionadas, Rent n´Chill por propios criterios tendrá el derecho de pedir al cliente que abandone el apartamento, y el cliente no tendrá derecho a reclamar ningún tipo de compensación.&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span style="font-family: 'courier new', courier;"&gt;&lt;strong&gt;Nuestra Página Web&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: 'courier new', courier;"&gt;Todas las descripciones de los apartamentos e información se aplicarán a los apartamentos publicados. Mientras Rent n´Chill hace todo lo posible por mantener la exactitud y comprobar que los detalles son exactos, Rent n´Chill no se responsabiliza de ningún error u omisiones que puedan surgir.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: 'courier new', courier;"&gt;Rent n´Chill también se reserva el derecho de cambiar información publicada en la web en todo momento inclusive los precios, descripciones y fotografías. Rent n´Chill no garantiza el estado ni representa la conveniencia de cualquier producto o servicio publicado en su página web.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: 'courier new', courier;"&gt;Rent n´Chill se reserva el derecho de actualizar cualquiera de estos términos y condiciones en cualquier momento en caso de que se exija, conforme al negocio de la empresa.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: 'courier new', courier;"&gt;Los usuarios son responsables de asegurarse de la vigencia de los términos y condiciones incluidos en esta página. El solo hecho de aceptar utilizar esta web implica la aceptación de cualquiera de los cambios por parte de cualquier tercer parte, y que cualquier tercer parte promete acatar esos cambios. &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: 'courier new', courier;"&gt;Estas condiciones no afectan los derechos estatuarios del usuario.&lt;/span&gt;&lt;/p&gt;
+&lt;br /&gt;</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="197">
+        <source>AcercaDe_navegacion</source>
+        <target>Sobre Rent n´Chill</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="198">
+        <source>AcercaDe_Titulo</source>
+        <target>Sobre Rent n´Chill</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="199">
+        <source>AcercaDe_Texto</source>
+        <target>
+Rent n`Chill es un proyecto nuevo y moderno de alquileres de apartamentos temporales online.
+Es un sistema muy practico y fácil tanto como para el inquilino como para el propietario. A
+través de Rent n`Chill podes organizar tus viajes ya sean de negocios, estudios, vacaciones,
+etc. Y también te permite publicar tu propiedad en pocos minutos desde cualquier lugar y
+publicitarla a través de la red a nivel global. Alquilar una propiedad en el destino programado es
+ideal si te gusta cocinar, si necesitas tener un espacio, ya sea para trabajar o recibir invitados,
+en otras palabras para vivir el lugar como un autentico lugareño.
+Ademas del alquiler, podes contratar servicios adicionales de limpieza, gastronomía y turismo,
+alquiler de autos, entre otros.
+No será difícil encontrar una opción perfecta para tu viaje, ya que ofrecemos opciones que se
+ajustan a todos.
+Nuestros equipo controla regularmente todos y cada una de las propiedades con el objetivo de
+asegurar un nivel de satisfacción y confort óptimo.
+Cualquier duda ya seas inquilino o propietario estaremos disponibles para ayudarlo, no dude en
+contactarnos.
+</target>
+        <note>es</note>
+      </trans-unit>
+    <trans-unit id="200"><source>Search_Filter Tipo Propiedad: apartment</source><target> </target><note>es</note></trans-unit><trans-unit id="201"><source>Search_Filter Tipo Propiedad: house</source><target> </target><note>pt</note></trans-unit><trans-unit id="202"><source>Search_Filter Tipo Propiedad: bedNbreakfast</source><target> </target><note>pt</note></trans-unit><trans-unit id="203"><source>Search_Filter Tipo Propiedad: cabin</source><target> </target><note>pt</note></trans-unit><trans-unit id="204"><source>Search_Filter Tipo Propiedad: villa</source><target> </target><note>pt</note></trans-unit><trans-unit id="205"><source>Search_Filter Tipo Propiedad: castle</source><target> </target><note>pt</note></trans-unit><trans-unit id="206"><source>Search_Filter Tipo Propiedad: dorm</source><target> </target><note>pt</note></trans-unit><trans-unit id="207"><source>Search_Filter Tipo Propiedad: treehouse</source><target> </target><note>pt</note></trans-unit><trans-unit id="208"><source>Search_Filter Tipo Propiedad: boat</source><target> </target><note>pt</note></trans-unit><trans-unit id="209"><source>Search_Filter Tipo Propiedad: automobile</source><target> </target><note>pt</note></trans-unit><trans-unit id="210"><source>Search_Filter Tipo Propiedad: igloo</source><target> </target><note>pt</note></trans-unit><trans-unit id="211"><source>Search_Filter Tipo de Propiedad</source><target> </target><note>pt</note></trans-unit><trans-unit id="212"><source>Search_Filter OrderBy: price</source><target> </target><note>pt</note></trans-unit><trans-unit id="213"><source>Search_Filter OrderBy: rooms</source><target> </target><note>pt</note></trans-unit><trans-unit id="214"><source>Search_Filter OrderBy: mts</source><target> </target><note>pt</note></trans-unit><trans-unit id="215"><source>Search_search</source><target> </target><note>pt</note></trans-unit><trans-unit id="216"><source>Search_Arrival</source><target> </target><note>pt</note></trans-unit><trans-unit id="217"><source>Search_Departure</source><target> </target><note>pt</note></trans-unit><trans-unit id="218"><source>Search_guests</source><target> </target><note>pt</note></trans-unit></body>
+  </file>
+</xliff>

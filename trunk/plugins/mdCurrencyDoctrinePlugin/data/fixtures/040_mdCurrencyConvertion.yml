@@ -1,0 +1,9 @@
+mdCurrencyConvertion:
+  mdCurrencyConvertion_1:
+    mdCurrencyFrom: mdCurrency_dolares
+    mdCurrencyTo: mdCurrency_euros
+    ratio: 0.768167153
+  mdCurrencyConvertion_2:
+    mdCurrencyFrom: mdCurrency_euros
+    mdCurrencyTo: mdCurrency_dolares
+    ratio: 1.3018

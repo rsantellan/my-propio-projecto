@@ -1,0 +1,19 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/10-Routing
+
+genericSaleAdmin:
+  url: /genericSaleAdmin
+  param: { module: saleAdmin, action: index }
+
+genericWesternFinish:
+  url: /western/:id
+  param: {module: saleSecure, action: finishWestern }
+
+genericAbitabFinish:
+  url: /abitab/:id
+  param: {module: saleSecure, action: finishAbitab }
+
+genericGiroFinish:
+  url: /giro/:id
+  param: {module: saleSecure, action: finishGiro }    
+  

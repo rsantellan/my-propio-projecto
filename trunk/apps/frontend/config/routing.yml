@@ -1,0 +1,109 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/10-Routing
+
+
+paypalCancelUrl:
+  url:   /paypal/cancel
+  param: { module: reservas, action: salePaypalCancel }
+
+paypalReturnUrl:
+  url:   /paypal/return
+  param: { module: reservas, action: salePaypalOK }
+
+paypalSaleActivation:
+  url:   /paypal/activation
+  param: { module: reservas, action: salePaypalActivation }  
+
+
+submit_type:
+  url: /submit/:type.html
+  param: { module: apartamentos, action: submit }
+
+submit:
+  url: /submit/
+  param: { module: apartamentos, action: submit }
+
+
+apartamento_edit:
+  url: /property/edit/:id/:slug.html
+  class:   sfDoctrineRoute
+  options: { model: mdApartamento, type: object }
+  param: { module: apartamentos, action: edit }
+  requirements:
+    sf_method: [get,post]
+
+
+fullService:
+  url: /fullService/:id/:slug.html
+  class:   sfDoctrineRoute
+  options: { model: mdApartamento, type: object }
+  param: { module: apartamentos, action: fullService }
+  requirements:
+    sf_method: [get,post]
+
+profile:
+  url: /profile/:id/:slug.html
+  class:   sfDoctrineRoute
+  options: { model: mdUser, type: object }
+  param: { module: perfil, action: index }
+  requirements:
+    sf_method: [get,post]
+
+
+apartamento:
+  url: /property/:id/:slug.html
+  class:   sfDoctrineRoute
+  options: { model: mdApartamento, type: object }
+  param: { module: apartamentos, action: detalle }
+  requirements:
+    sf_method: [get,post]
+
+buscador:
+  url: /apartments.html
+  param: { module: apartamentos, action: index }
+
+funcionamiento:
+  url: /how_it_works.html
+  param: { module: default, action: funcionamiento }
+
+terminos:
+  url: /terms_and_conditions.html
+  param: { module: default, action: terminos }
+
+
+about:
+  url: /aboutUs.html
+  param: { module: default, action: about }
+
+locacion:
+  url: /turist/:id/:slug.html
+  class:   sfDoctrineRoute
+  options: { model: mdLocacion, type: object }
+  param: { module: locaciones, action: detalle }
+  requirements:
+    sf_method: [get,post]
+
+
+locaciones:
+  url: /turist_info.html
+  param: { module: locaciones, action: index }
+  
+contacto:
+  url: /contactus.html
+  param: { module: mdContact, action: index }
+
+  
+
+# default rules
+homepage:
+  url:   /
+  param: { module: default, action: index }
+
+# generic rules
+# please, remove them by adding more specific rules
+default_index:
+  url:   /:module
+  param: { action: index }
+
+default:
+  url:   /:module/:action/*

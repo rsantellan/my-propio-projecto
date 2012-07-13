@@ -1,0 +1,297 @@
+mdApartamento:
+  tableName: md_apartamento
+  actAs:
+    Timestampable: ~
+    mdMediaBehavior: ~
+    I18n:
+      fields: [titulo,copete, descripcion]
+  columns:
+    id:
+      type: integer(4)
+      primary: true
+      autoincrement: true
+    md_locacion_id:
+      type: integer(4)
+      notnull: true
+    activo:
+      type: boolean
+      default: 0
+    tipo:
+      type: enum
+      values: [comission, fullservice]
+      notnull: true
+    md_user_id:
+      type: integer(4)
+      notnull: false
+    titulo:
+      type: string(200)
+      notnull: true
+    copete:
+      type: string(300)
+      notnull: false
+    descripcion:
+      type: string(5000)
+      notnull: true
+    md_currency_id:
+      type: integer(4)
+      notnull: true
+      default: 1
+    precio_alta:
+      type: float
+      notnull: true
+    precio_baja:
+      type: float
+      notnull: true
+    cantidad_personas:
+      type: integer(4)
+      notnull: true
+      default: 2
+  relations:
+    mdLocacion:
+      class: mdLocacion
+      local: md_locacion_id
+      foreign: id
+      type: one
+      onDelete: CASCADE
+    mdUser:
+      local: md_user_id
+      foreign: id
+      type: one
+      onDelete: CASCADE
+    mdCurrency:
+      local: md_currency_id
+      foreign: id
+      type: one
+      onDelete: CASCADE
+    mdComodidad:
+      class: mdComodidad
+      refClass: mdApartamento_mdComodidad
+      local: md_apartamento_id
+      foreign: md_comodidad_id
+
+
+mdOcupacion:
+  tableName: md_ocupacion
+  columns:
+    id:
+      type: integer(4)
+      primary: true
+      autoincrement: true
+    md_apartamento_id:
+      type: integer(4)
+      notnull: true
+    fecha:
+      type: timestamp
+      notnull: true
+  relations:
+    mdApartamento:
+      local: md_apartamento_id
+      foreign: id
+      type: one
+      onDelete: CASCADE
+
+mdLocacion:
+  actAs:
+    mdMediaBehavior: ~
+    I18n:
+      fields: [nombre,descripcion]
+  tableName: md_locacion
+  columns:
+    id:
+      type: integer(4)
+      primary: true
+      autoincrement: true
+    country:
+      type: string(2)
+      notnull: true
+    nombre:
+      type: string(100)
+      notnull: true
+    descripcion:
+      type: string(5000)
+      notnull: true
+
+mdLocacionTemporada:
+  tableName: md_locacion_temporada
+  columns:
+    id:
+      type: integer(4)
+      primary: true
+      autoincrement: true
+    md_locacion_id:
+      type: integer(4)
+      notnull: true
+    dia_desde:
+      type: integer(4)
+      notnull: true
+    mes_desde:
+      type: integer(4)
+      notnull: true
+    dia_hasta:
+      type: integer(4)
+      notnull: true
+    mes_hasta:
+      type: integer(4)
+      notnull: true
+  relations:
+    mdLocacion:
+      class: mdLocacion
+      local: md_locacion_id
+      foreign: id
+      type: one
+      onDelete: CASCADE
+
+mdComodidad:
+  actAs:
+    I18n:
+      fields: [nombre]
+  tableName: md_comodidad
+  columns:
+    id:
+      type: integer(4)
+      primary: true
+      autoincrement: true
+    imagen:
+      type: string(100)
+      notnull: true
+    nombre:
+      type: string(100)
+      notnull: true
+  relations:
+    mdApartamento:
+      class: mdApartamento
+      refClass: mdApartamento_mdComodidad
+      local: md_comodidad_id
+      foreign: md_apartamento_id
+
+mdDetalle:
+  tableName: md_detalle
+  columns:
+    id:
+      type: integer(4)
+      primary: true
+      autoincrement: true
+    md_apartamento_id:
+      type: integer(4)
+      primary: true
+    tipo_propiedad:
+      type: enum
+      values: [<?php echo sfConfig::get('sf_tipo_propiedad');?>]
+      notnull: false
+    cuartos:
+      type: integer(4)
+      notnull: false
+    banios:
+      type: integer(4)
+      notnull: false
+    costo_extra:
+      type: float
+      notnull: false
+      default: 0
+    minimo_dias:
+      type: integer(4)
+      notnull: false
+      default: 1
+    barrio:
+      type: string(100)
+      notnull: false
+    metraje:
+      type: string(100)
+      notnull: false
+  relations:
+    mdApartamento:
+      local: md_apartamento_id
+      foreign: id
+      type: one
+      onDelete: CASCADE
+
+
+mdApartamentoSearch:
+  tableName: md_apartamento_search
+  actAs:
+  columns:
+    id:
+      type: integer(4)
+      primary: true
+    md_locacion_id:
+      type: integer(4)
+      notnull: true
+    precio_alta:
+      type: float
+      notnull: true
+    precio_baja:
+      type: float
+      notnull: true
+    cantidad_personas:
+      type: integer(4)
+      notnull: true
+    tipo_propiedad:
+      type: enum
+      values: [<?php echo sfConfig::get('sf_tipo_propiedad');?>]
+      notnull: false
+    metraje:
+      type: integer(4)
+      notnull: false
+    cuartos:
+      type: integer(4)
+      notnull: false
+
+  relations:
+    mdApartamento:
+      class: mdApartamento
+      local: id
+      foreign: id
+      type: one
+      onDelete: CASCADE
+
+mdReserva:
+  tableName: md_reserva
+  actAs:
+    Timestampable: ~
+  columns:
+    id:
+      type: integer(4)
+      primary: true
+      autoincrement: true
+    md_user_id:
+      type: integer(4)
+      notnull: true
+    md_apartamento_id:
+      type: integer(4)
+      notnull: true
+    fecha_desde:
+      type: date
+      notnull: true
+    fecha_hasta:
+      type: date
+      notnull: true
+    cantidad_personas:
+      type: integer(4)
+      notnull: true
+    md_currency_id:
+      type: integer(4)
+      notnull: true
+    total:
+      type: double
+      notnull: true
+    status:
+      type: enum
+      values: [pending,confirm,efective,cancel]
+      default: pending
+      notnull: true
+  relations:
+    mdUser:
+      local: md_user_id
+      foreign: id
+      type: one
+      onDelete: CASCADE
+    mdApartamento:
+      local: md_apartamento_id
+      foreign: id
+      type: one
+      onDelete: CASCADE
+    mdCurrency:
+      local: md_currency_id
+      foreign: id
+      type: one
+      onDelete: CASCADE
