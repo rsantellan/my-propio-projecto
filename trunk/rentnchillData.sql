@@ -19,7 +19,6 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 --
 -- Database: `rentnchi_masto`
 --
-CREATE DATABASE `rentnchi_masto` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
 USE `rentnchi_masto`;
 
 --

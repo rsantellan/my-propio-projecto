@@ -21,6 +21,7 @@ abstract class BasemdLocacionTemporadaForm extends BaseFormDoctrine
       'mes_desde'      => new sfWidgetFormInputText(),
       'dia_hasta'      => new sfWidgetFormInputText(),
       'mes_hasta'      => new sfWidgetFormInputText(),
+      'tipo'           => new sfWidgetFormChoice(array('choices' => array('A' => 'A', 'M' => 'M'))),
     ));
 
     $this->setValidators(array(
@@ -30,6 +31,7 @@ abstract class BasemdLocacionTemporadaForm extends BaseFormDoctrine
       'mes_desde'      => new sfValidatorInteger(),
       'dia_hasta'      => new sfValidatorInteger(),
       'mes_hasta'      => new sfValidatorInteger(),
+      'tipo'           => new sfValidatorChoice(array('choices' => array(0 => 'A', 1 => 'M'), 'required' => false)),
     ));
 
     $this->widgetSchema->setNameFormat('md_locacion_temporada[%s]');

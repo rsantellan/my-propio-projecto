@@ -89,8 +89,12 @@ class mdLocacion extends BasemdLocacion
 		$q = $this->getTemporadaQuery($date);
 		$results = $q->execute();
 		if($results)
-			return $results->getFirst();
-
+        {
+          $aux = $results->getFirst();
+          var_dump($aux->toArray());
+          die;
+          return $results->getFirst();
+        }
 		return false;
 	}
 	

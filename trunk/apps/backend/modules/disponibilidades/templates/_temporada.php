@@ -31,6 +31,7 @@
       <input type="hidden" value="<?php echo $md_locacion->getId(); ?>" name="md_locacion_temporada[md_locacion_id]" />
       Desde: <?php echo $form['dia_desde']->render(); ?> <?php echo $form['mes_desde']->render(); ?>
       Hasta: <?php echo $form['dia_hasta']->render(); ?> <?php echo $form['mes_hasta']->render(); ?>
+      <?php //echo $form;?>
       <input type="submit" name="save" value="guardar" />
     </form>
   </div>
