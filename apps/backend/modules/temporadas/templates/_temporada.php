@@ -31,8 +31,13 @@
       <input type="hidden" value="<?php echo $md_locacion->getId(); ?>" name="md_locacion_temporada[md_locacion_id]" />
       Desde: <?php echo $form['dia_desde']->render(); ?> <?php echo $form['mes_desde']->render(); ?>
       Hasta: <?php echo $form['dia_hasta']->render(); ?> <?php echo $form['mes_hasta']->render(); ?>
+      Tipo: <?php echo $form['tipo']->render();?>
+      <?php //echo $form;?>
       <input type="submit" name="save" value="guardar" />
     </form>
+    <div id="disponiblidad-create-form-errores" style="display: none; color: red;">
+      
+    </div>
   </div>
 </div>
 
@@ -46,10 +51,18 @@
         data: $(form).serialize(),
         success: function(json){
           mdHideLoading();
-          if(json.response == "OK"){
+          if(json.response == "OK")
+          {
             $('#disponiblidad-create-form > select').val('');
             $('#disp-list').html(json.options.table);
             $('#disponiblidad-create').hide();
+            $('#disponiblidad-create').html("");
+          }
+          else
+          {
+            console.log(json.options);
+            $("#disponiblidad-create-form-errores").html(json.options);
+            $("#disponiblidad-create-form-errores").show();
           }
         },
         complete: function(){},

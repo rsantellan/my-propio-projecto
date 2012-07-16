@@ -46,7 +46,13 @@ class temporadasActions extends autoTemporadasActions
         
       }
     }
-    return $this->renderText(mdBasicFunction::basic_json_response(false, $form->getFormattedErrors()));
+    $errores = $form->getFormattedErrors();
+    $html = "";
+    foreach($errores as $error)
+    {
+      $html .= $error;
+    }
+    return $this->renderText(mdBasicFunction::basic_json_response(false, $html));
   }
   
   public function executeDeleteAjax(sfWebRequest $request)

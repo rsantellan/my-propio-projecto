@@ -22,5 +22,7 @@ class mdLocacionTemporadaForm extends BasemdLocacionTemporadaForm
 	$this->widgetSchema['mes_desde'] = new sfWidgetFormChoice(array('choices'=>$months));
 	$this->widgetSchema['mes_hasta'] = new sfWidgetFormChoice(array('choices'=>$months));
 	
+    $this->validatorSchema['dia_desde'] = new sfValidatorInteger(array('max' => 31, 'min' => 0));
+    $this->validatorSchema['dia_hasta'] = new sfValidatorInteger(array('max' => 31, 'min' => 0));
   }
 }

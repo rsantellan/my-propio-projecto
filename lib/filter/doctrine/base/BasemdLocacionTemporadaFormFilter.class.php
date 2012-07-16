@@ -18,6 +18,7 @@ abstract class BasemdLocacionTemporadaFormFilter extends BaseFormFilterDoctrine
       'mes_desde'      => new sfWidgetFormFilterInput(array('with_empty' => false)),
       'dia_hasta'      => new sfWidgetFormFilterInput(array('with_empty' => false)),
       'mes_hasta'      => new sfWidgetFormFilterInput(array('with_empty' => false)),
+      'tipo'           => new sfWidgetFormChoice(array('choices' => array('' => '', 'A' => 'A', 'M' => 'M'))),
     ));
 
     $this->setValidators(array(
@@ -26,6 +27,7 @@ abstract class BasemdLocacionTemporadaFormFilter extends BaseFormFilterDoctrine
       'mes_desde'      => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
       'dia_hasta'      => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
       'mes_hasta'      => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
+      'tipo'           => new sfValidatorChoice(array('required' => false, 'choices' => array('A' => 'A', 'M' => 'M'))),
     ));
 
     $this->widgetSchema->setNameFormat('md_locacion_temporada_filters[%s]');
@@ -51,6 +53,7 @@ abstract class BasemdLocacionTemporadaFormFilter extends BaseFormFilterDoctrine
       'mes_desde'      => 'Number',
       'dia_hasta'      => 'Number',
       'mes_hasta'      => 'Number',
+      'tipo'           => 'Enum',
     );
   }
 }

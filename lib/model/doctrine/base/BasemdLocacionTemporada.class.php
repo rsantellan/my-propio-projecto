@@ -11,6 +11,7 @@
  * @property integer $mes_desde
  * @property integer $dia_hasta
  * @property integer $mes_hasta
+ * @property enum $tipo
  * @property mdLocacion $mdLocacion
  * 
  * @method integer             getId()             Returns the current record's "id" value
@@ -19,6 +20,7 @@
  * @method integer             getMesDesde()       Returns the current record's "mes_desde" value
  * @method integer             getDiaHasta()       Returns the current record's "dia_hasta" value
  * @method integer             getMesHasta()       Returns the current record's "mes_hasta" value
+ * @method enum                getTipo()           Returns the current record's "tipo" value
  * @method mdLocacion          getMdLocacion()     Returns the current record's "mdLocacion" value
  * @method mdLocacionTemporada setId()             Sets the current record's "id" value
  * @method mdLocacionTemporada setMdLocacionId()   Sets the current record's "md_locacion_id" value
@@ -26,6 +28,7 @@
  * @method mdLocacionTemporada setMesDesde()       Sets the current record's "mes_desde" value
  * @method mdLocacionTemporada setDiaHasta()       Sets the current record's "dia_hasta" value
  * @method mdLocacionTemporada setMesHasta()       Sets the current record's "mes_hasta" value
+ * @method mdLocacionTemporada setTipo()           Sets the current record's "tipo" value
  * @method mdLocacionTemporada setMdLocacion()     Sets the current record's "mdLocacion" value
  * 
  * @package    rentNchill
@@ -68,6 +71,16 @@ abstract class BasemdLocacionTemporada extends sfDoctrineRecord
              'type' => 'integer',
              'notnull' => true,
              'length' => 4,
+             ));
+        $this->hasColumn('tipo', 'enum', null, array(
+             'type' => 'enum',
+             'values' => 
+             array(
+              0 => 'A',
+              1 => 'M',
+             ),
+             'default' => 'A',
+             'notnull' => true,
              ));
     }
 

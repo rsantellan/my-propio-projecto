@@ -31,6 +31,7 @@
       <input type="hidden" value="<?php echo $md_apartamento->getId(); ?>" name="md_disponibilidad[md_apartamento_id]" />
       Desde: <?php echo $form['fecha_desde']->render(); ?>
       Hasta: <?php echo $form['fecha_hasta']->render(); ?>
+      <?php //echo $form;?>
       <input type="submit" name="save" value="guardar" />
     </form>
   </div>

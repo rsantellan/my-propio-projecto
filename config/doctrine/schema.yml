@@ -39,6 +39,9 @@ mdApartamento:
     precio_alta:
       type: float
       notnull: true
+    precio_media:
+      type: float
+      notnull: true  
     precio_baja:
       type: float
       notnull: true
@@ -132,6 +135,11 @@ mdLocacionTemporada:
       notnull: true
     mes_hasta:
       type: integer(4)
+      notnull: true
+    tipo:
+      type: enum
+      values: ['A', 'M']
+      default: 'A'
       notnull: true
   relations:
     mdLocacion:

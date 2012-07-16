@@ -15,6 +15,7 @@
  * @property string $descripcion
  * @property integer $md_currency_id
  * @property float $precio_alta
+ * @property float $precio_media
  * @property float $precio_baja
  * @property integer $cantidad_personas
  * @property mdLocacion $mdLocacion
@@ -36,6 +37,7 @@
  * @method string              getDescripcion()         Returns the current record's "descripcion" value
  * @method integer             getMdCurrencyId()        Returns the current record's "md_currency_id" value
  * @method float               getPrecioAlta()          Returns the current record's "precio_alta" value
+ * @method float               getPrecioMedia()         Returns the current record's "precio_media" value
  * @method float               getPrecioBaja()          Returns the current record's "precio_baja" value
  * @method integer             getCantidadPersonas()    Returns the current record's "cantidad_personas" value
  * @method mdLocacion          getMdLocacion()          Returns the current record's "mdLocacion" value
@@ -56,6 +58,7 @@
  * @method mdApartamento       setDescripcion()         Sets the current record's "descripcion" value
  * @method mdApartamento       setMdCurrencyId()        Sets the current record's "md_currency_id" value
  * @method mdApartamento       setPrecioAlta()          Sets the current record's "precio_alta" value
+ * @method mdApartamento       setPrecioMedia()         Sets the current record's "precio_media" value
  * @method mdApartamento       setPrecioBaja()          Sets the current record's "precio_baja" value
  * @method mdApartamento       setCantidadPersonas()    Sets the current record's "cantidad_personas" value
  * @method mdApartamento       setMdLocacion()          Sets the current record's "mdLocacion" value
@@ -128,6 +131,10 @@ abstract class BasemdApartamento extends sfDoctrineRecord
              'length' => 4,
              ));
         $this->hasColumn('precio_alta', 'float', null, array(
+             'type' => 'float',
+             'notnull' => true,
+             ));
+        $this->hasColumn('precio_media', 'float', null, array(
              'type' => 'float',
              'notnull' => true,
              ));
