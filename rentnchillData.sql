@@ -590,11 +590,7 @@ INSERT INTO `md_locacion` (`id`, `country`) VALUES
 -- Dumping data for table `md_locacion_temporada`
 --
 
-INSERT INTO `md_locacion_temporada` (`id`, `md_locacion_id`, `dia_desde`, `mes_desde`, `dia_hasta`, `mes_hasta`) VALUES
-(13, 1, 25, 12, 28, 2),
-(14, 1, 1, 4, 8, 4),
-(15, 2, 25, 12, 28, 2),
-(16, 2, 1, 4, 8, 4);
+-- INSERT INTO `md_locacion_temporada` (`id`, `md_locacion_id`, `dia_desde`, `mes_desde`, `dia_hasta`, `mes_hasta`) VALUES (13, 1, 25, 12, 28, 2),(14, 1, 1, 4, 8, 4),(15, 2, 25, 12, 28, 2),(16, 2, 1, 4, 8, 4);
 
 --
 -- Dumping data for table `md_locacion_translation`

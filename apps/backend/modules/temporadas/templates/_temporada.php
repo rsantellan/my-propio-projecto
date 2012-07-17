@@ -29,8 +29,8 @@
     <form id="disponiblidad-create-form" name="md_locacion_temporada" method="POST" action="<?php echo url_for('@temporada-new'); ?>">
       <?php echo $form->renderHiddenFields(); ?>
       <input type="hidden" value="<?php echo $md_locacion->getId(); ?>" name="md_locacion_temporada[md_locacion_id]" />
-      Desde: <?php echo $form['dia_desde']->render(); ?> <?php echo $form['mes_desde']->render(); ?>
-      Hasta: <?php echo $form['dia_hasta']->render(); ?> <?php echo $form['mes_hasta']->render(); ?>
+      Desde: <?php echo $form['date_from']->render(); ?> 
+      Hasta: <?php echo $form['date_to']->render(); ?>
       Tipo: <?php echo $form['tipo']->render();?>
       <?php //echo $form;?>
       <input type="submit" name="save" value="guardar" />

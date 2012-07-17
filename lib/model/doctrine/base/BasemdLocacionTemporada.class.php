@@ -7,27 +7,21 @@
  * 
  * @property integer $id
  * @property integer $md_locacion_id
- * @property integer $dia_desde
- * @property integer $mes_desde
- * @property integer $dia_hasta
- * @property integer $mes_hasta
+ * @property date $date_from
+ * @property date $date_to
  * @property enum $tipo
  * @property mdLocacion $mdLocacion
  * 
  * @method integer             getId()             Returns the current record's "id" value
  * @method integer             getMdLocacionId()   Returns the current record's "md_locacion_id" value
- * @method integer             getDiaDesde()       Returns the current record's "dia_desde" value
- * @method integer             getMesDesde()       Returns the current record's "mes_desde" value
- * @method integer             getDiaHasta()       Returns the current record's "dia_hasta" value
- * @method integer             getMesHasta()       Returns the current record's "mes_hasta" value
+ * @method date                getDateFrom()       Returns the current record's "date_from" value
+ * @method date                getDateTo()         Returns the current record's "date_to" value
  * @method enum                getTipo()           Returns the current record's "tipo" value
  * @method mdLocacion          getMdLocacion()     Returns the current record's "mdLocacion" value
  * @method mdLocacionTemporada setId()             Sets the current record's "id" value
  * @method mdLocacionTemporada setMdLocacionId()   Sets the current record's "md_locacion_id" value
- * @method mdLocacionTemporada setDiaDesde()       Sets the current record's "dia_desde" value
- * @method mdLocacionTemporada setMesDesde()       Sets the current record's "mes_desde" value
- * @method mdLocacionTemporada setDiaHasta()       Sets the current record's "dia_hasta" value
- * @method mdLocacionTemporada setMesHasta()       Sets the current record's "mes_hasta" value
+ * @method mdLocacionTemporada setDateFrom()       Sets the current record's "date_from" value
+ * @method mdLocacionTemporada setDateTo()         Sets the current record's "date_to" value
  * @method mdLocacionTemporada setTipo()           Sets the current record's "tipo" value
  * @method mdLocacionTemporada setMdLocacion()     Sets the current record's "mdLocacion" value
  * 
@@ -52,25 +46,13 @@ abstract class BasemdLocacionTemporada extends sfDoctrineRecord
              'notnull' => true,
              'length' => 4,
              ));
-        $this->hasColumn('dia_desde', 'integer', 4, array(
-             'type' => 'integer',
+        $this->hasColumn('date_from', 'date', null, array(
+             'type' => 'date',
              'notnull' => true,
-             'length' => 4,
              ));
-        $this->hasColumn('mes_desde', 'integer', 4, array(
-             'type' => 'integer',
+        $this->hasColumn('date_to', 'date', null, array(
+             'type' => 'date',
              'notnull' => true,
-             'length' => 4,
-             ));
-        $this->hasColumn('dia_hasta', 'integer', 4, array(
-             'type' => 'integer',
-             'notnull' => true,
-             'length' => 4,
-             ));
-        $this->hasColumn('mes_hasta', 'integer', 4, array(
-             'type' => 'integer',
-             'notnull' => true,
-             'length' => 4,
              ));
         $this->hasColumn('tipo', 'enum', null, array(
              'type' => 'enum',

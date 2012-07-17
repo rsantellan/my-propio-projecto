@@ -124,18 +124,12 @@ mdLocacionTemporada:
     md_locacion_id:
       type: integer(4)
       notnull: true
-    dia_desde:
-      type: integer(4)
+    date_from:
+      type: date
       notnull: true
-    mes_desde:
-      type: integer(4)
-      notnull: true
-    dia_hasta:
-      type: integer(4)
-      notnull: true
-    mes_hasta:
-      type: integer(4)
-      notnull: true
+    date_to:
+      type: date
+      notnull: true    
     tipo:
       type: enum
       values: ['A', 'M']

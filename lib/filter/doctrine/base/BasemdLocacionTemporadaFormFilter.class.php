@@ -14,19 +14,15 @@ abstract class BasemdLocacionTemporadaFormFilter extends BaseFormFilterDoctrine
   {
     $this->setWidgets(array(
       'md_locacion_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('mdLocacion'), 'add_empty' => true)),
-      'dia_desde'      => new sfWidgetFormFilterInput(array('with_empty' => false)),
-      'mes_desde'      => new sfWidgetFormFilterInput(array('with_empty' => false)),
-      'dia_hasta'      => new sfWidgetFormFilterInput(array('with_empty' => false)),
-      'mes_hasta'      => new sfWidgetFormFilterInput(array('with_empty' => false)),
+      'date_from'      => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate(), 'with_empty' => false)),
+      'date_to'        => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate(), 'with_empty' => false)),
       'tipo'           => new sfWidgetFormChoice(array('choices' => array('' => '', 'A' => 'A', 'M' => 'M'))),
     ));
 
     $this->setValidators(array(
       'md_locacion_id' => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('mdLocacion'), 'column' => 'id')),
-      'dia_desde'      => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
-      'mes_desde'      => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
-      'dia_hasta'      => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
-      'mes_hasta'      => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
+      'date_from'      => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDate(array('required' => false)), 'to_date' => new sfValidatorDateTime(array('required' => false)))),
+      'date_to'        => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDate(array('required' => false)), 'to_date' => new sfValidatorDateTime(array('required' => false)))),
       'tipo'           => new sfValidatorChoice(array('required' => false, 'choices' => array('A' => 'A', 'M' => 'M'))),
     ));
 
@@ -49,10 +45,8 @@ abstract class BasemdLocacionTemporadaFormFilter extends BaseFormFilterDoctrine
     return array(
       'id'             => 'Number',
       'md_locacion_id' => 'ForeignKey',
-      'dia_desde'      => 'Number',
-      'mes_desde'      => 'Number',
-      'dia_hasta'      => 'Number',
-      'mes_hasta'      => 'Number',
+      'date_from'      => 'Date',
+      'date_to'        => 'Date',
       'tipo'           => 'Enum',
     );
   }

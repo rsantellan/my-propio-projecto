@@ -1,7 +1,7 @@
 <?php use_helper("mdAsset");?>
 <form action="<?php echo url_for('@changePassword') ?>" method="post" id="form_change_password_ajax">
-<?php echo $form;?>
-<?php die("corregir");?>
+<?php //echo $form;?>
+<?php //die("corregir");?>
     <ul>
         <li>
             Password actual.

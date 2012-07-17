@@ -49,6 +49,7 @@ if(sfContext::getInstance()->getRouting()->hasRouteName('mdTranslator')):?>
 
            		<li><a href="<?php echo url_for('md_locacion')?>" class="<?php if(has_slot('mdLocacion')){ echo 'current'; } else { echo ''; } ?>">Locaciones</a></li>
            		<li><a href="<?php echo url_for('md_apartamento')?>" class="<?php if(has_slot('mdApartamento')){ echo 'current'; } else { echo ''; } ?>">Apartamentos</a></li>
+                <li><a href="<?php echo url_for('@md_comodidad')?>" class="<?php if(has_slot('mdApartamento')){ echo 'current'; } else { echo ''; } ?>">Comodidades</a></li>
         <?php
         if(sfContext::getInstance()->getRouting()->hasRouteName('mdImageFileGalleryAdmin')):?>
                         <li><a href="<?php echo url_for('@mdImageFileGalleryAdmin')?>" class="<?php if(has_slot('mdImageFileGalleryAdmin')){ echo 'current'; } ?>">Galeria de imagenes</a></li>

@@ -12,12 +12,17 @@ $profile = $mdUser->getMdUserProfile();
 <div class="main-content-up">
     <div class="col-left">
     	<div class="perfil">
+    
         	<h1><?php echo $profile->getName() ?> <?php echo $profile->getLastName() ?></h1>
 <?php if($sf_user->isAuthenticated() and $sf_user->getMdUserId()==$mdUser->getId()): ?>
             <div class="info-profile">
 							<img src="/images/perfil.png" width="17" height="21" />Info
 						</div>
         		<img src="/images/profile.png" height="180" width="180" />
+<?php include_component("mdUserManagementFrontend","changeEmail");?>
+<?php include_component("mdUserManagementFrontend","changePassword");?>
+<?php include_component("mdUserManagementFrontend","changeUserProfile");?>      
+                
             <div class="datos" style="padding-right:50px"><?php echo __('Usuario_Nombre') ?>: <input  /></div>
             <div class="datos" style="padding-right:50px"><?php echo __('Usuario_Telefono') ?>: <input  /></div>
             <div class="datos" style="padding-right:15px"><?php echo __('Usuario_email') ?>: <input  /></div>

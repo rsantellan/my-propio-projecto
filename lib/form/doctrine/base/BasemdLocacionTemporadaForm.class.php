@@ -17,20 +17,16 @@ abstract class BasemdLocacionTemporadaForm extends BaseFormDoctrine
     $this->setWidgets(array(
       'id'             => new sfWidgetFormInputHidden(),
       'md_locacion_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('mdLocacion'), 'add_empty' => false)),
-      'dia_desde'      => new sfWidgetFormInputText(),
-      'mes_desde'      => new sfWidgetFormInputText(),
-      'dia_hasta'      => new sfWidgetFormInputText(),
-      'mes_hasta'      => new sfWidgetFormInputText(),
+      'date_from'      => new sfWidgetFormDate(),
+      'date_to'        => new sfWidgetFormDate(),
       'tipo'           => new sfWidgetFormChoice(array('choices' => array('A' => 'A', 'M' => 'M'))),
     ));
 
     $this->setValidators(array(
       'id'             => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
       'md_locacion_id' => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('mdLocacion'))),
-      'dia_desde'      => new sfValidatorInteger(),
-      'mes_desde'      => new sfValidatorInteger(),
-      'dia_hasta'      => new sfValidatorInteger(),
-      'mes_hasta'      => new sfValidatorInteger(),
+      'date_from'      => new sfValidatorDate(),
+      'date_to'        => new sfValidatorDate(),
       'tipo'           => new sfValidatorChoice(array('choices' => array(0 => 'A', 1 => 'M'), 'required' => false)),
     ));
 

@@ -67,7 +67,7 @@ class temporadasActions extends autoTemporadasActions
   protected function getMyPager()
   {
     $pager = new sfDoctrinePager( 'mdLocacionTemporada', 1000 );
-    $pager->setQuery(Doctrine::getTable ( 'mdLocacionTemporada' )->createQuery('d')->addWhere('d.md_locacion_id = ?', $this->mdLocacionId)->orderBy('d.mes_desde desc, d.dia_desde desc'));
+    $pager->setQuery(Doctrine::getTable ( 'mdLocacionTemporada' )->createQuery('d')->addWhere('d.md_locacion_id = ?', $this->mdLocacionId)->orderBy('d.date_from desc'));
     $pager->setPage(1);
     $pager->init();
 
