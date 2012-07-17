@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN" "http://www.oasis-open.org/committees/xliff/documents/xliff.dtd">
 <xliff version="1.0">
-  <file source-language="EN" target-language="es" datatype="plaintext" original="messages" date="2012-06-05T16:08:41Z" product-name="messages">
+  <file source-language="EN" target-language="es" datatype="plaintext" original="messages" date="2012-07-16T13:49:28Z" product-name="messages">
     <header/>
     <body>
       <trans-unit id="1">
@@ -9,23 +9,25 @@
         <target>Habitaciones</target>
         <note>es</note>
       </trans-unit>
-      <trans-unit id="2">
+<trans-unit id="2">
         <source>Mail_Usuario Final Titulo</source>
-        <target>You have booked your apartment in Rent n´Chill</target>
-        <note>es</note>
+        <target>Has reservado tu apartamento en Rent n' Chill</target>
+        <note>en</note>
       </trans-unit>
-      <trans-unit id="3">
+     <trans-unit id="3">
         <source>Mail_Usuario Final Cuerpo [url_reserva] [url_apartamento]</source>
-        <target>Your booking was made with success. You can see the apartment details  &lt;a href="[url_apartamento]"&gt;here&lt;/a&gt;.
+        <target>Vestibulum commodo dapibus vulputate. Donec adipiscing, magna eu iaculis iaculis, dui mauris viverra magna, id condimentum sapien elit id ligula. Vivamus sit amet felis mi, vitae lacinia arcu. Praesent a enim ligula, a semper augue. Etiam nec felis nunc. Vivamus at fringilla orci. Sed tincidunt nunc venenatis lacus aliquet pulvinar elementum odio pellentesque. Proin iaculis, magna in dictum volutpat, lorem augue vestibulum augue, nec hendrerit nisi velit a orci. Mauris interdum elit et nisi eleifend suscipit. Vestibulum et fringilla magna. Aliquam molestie hendrerit libero. In hac habitasse platea dictumst. Sed vel diam eu felis porttitor tempor sed quis felis. Integer justo quam, iaculis ac ullamcorper et, faucibus at orci. Proin a est sit amet sapien blandit luctus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis &lt;a href="[url_apartamento]"&gt;apartamento&lt;/a&gt;.
 
-Nullam sed sodales est. Phasellus sed urna vel neque sodales cursus quis et tortor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus consequat tristique aliquet. Cras nec felis tempus nibh porta lobortis nec a purus. Praesent tincidunt, dui eu commodo euismod, nunc lacus porta urna, vel tempor est orci non tortor. Pellentesque in libero sed lorem suscipit vehicula eget vitae purus. Fusce ornare aliquam &lt;a href="[url_reserva]"&gt;reserva&lt;/a&gt;.</target>
-        <note>es</note>
-      </trans-unit>
-      <trans-unit id="4">
+          Nullam sed sodales est. Phasellus sed urna vel neque sodales cursus quis et tortor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus consequat tristique aliquet. Cras nec felis tempus nibh porta lobortis nec a purus. Praesent tincidunt, dui eu commodo euismod, nunc lacus porta urna, vel tempor est orci non tortor. Pellentesque in libero sed lorem suscipit vehicula eget vitae purus. Fusce ornare aliquam &lt;a href="[url_reserva]"&gt;reserva&lt;/a&gt;.
+        </target>
+        <note>en</note>
+      </trans-unit> 
+<trans-unit id="4">
         <source>Mail_Usuario Final Asunto</source>
-        <target>Booking of apartment in[location] : [from] to [untill] </target>
-        <note>es</note>
+        <target>Reserva de apartamento en [locacion] : [desde] al [hasta] </target>
+        <note>en</note>
       </trans-unit>
+
       <trans-unit id="5">
         <source>Mail_Nombre del mail al usuario con confirmacion de pago</source>
         <target>Rent n' Chill</target>
@@ -33,66 +35,70 @@ Nullam sed sodales est. Phasellus sed urna vel neque sodales cursus quis et tort
       </trans-unit>
       <trans-unit id="6">
         <source>Mail_Admin Final Titulo</source>
-        <target>New bookin type [type]</target>
-        <note>es</note>
+        <target>Nueva reserva tipo [tipo]</target>
+        <note>en</note>
       </trans-unit>
+
       <trans-unit id="7">
         <source>Mail_Admin Final Cuerpo</source>
         <target>Vestibulum commodo dapibus vulputate. Donec adipiscing, magna eu iaculis iaculis, dui mauris viverra magna, id condimentum sapien elit id ligula. Vivamus sit amet felis mi, vitae lacinia arcu. Praesent a enim ligula, a semper augue. Etiam nec felis nunc. Vivamus at fringilla orci. Sed tincidunt nunc venenatis lacus aliquet pulvinar elementum odio pellentesque. Proin iaculis, magna in dictum volutpat, lorem augue vestibulum augue, nec hendrerit nisi velit a orci. Mauris interdum elit et nisi eleifend suscipit. Vestibulum et fringilla magna. Aliquam molestie hendrerit libero. In hac habitasse platea dictumst. Sed vel diam eu felis porttitor tempor sed quis felis. Integer justo quam, iaculis ac ullamcorper et, faucibus at orci. Proin a est sit amet sapien blandit luctus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac tu.
-</target>
+        </target>
         <note>es</note>
       </trans-unit>
       <trans-unit id="8">
         <source>Mail_Admin Final Locacion</source>
-        <target>City</target>
-        <note>es</note>
+        <target>Ciudad</target>
+        <note>en</note>
       </trans-unit>
       <trans-unit id="9">
         <source>Mail_Admin Final Apartamento</source>
-        <target>Apartment</target>
-        <note>es</note>
+        <target>Apartamento</target>
+        <note>en</note>
       </trans-unit>
       <trans-unit id="10">
         <source>Mail_Admin Final Usuario</source>
-        <target>User</target>
-        <note>es</note>
+        <target>Usuario</target>
+        <note>en</note>
       </trans-unit>
+      
       <trans-unit id="11">
         <source>Mail_Admin Final Email</source>
         <target>Email</target>
         <note>es</note>
       </trans-unit>
-      <trans-unit id="12">
+            <trans-unit id="12">
         <source>Mail_Admin Final Fecha</source>
-        <target>Dates</target>
-        <note>es</note>
+        <target>Fechas</target>
+        <note>en</note>
       </trans-unit>
-      <trans-unit id="13">
+       <trans-unit id="13">
         <source>Mail_Admin Final Asunto</source>
-        <target>Booking of apartment type [type] in [location] : [from] to [untill] </target>
-        <note>es</note>
+        <target>Reserva de apartamento tipo [tipo] en [locacion] : [desde] al [hasta] </target>
+        <note>en</note>
       </trans-unit>
       <trans-unit id="14">
         <source>Mail_Admin ventas</source>
         <target>Rent n' Chill</target>
         <note>es</note>
       </trans-unit>
-      <trans-unit id="15">
+<trans-unit id="15">
         <source>Mail_Comission Titulo</source>
-        <target>Your apartment has been booked</target>
-        <note>es</note>
+        <target>Se ha alquilado tu apartamento</target>
+        <note>en</note>
       </trans-unit>
+      
       <trans-unit id="16">
         <source>Mail_Comission Cuerpo [url_apartamento]</source>
         <target> Vestibulum commodo dapibus vulputate. Donec adipiscing, magna eu iaculis iaculis, dui mauris viverra magna, id condimentum sapien elit id ligula. Vivamus sit amet felis mi, vitae lacinia arcu. Praesent a enim ligula, a semper augue. Etiam nec felis nunc. Vivamus at fringilla orci. Sed tincidunt nunc venenatis lacus aliquet pulvinar elementum odio pellentesque. Proin iaculis, magna in dictum volutpat, lorem augue vestibulum augue, nec hendrerit nisi velit a orci. Mauris interdum elit et nisi eleifend suscipit. Vestibulum et fringilla magna. Aliquam molestie hendrerit libero. In hac habitasse platea dictumst. Sed vel diam eu felis porttitor tempor sed quis felis. Integer justo quam, iaculis ac ullamcorper et, faucibus at orci. Proin a est sit amet sapien blandit luctus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis &lt;a href="[url_apartamento]"&gt;apartamento&lt;/a&gt;.
-</target>
+        </target>
         <note>es</note>
       </trans-unit>
-      <trans-unit id="17">
+<trans-unit id="17">
         <source>Mail_Comission Asunto</source>
-        <target>Booking of [apartment] : [from] to [untill] </target>
-        <note>es</note>
+        <target> Reserva de [apartamento] : [desde] al [hasta] </target>
+        <note>en</note>
       </trans-unit>
+      
       <trans-unit id="18">
         <source>Global_GET TO KNOW</source>
         <target>Visite</target>
@@ -295,7 +301,7 @@ Nullam sed sodales est. Phasellus sed urna vel neque sodales cursus quis et tort
       </trans-unit>
       <trans-unit id="58">
         <source>Apartamento_Bedrooms</source>
-        <target>Bedrooms</target>
+        <target>Cuartos</target>
         <note>es</note>
       </trans-unit>
       <trans-unit id="59">
@@ -325,7 +331,7 @@ Nullam sed sodales est. Phasellus sed urna vel neque sodales cursus quis et tort
       </trans-unit>
       <trans-unit id="64">
         <source>Apartamento_Amenities</source>
-        <target>Amenities</target>
+        <target>Comodidades</target>
         <note>es</note>
       </trans-unit>
       <trans-unit id="65">
@@ -566,7 +572,8 @@ Nullam sed sodales est. Phasellus sed urna vel neque sodales cursus quis et tort
 &lt;p style="text-align: justify;"&gt;&lt;span style="font-size: small;"&gt;&lt;strong&gt;&lt;span style="font-family: 'courier new', courier;"&gt;Transacciones online,&lt;/span&gt;&lt;/strong&gt;&lt;span style="font-family: 'courier new', courier;"&gt; gestionamos todos los pagos para garantizar que cobres puntualmente.&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p style="text-align: justify;"&gt;&lt;span style="font-size: small;"&gt;&lt;strong&gt;&lt;span style="font-family: 'courier new', courier;"&gt;Atención al cliente, &lt;/span&gt;&lt;/strong&gt;&lt;span style="font-family: 'courier new', courier;"&gt;estamos disponibles siempre que nos necesite, ante cualquier duda.&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p style="text-align: justify;"&gt;&lt;strong&gt;&lt;span style="font-size: small; font-family: 'courier new', courier;"&gt;Google, &lt;/span&gt;&lt;/strong&gt;&lt;span style="font-size: small; font-family: 'courier new', courier;"&gt;trabajamos con google para maximizar la difusión y las visitas a nuestra página de Rent n´Chill.&lt;/span&gt;&lt;/p&gt;
-&lt;p style="text-align: justify;"&gt;&lt;span style="font-size: small;"&gt;&lt;strong&gt;&lt;span style="font-family: 'courier new', courier;"&gt;Redes sociales,&lt;/span&gt;&lt;/strong&gt; &lt;span style="font-family: 'courier new', courier;"&gt;estamos conectados a redes sociales como facebook y twiter.&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;</target>
+&lt;p style="text-align: justify;"&gt;&lt;span style="font-size: small;"&gt;&lt;strong&gt;&lt;span style="font-family: 'courier new', courier;"&gt;Redes sociales,&lt;/span&gt;&lt;/strong&gt; &lt;span style="font-family: 'courier new', courier;"&gt;estamos conectados a redes sociales como facebook y twiter.&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+        </target>
         <note>es</note>
       </trans-unit>
       <trans-unit id="112">
@@ -576,7 +583,8 @@ Nullam sed sodales est. Phasellus sed urna vel neque sodales cursus quis et tort
 &lt;p style="text-align: justify;"&gt;&lt;span style="font-size: small;"&gt;&lt;strong&gt;&lt;span style="font-family: 'courier new', courier;"&gt;Política de cancelación, &lt;/span&gt;&lt;/strong&gt;&lt;span style="font-family: 'courier new', courier;"&gt;defenderemos por ti cualquier problema con nuestra política de cancelación.&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p style="text-align: justify;"&gt;&lt;span style="font-size: small;"&gt;&lt;strong&gt;&lt;span style="font-family: 'courier new', courier;"&gt;Precio flexible, &lt;/span&gt;&lt;/strong&gt;&lt;span style="font-family: 'courier new', courier;"&gt;adapta tus tarifas a la temporada desde tu cuenta.&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p style="text-align: justify;"&gt;&lt;span style="font-size: small;"&gt;&lt;strong&gt;&lt;span style="font-family: 'courier new', courier;"&gt;Anuncio en un click, &lt;/span&gt;&lt;/strong&gt;&lt;span style="font-family: 'courier new', courier;"&gt;pública y tu anuncio estará activo cuando quieras. &lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;p style="text-align: justify;"&gt;&lt;span style="font-size: small;"&gt;&lt;strong&gt;&lt;span style="font-family: 'courier new', courier;"&gt;Traducciones, &lt;/span&gt;&lt;/strong&gt;&lt;span style="font-family: 'courier new', courier;"&gt;traducimos tu anuncio a varios idiomas, como inglés, portugués, español, etc.&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;</target>
+&lt;p style="text-align: justify;"&gt;&lt;span style="font-size: small;"&gt;&lt;strong&gt;&lt;span style="font-family: 'courier new', courier;"&gt;Traducciones, &lt;/span&gt;&lt;/strong&gt;&lt;span style="font-family: 'courier new', courier;"&gt;traducimos tu anuncio a varios idiomas, como inglés, portugués, español, etc.&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+        </target>
         <note>es</note>
       </trans-unit>
       <trans-unit id="113">
@@ -701,7 +709,7 @@ Nullam sed sodales est. Phasellus sed urna vel neque sodales cursus quis et tort
       </trans-unit>
       <trans-unit id="137">
         <source>Mensajes_Error</source>
-        <target/>
+        <target>Error</target>
       </trans-unit>
       <trans-unit id="138">
         <source>Usuario_nombre</source>
@@ -710,7 +718,7 @@ Nullam sed sodales est. Phasellus sed urna vel neque sodales cursus quis et tort
       </trans-unit>
       <trans-unit id="139">
         <source>Usuario_acepto los terminos</source>
-        <target/>
+<target>Haciendo clic en aceptar confirga que acepta</target>
         <note>es</note>
       </trans-unit>
       <trans-unit id="140">
@@ -755,7 +763,7 @@ Nullam sed sodales est. Phasellus sed urna vel neque sodales cursus quis et tort
       </trans-unit>
       <trans-unit id="148">
         <source>Usuario_create free account</source>
-        <target>Create &lt;span style="font-size:36px; color:black; font-family:'BelloScript';"&gt;una&lt;/span&gt; cuenta</target>
+        <target>Crear &lt;span style="font-size:36px; color:black; font-family:'BelloScript';"&gt;una&lt;/span&gt; cuenta</target>
         <note>es</note>
       </trans-unit>
       <trans-unit id="149">
@@ -957,7 +965,7 @@ Nullam sed sodales est. Phasellus sed urna vel neque sodales cursus quis et tort
       <trans-unit id="190">
         <source>Funcionamiento_Buscar modal</source>
         <target>Para hacer su proceso de búsqueda más rápido y eficaz hemos puesto a su disposición una serie de filtros en los cuales podrá seleccionar la disponibilidad de nuestros calendarios para cada propiedad, el día de llegada y salida, el número de personas, así como cualquier otra petición. Nuestro sistema le contabilizará el precio total y le proporcionará el formulario de reserva on-line.
-</target>
+        </target>
         <note>es</note>
       </trans-unit>
       <trans-unit id="191">
@@ -968,9 +976,10 @@ Nullam sed sodales est. Phasellus sed urna vel neque sodales cursus quis et tort
       <trans-unit id="192">
         <source>Funcionamiento_Reserva modal</source>
         <target>Paso 1. Comprobar disponibilidad de la propiedad
-Paso 2. Reservar
-Paso 3. Pagar
-Paso 4. Leer atentamente las condiciones de uso</target>
+          Paso 2. Reservar
+          Paso 3. Pagar
+          Paso 4. Leer atentamente las condiciones de uso
+        </target>
         <note>es</note>
       </trans-unit>
       <trans-unit id="193">
@@ -1091,7 +1100,8 @@ Paso 4. Leer atentamente las condiciones de uso</target>
 &lt;p&gt;&lt;span style="font-family: 'courier new', courier;"&gt;Rent n´Chill se reserva el derecho de actualizar cualquiera de estos términos y condiciones en cualquier momento en caso de que se exija, conforme al negocio de la empresa.&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;span style="font-family: 'courier new', courier;"&gt;Los usuarios son responsables de asegurarse de la vigencia de los términos y condiciones incluidos en esta página. El solo hecho de aceptar utilizar esta web implica la aceptación de cualquiera de los cambios por parte de cualquier tercer parte, y que cualquier tercer parte promete acatar esos cambios. &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;span style="font-family: 'courier new', courier;"&gt;Estas condiciones no afectan los derechos estatuarios del usuario.&lt;/span&gt;&lt;/p&gt;
-&lt;br /&gt;</target>
+&lt;br /&gt;
+        </target>
         <note>es</note>
       </trans-unit>
       <trans-unit id="197">
@@ -1107,22 +1117,22 @@ Paso 4. Leer atentamente las condiciones de uso</target>
       <trans-unit id="199">
         <source>AcercaDe_Texto</source>
         <target>
-Rent n`Chill es un proyecto nuevo y moderno de alquileres de apartamentos temporales online.
-Es un sistema muy practico y fácil tanto como para el inquilino como para el propietario. A
-través de Rent n`Chill podes organizar tus viajes ya sean de negocios, estudios, vacaciones,
-etc. Y también te permite publicar tu propiedad en pocos minutos desde cualquier lugar y
-publicitarla a través de la red a nivel global. Alquilar una propiedad en el destino programado es
-ideal si te gusta cocinar, si necesitas tener un espacio, ya sea para trabajar o recibir invitados,
-en otras palabras para vivir el lugar como un autentico lugareño.
-Ademas del alquiler, podes contratar servicios adicionales de limpieza, gastronomía y turismo,
-alquiler de autos, entre otros.
-No será difícil encontrar una opción perfecta para tu viaje, ya que ofrecemos opciones que se
-ajustan a todos.
-Nuestros equipo controla regularmente todos y cada una de las propiedades con el objetivo de
-asegurar un nivel de satisfacción y confort óptimo.
-Cualquier duda ya seas inquilino o propietario estaremos disponibles para ayudarlo, no dude en
-contactarnos.
-</target>
+          Rent n`Chill es un proyecto nuevo y moderno de alquileres de apartamentos temporales online.
+          Es un sistema muy practico y fácil tanto como para el inquilino como para el propietario. A
+          través de Rent n`Chill podes organizar tus viajes ya sean de negocios, estudios, vacaciones,
+          etc. Y también te permite publicar tu propiedad en pocos minutos desde cualquier lugar y
+          publicitarla a través de la red a nivel global. Alquilar una propiedad en el destino programado es
+          ideal si te gusta cocinar, si necesitas tener un espacio, ya sea para trabajar o recibir invitados,
+          en otras palabras para vivir el lugar como un autentico lugareño.
+          Ademas del alquiler, podes contratar servicios adicionales de limpieza, gastronomía y turismo,
+          alquiler de autos, entre otros.
+          No será difícil encontrar una opción perfecta para tu viaje, ya que ofrecemos opciones que se
+          ajustan a todos.
+          Nuestros equipo controla regularmente todos y cada una de las propiedades con el objetivo de
+          asegurar un nivel de satisfacción y confort óptimo.
+          Cualquier duda ya seas inquilino o propietario estaremos disponibles para ayudarlo, no dude en
+          contactarnos.
+        </target>
         <note>es</note>
       </trans-unit>
       <trans-unit id="200">
@@ -1202,7 +1212,7 @@ contactarnos.
       </trans-unit>
       <trans-unit id="215">
         <source>Search_search</source>
-        <target>search</target>
+        <target>Buscar</target>
         <note>es</note>
       </trans-unit>
       <trans-unit id="216">
@@ -1212,12 +1222,12 @@ contactarnos.
       </trans-unit>
       <trans-unit id="217">
         <source>Search_Departure</source>
-        <target>Departure</target>
+        <target>Partida</target>
         <note>es</note>
       </trans-unit>
       <trans-unit id="218">
         <source>Search_guests</source>
-        <target> guests</target>
+        <target>Huespedes</target>
         <note>es</note>
       </trans-unit>
     </body>

@@ -7,6 +7,7 @@ use_javascript('../fancybox/jquery.fancybox-1.3.4.pack.js');
 
 use_javascript('regiterUser.js');
 use_javascript('jquery.scrollTo-min.js');
+use_helper('Text');
 ?>
 <div class="title">
     <li><img src="/images/folder.png" width="15" height="12" /></li>
@@ -15,13 +16,39 @@ use_javascript('jquery.scrollTo-min.js');
     <li class="current"><?php echo __('Submit_navegacion') ?></li>
 </div> 
 <?php echo include_component('locaciones','title_right'); ?>
+
+<div style="display:none">
+    <div id="data">
+    	<img src="/images/key.png" width="48" height="40" style="float:left"/>
+        <div class="texto-titulo-right-fancy"><?php echo __('Funcionamiento_Full service') ?></div>
+        <div class="texto-subtitulo-right" style="float:left">
+						<?php echo simple_format_text(__('Funcionamiento_Full service modal')) ?>
+        </div>
+    </div>
+</div>
+<div style="display:none">
+    <div id="data2">
+    	<img src="/images/house.png" width="48" height="40" style="float:left"/>
+        <div class="texto-titulo-right-fancy"><?php echo __('Funcionamiento_Comission') ?></div>
+        <div class="texto-subtitulo-right" style="float:left">
+					<?php echo simple_format_text(__('Funcionamiento_Comission modal')) ?>
+        </div>
+    </div>
+</div>
+
 <div class="main-content-up">
     <div class="col-left">
         <div class="titulo blue"><?php echo __('Submit_HOSTING') ?></div>
         <div class="sub-title"><?php echo __('Submit_Place select your hosting plan') ?></div>
         <div class="buttons">
-            <div class="div-send"><button type="button" rel="fullservice" class="full <?php if($type == 'fullservice') echo 'full-press'; ?>"><?php echo __('Submit_Full Service') ?></button></div>
-            <div class="div-send"><button type="button" rel="comission" class="comission <?php if($type == 'comission') echo 'comission-press'; ?>"><?php echo __('Submit_Comission') ?></button></div>
+            <div class="div-send">
+<!--              <a href="help">help</a>-->
+              <button type="button" rel="fullservice" class="mfancy full <?php if($type == 'fullservice') echo 'full-press'; ?>"><?php echo __('Submit_Full Service') ?></button>
+            </div>
+            <div class="div-send">
+<!--              <a href="help">help</a>-->
+              <button type="button" rel="comission" class="mfancy comission <?php if($type == 'comission') echo 'comission-press'; ?>"><?php echo __('Submit_Comission') ?></button>
+            </div>
         </div>
 				<?php if($sf_user->isAuthenticated()): ?>
 					<?php include_partial('registerUser/userInfo') ?>
@@ -80,3 +107,19 @@ use_javascript('jquery.scrollTo-min.js');
 				</script>
     </div>    
 </div>
+<script>
+$(document).ready(function() {
+/*
+	$(".mfancy").fancybox({
+		'titlePosition'	:	'over',
+        'onComplete'	:	function() {
+            $("#fancybox-wrap").hover(function() {
+                $("#fancybox-title").show();
+            }, function() {
+                $("#fancybox-title").hide();
+            });
+        }
+	});
+*/
+});
+</script>

@@ -32,7 +32,7 @@ class temporadasComponents extends sfComponents
   {
     $query = Doctrine::getTable ( 'mdLocacionTemporada' )->createQuery('d')
            ->addWhere('d.md_locacion_id = ?', $this->mdLocacion->getId())
-					 ->orderBy('d.mes_desde desc, d.dia_desde desc');
+					 ->orderBy('d.date_from');
 
     return $query;
   }

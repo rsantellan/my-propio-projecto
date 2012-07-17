@@ -14,24 +14,11 @@ class mdLocacionTemporada extends BasemdLocacionTemporada
 {
 
 	public function getDesde(){
-			if(sfContext::hasInstance()){
-				$culture = sfContext::getInstance()->getUser()->getCulture();
-				$months = sfDateTimeFormatInfo::getInstance($culture)->getMonthNames();
-				$mes = $this->getMesDesde();
-				$mes = $months[$mes-1];
-				return $this->getDiaDesde() . ' ' . $mes;
-			}else
-			return $this->getDiaDesde() . '/' . $this->getMesDesde();
+      return format_date($this->getDateFrom(), 'D');
+      
 	}
 
 	public function getHasta(){
-		if(sfContext::hasInstance()){
-			$culture = sfContext::getInstance()->getUser()->getCulture();
-			$months = sfDateTimeFormatInfo::getInstance($culture)->getMonthNames();
-			$mes = $this->getMesHasta();
-			$mes = $months[$mes-1];
-			return $this->getDiaHasta() . ' ' . $mes;
-		}else
-		return $this->getDiaHasta() . '/' . $this->getMesHasta();
+      return format_date($this->getDateTo(), 'D');
 	}
 }

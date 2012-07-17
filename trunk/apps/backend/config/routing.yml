@@ -1,3 +1,12 @@
+md_comodidad:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                mdComodidad
+    module:               md_comodidad
+    prefix_path:          /md_comodidad
+    column:               id
+    with_wildcard_routes: true
+
 md_locacion_temporada:
   class: sfDoctrineRouteCollection
   options:
