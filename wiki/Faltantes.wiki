@@ -1,0 +1,22 @@
+#Esta pagina voy poniendo las cosas que faltan y no las puedo resolver.
+
+= Introduction =
+
+En esta pagina voy a ir poniendo las cosas que faltan
+
+
+= Details =
+
+=== I18n ===
+
+==== en ====
+ * 112
+ * 192 traducir
+ * Traducir desde el 193 en adelante
+
+==== todos ====
+ * 155, 157  *de donde son?*
+ * 163, 164  *de donde son?*
+ * 166, 167  *de donde son?*
+ * 179, 193 *de donde son?*
+ * 
