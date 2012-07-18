@@ -41,6 +41,7 @@ CREATE TABLE md_reserva (id INT AUTO_INCREMENT, md_user_id INT NOT NULL, md_apar
 CREATE TABLE md_user (id INT AUTO_INCREMENT, email VARCHAR(128) NOT NULL UNIQUE, super_admin TINYINT DEFAULT '0' NOT NULL, culture VARCHAR(2), deleted_at DATETIME, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, PRIMARY KEY(id)) ENGINE = INNODB;
 CREATE TABLE md_user_profile (id INT AUTO_INCREMENT, name VARCHAR(128), last_name VARCHAR(128), city VARCHAR(128), country_code VARCHAR(2) DEFAULT 'UY', PRIMARY KEY(id)) ENGINE = INNODB;
 CREATE TABLE md_user_search (id BIGINT AUTO_INCREMENT, md_user_id INT NOT NULL, email VARCHAR(128), username VARCHAR(128), name VARCHAR(128), last_name VARCHAR(128), country_code VARCHAR(2), avatar_src TEXT, active TINYINT(1) DEFAULT '0', blocked TINYINT(1) DEFAULT '0', admin TINYINT(1) DEFAULT '0', show_email TINYINT(1) DEFAULT '0', created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, INDEX username_index_idx (username), INDEX email_index_idx (email), INDEX last_name_index_idx (last_name), INDEX name_index_idx (name), INDEX md_user_id_idx (md_user_id), PRIMARY KEY(id)) ENGINE = INNODB;
+CREATE TABLE temporada_anual (fecha DATE, md_locacion_id INT, tipo ENUM('A', 'M', 'B') DEFAULT 'B' NOT NULL, PRIMARY KEY(fecha, md_locacion_id)) ENGINE = INNODB;
 ALTER TABLE md_apartamento_translation ADD CONSTRAINT md_apartamento_translation_id_md_apartamento_id FOREIGN KEY (id) REFERENCES md_apartamento(id) ON UPDATE CASCADE ON DELETE CASCADE;
 ALTER TABLE md_apartamento ADD CONSTRAINT md_apartamento_md_user_id_md_user_id FOREIGN KEY (md_user_id) REFERENCES md_user(id) ON DELETE CASCADE;
 ALTER TABLE md_apartamento ADD CONSTRAINT md_apartamento_md_locacion_id_md_locacion_id FOREIGN KEY (md_locacion_id) REFERENCES md_locacion(id) ON DELETE CASCADE;
@@ -72,3 +73,4 @@ ALTER TABLE md_reserva ADD CONSTRAINT md_reserva_md_user_id_md_user_id FOREIGN K
 ALTER TABLE md_reserva ADD CONSTRAINT md_reserva_md_currency_id_md_currency_id FOREIGN KEY (md_currency_id) REFERENCES md_currency(id) ON DELETE CASCADE;
 ALTER TABLE md_reserva ADD CONSTRAINT md_reserva_md_apartamento_id_md_apartamento_id FOREIGN KEY (md_apartamento_id) REFERENCES md_apartamento(id) ON DELETE CASCADE;
 ALTER TABLE md_user_search ADD CONSTRAINT md_user_search_md_user_id_md_user_id FOREIGN KEY (md_user_id) REFERENCES md_user(id) ON DELETE CASCADE;
+ALTER TABLE temporada_anual ADD CONSTRAINT temporada_anual_md_locacion_id_md_locacion_id FOREIGN KEY (md_locacion_id) REFERENCES md_locacion(id) ON DELETE CASCADE;

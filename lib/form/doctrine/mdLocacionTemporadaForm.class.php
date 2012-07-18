@@ -14,6 +14,8 @@ class mdLocacionTemporadaForm extends BasemdLocacionTemporadaForm
   {
     $this->widgetSchema['date_from'] = new sfWidgetFormInputDatepicker();
 	$this->widgetSchema['date_to'] = new sfWidgetFormInputDatepicker();
+	$this->validatorSchema['date_from'] = new sfExtraValidatorDatepicker(array('required' => true));
+	$this->validatorSchema['date_to'] = new sfExtraValidatorDatepicker(array('required' => true));
     /*
     $this->validatorSchema['date_from'] = new sfValidatorDateRange(
                 array(

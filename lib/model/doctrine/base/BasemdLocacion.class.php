@@ -11,6 +11,7 @@
  * @property string $descripcion
  * @property Doctrine_Collection $mdApartamento
  * @property Doctrine_Collection $mdLocacionTemporada
+ * @property Doctrine_Collection $temporadaAnual
  * 
  * @method integer             getId()                  Returns the current record's "id" value
  * @method string              getCountry()             Returns the current record's "country" value
@@ -18,12 +19,14 @@
  * @method string              getDescripcion()         Returns the current record's "descripcion" value
  * @method Doctrine_Collection getMdApartamento()       Returns the current record's "mdApartamento" collection
  * @method Doctrine_Collection getMdLocacionTemporada() Returns the current record's "mdLocacionTemporada" collection
+ * @method Doctrine_Collection getTemporadaAnual()      Returns the current record's "temporadaAnual" collection
  * @method mdLocacion          setId()                  Sets the current record's "id" value
  * @method mdLocacion          setCountry()             Sets the current record's "country" value
  * @method mdLocacion          setNombre()              Sets the current record's "nombre" value
  * @method mdLocacion          setDescripcion()         Sets the current record's "descripcion" value
  * @method mdLocacion          setMdApartamento()       Sets the current record's "mdApartamento" collection
  * @method mdLocacion          setMdLocacionTemporada() Sets the current record's "mdLocacionTemporada" collection
+ * @method mdLocacion          setTemporadaAnual()      Sets the current record's "temporadaAnual" collection
  * 
  * @package    rentNchill
  * @subpackage model
@@ -66,6 +69,10 @@ abstract class BasemdLocacion extends sfDoctrineRecord
              'foreign' => 'md_locacion_id'));
 
         $this->hasMany('mdLocacionTemporada', array(
+             'local' => 'id',
+             'foreign' => 'md_locacion_id'));
+
+        $this->hasMany('temporadaAnual', array(
              'local' => 'id',
              'foreign' => 'md_locacion_id'));
 

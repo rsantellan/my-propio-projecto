@@ -143,6 +143,29 @@ mdLocacionTemporada:
       type: one
       onDelete: CASCADE
 
+temporadaAnual:
+  columns:
+    fecha:
+      type: date
+      notnull: true
+      primary: true
+    md_locacion_id:
+      type: integer(4)
+      notnull: true
+      primary: true
+    tipo:
+      type: enum
+      values: ['A', 'M', 'B']
+      default: 'B'
+      notnull: true
+  relations:
+    mdLocacion:
+      class: mdLocacion
+      local: md_locacion_id
+      foreign: id
+      type: one
+      onDelete: CASCADE
+      
 mdComodidad:
   actAs:
     I18n:

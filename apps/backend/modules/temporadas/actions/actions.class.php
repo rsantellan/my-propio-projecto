@@ -17,11 +17,12 @@ class temporadasActions extends autoTemporadasActions
 	public function executeCreateAjax(sfWebRequest $request)
   {    
     $form = new mdLocacionTemporadaForm(array(), array(), false);
+    //$form = new mdLocacionTemporadaForm();
     
     $parameters = $request->getParameter('md_locacion_temporada');
-
+	//var_dump($parameters);
     $form->bind($parameters);
-    
+    //return $this->renderText(mdBasicFunction::basic_json_response(false, ""));
     if ($form->isValid())
     {
       try {
