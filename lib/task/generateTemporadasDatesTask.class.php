@@ -18,7 +18,7 @@ class generateTemporadasDatesTask extends sfBaseTask
 
     $this->namespace        = 'temporadas';
     $this->name             = 'generateTemporadasDates';
-    $this->briefDescription = '';
+    $this->briefDescription = 'Crea todos los dias del año que viene.';
     $this->detailedDescription = <<<EOF
 The [generateTemporadasDates|INFO] task does things.
 Call it with:
@@ -35,7 +35,8 @@ EOF;
 
     // add your code here
 	
-	//TemporadasDatesHandler::insertLocationFirstYear();
+	TemporadasDatesHandler::insertLocationFirstYear();
 	TemporadasDatesHandler::generateSeasons();
+    //TemporadasDatesHandler::addDaysToAllLocations();
   }
 }

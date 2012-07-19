@@ -23,7 +23,8 @@ abstract class BasemdReservaForm extends BaseFormDoctrine
       'cantidad_personas' => new sfWidgetFormInputText(),
       'md_currency_id'    => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('mdCurrency'), 'add_empty' => false)),
       'total'             => new sfWidgetFormInputText(),
-      'status'            => new sfWidgetFormChoice(array('choices' => array('pending' => 'pending', 'confirm' => 'confirm', 'efective' => 'efective', 'cancel' => 'cancel'))),
+      'status'            => new sfWidgetFormChoice(array('choices' => array('pending' => 'pending', 'confirm' => 'confirm', 'efective' => 'efective', 'cancel' => 'cancel', 'cancelPayPal' => 'cancelPayPal', 'errorPayPal' => 'errorPayPal'))),
+      'message'           => new sfWidgetFormTextarea(),
       'created_at'        => new sfWidgetFormDateTime(),
       'updated_at'        => new sfWidgetFormDateTime(),
     ));
@@ -37,7 +38,8 @@ abstract class BasemdReservaForm extends BaseFormDoctrine
       'cantidad_personas' => new sfValidatorInteger(),
       'md_currency_id'    => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('mdCurrency'))),
       'total'             => new sfValidatorPass(),
-      'status'            => new sfValidatorChoice(array('choices' => array(0 => 'pending', 1 => 'confirm', 2 => 'efective', 3 => 'cancel'), 'required' => false)),
+      'status'            => new sfValidatorChoice(array('choices' => array(0 => 'pending', 1 => 'confirm', 2 => 'efective', 3 => 'cancel', 4 => 'cancelPayPal', 5 => 'errorPayPal'), 'required' => false)),
+      'message'           => new sfValidatorString(array('max_length' => 1000, 'required' => false)),
       'created_at'        => new sfValidatorDateTime(),
       'updated_at'        => new sfValidatorDateTime(),
     ));

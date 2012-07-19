@@ -39,6 +39,8 @@ class temporadasActions extends autoTemporadasActions
 
         $sort = $this->getSort();        
         
+        TemporadasDatesHandler::generateSeasons($this->mdLocacionId);
+        
         return $this->renderText(mdBasicFunction::basic_json_response(true, array('table' => $this->getPartial('temporadas/list', array('pager' => $pager, 'sort' => $sort, 'helper' => $helper)))));
               
       } catch (Doctrine_Validator_Exception $e) {

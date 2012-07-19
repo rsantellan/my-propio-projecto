@@ -21,4 +21,6 @@ class mdLocacionTemporada extends BasemdLocacionTemporada
 	public function getHasta(){
       return format_date($this->getDateTo(), 'D');
 	}
+    
+    
 }

@@ -27,11 +27,17 @@ class TemporadasDatesHandler
   
   private static function actualInsertLocationFirstYear($location_id)
   {
-	//Los mismos son cualquiera, tengo que ponerlos bien.
-	$start = '2012-01-01';
-	$end   = '2012-12-31';
-
-	self::actualAddDates($start, $end, $location_id);
+    $start = date('Y-m-d');
+    //var_dump($start);
+    $nextYear = mktime(0, 0, 0, date("m"), date("d"),   date("Y")+1);
+    $end = date('Y-m-d', $nextYear);
+    //var_dump($nextYear);
+    //var_dump($end);
+    self::actualAddDates($start, $end, $location_id);
+    //Los mismos son cualquiera, tengo que ponerlos bien.
+	$start = '2008-01-01';
+	$end   = '2008-12-31';
+    self::actualAddDates($start, $end, $location_id);
   }
   
   private static function actualAddDates($start, $end, $location_id)
@@ -59,6 +65,10 @@ class TemporadasDatesHandler
   public static function deleteOldEntries()
   {
 	//Lo que mas me conviene es tirar una sql directo a la base
+    $sql = "delete FROM temporada_anual where fecha < current_date";
+    $conn = Doctrine_Manager::getInstance()->getCurrentConnection(); 
+    $r = $conn->execute($sql);
+    return $r;
   }
   
   public static function addMonthToLocations()
@@ -101,16 +111,38 @@ class TemporadasDatesHandler
 	foreach($temporadas as $temporada)
 	{
 	  $dias = Doctrine::getTable('temporadaAnual')->retrieveByDatesAndLocation($location_id, $temporada->getDateFrom(), $temporada->getDateTo());
-	  //var_dump($temporada->toArray());
 	  foreach($dias as $dia)
 	  {
-		//var_dump($dia->toArray());
 		$dia->setTipo($temporada->getTipo());
 		$dia->save();
 	  }
 	}
   }
-  
+
+  public static function addDaysToAllLocations()
+  {
+    //Borro mas viejo que hoy.
+    self::deleteOldEntries();
+    //Tengo que hacerlo para todos.
+    $locations = Doctrine::getTable('mdLocacion')->findAll();
+    foreach($locations as $location)
+    {
+      //Agrego hoy.
+      //Me fijo si no existe.
+      
+      $hoy = Doctrine::getTable('temporadaAnual')->retrieveByDateAndLocation($location->getId(), date('Y-m-d'));
+      if(!$hoy)
+      {
+        $obj = new temporadaAnual();
+        $obj->setFecha(date('Y-m-d'));
+        $obj->setMdLocacionId($location->getId());
+        $obj->save();
+      }
+      //Genero de vuelta las sesiones.
+      self::actualGenerateSeasons($location->getId());
+    }
+    
+  }
 }
 
 

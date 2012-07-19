@@ -10,7 +10,7 @@
       <div class="sub-title-detalles"><?php echo $apartamento->getCopete() ?></div>
     </div>
     <div class="precio">
-      <div class="title-precio"><?php echo mdCurrencyHandler::getCurrentSymbol() ?> <?php echo $apartamento->getPrecio() ?></div>
+      <div class="title-precio"><?php echo mdCurrencyHandler::getCurrentSymbol() ?> <?php echo $apartamento->getPrecioHoy() ?></div>
       <div class="sub-title-precio"><?php echo __('Apartamento_per night') ?></div>
     </div>
   </div>
