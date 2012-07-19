@@ -24,6 +24,22 @@ class temporadaAnualTable extends Doctrine_Table
 			  ->addWhere('fecha >= ?', $date_from)
 			  ->addWhere('fecha <= ?', $date_to);
 	  return $query->execute();
-				
 	}
+    
+    public function retrieveByDateAndLocation($location_id, $date)
+    {
+      $query = $this->createQuery('tempAnual')
+			  ->where('tempAnual.md_locacion_id = ?', $location_id)
+			  ->addWhere('tempAnual.fecha = ?', $date);
+	  return $query->fetchOne();
+    }
+    
+    public function retrieveSeasonRange($location_id, $start, $end)
+    {
+      $conn = Doctrine_Manager::getInstance()->getCurrentConnection(); 
+      $sql = "select tipo, count(fecha) as cantidad from temporada_anual where md_locacion_id = ? and fecha >= ? and fecha <= ? group by tipo";
+      $r = $conn->fetchAssoc($sql, array($location_id, $start, $end));
+      //var_dump($r);
+      return $r;
+    }
 }

@@ -67,15 +67,16 @@ use_plugin_javascript('mdGoogleMapDoctrinePlugin', 'mdGoogleMap.js', 'last');
     </div>
     <div class="col-right">
     	<div class="pre-precio">
-        	<div class="price-pn"><?php echo mdCurrencyHandler::getCurrentSymbol() ?><?php echo $depto->getPrecio() ?></div>
+        	<div class="price-pn"><?php echo mdCurrencyHandler::getCurrentSymbol() ?><?php echo $depto->getPrecioHoy() ?></div>
             <div class="price-pn-details">
             <li><?php echo __('Apartamento_per night') ?><br />
 							(
-							<?php if($depto->getMdLocacion()->esTemporadaAlta()): $temporada = $depto->getMdLocacion()->getTemporada();?>
-								<?php echo __('Apartamento_HIGH SEASON') ?> - <?php  echo $temporada->getDesde() . ' : ' . $temporada->getHasta()?>
-							<?php else: ?>
-								<?php echo __('Apartamento_LOW SEASON') ?>
-							<?php endif; ?>
+                            
+							<?php //if($depto->getMdLocacion()->esTemporadaAlta()): $temporada = $depto->getMdLocacion()->getTemporada();?>
+								<?php //echo __('Apartamento_HIGH SEASON') ?> - <?php  //echo $temporada->getDesde() . ' : ' . $temporada->getHasta()?>
+							<?php //else: ?>
+								<?php //echo __('Apartamento_LOW SEASON') ?>
+							<?php //endif; ?>
 							)</li>
             </div>
         </div>

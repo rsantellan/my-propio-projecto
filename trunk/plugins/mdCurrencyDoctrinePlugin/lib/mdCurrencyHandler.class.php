@@ -64,5 +64,9 @@ class mdCurrencyHandler
 		return Doctrine::getTable('mdCurrency')->findAll();
 	}
 
+    public static function getById($id)
+    {
+      return Doctrine::getTable('mdCurrency')->findOneBy('id', $id);
+    }
 
 }

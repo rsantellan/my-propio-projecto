@@ -14,6 +14,7 @@
  * @property integer $md_currency_id
  * @property double $total
  * @property enum $status
+ * @property string $message
  * @property mdUser $mdUser
  * @property mdApartamento $mdApartamento
  * @property mdCurrency $mdCurrency
@@ -27,6 +28,7 @@
  * @method integer       getMdCurrencyId()      Returns the current record's "md_currency_id" value
  * @method double        getTotal()             Returns the current record's "total" value
  * @method enum          getStatus()            Returns the current record's "status" value
+ * @method string        getMessage()           Returns the current record's "message" value
  * @method mdUser        getMdUser()            Returns the current record's "mdUser" value
  * @method mdApartamento getMdApartamento()     Returns the current record's "mdApartamento" value
  * @method mdCurrency    getMdCurrency()        Returns the current record's "mdCurrency" value
@@ -39,6 +41,7 @@
  * @method mdReserva     setMdCurrencyId()      Sets the current record's "md_currency_id" value
  * @method mdReserva     setTotal()             Sets the current record's "total" value
  * @method mdReserva     setStatus()            Sets the current record's "status" value
+ * @method mdReserva     setMessage()           Sets the current record's "message" value
  * @method mdReserva     setMdUser()            Sets the current record's "mdUser" value
  * @method mdReserva     setMdApartamento()     Sets the current record's "mdApartamento" value
  * @method mdReserva     setMdCurrency()        Sets the current record's "mdCurrency" value
@@ -99,9 +102,15 @@ abstract class BasemdReserva extends sfDoctrineRecord
               1 => 'confirm',
               2 => 'efective',
               3 => 'cancel',
+              4 => 'cancelPayPal',
+              5 => 'errorPayPal',
              ),
              'default' => 'pending',
              'notnull' => true,
+             ));
+        $this->hasColumn('message', 'string', 1000, array(
+             'type' => 'string',
+             'length' => 1000,
              ));
     }
 

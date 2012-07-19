@@ -10,163 +10,216 @@
  * @author     maui
  * @version    SVN: $Id: Builder.php 7490 2010-03-29 19:53:27Z jwage $
  */
-class mdApartamento extends BasemdApartamento
-{
-	/**
-	 * retorna la clase, se usa para los behaviors
-	 *
-	 * @return void
-	 * @author maui .-
-	 **/
-	public function getObjectClass()
-	{
-		return 'mdApartamento';
-	}
-	
-	public function __toString(){
-		return $this->getTitulo();
-	}
-	public function getSlug(){
-		return mdBasicFunction::slugify($this->getTitulo());
-	}
-	
-	/**
-	 * retorna el src del avatar de 50px. Se usa en el list del backend
-	 *
-	 * @return void
-	 * @author maui .-
-	 **/
-	public function getAvatar50()
-	{
-		if($this->hasAvatar()){
-			$src = $this->retrieveAvatar(array(mdWebOptions::WIDTH =>50 , mdWebOptions::HEIGHT =>50 , mdWebOptions::CODE => mdWebCodes::CROPRESIZE ));
-			return $src;
-			return '<img src="' . $src . '" />';
-		}else{
-			return false;
-		}
-	}
-	
-	/**
-	 * devuelve el objeto mdDetalle relacionado con el apartamento
-	 *
-	 * @return mdDetalle
-	 * @author maui .-
-	 **/
-	public function getDetalle()
-	{
-		if(!$this->isNew()){
-			return Doctrine::getTable('mdDetalle')->findOneBymd_apartamento_id($this->getId());
-		}
-		
-		return false;
-		
-	}
+class mdApartamento extends BasemdApartamento {
 
-	/**
-	 * calcula el precio del apartamento dependiendo de la temporada
-	 *
-	 * @return void
-	 * @author maui .-
-	 **/
-	public function getPrecio($date=null, $currency=null)
-	{
-		
-		if($date == null){
-			$date = new DateTime('now');
-		}
-		if($this->getmdLocacion()->esTemporadaAlta($date))
-			$precio = $this->getPrecioAlta();
-		else
-			$precio = $this->getPrecioBaja();
-		
-		if(!$currency){
-			$currency = mdCurrencyHandler::getCurrent();
-		}else{
-			if(get_class($currency) != 'mdCurrency'){
-				if(typeof($currency) == 'string')
-					$currency = mdCurrencyHandler::getByCode($currency);
-				else
-					$currency = mdCurrencyHandler::getById($currency);
-			}
-		}
-		if($this->getmdCurrencyId() != $currency->getId()){
-			$precio = mdCurrencyConvertion::convert($this->getmdCurrency()->getCode(), $currency->getCode(), $precio);
-		}
-		return round($precio,0);
-		
-	}
+  /**
+   * retorna la clase, se usa para los behaviors
+   *
+   * @return void
+   * @author maui .-
+   * */
+  public function getObjectClass() {
+    return 'mdApartamento';
+  }
 
-	public function  postSave($event) {
+  public function __toString() {
+    return $this->getTitulo();
+  }
+
+  public function getSlug() {
+    return mdBasicFunction::slugify($this->getTitulo());
+  }
+
+  /**
+   * retorna el src del avatar de 50px. Se usa en el list del backend
+   *
+   * @return void
+   * @author maui .-
+   * */
+  public function getAvatar50() {
+    if ($this->hasAvatar()) {
+      $src = $this->retrieveAvatar(array(mdWebOptions::WIDTH => 50, mdWebOptions::HEIGHT => 50, mdWebOptions::CODE => mdWebCodes::CROPRESIZE));
+      return $src;
+      return '<img src="' . $src . '" />';
+    } else {
+      return false;
+    }
+  }
+
+  /**
+   * devuelve el objeto mdDetalle relacionado con el apartamento
+   *
+   * @return mdDetalle
+   * @author maui .-
+   * */
+  public function getDetalle() {
+    if (!$this->isNew()) {
+      return Doctrine::getTable('mdDetalle')->findOneBymd_apartamento_id($this->getId());
+    }
+
+    return false;
+  }
+
+  /**
+   * calcula el precio del apartamento dependiendo de la temporada
+   *
+   * @return void
+   * @author maui .-
+   * */
+  public function getPrecio($dateFrom, $dateTo, $currency = null) {
+    $resultadosDias = Doctrine::getTable('temporadaAnual')->retrieveSeasonRange($this->getMdLocacionId(), $dateFrom, $dateTo);
+    $precio = 0;
+    foreach($resultadosDias as $dias)
+    {
+      switch ($dias["tipo"]) {
+        case "A":
+            $precio += ($this->getPrecioAlta() * (int) $dias['cantidad']);
+          break;
+        case "M":
+            $precio += ($this->getPrecioMedia() * (int) $dias['cantidad']);
+          break;
+        case "B":
+            $precio += ($this->getPrecioBaja() * (int) $dias['cantidad']);
+          break;
+      }
+    }
+    
+    if (!$currency) {
+      $currency = mdCurrencyHandler::getCurrent();
+    } else {
+      if (get_class($currency) != 'mdCurrency') {
+        if (typeof($currency) == 'string')
+          $currency = mdCurrencyHandler::getByCode($currency);
+        else
+          $currency = mdCurrencyHandler::getById($currency);
+      }
+    }
+    if ($this->getmdCurrencyId() != $currency->getId()) {
+      $precio = mdCurrencyConvertion::convert($this->getmdCurrency()->getCode(), $currency->getCode(), $precio);
+    }
+    return round($precio, 0);
+  }
+
+  public static function calculatePriceOfConversion($precio, $currencyNew, $currencyOld)
+  {
+    if (get_class($currencyNew) != 'mdCurrency') {
+      if (typeof($currencyNew) == 'string')
+        $currencyNew = mdCurrencyHandler::getByCode($currencyNew);
+      else
+        $currencyNew = mdCurrencyHandler::getById($currencyNew);
+    }
+    $currencyOld = mdCurrencyHandler::getById($currencyOld);
+    if ($currencyNew->getId() != $currencyOld->getId()) {
+      $precio = mdCurrencyConvertion::convert($currencyOld->getCode(), $currencyNew->getCode(), $precio);
+    }
+    return round($precio, 0);
+  }
+  
+  public function getPrecioHoy($currency = null)
+  {
+    $date = date('Y-m-d');
+    $resultadosDias = Doctrine::getTable('temporadaAnual')->retrieveSeasonRange($this->getMdLocacionId(), $date, $date);
+    $precio = 0;
+    if(!is_array($resultadosDias) || count($resultadosDias) == 0)
+    {
+      $precio = $this->getPrecioBaja();
+    }
+    else
+    {
+      $aux = $resultadosDias[0];
+      switch ($aux["tipo"]) {
+        case "A":
+            $precio = $this->getPrecioAlta();
+          break;
+        case "M":
+            $precio = $this->getPrecioMedia();
+          break;
+        case "B":
+            $precio = $this->getPrecioBaja();
+          break;
+      }
+    }
+    
+    if (!$currency) {
+      $currency = mdCurrencyHandler::getCurrent();
+    } else {
+      if (get_class($currency) != 'mdCurrency') {
+        if (typeof($currency) == 'string')
+          $currency = mdCurrencyHandler::getByCode($currency);
+        else
+          $currency = mdCurrencyHandler::getById($currency);
+      }
+    }
+    if ($this->getmdCurrencyId() != $currency->getId()) {
+      $precio = mdCurrencyConvertion::convert($this->getmdCurrency()->getCode(), $currency->getCode(), $precio);
+    }
+    return round($precio, 0);
+  }
+  
+  public function postSave($event) {
     parent::postSave($event);
-		$mdApartamentoSearch = Doctrine::getTable('mdApartamentoSearch')->find($this->getId());
-		
-		if($this->getActivo() == true){
+    $mdApartamentoSearch = Doctrine::getTable('mdApartamentoSearch')->find($this->getId());
 
-			if(!$mdApartamentoSearch){
-				$mdApartamentoSearch = new mdApartamentoSearch();
-				$mdApartamentoSearch->setId($this->getId());
-			}
-			$mdApartamentoSearch->setMdLocacionId($this->getMdLocacionId());
-			$mdApartamentoSearch->setCantidadPersonas($this->getCantidadPersonas());
-		
-			if($this->getMdCurrencyId() != 1){
-				$mdCurrency = Doctrine::getTable('mdCurrency')->find(1);
-				$precioAlta = mdCurrencyConvertion::convert($this->getMdCurrency()->getCode(), $mdCurrency->getCode(), $this->getPrecioAlta());
-				$precioBaja = mdCurrencyConvertion::convert($this->getMdCurrency()->getCode(), $mdCurrency->getCode(), $this->getPrecioBaja());
-			}else{
-				$precioAlta = $this->getPrecioAlta();
-				$precioBaja = $this->getPrecioBaja();
-			}
-			$mdApartamentoSearch->setPrecioAlta($precioAlta);
-			$mdApartamentoSearch->setPrecioBaja($precioBaja);
-			$mdApartamentoSearch->save();
-		}else{
-			if($mdApartamentoSearch)
-				$mdApartamentoSearch->delete();
-		}
-		
-		 $manager = mdMediaManager::getInstance(mdMediaManager::MIXED, $this)->load();
-    
-		if(!$manager->hasAlbum("default"))
-     {
-         $params = array(
-             "title" => "default",
-             "description" => "",
-             "type" => mdMediaManager::MIXED,
-         );
-         $manager->createAlbum($params);
-     }
-    
-		
-	}		
-	public function  postDelete($event) {
+    if ($this->getActivo() == true) {
+
+      if (!$mdApartamentoSearch) {
+        $mdApartamentoSearch = new mdApartamentoSearch();
+        $mdApartamentoSearch->setId($this->getId());
+      }
+      $mdApartamentoSearch->setMdLocacionId($this->getMdLocacionId());
+      $mdApartamentoSearch->setCantidadPersonas($this->getCantidadPersonas());
+
+      if ($this->getMdCurrencyId() != 1) {
+        $mdCurrency = Doctrine::getTable('mdCurrency')->find(1);
+        $precioAlta = mdCurrencyConvertion::convert($this->getMdCurrency()->getCode(), $mdCurrency->getCode(), $this->getPrecioAlta());
+        $precioBaja = mdCurrencyConvertion::convert($this->getMdCurrency()->getCode(), $mdCurrency->getCode(), $this->getPrecioBaja());
+      } else {
+        $precioAlta = $this->getPrecioAlta();
+        $precioBaja = $this->getPrecioBaja();
+      }
+      $mdApartamentoSearch->setPrecioAlta($precioAlta);
+      $mdApartamentoSearch->setPrecioBaja($precioBaja);
+      $mdApartamentoSearch->save();
+    } else {
+      if ($mdApartamentoSearch)
+        $mdApartamentoSearch->delete();
+    }
+
+    $manager = mdMediaManager::getInstance(mdMediaManager::MIXED, $this)->load();
+
+    if (!$manager->hasAlbum("default")) {
+      $params = array(
+          "title" => "default",
+          "description" => "",
+          "type" => mdMediaManager::MIXED,
+      );
+      $manager->createAlbum($params);
+    }
+  }
+
+  public function postDelete($event) {
     parent::postDelete($event);
-		$mdApartamentoSearch = Doctrine::getTable('mdApartamentoSearch')->find($this->getId());
-		if($mdApartamentoSearch)
-			$mdApartamentoSearch->delete();
-	}
+    $mdApartamentoSearch = Doctrine::getTable('mdApartamentoSearch')->find($this->getId());
+    if ($mdApartamentoSearch)
+      $mdApartamentoSearch->delete();
+  }
 
+  /**
+   * devuelve la imagen por defecto cuando no tiene ningun
+   *
+   * @return void
+   * @author maui .-
+   * */
+  public function retrieveDefault() {
+    return '/images/house.png';
+  }
 
+  public function hasComodidad($comodidad) {
+    foreach ($this->getMdComodidad() as $com) {
+      if ($com->getId() == $comodidad->getId())
+        return true;
+    }
+    return false;
+  }
 
-
-	/**
-	 * devuelve la imagen por defecto cuando no tiene ningun
-	 *
-	 * @return void
-	 * @author maui .-
-	 **/
-	public function retrieveDefault()
-	{
-		return '/images/house.png';
-	}
-	
-	public function hasComodidad($comodidad){
-		foreach($this->getMdComodidad() as $com){
-			if($com->getId() == $comodidad->getId())
-				return true;
-		}
-		return false;
-	}
-	
 }

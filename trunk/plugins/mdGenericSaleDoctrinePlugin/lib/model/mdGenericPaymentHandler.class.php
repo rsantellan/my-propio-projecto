@@ -313,14 +313,20 @@ class mdGenericPaymentHandler
 
     $expressCheckout = new Md_Express_Checkout();
     $expressCheckout->setReturnUrl(url_for('@paypalReturnUrl', true) . '?PAYMENTACTION=Sale&SALE=' . $this->mdGenericSale->getId() . ((array_key_exists('track', $options)) ? '&track=' . $options['track'] : ''));
-    $expressCheckout->setCancelUrl(url_for('@paypalCancelUrl', true));
+    $expressCheckout->setCancelUrl(url_for('@paypalCancelUrl', true).'?SALE='.$this->mdGenericSale->getId());
     //$expressCheckout->setLocaleCode('');  TODO
 
+    $curreny = "USD";
+    if(isset($options['currency']) && !empty($options['currency']))
+    {
+      $curreny = $options['currency'];
+    }
+    
     $options = array(
         'SHIPDISCAMT'   => 0,
         'DESC'          => __('Mensajes_Description Paypal'),
         'PAYMENTACTION' => 'Sale',
-        'CURRENCYCODE'  => 'USD'
+        'CURRENCYCODE'  => $curreny
     );
     // 'CURRENCYCODE'  => 'EUR'
     $expressCheckout->addPaymentDetail($options);

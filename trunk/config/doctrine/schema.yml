@@ -260,7 +260,6 @@ mdApartamentoSearch:
     cuartos:
       type: integer(4)
       notnull: false
-
   relations:
     mdApartamento:
       class: mdApartamento
@@ -301,9 +300,11 @@ mdReserva:
       notnull: true
     status:
       type: enum
-      values: [pending,confirm,efective,cancel]
+      values: [pending,confirm,efective,cancel,cancelPayPal, errorPayPal, prePayPal]
       default: pending
       notnull: true
+    message:
+      type: string(1000)
   relations:
     mdUser:
       local: md_user_id

@@ -1,5 +1,5 @@
 
-<form class="form-search" method="post" id="md_narrow_search" action="<?php echo url_for('@buscador') ?>">
+<form class="form-search" method="get" id="md_narrow_search" action="<?php echo url_for('@buscador') ?>">
 	<?php echo $form->renderHiddenFields() ?>
 
 <?php if(isset($home)): ?>
@@ -64,7 +64,7 @@ $(function(){
 		dateFormat: dateformat,
 		numberOfMonths: 1,
 		onSelect: function( selectedDate ) {
-			var option = this.id == "md_apartamento_search_filters_fecha_from" ? "minDate" : "maxDate",
+			var option = this.id == "m_fecha_from" ? "minDate" : "maxDate",
 				instance = $( this ).data( "datepicker" ),
 				date = $.datepicker.parseDate(
 					instance.settings.dateFormat ||

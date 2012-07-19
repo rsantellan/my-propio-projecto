@@ -50,7 +50,7 @@
 					setPriceRange($( "#slider-range" ).slider( "values", 0 ), $( "#slider-range" ).slider( "values", 1 ));
 					
 					function setPriceRange(val1, val2){
-						var input = $( "#md_apartamento_search_filters_md_price_range" );
+						var input = $( "#m_md_price_range" );
 						input.val( "" + val1 + " - " + val2 );
 					}
 				});

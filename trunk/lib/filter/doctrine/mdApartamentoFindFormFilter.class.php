@@ -77,7 +77,7 @@ class mdApartamentoFindFormFilter extends BasemdApartamentoSearchFormFilter
 
 
 		$this->disableLocalCSRFProtection();
-
+        $this->widgetSchema->setNameFormat('m[%s]');
   }
 
 
@@ -125,8 +125,8 @@ class mdApartamentoFindFormFilter extends BasemdApartamentoSearchFormFilter
 	
 		//inicializo los parametros que necesito
 		$rango = explode(' - ', $values);
-
-		$field = $this->getPriceKind();
+        
+        $field = $this->getPriceKind();
 
 		if(mdCurrencyHandler::getCurrent()->getId()!=1){
 			$rango[0] = mdCurrencyConvertion::convert(mdCurrencyHandler::getCurrentCode(), 'EUR', $rango[0]);
@@ -175,12 +175,34 @@ class mdApartamentoFindFormFilter extends BasemdApartamentoSearchFormFilter
 		$fecha = $this->getValue('fecha');
 		
 		// si no hay fecha seleccionada uso hoy
-		if(!isset($fecha['from']) or $fecha['from']==''){
-			$fecha = new DateTime();
+		if(!isset($fecha['from']) || $fecha['from']=='' || !isset($fecha['to']) || $fecha['to']=='')
+        {
+			$fecha = date('Y-m-d');
 		}else{
-			$fecha = DateTime::createFromFormat('d/m/Y', $fecha['from']);
+			$fecha = $fecha['from'];
 		}
-		
+		$resultadosDias = Doctrine::getTable('temporadaAnual')->retrieveSeasonRange($md_locacion_id, $fecha, $fecha);
+        $field = 0;
+        if(!is_array($resultadosDias) || count($resultadosDias) == 0)
+        {
+          $field = 'precio_baja';
+        }
+        else
+        {
+          $aux = $resultadosDias[0];
+          switch ($aux["tipo"]) {
+            case "A":
+                $field = 'precio_alta';
+              break;
+            case "M":
+                $field = 'precio_media';
+              break;
+            case "B":
+                $field = 'precio_baja';
+              break;
+          }
+        }
+        return $field;
 		if(Doctrine::getTable('mdLocacion')->find($md_locacion_id)->esTemporadaAlta($fecha)){
 			$field = 'precio_alta';
 		}else{

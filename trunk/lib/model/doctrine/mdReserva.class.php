@@ -12,4 +12,11 @@
  */
 class mdReserva extends BasemdReserva
 {
+  const PENDING = 'pending';
+  const CONFIRM = 'confirm';
+  const EFECTIVE = 'efective';
+  const CANCEL = 'cancel';
+  const CANCELPAYPAL = 'cancelPayPal';
+  const ERRORPAYPAL = 'errorPayPal';
+  const PREPAYPAL = 'prePayPal';
 }
