@@ -1,12 +1,12 @@
 <footer>
     <div class="black">
-        <div>
+        <div class="bdiv">
             <ul>
                 <li><img src="/images/hand-white.png" width="14" height="13"  /></li>
                 <li class="gettoknow"><?php echo __('Global_GET TO KNOW') ?>:</li>
             </ul>
         </div>
-        <div>
+        <div class="bdiv">
             <ul>
                 <li><a href="#">PUNTA DEL ESTE</a></li>
 <!--
@@ -18,7 +18,7 @@
                 <li class="green"><a href="#">MORE...</a></li>
 -->
             </ul>
-        </div>        
+        </div>  <div class="beba"><img src="/images/logobeba.jpg" width="99" height="80" /></div>      
     </div>
     <div class="line">
     </div>

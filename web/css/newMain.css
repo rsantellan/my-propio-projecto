@@ -1,0 +1,11 @@
+/* 
+    Document   : newMain
+    Created on : Jul 20, 2012, 11:29:37 AM
+    Author     : Rodrigo Santellan <rodrigo.santellan at inswitch.us>
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+.hidden_div{
+  display: none;
+}

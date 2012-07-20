@@ -26,12 +26,13 @@ use_stylesheet('contact-us.css');
                   <li><?php echo $form['nombre']->render(array('tabIndex'=>1)) ?></li>
                   <li><?php echo $form['email']->renderLabel() ?></li>
                   <li><?php echo $form['email']->render(array('tabIndex'=>2)) ?></li>
-                  <div class="div-send"><button class="send" type="submit" tabIndex="4"><?php echo __('Contacto_Enviar') ?></button></div>
-              </div>
-              <div class="campos-right">
+                  <div class="campos-right">
               	<li><?php echo $form['mensaje']->renderLabel() ?></li>
                  <li><?php echo $form['mensaje']->render(array('tabIndex'=>3, 'value'=>__('Contacto_Hi!'), 'cols'=>"", 'rows'=>"")) ?></li>
               </div>
+                  <div class="div-send"><button class="send" type="submit" tabIndex="4"><?php echo __('Contacto_Enviar') ?></button></div>
+              </div>
+              
 							<div class="clear"></div>
 							<ul class="error_list">
 								<?php foreach($form->getFormattedErrors() as $error): ?>
