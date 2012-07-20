@@ -20,3 +20,10 @@ En esta pagina voy a ir poniendo las cosas que faltan
  * 166, 167  *de donde son?*
  * 179, 193 *de donde son?*
  * 
+ 
+ 
+ 
+ == Textos agregados ==
+ 
+ Usuario_cambiar password
+ Usuario_cambiar email

@@ -1,4 +1,3 @@
-
 /*contenet*/
 .content {
     float: left;
@@ -18,7 +17,7 @@
 	font-family: 'CourierRegular';
 }
 .main-content-up {
-	height:	346px;
+	height:	470px;
 	background:#FFF;
 	float:left;
 	width:1020px;
@@ -27,7 +26,7 @@
 .col-left {
 	float:left;
 	width:482px;
-	height:320px;
+	height:470px;
 }
 .titulo {
     font-family: 'BelloSmCp';
@@ -62,11 +61,11 @@ input {
 	color:#72D400;
 }
 .campos-right {
-    float: left;
-    margin-left: 14px;
-    position: relative;
-    top: -2px;
-    width: 250px;
+	float: left;
+	margin-left: 0px;
+	position: relative;
+	top: -2px;
+	width: 250px;
 }
 .campos-right li {
     display: block;

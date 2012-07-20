@@ -65,7 +65,8 @@ mdUserManagementFrontend.prototype = {
                     $("#loader_button_change_mail").hide();
                     $("#button_change_mail").show();
                     $('#change_email_container').fadeTo("slow", 0.4);
-                    $('#change_email_container').fadeTo("slow", 1);
+                    $('#change_email_container').hide();
+                    $('#user_email').html($('#md_change_email_email').val())
                 }else {
                     $("#change_email_container").html(json.options.body);
                 }
@@ -91,6 +92,7 @@ mdUserManagementFrontend.prototype = {
                     $("#button_change_pass").show();
                     $('#change_password_container').fadeTo("slow", 0.4);
                     $('#change_password_container').fadeTo("slow", 1);
+                    $('#user_change_pass').hide();
                 }else {
                     $("#change_password_container").html(json.options.body);
                 }
@@ -116,6 +118,8 @@ mdUserManagementFrontend.prototype = {
                     $('#change_user_container').fadeTo("slow", 0.4);
                     $('#change_user_container').fadeTo("slow", 1);
                     mdUserManagementFrontend.getInstance().saveExistingMdProfiles(0);
+                    $('#user_real_data').html(json.options.body);
+                    $('#user_change_data').hide();
                 }else {
                     $("#change_user_container").html(json.options.body);
                 }

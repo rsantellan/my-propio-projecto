@@ -178,12 +178,17 @@ footer li a {
 	color:#FFF;
 }
 .black {
-    float: left;
-    padding: 0;
+	float: left;
+	padding: 0;
 	width:1020px;
 	height:81px;
 	background:#000;
+	position: relative;
 }
+.black .bdiv {
+	width:500px;
+}
+
 .black ul {
     margin-bottom: 0;
     margin-top: 7px;
@@ -275,3 +280,10 @@ footer li a {
     margin-top: 40px;
 }
 /**/
+.beba {
+	height: 80px;
+	width: 99px;
+	top: 0px;
+	position: absolute;
+	right: 10px;
+}
