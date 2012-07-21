@@ -2,13 +2,22 @@
 use_stylesheet('perfil');
 use_helper("mdAsset");
 
-use_plugin_javascript("mdUserDoctrinePlugin", "mdUserManagmentFrontend.js", "last");
+
 
 $profile = $mdUser->getMdUserProfile();
+
+if ($sf_user->isAuthenticated() && $sf_user->getMdUserId() == $mdUser->getId())
+{
+  use_plugin_javascript("mdUserDoctrinePlugin", "mdUserManagmentFrontend.js", "last");
+  include_partial('mdMediaContentAdmin/javascriptInclude');
+  //Tengo que agregar fancybox
+  use_plugin_stylesheet('mastodontePlugin', '../js/fancybox/jquery.fancybox-1.3.1.css');
+  use_plugin_javascript('mastodontePlugin','fancybox/jquery.fancybox-1.3.1.pack.js','last');
+}
 ?>
 <div class="title">
   <li><img src="/images/folder.png" width="15" height="12" /></li>
-  <li><a href="<?php echo url_for('@homepage') ?>"<?php echo __('Global_Home') ?></a></li>
+  <li><a href="<?php echo url_for('@homepage') ?>"><?php echo __('Global_Home') ?></a></li>
   <li>/</li>
   <li class="current"><?php echo __('Usuario_Perfil navegacion') ?></li>
 </div> 
@@ -18,11 +27,22 @@ $profile = $mdUser->getMdUserProfile();
     <div class="perfil">
 
       <h1><?php echo $profile->getName() ?> <?php echo $profile->getLastName() ?></h1>
-      <?php if ($sf_user->isAuthenticated() and $sf_user->getMdUserId() == $mdUser->getId()): ?>
+      <?php if ($sf_user->isAuthenticated() && $sf_user->getMdUserId() == $mdUser->getId()): ?>
         <div class="info-profile">
           <img src="/images/perfil.png" width="17" height="21" />Info
         </div>
-        <img src="/images/profile.png" height="180" width="180" />
+		<div id="image_container">
+		  <img src="/images/profile.png" height="180" width="180" />
+		</div>
+		<div class="md_blocks">
+			<h2 class="float_left"><?php echo __('Usuario_cambiar imagen'); ?></h2>
+			<div class="float_left">
+				<a id="opener-el" class="iframe">
+				  <?php echo image_tag ( '/mastodontePlugin/images/agregar.jpg' )?>
+				</a>
+			</div>
+			<div class="clear"></div>
+		</div>
         <div class="datos" style="padding-right:15px">
           <?php echo __('Usuario_email') ?>: 
           <label id="user_email">
@@ -57,6 +77,16 @@ $profile = $mdUser->getMdUserProfile();
         </div>
         <div class="clear"></div>
   <!--            <button class="save" type="button"><?php echo __('Usuario_Save') ?></button>-->
+		
+	 <!--
+	  Aca inicializo el objeto para subir imagenes
+	 -->
+ <script type="text/javascript">
+  $(document).ready(function() {  
+
+  initializeLightBox('<?php echo $profile->getId(); ?>', '<?php echo $profile->getObjectClass(); ?>', MdAvatarAdmin.getInstance().getDefaultAlbumId());
+  });
+  </script>
       <?php endif; ?>
     </div>
     <div class="separator" style="margin-left:15px"><img width="707" height="7" src="/images/separator2.png"></div>

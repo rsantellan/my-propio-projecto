@@ -63,10 +63,10 @@ class mdMagick_resize
     public function onTheFly(mdMagick $p,$imageUrl, $width, $height, $exactDimentions = false, $webPath = '', $physicalPath=''){
         //convert web path to physical
         $basePath = str_replace($webPath,$physicalPath, dirname($imageUrl) );
-        $sourceFile = $basePath .'/'. basename($imageUrl); ;
+        $sourceFile = $basePath .DIRECTORY_SEPARATOR. basename($imageUrl); ;
 
         //naming the new thumbnail
-        $thumbnailFile = $basePath . '/'.$width . '_' . $height . '_' . basename($imageUrl) ;
+        $thumbnailFile = $basePath . DIRECTORY_SEPARATOR.$width . '_' . $height . '_' . basename($imageUrl) ;
 
         $P->setSource($sourceFile);
         $p->setDestination($thumbnailFile);

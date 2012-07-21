@@ -71,7 +71,7 @@ class mdMagick_transform
         $p->execute($cmd);
 
         //apply desired transparency, by creating a transparent image and merge the mirros image on to it with the desired transparency
-        $file = dirname($p->getDestination()) . '/'. uniqid() . '.png';
+        $file = dirname($p->getDestination()) . DIRECTORY_SEPARATOR. uniqid() . '.png';
 
         $cmd  = $p->getBinary('convert');
         $cmd .= '  -size ' . $w.'x'. ( $h * ($size/100)) .' xc:none  ';

@@ -26,7 +26,7 @@ class mdMediaBehavior extends Doctrine_Template
     	try{
     		$path = $this->getInvoker()->getUploadPath();
     	}catch(Exception $e){
-    		$path = '/media/'. $this->getInvoker()->getObjectClass() .'/';
+    		$path = DIRECTORY_SEPARATOR.'media'.DIRECTORY_SEPARATOR. $this->getInvoker()->getObjectClass() .DIRECTORY_SEPARATOR;
     	}
     	return $path;
     }

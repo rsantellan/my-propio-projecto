@@ -27,3 +27,10 @@ En esta pagina voy a ir poniendo las cosas que faltan
  
  Usuario_cambiar password
  Usuario_cambiar email
+ Usuario_cambiar imagen
+
+ 
+== Imagenes ==
+
+Corregir para que funcione en windows.
+ 

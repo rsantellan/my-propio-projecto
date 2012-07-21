@@ -70,6 +70,7 @@ use_helper('Text');
                      <li<?php if($form[$sf_user->getCulture()]['descripcion']->hasError()) echo ' class="error_list"' ?> style="font-family:'BelloProRegular';"><?php echo __('Submit_Description') ?></li>
                      <li<?php if($form[$sf_user->getCulture()]['descripcion']->hasError()) echo ' class="error_list"' ?>><?php echo $form[$sf_user->getCulture()]['descripcion']->render(); ?></li>
                      <li><button class="submit" type="submit"><?php echo __('Submit_Boton') ?></button></li>
+					 
                  </div>
                  <div class="campos-right-right">
                    <li<?php if($form['md_locacion_id']->hasError()) echo ' class="error_list"' ?>><?php echo __('Submit_CITY') ?>:</li>
@@ -86,7 +87,11 @@ use_helper('Text');
 						?>
 											</ul>
 						<?php endif; ?>
-        </form> 
+        </form>
+		<div class="clear"></div>
+		<hr/>
+		<?php echo $form; ?>
+		<div class="clear"></div>
 				<script>
 					function submitPropertyForm(){
 						if($('#user_new_form').length>0){

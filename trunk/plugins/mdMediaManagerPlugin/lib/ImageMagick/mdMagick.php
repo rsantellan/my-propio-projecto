@@ -76,7 +76,7 @@ class mdMagick
         {
             $source = $this->getSource() ;
             $ext = end (explode('.', $source)) ;
-            $this->destinationFile = dirname($source) . '/' . md5(microtime()) . '.' . $ext;
+            $this->destinationFile = dirname($source) . DIRECTORY_SEPARATOR . md5(microtime()) . '.' . $ext;
         }
         return $this->destination ;
     }
@@ -84,9 +84,9 @@ class mdMagick
     function setImageMagickPath($path)
     {
         if($path != '')
-            if ( strpos($path, '/') < strlen($path))
-                $path .= '/';
-        $this->imageMagickPath = str_replace(' ','\ ',$path);
+            if ( strpos($path, DIRECTORY_SEPARATOR) < strlen($path))
+                $path .= DIRECTORY_SEPARATOR;
+        $this->imageMagickPath = str_replace(' ',DIRECTORY_SEPARATOR.' ',$path);
     }
 
     function getImageMagickPath()
