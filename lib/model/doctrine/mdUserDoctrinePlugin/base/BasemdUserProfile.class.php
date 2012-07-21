@@ -61,6 +61,8 @@ abstract class BasemdUserProfile extends sfDoctrineRecord
     {
         parent::setUp();
         $mdcontentbehavior0 = new MdContentBehavior();
+        $mdmediabehavior0 = new mdMediaBehavior();
         $this->actAs($mdcontentbehavior0);
+        $this->actAs($mdmediabehavior0);
     }
 }

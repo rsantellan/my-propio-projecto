@@ -34,7 +34,7 @@ abstract class PluginmdMediaImage extends BasemdMediaImage implements mdMediaCon
      */
     public function getObjectSource()
     {
-        return $this->getPath() . $this->getFilename();
+	    return $this->getPath() . $this->getFilename();
     }
 
     public function getObjectUrl($options = array())

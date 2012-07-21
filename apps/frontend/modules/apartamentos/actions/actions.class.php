@@ -83,7 +83,7 @@ class apartamentosActions extends sfActions {
   }
 
   public function executeSubmit(sfWebRequest $request) {
-    $this->form = new mdApartamentoFrontendForm();
+    $this->form = new mdApartamentoForm();
 
     if ($request->getParameter('type', false)) {
       $this->type = $request->getParameter('type');

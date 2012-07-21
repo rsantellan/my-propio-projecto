@@ -201,16 +201,17 @@ class MdFileHandler {
 	public static function checkDirectory($path){
 		if (is_dir($path)) {
             $last = $path[strlen($path)-1];
-            if($last == '/'){
+            if($last == DIRECTORY_SEPARATOR){
                 return $path;
             }
-			return $path.'/';
+			return $path.DIRECTORY_SEPARATOR;
 		}
         $cacheDir = sfConfig::get('sf_cache_dir');
         $rootDir = sfConfig::get('sf_root_dir');
         $webDir = sfConfig::get('sf_web_dir');
-		$folders = $pieces = explode("/", $path);
-		$smallPath = "/";
+		$auxPath = str_replace($rootDir, "", $path);
+		$folders = explode(DIRECTORY_SEPARATOR, $auxPath);
+		$smallPath = $rootDir.DIRECTORY_SEPARATOR;
 		foreach($folders as $key => $folder){
 			$smallPath .= $folder;
             try{
@@ -224,16 +225,16 @@ class MdFileHandler {
                 }
             }catch(Exception $e){
                 if(strlen($smallPath) > strlen($cacheDir) && strlen($smallPath) > strlen($rootDir) && strlen($smallPath) > strlen($webDir) ){
-                    throw $e;
+				    throw $e;
                 }
             }
 
-            $smallPath .= '/';
+            $smallPath .= DIRECTORY_SEPARATOR;
 
             
 			
 		}
-		return $path.'/';
+		return $path.DIRECTORY_SEPARATOR;
 	}
 
 }

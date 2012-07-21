@@ -10,7 +10,7 @@ all:
 # Activar los atributos para los usuarios
     plugins_user_attributes: false
 # Activar la media para el usuario
-    plugins_user_media: false
+    plugins_user_media: true
 # Activar la carga de grupos y permisos para el usuario.
     plugins_user_groups_permissions: false
 # Desactivar el envio de mails por testeo

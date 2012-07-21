@@ -104,6 +104,7 @@ abstract class BasemdReserva extends sfDoctrineRecord
               3 => 'cancel',
               4 => 'cancelPayPal',
               5 => 'errorPayPal',
+              6 => 'prePayPal',
              ),
              'default' => 'pending',
              'notnull' => true,

@@ -6,13 +6,13 @@ class mdFileCacheHandler {
         {
             $cacheFileName = basename($route);
 
-            $cachePath = sfConfig::get('sf_cache_dir') . '/images/web';
+            $cachePath = sfConfig::get('sf_cache_dir') . DIRECTORY_SEPARATOR.'images'.DIRECTORY_SEPARATOR.'web';
 
             $dirName = dirname($route);
 
             $cacheDir = str_replace(sfConfig::get ( 'sf_web_dir' ), $cachePath, $dirName);
 
-            $codeName = '/' . $options['code'] . '_' . (isset($options['width']) ? $options['width'] : '') . 'X' . (isset($options['height']) ? $options['height'] : '');
+            $codeName = DIRECTORY_SEPARATOR . $options['code'] . '_' . (isset($options['width']) ? $options['width'] : '') . 'X' . (isset($options['height']) ? $options['height'] : '');
 
             $cacheDir = MdFileHandler::checkDirectory($cacheDir . $codeName);
 
@@ -23,7 +23,7 @@ class mdFileCacheHandler {
         {
             $cacheFileName = basename($route);
 
-            $root = sfConfig::get ( 'sf_root_dir' ) . '/cache/images';
+            $root = sfConfig::get ( 'sf_root_dir' ) . DIRECTORY_SEPARATOR.'cache'.DIRECTORY_SEPARATOR.'images';
 
             $dirName = dirname($route);
 
@@ -46,15 +46,15 @@ class mdFileCacheHandler {
                 {
                     if ($file != "." && $file != "..")
                     {
-                        if (is_dir($path . '/' . $file))
+                        if (is_dir($path . DIRECTORY_SEPARATOR . $file))
                         {
-                            self::findAndRemoveFile($path.'/'.$file, $fileName);
+                            self::findAndRemoveFile($path.DIRECTORY_SEPARATOR.$file, $fileName);
                         }
                         else
                         {
                             if($file == $fileName)
                             {
-                                if (!unlink($path . '/' . $fileName))
+                                if (!unlink($path . DIRECTORY_SEPARATOR . $fileName))
                                 {
                                     throw new Exception('image not deleted of cache', 150);
                                 }

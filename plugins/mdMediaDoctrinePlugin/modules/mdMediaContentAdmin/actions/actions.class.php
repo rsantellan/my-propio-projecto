@@ -385,7 +385,7 @@ class mdMediaContentAdminActions extends sfActions
             $mdObject = Doctrine::getTable ( $object_class )->find($object_id);
 
             $path = $mdObject->getPath();
-
+			
             $file_name = MdFileHandler::upload($FILES, sfConfig::get('sf_upload_dir') . $path);
 
             //Obtenemos el usuario logueado
@@ -431,7 +431,7 @@ class mdMediaContentAdminActions extends sfActions
             $file_name = MdFileHandler::upload($_FILES, $path);
 
             try{
-                $avatar_path = MDVIDEOAVATAR_PATH .'/';
+                $avatar_path = MDVIDEOAVATAR_PATH .DIRECTORY_SEPARATOR;
                 MdFileHandler::delete($this->mediaConcrete->getAvatar(), $avatar_path);
             } catch(Exception $e){
 

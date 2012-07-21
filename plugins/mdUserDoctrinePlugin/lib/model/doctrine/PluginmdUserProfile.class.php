@@ -63,7 +63,7 @@ abstract class PluginmdUserProfile extends BasemdUserProfile {
     }
 
     public function getPath() {
-        return '/media/userProfile/';
+        return DIRECTORY_SEPARATOR.'media'.DIRECTORY_SEPARATOR.'userProfile'.DIRECTORY_SEPARATOR;
     }
 
     public static function getMdUserProfileOfProfile($mdProfileName) {
@@ -131,7 +131,7 @@ abstract class PluginmdUserProfile extends BasemdUserProfile {
     }
 
     public function retrieveDefault() {
-        return "/mdUserDoctrinePlugin/images/md_user_image.jpg";
+        return DIRECTORY_SEPARATOR."mdUserDoctrinePlugin".DIRECTORY_SEPARATOR."images".DIRECTORY_SEPARATOR."md_user_image.jpg";
     }
 
     public static function retrieveByMdUserId($md_user_id) {

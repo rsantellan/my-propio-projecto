@@ -34,8 +34,7 @@ class mdFileMagickHandler
         }        
         
         try{
-
-            $cacheFile  = mdFileCacheHandler::getCacheFile($route, $options);
+			$cacheFile  = mdFileCacheHandler::getCacheFile($route, $options);
 
             if(!file_exists($cacheFile))
             {

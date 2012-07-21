@@ -86,7 +86,7 @@ class mdWebImage
         $optionsBloc = explode(':',$array_params[1]);
         $keys = str_split($optionsBloc[0]);
         $optionsValues = explode('/',$optionsBloc[1]);
-        for($i=0;$i<count($keys);$i++)
+		for($i=0;$i<count($keys);$i++)
         {
             $options[mdWebImage::$dictionary[$keys[$i]]] = $optionsValues[$i];
         }
