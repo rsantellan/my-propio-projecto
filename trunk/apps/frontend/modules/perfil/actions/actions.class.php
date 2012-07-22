@@ -23,4 +23,15 @@ class perfilActions extends sfActions
 		$this->reservados = Doctrine::getTable('mdApartamento')->findReservedBy($this->mdUser->getId());
 		$this->visitados = Doctrine::getTable('mdApartamento')->findVisitedBy($this->mdUser->getId());
   }
+  
+  public function executeRetrieveUserAvatar(sfWebRequest $request)
+  {
+	  $mdUserProfile = mdUserHandler::retrieveMdUserProfile($request->getParameter('id'));
+	  if(!$mdUserProfile)
+	  {
+		return $this->renderText(mdBasicFunction::basic_json_response(false, array()));
+	  }
+	  $src = $mdUserProfile->retrieveAvatar(array(mdWebOptions::WIDTH =>180 , mdWebOptions::HEIGHT =>180 , mdWebOptions::CODE => mdWebCodes::CROPRESIZE ));
+	  return $this->renderText(mdBasicFunction::basic_json_response(true, array('src' => $src)));
+  }
 }

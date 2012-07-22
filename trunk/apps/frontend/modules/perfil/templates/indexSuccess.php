@@ -9,7 +9,7 @@ $profile = $mdUser->getMdUserProfile();
 if ($sf_user->isAuthenticated() && $sf_user->getMdUserId() == $mdUser->getId())
 {
   use_plugin_javascript("mdUserDoctrinePlugin", "mdUserManagmentFrontend.js", "last");
-  include_partial('mdMediaContentAdmin/javascriptInclude');
+  include_partial('uploadJavascriptInclude');
   //Tengo que agregar fancybox
   use_plugin_stylesheet('mastodontePlugin', '../js/fancybox/jquery.fancybox-1.3.1.css');
   use_plugin_javascript('mastodontePlugin','fancybox/jquery.fancybox-1.3.1.pack.js','last');
@@ -32,7 +32,8 @@ if ($sf_user->isAuthenticated() && $sf_user->getMdUserId() == $mdUser->getId())
           <img src="/images/perfil.png" width="17" height="21" />Info
         </div>
 		<div id="image_container">
-		  <img src="/images/profile.png" height="180" width="180" />
+		  <!-- <img id='user_avatar_image' src="/images/profile.png" height="180" width="180" /> -->
+		  <img id='user_avatar_image' src="<?php echo $profile->retrieveAvatar(array(mdWebOptions::WIDTH =>180 , mdWebOptions::HEIGHT =>180 , mdWebOptions::CODE => mdWebCodes::CROPRESIZE ));?>" height="180" width="180" />
 		</div>
 		<div class="md_blocks">
 			<h2 class="float_left"><?php echo __('Usuario_cambiar imagen'); ?></h2>
@@ -54,7 +55,7 @@ if ($sf_user->isAuthenticated() && $sf_user->getMdUserId() == $mdUser->getId())
           <?php include_component("mdUserManagementFrontend", "changeEmail"); ?>
         </div>
         <?php
-        $profile = $mdUser->getMdUserProfile();
+        //$profile = $mdUser->getMdUserProfile();
         ?>
         <div id="user_real_data">
           <?php include_partial('perfil/user_profile_data', array('profile'=> $profile));?>
