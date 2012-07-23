@@ -244,6 +244,9 @@ mdApartamentoSearch:
     precio_alta:
       type: float
       notnull: true
+    precio_media:
+      type: float
+      notnull: true       
     precio_baja:
       type: float
       notnull: true

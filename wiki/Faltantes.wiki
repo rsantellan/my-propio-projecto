@@ -29,8 +29,27 @@ En esta pagina voy a ir poniendo las cosas que faltan
  Usuario_cambiar email
  Usuario_cambiar imagen
 
+ Submit_PRECIO TEMPORADA MEDIA
+ Submit_CANTIDAD DE CUARTOS
+ Submit_TIPO DE PROPIEDAD
+ Submit_CANTIDAD DE BANIOS
+ Submit_MINIMO DE DIAS
+ Submit_COSTOS EXTRAS
+ Submit_METRAJE
+ Submit_BARRIO
+ Submit_COMODIDADES
+ Submit_Copete
+ Submit_CANTIDAD DE PERSONAS
+ Apartamento_precio
+ Apartamento_Medium season
+ 
+
+== Sacar cotizaciones desde == 
+
+http://www.nbc.com.uy/nbc/modules/mod_nbccotizaciones/rss.php
+
  
 == Imagenes ==
 
 Corregir para que funcione en windows.
- 
+

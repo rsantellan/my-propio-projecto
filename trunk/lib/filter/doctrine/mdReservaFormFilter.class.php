@@ -12,5 +12,6 @@ class mdReservaFormFilter extends BasemdReservaFormFilter
 {
   public function configure()
   {
+    $this->widgetSchema['lugar'] = new sfWidgetFormDoctrineChoice(array('model' => 'mdLocacion', 'add_empty' => true));
   }
 }

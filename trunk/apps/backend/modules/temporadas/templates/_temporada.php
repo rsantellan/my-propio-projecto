@@ -60,7 +60,7 @@
           }
           else
           {
-            console.log(json.options);
+            //console.log(json.options);
             $("#disponiblidad-create-form-errores").html(json.options);
             $("#disponiblidad-create-form-errores").show();
           }

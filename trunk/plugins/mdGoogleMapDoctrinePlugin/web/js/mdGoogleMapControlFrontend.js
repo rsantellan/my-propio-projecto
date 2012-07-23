@@ -6,7 +6,7 @@ function onDragEndMarker(marker){
     var lat  = markerLatLng.lat();
     var lng  = markerLatLng.lng();
     $.ajax({
-        url: __MD_CONTROLLER_FRONTEND_SYMFONY + '/google-map-coordinates',
+        url: $('#google-map-save-url').val(),
         data: { latitude: lat, longitude: lng, object_class_name: marker.get("object_class_name"), object_id: marker.get("object_id") },
         type: 'post',
         dataType: 'json',

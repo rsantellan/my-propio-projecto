@@ -14,4 +14,9 @@ require_once dirname(__FILE__).'/../lib/mdApartamentoGeneratorHelper.class.php';
 class mdApartamentoActions extends autoMdApartamentoActions
 {
 
+  public function executeGenerarIdiomas(sfWebRequest $request)
+  {
+    mdApartamentoHandler::generateOtherLanguages();
+    return $this->renderText(mdBasicFunction::basic_json_response(true, array()));
+  }
 }

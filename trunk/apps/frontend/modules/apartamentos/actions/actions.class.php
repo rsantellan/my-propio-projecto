@@ -67,7 +67,7 @@ class apartamentosActions extends sfActions {
   public function executeEdit(sfWebRequest $request) {
     $this->depto = $this->getRoute()->getObject();
     if ($this->getUser()->isAuthenticated() and $this->getUser()->getMdUserId() == $this->depto->getMdUserId()) {
-      $this->form = new mdApartamentoEditForm($this->depto);
+      $this->form = new apartamentaPublicar($this->depto);
       if ($request->hasParameter($this->form->getName())) {
         $parameters = $request->getParameter($this->form->getName());
 
@@ -75,7 +75,7 @@ class apartamentosActions extends sfActions {
 
         if ($this->form->isValid()) {
           $this->form->save();
-          $this->redirect('user_edit');
+          //$this->redirect('user_edit');
         }
       }
     }else
@@ -83,7 +83,7 @@ class apartamentosActions extends sfActions {
   }
 
   public function executeSubmit(sfWebRequest $request) {
-    $this->form = new mdApartamentoForm();
+    $this->form = new apartamentaPublicar();
 
     if ($request->getParameter('type', false)) {
       $this->type = $request->getParameter('type');
@@ -108,10 +108,12 @@ class apartamentosActions extends sfActions {
       $mdApartamento = new mdApartamento();
       $mdApartamento->setTipo($this->type);
       if ($this->getUser()->isAuthenticated())
+      {
         $mdApartamento->setMdUserId($this->getUser()->getMdUserId());
+      }
       $mdApartamento->setmdCurrencyId(mdCurrencyHandler::getCurrent()->getId());
       $mdApartamento->setActivo(false);
-      $this->form = new mdApartamentoFrontendForm($mdApartamento);
+      $this->form = new apartamentaPublicar($mdApartamento);
     }
   }
 

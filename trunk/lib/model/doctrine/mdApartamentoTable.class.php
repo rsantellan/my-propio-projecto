@@ -46,5 +46,21 @@ class mdApartamentoTable extends Doctrine_Table
 			->addWhere('r.fecha_desde <= ?', date('Y-m-d'));
 			return $q->execute();
 		}
+        
+        public function countNumberOfTranslation($mdApartmentId)
+        {
+          $conn = Doctrine_Manager::getInstance()->getCurrentConnection(); 
+          $sql = "SELECT id, titulo, copete, descripcion, lang  FROM md_apartamento_translation m where id = ?";
+          $r = $conn->fetchAssoc($sql, array($mdApartmentId));
+          return $r;
+        }
+        
+        public function insertOtherLanguage($id, $titulo, $copete, $descripcion, $lang)
+        {
+          $conn = Doctrine_Manager::getInstance()->getCurrentConnection(); 
+          $sql = "INSERT INTO `md_apartamento_translation` (`id` , `titulo` , `copete` , `descripcion` , `lang` ) VALUES (?, ?, ?, ?, ?)";
+          $r = $conn->execute($sql, array( $id, $titulo, $copete, $descripcion, $lang));
+          return $r;
+        }
 
 }

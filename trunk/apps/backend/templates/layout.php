@@ -14,6 +14,7 @@
         use_plugin_javascript('mastodontePlugin', 'mdLoadController.js');
         use_plugin_stylesheet('mastodontePlugin', '../js/fancybox/jquery.fancybox-1.3.1.css');
         use_plugin_javascript('mastodontePlugin','fancybox/jquery.fancybox-1.3.1.pack.js','last');
+        use_javascript('backendApartamentos.js');
     ?>
     <?php include_stylesheets() ?>
     <?php include_javascripts() ?>
