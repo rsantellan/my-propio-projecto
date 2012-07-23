@@ -1,3 +1,12 @@
+md_reserva:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                mdReserva
+    module:               md_reserva
+    prefix_path:          /md_reserva
+    column:               id
+    with_wildcard_routes: true
+
 md_comodidad:
   class: sfDoctrineRouteCollection
   options:

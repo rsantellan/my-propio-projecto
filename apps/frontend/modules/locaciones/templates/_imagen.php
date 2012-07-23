@@ -28,13 +28,13 @@ $(document).ready(function(){
 		$('img.promo').each(function(){
 			if($(this).is(":visible")){
 				$(this).fadeOut(500);
-				console.log(i);
+				//console.log(i);
 				if(i == showItem){
 					if(showItem == count-1){
 						$('img.promo').first().fadeIn(500);
 					}else showItem++;
 				}
-				console.log(showItem);
+				//console.log(showItem);
 			}else{
 				if(i == showItem){
 					$(this).fadeIn(500);

@@ -8,6 +8,7 @@
  * @property integer $id
  * @property integer $md_locacion_id
  * @property float $precio_alta
+ * @property float $precio_media
  * @property float $precio_baja
  * @property integer $cantidad_personas
  * @property enum $tipo_propiedad
@@ -18,6 +19,7 @@
  * @method integer             getId()                Returns the current record's "id" value
  * @method integer             getMdLocacionId()      Returns the current record's "md_locacion_id" value
  * @method float               getPrecioAlta()        Returns the current record's "precio_alta" value
+ * @method float               getPrecioMedia()       Returns the current record's "precio_media" value
  * @method float               getPrecioBaja()        Returns the current record's "precio_baja" value
  * @method integer             getCantidadPersonas()  Returns the current record's "cantidad_personas" value
  * @method enum                getTipoPropiedad()     Returns the current record's "tipo_propiedad" value
@@ -27,6 +29,7 @@
  * @method mdApartamentoSearch setId()                Sets the current record's "id" value
  * @method mdApartamentoSearch setMdLocacionId()      Sets the current record's "md_locacion_id" value
  * @method mdApartamentoSearch setPrecioAlta()        Sets the current record's "precio_alta" value
+ * @method mdApartamentoSearch setPrecioMedia()       Sets the current record's "precio_media" value
  * @method mdApartamentoSearch setPrecioBaja()        Sets the current record's "precio_baja" value
  * @method mdApartamentoSearch setCantidadPersonas()  Sets the current record's "cantidad_personas" value
  * @method mdApartamentoSearch setTipoPropiedad()     Sets the current record's "tipo_propiedad" value
@@ -55,6 +58,10 @@ abstract class BasemdApartamentoSearch extends sfDoctrineRecord
              'length' => 4,
              ));
         $this->hasColumn('precio_alta', 'float', null, array(
+             'type' => 'float',
+             'notnull' => true,
+             ));
+        $this->hasColumn('precio_media', 'float', null, array(
              'type' => 'float',
              'notnull' => true,
              ));

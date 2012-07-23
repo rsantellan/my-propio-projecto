@@ -19,4 +19,39 @@ class mdReserva extends BasemdReserva
   const CANCELPAYPAL = 'cancelPayPal';
   const ERRORPAYPAL = 'errorPayPal';
   const PREPAYPAL = 'prePayPal';
+  
+  public function getUser()
+  {
+    return $this->getMdUser();
+  }
+  
+  public function getApartamento()
+  {
+    return $this->getMdApartamento();
+  }
+  
+  public function getDesde()
+  {
+    return format_date($this->getFechaDesde(), 'D');
+  }
+  
+  public function getHasta()
+  {
+    return format_date($this->getFechaHasta(), 'D');
+  }
+  
+  public function getMoneda()
+  {
+    return $this->getMdCurrency();
+  }
+  
+  public function getTotalRedondeado()
+  {
+    return round($this->getTotal(), 0);
+  }
+  
+  public function getLugar()
+  {
+    return $this->getMdApartamento()->getMdLocacion();
+  }
 }

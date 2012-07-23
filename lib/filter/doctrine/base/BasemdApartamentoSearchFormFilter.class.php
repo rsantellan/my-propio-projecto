@@ -15,6 +15,7 @@ abstract class BasemdApartamentoSearchFormFilter extends BaseFormFilterDoctrine
     $this->setWidgets(array(
       'md_locacion_id'    => new sfWidgetFormFilterInput(array('with_empty' => false)),
       'precio_alta'       => new sfWidgetFormFilterInput(array('with_empty' => false)),
+      'precio_media'      => new sfWidgetFormFilterInput(array('with_empty' => false)),
       'precio_baja'       => new sfWidgetFormFilterInput(array('with_empty' => false)),
       'cantidad_personas' => new sfWidgetFormFilterInput(array('with_empty' => false)),
       'tipo_propiedad'    => new sfWidgetFormChoice(array('choices' => array('' => '', 'apartment' => 'apartment', 'house' => 'house', 'bedNbreakfast' => 'bedNbreakfast', 'cabin' => 'cabin', 'villa' => 'villa', 'castle' => 'castle', 'dorm' => 'dorm', 'treehouse' => 'treehouse', 'boat' => 'boat', 'automobile' => 'automobile', 'igloo' => 'igloo'))),
@@ -25,6 +26,7 @@ abstract class BasemdApartamentoSearchFormFilter extends BaseFormFilterDoctrine
     $this->setValidators(array(
       'md_locacion_id'    => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
       'precio_alta'       => new sfValidatorSchemaFilter('text', new sfValidatorNumber(array('required' => false))),
+      'precio_media'      => new sfValidatorSchemaFilter('text', new sfValidatorNumber(array('required' => false))),
       'precio_baja'       => new sfValidatorSchemaFilter('text', new sfValidatorNumber(array('required' => false))),
       'cantidad_personas' => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
       'tipo_propiedad'    => new sfValidatorChoice(array('required' => false, 'choices' => array('apartment' => 'apartment', 'house' => 'house', 'bedNbreakfast' => 'bedNbreakfast', 'cabin' => 'cabin', 'villa' => 'villa', 'castle' => 'castle', 'dorm' => 'dorm', 'treehouse' => 'treehouse', 'boat' => 'boat', 'automobile' => 'automobile', 'igloo' => 'igloo'))),
@@ -52,6 +54,7 @@ abstract class BasemdApartamentoSearchFormFilter extends BaseFormFilterDoctrine
       'id'                => 'Number',
       'md_locacion_id'    => 'Number',
       'precio_alta'       => 'Number',
+      'precio_media'      => 'Number',
       'precio_baja'       => 'Number',
       'cantidad_personas' => 'Number',
       'tipo_propiedad'    => 'Enum',

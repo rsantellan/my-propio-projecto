@@ -6,8 +6,8 @@ function calledOnQueueCompleteBasicUploaderCallBack(__MD_OBJECT_ID, __MD_OBJECT_
 function calledOnQueueCompleteUploaderCallBack(__MD_OBJECT_ID, __MD_OBJECT_CLASS)
 {
 
-  	var url = __MD_CONTROLLER_FRONTEND_SYMFONY + '/apartamentos/images';		
-
+  var url = $("#retrieve-album-images").val();//__MD_CONTROLLER_FRONTEND_SYMFONY + '/apartamentos/images';		
+  
   $.ajax({
     url: url,
     data: {

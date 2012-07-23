@@ -173,12 +173,15 @@ class mdApartamento extends BasemdApartamento {
         $mdCurrency = Doctrine::getTable('mdCurrency')->find(1);
         $precioAlta = mdCurrencyConvertion::convert($this->getMdCurrency()->getCode(), $mdCurrency->getCode(), $this->getPrecioAlta());
         $precioBaja = mdCurrencyConvertion::convert($this->getMdCurrency()->getCode(), $mdCurrency->getCode(), $this->getPrecioBaja());
+        $precioMedia = mdCurrencyConvertion::convert($this->getMdCurrency()->getCode(), $mdCurrency->getCode(), $this->getPrecioMedia());
       } else {
         $precioAlta = $this->getPrecioAlta();
         $precioBaja = $this->getPrecioBaja();
+        $precioMedia = $this->getPrecioMedia();
       }
       $mdApartamentoSearch->setPrecioAlta($precioAlta);
       $mdApartamentoSearch->setPrecioBaja($precioBaja);
+      $mdApartamentoSearch->setPrecioMedia($precioMedia);
       $mdApartamentoSearch->save();
     } else {
       if ($mdApartamentoSearch)
@@ -195,6 +198,7 @@ class mdApartamento extends BasemdApartamento {
       );
       $manager->createAlbum($params);
     }
+    //mdApartamentoHandler::saveOtherLanguages($this->getId());
   }
 
   public function postDelete($event) {
