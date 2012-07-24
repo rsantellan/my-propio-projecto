@@ -14,7 +14,7 @@ generator:
     config:
       actions: ~
       fields:  
-        User: { label: Usuario }
+        md_user_id: { label: Usuario }
         md_apartamento_id: { label: Apartamento }
         fecha_desde: { label: Desde, help: Fecha desde que se alquila }
         fecha_hasta: { label: Hasta, help: Fecha hasta que se alquila }
@@ -24,8 +24,8 @@ generator:
       list:    
         title: 'Reservas'
         hide: [created_at, updated_at]
-        display: [id, _usuario, _apartamento, Desde, Hasta, Moneda, Lugar, TotalRedondeado, _status]
-        sort: [status desc]
+        display: [id, _md_user_id, _md_apartamento_id, _fecha_desde, _fecha_hasta, _md_currency_id, Lugar, total, _status]
+        #sort: [status]
         object_actions: []
       filter:  
         display: [md_user_id, md_apartamento_id, fecha_desde, fecha_hasta, md_currency_id, status, lugar]

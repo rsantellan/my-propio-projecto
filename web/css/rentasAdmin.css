@@ -1,0 +1,23 @@
+/* 
+    Document   : rentasAdmin
+    Created on : Jul 24, 2012, 3:02:12 PM
+    Author     : Rodrigo Santellan <rodrigo.santellan at inswitch.us>
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+div.reserva_datos_usuario{
+  float: left;
+  width: 50%;
+}
+
+div.reserva_imagen_usuario{
+  float: left;
+  height: 180px;
+  width: 45%;
+}
+
+div.reserva_imagen_usuario img{
+  margin: auto;
+}
+
