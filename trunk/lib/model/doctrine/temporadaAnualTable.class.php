@@ -39,7 +39,7 @@ class temporadaAnualTable extends Doctrine_Table
       $conn = Doctrine_Manager::getInstance()->getCurrentConnection(); 
       $sql = "select tipo, count(fecha) as cantidad from temporada_anual where md_locacion_id = ? and fecha >= ? and fecha <= ? group by tipo";
       $r = $conn->fetchAssoc($sql, array($location_id, $start, $end));
-      //var_dump($r);
+//      var_dump($r);
       return $r;
     }
 }

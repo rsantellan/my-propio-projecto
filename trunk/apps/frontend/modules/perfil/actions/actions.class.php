@@ -17,7 +17,7 @@ class perfilActions extends sfActions
   */
   public function executeIndex(sfWebRequest $request)
   {
-		$this->mdUser = $this->getRoute()->getObject();
+    	$this->mdUser = $this->getRoute()->getObject();
 		$this->deptos = Doctrine::getTable('mdApartamento')->findBymd_user_id($this->mdUser->getId());
 		
 		$this->reservados = Doctrine::getTable('mdApartamento')->findReservedBy($this->mdUser->getId());

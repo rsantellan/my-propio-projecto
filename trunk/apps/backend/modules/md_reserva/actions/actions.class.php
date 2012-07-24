@@ -13,4 +13,14 @@ require_once dirname(__FILE__).'/../lib/md_reservaGeneratorHelper.class.php';
  */
 class md_reservaActions extends autoMd_reservaActions
 {
+  
+  public function executeGetUserData(sfWebRequest $request)
+  {
+    $this->object = mdUserHandler::retrieveMdUser($request->getParameter('id'));
+  }
+  
+  public function executeGetApartamentData(sfWebRequest $request)
+  {
+    $this->object = Doctrine::getTable('mdApartamento')->find($request->getParameter('id'));
+  }
 }

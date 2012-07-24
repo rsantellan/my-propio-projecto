@@ -129,12 +129,11 @@ class TemporadasDatesHandler
     {
       //Agrego hoy.
       //Me fijo si no existe.
-      
-      $hoy = Doctrine::getTable('temporadaAnual')->retrieveByDateAndLocation($location->getId(), date('Y-m-d'),strtotime("+1 years"));
+      $hoy = Doctrine::getTable('temporadaAnual')->retrieveByDateAndLocation($location->getId(), date('Y-m-d',strtotime("+1 years")));
       if(!$hoy)
       {
         $obj = new temporadaAnual();
-        $obj->setFecha($hoy);
+        $obj->setFecha(date('Y-m-d',strtotime("+1 years")));
         $obj->setMdLocacionId($location->getId());
         $obj->save();
       }

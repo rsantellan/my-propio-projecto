@@ -6,7 +6,7 @@
             <?php if( sfConfig::get( 'sf_plugins_user_media', false ) ):  ?>
                 <?php $mdUserProfile = $object->getMdUserProfile(); ?>
                 <?php if($mdUserProfile):?>
-            <img id="user_<?php echo $object->getId()?>" src="<?php echo $mdUserProfile->retrieveAvatar(array(mdWebOptions::WIDTH => 46, mdWebOptions::HEIGHT => 46, mdWebOptions::CODE => mdWebCodes::RESIZE), mdMediaManager::IMAGES); ?>" />
+                    <img id="user_<?php echo $object->getId()?>" src="<?php echo $mdUserProfile->retrieveAvatar(array(mdWebOptions::WIDTH => 46, mdWebOptions::HEIGHT => 46, mdWebOptions::CODE => mdWebCodes::RESIZE)); ?>" />
                     <?php $hasImage = true; ?>
                 <?php endif; ?>
             <?php endif; ?>
