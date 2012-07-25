@@ -23,16 +23,5 @@
       <?php echo __('apartament_precio temporada baja') ?>:<strong><?php echo $object->getPrecioBaja(); ?></strong>
     </span>
     <div class="clear"></div>
-    <span>
-      <?php echo __('mdUserDoctrine_text_lastname') ?>:<strong><?php //echo $mdUserProfile->getLastName(); ?></strong>
-    </span>
-    <div class="clear"></div>
-    <span>
-      <?php echo __('mdUserDoctrine_text_city') ?>:<strong><?php //echo $mdUserProfile->getCity(); ?></strong>
-    </span>
-    <div class="clear"></div>
-    <span>
-      <?php echo __('mdUserDoctrine_text_country') ?>:<strong><?php //echo sfCultureInfo::getInstance()->getCountry($mdUserProfile->getCountryCode()); ?></strong>
-    </span>
   </div>
 </div>
