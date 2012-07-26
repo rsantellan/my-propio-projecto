@@ -24,7 +24,7 @@ $(document).ready(function(){
 		var count = $('img.promo').length;
 		var showItem = Math.floor(Math.random()*count);
 		var i = 0;
-		console.info(showItem);
+		//console.info(showItem);
 		$('img.promo').each(function(){
 			if($(this).is(":visible")){
 				$(this).fadeOut(500);

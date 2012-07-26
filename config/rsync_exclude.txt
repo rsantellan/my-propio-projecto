@@ -2,10 +2,10 @@
 /cache/*
 /log/*
 /web/*_dev.php
-#/web/uploads/*
+/web/uploads/*
 /plugins/mastodontePlugin/web/js/mdConfig.js
-#apps/frontend/i18n/*
-#apps/backend/i18n/*
+apps/frontend/i18n/*
+apps/backend/i18n/*
 /config/databases.yml
 /config/app.yml
 #/web/css/*
