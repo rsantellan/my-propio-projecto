@@ -42,6 +42,7 @@ En esta pagina voy a ir poniendo las cosas que faltan
  Submit_CANTIDAD DE PERSONAS
  Apartamento_precio
  Apartamento_Medium season
+ Reservas_porcentaje a pagar ahora
 
 === Backend === 
 
@@ -77,5 +78,5 @@ http://www.nbc.com.uy/nbc/modules/mod_nbccotizaciones/rss.php
  
 == Imagenes ==
 
-Corregir para que funcione en windows.
+Corregir para que funcione en windows. (Esto no es mas necesario)
 

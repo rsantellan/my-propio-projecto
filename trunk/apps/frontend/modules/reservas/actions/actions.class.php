@@ -47,7 +47,8 @@ class reservasActions extends sfActions {
         'track' => 'reservas/done',
         'currency' => mdCurrencyHandler::getCurrent()->getCode()
     );
-    $precio = $reserva->getTotal();
+    $precio = round($reserva->getTotal() * 0.125, 0);
+    //$precio = $reserva->getTotal();
     return mdGenericPaymentHandler::startPayment(mdGenericPaymentHandler::PAYPAL, $precio, $options);
   }
 

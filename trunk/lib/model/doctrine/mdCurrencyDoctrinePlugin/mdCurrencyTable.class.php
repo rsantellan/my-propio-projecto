@@ -16,4 +16,6 @@ class mdCurrencyTable extends PluginmdCurrencyTable
     {
         return Doctrine_Core::getTable('mdCurrency');
     }
+
+    
 }

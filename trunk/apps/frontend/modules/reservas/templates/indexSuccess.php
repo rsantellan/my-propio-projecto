@@ -28,6 +28,22 @@ use_javascript('jquery.scrollTo-min.js');
           <li><?php echo __('Reservas_nights') ?>:<span> <?php echo $noches ?></span></li>
         </ul>
         <ul>
+          <li><?php echo __('Reservas_porcentaje a pagar ahora') ?></li>
+          <li class="prezio green">
+            <?php echo mdCurrencyHandler::getCurrentCode() ?> 
+            <?php 
+            $auxValor = 0;
+            if($values["md_currency_id"] !=  mdCurrencyHandler::getCurrent()->getId()):
+                //No son iguales, tengo que recalcular.
+              $auxValor = mdApartamento::calculatePriceOfConversion($values['total'], mdCurrencyHandler::getCurrent(), $values["md_currency_id"]);
+            else:
+              //No tengo que hacer nada
+              $auxValor = $values['total'];
+            endif;
+            echo round($auxValor * 0.125, 0);
+            ?>
+            <?php  ?>
+          </li>
           <li><?php echo __('Reservas_total') ?></li>
           <li class="prezio green">
             <?php echo mdCurrencyHandler::getCurrentCode() ?> 
