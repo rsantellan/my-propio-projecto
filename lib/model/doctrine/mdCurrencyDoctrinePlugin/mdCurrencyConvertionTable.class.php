@@ -16,4 +16,12 @@ class mdCurrencyConvertionTable extends PluginmdCurrencyConvertionTable
     {
         return Doctrine_Core::getTable('mdCurrencyConvertion');
     }
+    
+    public function getCurrenyConvertionBase($from, $to)
+    {
+      $q = $this->createQuery('mdC')
+            ->addWhere('mdC.currency_from = ?', $from)
+            ->addWhere('mdC.currency_to = ?', $to);
+      return $q->fetchOne();
+    }
 }

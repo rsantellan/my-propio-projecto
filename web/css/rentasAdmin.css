@@ -79,3 +79,8 @@ div.padding_block_filter{
 div.sf_admin_list{
   width: 100%;
 }
+
+div.form_status_field{
+	width: 100%;
+	text-align: center !important;
+}

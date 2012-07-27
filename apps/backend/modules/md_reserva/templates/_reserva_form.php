@@ -3,10 +3,12 @@
 <form action="<?php echo url_for('md_reserva/saveStatus');?>" method="POST" onsubmit="return salvarCambioEstado(this);">
   <div class="form_status_field">
     <label><?php echo __("reserva_status");?></label>
+    <div class="clear"></div>
     <?php echo $form['status']->render();?>
   </div>
   <div class="form_status_field">
     <label><?php echo __("reserva_message");?></label>
+    <div class="clear"></div>
     <?php echo $form['message']->render();?>
   </div>
   <?php
