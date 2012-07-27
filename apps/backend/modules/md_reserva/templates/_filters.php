@@ -27,15 +27,7 @@
             <?php echo link_to(__('Reset', array(), 'sf_admin'), 'md_reserva_collection', array('action' => 'filter'), array('query_string' => '_reset', 'method' => 'post')) ?>
             <input type="submit" value="<?php echo __('Filter', array(), 'sf_admin') ?>" />
     </div>
-    <table cellspacing="0">
-      <tfoot>
-        <tr>
-          <td colspan="2">
-          </td>
-        </tr>
-      </tfoot>
-      <tbody>
-      </tbody>
-    </table>
   </form>
 </div>
+<div class="clear"></div>
+<div class="padding_block_filter"></div>
