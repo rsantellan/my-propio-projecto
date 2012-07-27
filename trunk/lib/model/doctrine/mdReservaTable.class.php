@@ -16,4 +16,11 @@ class mdReservaTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('mdReserva');
     }
+    
+    public function retrieveOnlyNew(Doctrine_Query $q)
+    {
+      $rootAlias = $q->getRootAlias();
+      $q->addWhere($rootAlias.".fecha_hasta >= NOW()");
+      return $q;
+    }
 }

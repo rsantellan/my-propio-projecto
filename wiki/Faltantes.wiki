@@ -52,6 +52,10 @@ En esta pagina voy a ir poniendo las cosas que faltan
  reserva_estado cancelPayPal  *Cancelada en paypal*
  reserva_estado errorPayPal  *Error en paypal*
  reserva_estado prePayPal  *Pre paypal*
+ reserva_guardar
+ reserva_status
+ reserva_message
+ reserva_cambiar status
  barra_company name
  mdUserDoctrine_text_IsActive
  usuario_la cuenta esta activa

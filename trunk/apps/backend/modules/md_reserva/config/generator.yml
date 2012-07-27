@@ -27,6 +27,7 @@ generator:
         display: [id, _md_user_id, _md_apartamento_id, _fecha_desde, _fecha_hasta, _md_currency_id, Lugar, total, _status]
         #sort: [status]
         object_actions: []
+        table_method: retrieveOnlyNew
       filter:  
         display: [md_user_id, md_apartamento_id, fecha_desde, fecha_hasta, md_currency_id, status, lugar]
       form:    ~

@@ -43,3 +43,39 @@ div.reserva_imagen_apartamento img{
 div.rentas_filters label{
   float: none !important;
 }
+
+div.filter_field_div{
+  border-style: dotted; 
+  border-width: 1px; 
+  width: 25%; 
+  text-align: center;
+  float: left;
+  height: 100px;
+}
+
+div.filter_field_div .help{
+  padding-left: 0 !important;
+}
+
+div.filter_field_div label {
+    padding: 0 !important;
+    text-align: center !important;
+    width: 100% !important;
+}    
+div.form_actions{
+  float: left;
+  padding-top: 40px;
+  text-align: center;
+  width: 25%;
+}
+
+div.padding_block_filter{
+  height: 20px;
+  width: 100%;
+  border-top-width: 1px;
+  border-top-style: dotted;
+}
+
+div.sf_admin_list{
+  width: 100%;
+}
