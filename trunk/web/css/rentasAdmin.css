@@ -21,3 +21,25 @@ div.reserva_imagen_usuario img{
   margin: auto;
 }
 
+div.reserva_datos_apartamento{
+  float: left;
+  width: 50%;
+}
+
+div.reserva_imagen_apartamento{
+  float: left;
+  height: 180px;
+  width: 45%;
+}
+
+div.reserva_imagen_apartamento img{
+  margin: auto;
+}
+
+#sf_admin_bar{
+  float: none !important;
+}
+
+div.rentas_filters label{
+  float: none !important;
+}
