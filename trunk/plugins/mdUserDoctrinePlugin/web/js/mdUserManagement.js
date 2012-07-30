@@ -935,9 +935,11 @@ mastodontePlugin.UI.BackendBasic.getInstance().afterOpen = function(json){
             initializeLightBox(json.id, json.className, MdAvatarAdmin.getInstance().getDefaultAlbumId());
         }
     }
+    /*
     if(typeof mdNewsFeedBackendManager.getInstance().initializeAll == 'function'){
       mdNewsFeedBackendManager.getInstance().initializeAll();
     }
+    */
     if(typeof changeCountry == 'function') { 
       changeCountry($("#user_city_value").val());
     }

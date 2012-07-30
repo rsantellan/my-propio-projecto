@@ -57,6 +57,10 @@ if(sfContext::getInstance()->getRouting()->hasRouteName('mdTranslator')):?>
         <?php endif;
         ?>
         <?php
+            if(sfContext::getInstance()->getRouting()->hasRouteName('manage_newsletter')):?>
+                <li><a href="<?php echo url_for('@manage_newsletter')?>" class="<?php if(has_slot('manage_newsletter')){ echo 'current'; } else { echo ''; } ?>"><?php echo __("template_News Letter management");?></a></li>
+            <?php endif;?>
+        <?php
         if(sfContext::getInstance()->getRouting()->hasRouteName('configuration')):?>
                 <li><a href="<?php echo url_for('@configuration')?>" class="<?php if(has_slot('configuration')){ echo 'current'; } else { echo ''; } ?>">Configuraciones</a></li>
         <?php endif;?>
@@ -64,7 +68,6 @@ if(sfContext::getInstance()->getRouting()->hasRouteName('mdTranslator')):?>
         if(sfContext::getInstance()->getRouting()->hasRouteName('backend_mdSale')):?>
                 <li><a href="<?php echo url_for('@backend_mdSale')?>" class="<?php if(has_slot('backend_mdSale')){ echo 'current'; } else { echo ''; } ?>">Ventas</a></li>
         <?php endif;?>
-
             </ul>
         <?php endif;?>
         </div><!--MENU-->

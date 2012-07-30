@@ -8,6 +8,10 @@ prod:
       level:   err
       loggers: ~
 
+  mailer:
+    param:
+      delivery_strategy: realtime
+      
 test:
   storage:
     class: sfSessionTestStorage

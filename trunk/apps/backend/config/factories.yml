@@ -8,6 +8,13 @@ prod:
       level:   err
       loggers: ~
 
+  mailer:
+    class: sfMailer
+    param:
+      delivery_strategy: spool
+      spool_class:       Swift_DoctrineSpool
+      spool_arguments:   [ MailMessage, message, getSpooledMessages ]
+      
 test:
   storage:
     class: sfSessionTestStorage
@@ -25,8 +32,11 @@ test:
 
 dev:
   mailer:
+    class: sfMailer
     param:
-      delivery_strategy: realtime
+      delivery_strategy: spool
+      spool_class:       Swift_DoctrineSpool
+      spool_arguments:   [ MailMessage, message, getSpooledMessages ]
 
 all:
   routing:

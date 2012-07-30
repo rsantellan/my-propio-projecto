@@ -324,3 +324,8 @@ mdReserva:
       foreign: id
       type: one
       onDelete: CASCADE
+
+MailMessage:
+ actAs: { Timestampable: ~ }
+ columns:
+   message: { type: blob, notnull: true }
