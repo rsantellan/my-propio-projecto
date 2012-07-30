@@ -3,6 +3,7 @@ use_helper('mdAsset');
 use_helper( 'JavascriptBase' );
 use_plugin_javascript('mdMediaDoctrinePlugin', 'AvatarAdmin.js');
 use_plugin_javascript('mdMediaDoctrinePlugin', 'MdMouseOverObserver.js', 'last');
+use_plugin_javascript('mastodontePlugin', 'easySlider1.5.js', 'last');
 ?>
 
 <?php echo javascript_tag("

@@ -7,7 +7,7 @@
  *
  * @package    rentNchill
  * @subpackage form
- * @author     maui
+ * @author     Rodrigo Santellan
  * @version    SVN: $Id: sfDoctrineFormGeneratedTemplate.php 29553 2010-05-20 14:33:00Z Kris.Wallsmith $
  */
 abstract class BasemdMediaAlbumContentForm extends BaseFormDoctrine
