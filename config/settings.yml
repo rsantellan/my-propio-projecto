@@ -188,3 +188,7 @@ all:
 ########## mastodontePlugin  #################
     # habilita el servicio de CAPTCHA
     plugins_captcha_available: false
+
+########### Newsletter #######################
+
+    plugins_newsletter_group_enable: true

@@ -8,13 +8,6 @@ prod:
       level:   err
       loggers: ~
 
-  mailer:
-    class: sfMailer
-    param:
-      delivery_strategy: spool
-      spool_class:       Swift_DoctrineSpool
-      spool_arguments:   [ MailMessage, message, getSpooledMessages ]
-      
 test:
   storage:
     class: sfSessionTestStorage
@@ -26,17 +19,8 @@ test:
     param:
       send_http_headers: false
 
-  mailer:
-    param:
-      delivery_strategy: none
-
 dev:
-  mailer:
-    class: sfMailer
-    param:
-      delivery_strategy: spool
-      spool_class:       Swift_DoctrineSpool
-      spool_arguments:   [ MailMessage, message, getSpooledMessages ]
+
 
 all:
   routing:
@@ -57,3 +41,9 @@ all:
       session_name: mastodonte_admin
       timeout: 86400
 
+  mailer:
+    class: sfMailer
+    param:
+      delivery_strategy: spool
+      spool_class:       Swift_DoctrineSpool
+      spool_arguments:   [ MailMessage, message ]
