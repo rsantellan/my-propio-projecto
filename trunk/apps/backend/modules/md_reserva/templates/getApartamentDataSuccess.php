@@ -23,5 +23,6 @@
       <?php echo __('apartament_precio temporada baja') ?>:<strong><?php echo $object->getPrecioBaja(); ?></strong>
     </span>
     <div class="clear"></div>
+    <a href="<?php echo url_for('mdApartamento/edit?id='.$object->getId());;?>" target="_blank"><?php echo __('apartament_mas info') ?></a>
   </div>
 </div>
