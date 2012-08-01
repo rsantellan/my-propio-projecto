@@ -42,7 +42,15 @@ En esta pagina voy a ir poniendo las cosas que faltan
  Submit_CANTIDAD DE PERSONAS
  Apartamento_precio
  Apartamento_Medium season
+ novedades_Titulo
+ novedades_gracias por registrarse
+ novedades_nombre
+ novedades_email
+ novedades_Enviar
+ novedades_te has desregistrado
+ locacion_footer more
  Reservas_porcentaje a pagar ahora
+
 
 === Backend === 
 
@@ -69,6 +77,7 @@ En esta pagina voy a ir poniendo las cosas que faltan
  apartament_precio temporada alta
  apartament_precio temporada media
  apartament_precio temporada baja
+ apartament_mas info
  
  
 == Sacar cotizaciones desde == 
