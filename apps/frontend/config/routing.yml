@@ -1,6 +1,12 @@
 # You can find more information about this file on the symfony website:
 # http://www.symfony-project.org/reference/1_4/en/10-Routing
-
+newsletterDesvincularse:
+  url: /novedades-desvincularse.html
+  param: {module: newsletter, action: desvincularse }
+  
+newsletter:
+  url: /novedades.html
+  param: {module: newsletter, action: index }
 
 paypalCancelUrl:
   url:   /paypal/cancel

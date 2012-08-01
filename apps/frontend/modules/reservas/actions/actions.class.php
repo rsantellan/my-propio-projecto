@@ -129,13 +129,13 @@ class reservasActions extends sfActions {
       $reserva->setStatus(mdReserva::CANCELPAYPAL);
       $reserva->save();
     }
-    $this->redirect('@homepage');
+    //$this->redirect('@homepage');
   }
 
   public function executeSalePaypalError(sfWebRequest $request) {
-    echo 'error';
-    die();
-    $this->redirect('@homepage');
+    //echo 'error';
+    //die();
+    //$this->redirect('@homepage');
   }
 
   public function executeProcess($request) {
@@ -165,6 +165,11 @@ class reservasActions extends sfActions {
       $total = $depto->getPrecio($desde, $hasta);
       return $this->renderText(mdBasicFunction::basic_json_response(true, array('total' => $total)));
     }
+  }
+  
+  public function executeDummyCancel(sfWebRequest $request)
+  {
+    $this->setTemplate('salePaypalCancel');
   }
 
 }

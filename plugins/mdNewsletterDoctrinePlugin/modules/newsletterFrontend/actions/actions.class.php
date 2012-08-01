@@ -25,5 +25,5 @@ class newsletterFrontendActions extends sfActions {
         }
         return $this->renderText(mdBasicFunction::basic_json_response($ok, array("body"=>$this->getPartial("newsletterFrontend/form", array("form"=>$this->form, 'position'=>$position, 'number' =>$number)))));
     }
-
+    
 }

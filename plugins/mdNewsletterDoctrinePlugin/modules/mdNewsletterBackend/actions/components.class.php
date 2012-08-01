@@ -11,7 +11,7 @@ class mdNewsletterBackendComponents extends sfComponents {
     }
     
     public function executeRemoveUser(sfWebRequest $request) {
-        $this->form = new mdNewsletterForm();
+        $this->form = new mdNewsletterDeleteForm();
     }
 
     public function executeAddDates(sfWebRequest $request) {

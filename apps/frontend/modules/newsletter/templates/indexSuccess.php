@@ -1,7 +1,7 @@
 <?php
-slot('mdContact', true);
+slot('novedades', true);
 
-use_stylesheet('contact-us.css');
+use_stylesheet('novedades.css');
 
 ?>
 
@@ -10,7 +10,7 @@ use_stylesheet('contact-us.css');
     <li><img src="/images/folder.png" width="15" height="12" /></li>
 		<li><a href="<?php echo url_for('@homepage') ?>"><?php echo __('Global_Home') ?></a></li>
     <li>/</li>
-    <li class="current"><?php echo __('Contacto_Navegacion') ?></li>
+    <li class="current"><?php echo __('novedades_Navegacion') ?></li>
 </div> 
  <div class="main-content-up">
 	 <div class="col-right">
@@ -18,19 +18,19 @@ use_stylesheet('contact-us.css');
    </div>
   
      <div class="col-left">
-         <div class="titulo green"><?php echo __('Contacto_Titulo') ?></div>
-        <form name="<?php echo $form->getName();?>" class="form-send" method="POST" action="<?php echo url_for('@mdContact') ?>">
+         <div class="titulo green"><?php echo __('novedades_Titulo') ?></div>
+         <?php if ($sf_user->hasFlash('ok')): ?>
+          <h3><?php echo __('novedades_gracias por registrarse');?></h3>
+        <?php endif; ?>
+        <form name="<?php echo $form->getName();?>" class="form-send" method="POST" action="<?php echo url_for('@newsletter') ?>">
 	            <?php echo $form->renderHiddenFields() ?>
               <div class="campos-left">
-                  <li><?php echo $form['nombre']->renderLabel() ?></li>
+                  <li><?php echo __('novedades_nombre') ?></li>
                   <li><?php echo $form['nombre']->render(array('tabIndex'=>1)) ?></li>
-                  <li><?php echo $form['email']->renderLabel() ?></li>
+                  <li><?php echo __('novedades_email') ?></li>
                   <li><?php echo $form['email']->render(array('tabIndex'=>2)) ?></li>
-                  <div class="campos-right">
-              	<li><?php echo $form['mensaje']->renderLabel() ?></li>
-                 <li><?php echo $form['mensaje']->render(array('tabIndex'=>3, 'value'=>__('Contacto_Hi!'), 'cols'=>"", 'rows'=>"")) ?></li>
-              </div>
-                  <div class="div-send"><button class="send" type="submit" tabIndex="4"><?php echo __('Contacto_Enviar') ?></button></div>
+                  
+                  <div class="div-send"><button class="send" type="submit" tabIndex="4"><?php echo __('novedades_Enviar') ?></button></div>
               </div>
               
 							<div class="clear"></div>
