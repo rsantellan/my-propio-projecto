@@ -1,0 +1,985 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN" "http://www.oasis-open.org/committees/xliff/documents/xliff.dtd">
+<xliff version="1.0">
+  <file source-language="EN" target-language="en" datatype="plaintext" original="messages" date="2012-08-01T18:20:28Z" product-name="messages">
+    <header/>
+    <body>
+      <trans-unit id="1">
+        <source>mdMediaDoctrine_text_embed_code:</source>
+        <target>Codigo:</target>
+      </trans-unit>
+      <trans-unit id="2">
+        <source>mdMediaDoctrine_text_Url:</source>
+        <target>Url:</target>
+      </trans-unit>
+      <trans-unit id="3">
+        <source>mdUserDoctrine_error User Is Blocked</source>
+        <target>User Is Blocked</target>
+      </trans-unit>
+      <trans-unit id="4">
+        <source>mdUserDoctrine_text_isActive</source>
+        <target>User Is Active</target>
+      </trans-unit>
+      <trans-unit id="5">
+        <source>mdUserDoctrine_text_notIsActive</source>
+        <target>User Is Not Active</target>
+      </trans-unit>
+      <trans-unit id="6">
+        <source>mdUserDoctrine_text_isBlocked</source>
+        <target>User Is Blocked</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>mdUserDoctrine_text_Solo de mailing</source>
+        <target>Only mailing</target>
+      </trans-unit>
+      <trans-unit id="8">
+        <source>blocked_no importa</source>
+        <target>Both</target>
+      </trans-unit>
+      <trans-unit id="9">
+        <source>blocked_si</source>
+        <target>Yes</target>
+      </trans-unit>
+      <trans-unit id="10">
+        <source>blocked_no</source>
+        <target>No</target>
+      </trans-unit>
+      <trans-unit id="11">
+        <source>ordenar_Titulo</source>
+        <target>Order</target>
+      </trans-unit>
+      <trans-unit id="12">
+        <source>ordenar_Seleccione una categoria padre</source>
+        <target>Select a category</target>
+      </trans-unit>
+      <trans-unit id="13">
+        <source>ordenar_Boton</source>
+        <target>Order</target>
+      </trans-unit>
+      <trans-unit id="14">
+        <source>error_</source>
+        <target>error</target>
+      </trans-unit>
+      <trans-unit id="15">
+        <source>user_changeEmail</source>
+        <target>Change email</target>
+      </trans-unit>
+      <trans-unit id="16">
+        <source>mdUserDoctrine_text_myData</source>
+        <target>My data</target>
+      </trans-unit>
+      <trans-unit id="17">
+        <source>usuario_username</source>
+        <target>Username</target>
+      </trans-unit>
+      <trans-unit id="18">
+        <source>usuario_email</source>
+        <target>Email</target>
+      </trans-unit>
+      <trans-unit id="19">
+        <source>usuario_enviar</source>
+        <target>Send</target>
+      </trans-unit>
+      <trans-unit id="20">
+        <source>usuario_password</source>
+        <target>Password</target>
+      </trans-unit>
+      <trans-unit id="21">
+        <source>usuario_password_confirmation</source>
+        <target>Password confirmation</target>
+      </trans-unit>
+      <trans-unit id="22">
+        <source>usuario_name</source>
+        <target>Name</target>
+      </trans-unit>
+      <trans-unit id="23">
+        <source>usuario_last_name</source>
+        <target>Last name</target>
+      </trans-unit>
+      <trans-unit id="24">
+        <source>usuario_city</source>
+        <target>Phone</target>
+      </trans-unit>
+      <trans-unit id="25">
+        <source>usuario_country</source>
+        <target>Country</target>
+      </trans-unit>
+      <trans-unit id="26">
+        <source>mdUserDoctrine_text_email</source>
+        <target>Email</target>
+      </trans-unit>
+      <trans-unit id="27">
+        <source>mdUserDoctrine_text_changeMyData</source>
+        <target>Change my data</target>
+      </trans-unit>
+      <trans-unit id="28">
+        <source>mdUserDoctrine_text_password</source>
+        <target>Password</target>
+      </trans-unit>
+      <trans-unit id="29">
+        <source>mdUserDoctrine_text_repeatPassword</source>
+        <target>Repeat Password</target>
+      </trans-unit>
+      <trans-unit id="30">
+        <source>user_cambiarPassword</source>
+        <target>Change password</target>
+      </trans-unit>
+      <trans-unit id="31">
+        <source>user_changeUserData</source>
+        <target>Change user data</target>
+      </trans-unit>
+      <trans-unit id="32">
+        <source>mdBasic_text_managementFrontendRegisterName</source>
+        <target>Name</target>
+      </trans-unit>
+      <trans-unit id="33">
+        <source>mdBasic_text_managementFrontendRegisterUser</source>
+        <target>User</target>
+      </trans-unit>
+      <trans-unit id="34">
+        <source>mdBasic_text_managementFrontendRegisterLastName</source>
+        <target>Last name</target>
+      </trans-unit>
+      <trans-unit id="35">
+        <source>mdBasic_text_managementFrontendRegisterEmail</source>
+        <target>Email</target>
+      </trans-unit>
+      <trans-unit id="36">
+        <source>mdBasic_text_managementFrontendRegisterPassword</source>
+        <target>Password</target>
+      </trans-unit>
+      <trans-unit id="37">
+        <source>mdBasic_text_managementFrontendRegisterRepeat_password</source>
+        <target>Repeat password</target>
+      </trans-unit>
+      <trans-unit id="38">
+        <source>mdImageFileGallery_text_imagesAdd</source>
+        <target>Add image</target>
+      </trans-unit>
+      <trans-unit id="39">
+        <source>user_editUserTitle</source>
+        <target>Edit user</target>
+      </trans-unit>
+      <trans-unit id="40">
+        <source>mdUserDoctrine_text_changeMyDataFinish</source>
+        <target>Finish</target>
+      </trans-unit>
+      <trans-unit id="41">
+        <source>mdUserDoctrine_text_ResetMailTitle</source>
+        <target>Reset mail</target>
+      </trans-unit>
+      <trans-unit id="42">
+        <source>mdUserDoctrine_text_ResetMailDescription</source>
+        <target>You have requested a reset mail operation</target>
+      </trans-unit>
+      <trans-unit id="43">
+        <source>mdUserDoctrine_text_ResetMailFollowLink</source>
+        <target>Please clic </target>
+      </trans-unit>
+      <trans-unit id="44">
+        <source>mdUserDoctrine_text_ResetHere</source>
+        <target>Here</target>
+      </trans-unit>
+      <trans-unit id="45">
+        <source>mdUserDoctrine_text_activateMailTitle</source>
+        <target>Activate email</target>
+      </trans-unit>
+      <trans-unit id="46">
+        <source>mdUserDoctrine_text_activateMailDescription</source>
+        <target>Please activate your account</target>
+      </trans-unit>
+      <trans-unit id="47">
+        <source>mdUserDoctrine_text_activateMailFollowLink</source>
+        <target>Click here</target>
+      </trans-unit>
+      <trans-unit id="48">
+        <source>mdUserDoctrine_text_titleLayoutRelation</source>
+        <target>Relations</target>
+      </trans-unit>
+      <trans-unit id="49">
+        <source>mdUserDoctrine_text_IsActive</source>
+        <target>Is active</target>
+      </trans-unit>
+      <trans-unit id="50">
+        <source>mdUserDoctrine_text_IsBlocked</source>
+        <target>Is blocked</target>
+      </trans-unit>
+      <trans-unit id="51">
+        <source>homero_Vehiculo 1</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="52">
+        <source>homero_Vehiculo 2</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="53">
+        <source>homero_Vehiculo 3</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="54">
+        <source>homero_Vehiculo 4</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="55">
+        <source>mdUserDoctrine_text_addMdPassport</source>
+        <target>Add password</target>
+      </trans-unit>
+      <trans-unit id="56">
+        <source>mdUserDoctrine_text_cancelProfile</source>
+        <target>Cancel</target>
+      </trans-unit>
+      <trans-unit id="57">
+        <source>mdUserDoctrine_text_noNewProfile</source>
+        <target>No profile</target>
+      </trans-unit>
+      <trans-unit id="58">
+        <source>mdUserManagement_Seleccionar un perfil</source>
+        <target>Select a profile</target>
+      </trans-unit>
+      <trans-unit id="59">
+        <source>mdUserDoctrine_text_blocked</source>
+        <target>Blocked</target>
+      </trans-unit>
+      <trans-unit id="60">
+        <source>usuario_el email no existe</source>
+        <target>Email doesn't exists</target>
+      </trans-unit>
+      <trans-unit id="61">
+        <source>usuario_el email se ha enviado con exito.</source>
+        <target>Email send</target>
+      </trans-unit>
+      <trans-unit id="62">
+        <source>user_ingresar</source>
+        <target>Login</target>
+      </trans-unit>
+      <trans-unit id="63">
+        <source>mdAuth_text_username</source>
+        <target>Username</target>
+      </trans-unit>
+      <trans-unit id="64">
+        <source>mdAuth_text_password</source>
+        <target>Password</target>
+      </trans-unit>
+      <trans-unit id="65">
+        <source>usuario_Recordar contraseña</source>
+        <target>Remember</target>
+      </trans-unit>
+      <trans-unit id="66">
+        <source>usuario_Le enviaremos sus datos de login a su casilla de mail</source>
+        <target>We will send your login data to your email</target>
+      </trans-unit>
+      <trans-unit id="67">
+        <source>usuario_Enviar clave</source>
+        <target>Send password</target>
+      </trans-unit>
+      <trans-unit id="68">
+        <source>mdAuthDoctrine_text_changePasswordCorrect</source>
+        <target>Password changed</target>
+      </trans-unit>
+      <trans-unit id="69">
+        <source>newsletter_seleccionar todos</source>
+        <target>Select all</target>
+      </trans-unit>
+      <trans-unit id="70">
+        <source>newsletter_seleccionar algunos</source>
+        <target>Select some</target>
+      </trans-unit>
+      <trans-unit id="71">
+        <source>newsletter_seleccionar grupo</source>
+        <target>Select group</target>
+      </trans-unit>
+      <trans-unit id="72">
+        <source>newsletter_fecha de envio</source>
+        <target>Sending date</target>
+      </trans-unit>
+      <trans-unit id="73">
+        <source>newsletter_guardar</source>
+        <target>Save</target>
+      </trans-unit>
+      <trans-unit id="74">
+        <source>newsletter_Enviado</source>
+        <target>Sended</target>
+      </trans-unit>
+      <trans-unit id="75">
+        <source>newsletter_No enviado</source>
+        <target>Not sended</target>
+      </trans-unit>
+      <trans-unit id="76">
+        <source>newsletter_Enviado a todos</source>
+        <target>Sended to all</target>
+      </trans-unit>
+      <trans-unit id="77">
+        <source>newsletter_Enviado a algunos</source>
+        <target>Sended to some</target>
+      </trans-unit>
+      <trans-unit id="78">
+        <source>newsletter_Enviado a grupos</source>
+        <target>Sended to a group</target>
+      </trans-unit>
+      <trans-unit id="79">
+        <source>newsletter_Cancelar envio</source>
+        <target>Cancel</target>
+      </trans-unit>
+      <trans-unit id="80">
+        <source>newsletter_Visualizar</source>
+        <target>Preview</target>
+      </trans-unit>
+      <trans-unit id="81">
+        <source>newsletter_Bajar lista de usuarios</source>
+        <target>Download list</target>
+      </trans-unit>
+      <trans-unit id="82">
+        <source>newsletter_asunto</source>
+        <target>Title</target>
+      </trans-unit>
+      <trans-unit id="83">
+        <source>newsletter_cuerpo</source>
+        <target>Body</target>
+      </trans-unit>
+      <trans-unit id="84">
+        <source>newsletter_mail eliminado</source>
+        <target>Email delete</target>
+      </trans-unit>
+      <trans-unit id="85">
+        <source>newsletter_no existe el mail</source>
+        <target>Email doesn't exists</target>
+      </trans-unit>
+      <trans-unit id="86">
+        <source>newsletter_enviado</source>
+        <target>Sended</target>
+      </trans-unit>
+      <trans-unit id="87">
+        <source>newsletter_Destinatario</source>
+        <target>Destiny</target>
+      </trans-unit>
+      <trans-unit id="88">
+        <source>newsletter_Fecha de envio</source>
+        <target>Sending date</target>
+      </trans-unit>
+      <trans-unit id="89">
+        <source>newsletter_Acciones</source>
+        <target>Actions</target>
+      </trans-unit>
+      <trans-unit id="90">
+        <source>newsletter_El archivo subido no esta soportado.</source>
+        <target>The uploaded file is not suported</target>
+      </trans-unit>
+      <trans-unit id="91">
+        <source>newsletter_Se han importado correctamente los usuarios.</source>
+        <target>The users has been imported</target>
+      </trans-unit>
+      <trans-unit id="92">
+        <source>newsletter_cancelar</source>
+        <target>Cancel</target>
+      </trans-unit>
+      <trans-unit id="93">
+        <source>newsletter_nuevo mail guardado</source>
+        <target>New email saved</target>
+      </trans-unit>
+      <trans-unit id="94">
+        <source>newsletter_la cantidad de usuarios registrados es:</source>
+        <target>Quantity</target>
+      </trans-unit>
+      <trans-unit id="95">
+        <source>newsletter_agregar usuario</source>
+        <target>Add user</target>
+      </trans-unit>
+      <trans-unit id="96">
+        <source>newsletter_eliminar usuario</source>
+        <target>Delete user</target>
+      </trans-unit>
+      <trans-unit id="97">
+        <source>newsletter_exportar</source>
+        <target>Export</target>
+      </trans-unit>
+      <trans-unit id="98">
+        <source>newsletter_importar</source>
+        <target>Import</target>
+      </trans-unit>
+      <trans-unit id="99">
+        <source>newsletter_no seleccionar a ninguno</source>
+        <target>Select none</target>
+      </trans-unit>
+      <trans-unit id="100">
+        <source>newsletter_seleccionar usuarios</source>
+        <target>Select users</target>
+      </trans-unit>
+      <trans-unit id="101">
+        <source>newsletter_save</source>
+        <target>Save</target>
+      </trans-unit>
+      <trans-unit id="102">
+        <source>newsletter_cancel</source>
+        <target>Cancel</target>
+      </trans-unit>
+      <trans-unit id="103">
+        <source>newsletter_esta seguro de querer eliminar?</source>
+        <target>Are you sure you want to delete?</target>
+      </trans-unit>
+      <trans-unit id="104">
+        <source>newsletter_Eliminar</source>
+        <target>Delete</target>
+      </trans-unit>
+      <trans-unit id="105">
+        <source>Contacto_titulo</source>
+        <target>Title</target>
+      </trans-unit>
+      <trans-unit id="106">
+        <source>Mail_Admin ventas</source>
+        <target>Reservations admins</target>
+      </trans-unit>
+      <trans-unit id="107">
+        <source>Mail_Nombre del mail al usuario con detalle del metodo de pago</source>
+        <target>Email</target>
+      </trans-unit>
+      <trans-unit id="108">
+        <source>mailVenta_subject_cliente </source>
+        <target>Cliente</target>
+      </trans-unit>
+      <trans-unit id="109">
+        <source>Mail_subject respuesta confirmacion_</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="110">
+        <source>Mail_Nombre del mail al usuario con confirmacion de pago</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="111">
+        <source>Mensajes_Description Paypal</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="112">
+        <source>Mensajes_Name item Paypal</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="113">
+        <source>Mensajes_Desc item Paypal</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="114">
+        <source>Mail_Comission Asunto</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="115">
+        <source>Mail_Titulo respuesta confirmacion </source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="116">
+        <source>Mail_Respuesta a solicitud de pago</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="117">
+        <source>Mail_Respuesta pago </source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="118">
+        <source>Mail_Admin Final Titulo</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="119">
+        <source>Mail_Admin Final Cuerpo</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="120">
+        <source>Mail_Admin Final Locacion</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="121">
+        <source>Mail_Admin Final Apartamento</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="122">
+        <source>Mail_Admin Final Fecha</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="123">
+        <source>Mail_Admin Final Usuario</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="124">
+        <source>Mail_Admin Final Email</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="125">
+        <source>Mail_Usuario Final Asunto</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="126">
+        <source>Mail_Comission Titulo</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="127">
+        <source>Mail_Comission Cuerpo [url_apartamento]</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="128">
+        <source>Mail_Admin Final Asunto</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="129">
+        <source>mdGenericSalePlugin_Code</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="130">
+        <source>mdGenericSalePlugin_pago Rechazado</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="131">
+        <source>mdGenericSalePlugin_pago Validado</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="132">
+        <source>mdGenericSalePlugin_pago Cambiar estado</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="133">
+        <source>mdShoppingSalePlugin_text_previousStatus</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="134">
+        <source>mdShoppingSalePlugin_text_nextStatus</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="135">
+        <source>mdGenericSalePlugin_Detalle</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="136">
+        <source>mdGenericSalePlugin_UserData</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="137">
+        <source>mdGenericSalePlugin_Id</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="138">
+        <source>mdGenericSalePlugin_Name</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="139">
+        <source>mdGenericSalePlugin_LastName</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="140">
+        <source>mdGenericSalePlugin_Email</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="141">
+        <source>mdGenericSalePlugin_Pais</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="142">
+        <source>mdGenericSalePlugin_Pago</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="143">
+        <source>mdGenericSalePlugin_Total</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="144">
+        <source>mdGenericSalePlugin_Payment Method</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="145">
+        <source>venta_</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="146">
+        <source>venta_precio:</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="147">
+        <source>venta_usuario:</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="148">
+        <source>venta_forma de pago:</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="149">
+        <source>venta_link sin validez</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="150">
+        <source>venta_su compra esta siendo procesada, al momento de verificar el codigo se le informara</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="151">
+        <source>venta_enviar codigo de giro</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="152">
+        <source>venta_enviar codigo de western</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="153">
+        <source>venta_enviar codigo de abitab</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="154">
+        <source>mdBasic_text_PrincipalTitulo</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="155">
+        <source>mdBasic_text_PrincipalTexto</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="156">
+        <source>mdBasic_text_PrincipalFooter</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="157">
+        <source>mdBasic_text_ContactenosTitulo</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="158">
+        <source>mdBasic_text_ContactenosTexto</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="159">
+        <source>mdBasic_text_ContactenosFooter</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="160">
+        <source>mdBasic_text_ProductosTitulo</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="161">
+        <source>mdBasic_text_ProductosTexto</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="162">
+        <source>mdBasic_text_ProductosFooter</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="163">
+        <source>mdUserDoctrine_text_ResetMailSubject</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="164">
+        <source>mdUserDoctrine_text_ActivationMailSubject</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="165">
+        <source>Configuracion_Mail Titulo</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="166">
+        <source>Configuracion_Mail Recipient</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="167">
+        <source>Configuracion_Mail Automatico</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="168">
+        <source>Configuracion_Mail Desde cliente</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="169">
+        <source>Configuracion_Mail From Email</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="170">
+        <source>Configuracion_Mail From Name</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="171">
+        <source>mastodonte_Errores Requerido</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="172">
+        <source>mastodonte_Errores Invalido</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="173">
+        <source>tinymce_agregar formato</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="174">
+        <source>tinymce_sacar formato</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="175">
+        <source>Captcha_Ingrese el código de la imagen</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="176">
+        <source>Captcha_Si no lo entiende haga click sobre ella</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="177">
+        <source>Captcha_Reload image</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="178">
+        <source>mdConfiguration_text_save</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="179">
+        <source>layout_configuration</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="180">
+        <source>mastodontePlugin_text_contactConfiguration</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="181">
+        <source>mastodontePlugin_text_securityConfiguration</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="182">
+        <source>mastodontePlugin_text_backendSecurityConfiguration</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="183">
+        <source>mastodontePlugin_text_backendSalesConfiguration</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="184">
+        <source>exportaFacil_importar archivo</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="185">
+        <source>correoUruguayo_importar archivo</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="186">
+        <source>mastodontePlugin_text_configurationGroupName</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="187">
+        <source>mastodontePlugin_text_configurationGroupRequiered</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="188">
+        <source>mastodontePlugin_text_configurationGroupNotRequiered</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="189">
+        <source>layout_</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="190">
+        <source>layout_Ordenar</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="191">
+        <source>layout_Agregar</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="192">
+        <source>barra_company name</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="193">
+        <source>Layout_Tiene textos sin publicar</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="194">
+        <source>Layout_Publicando...</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="195">
+        <source>Layout_Los textos se han publicado</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="196">
+        <source>Layout_publicar</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="197">
+        <source>backendLayout_Usuarios</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="198">
+        <source>backendLayout_Textos</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="199">
+        <source>template_News Letter management</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="200">
+        <source>Apartamentos_Ocupacion</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="201">
+        <source>Locacion_Temporadas</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="202">
+        <source>Apartamentos_Nuevo</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="203">
+        <source>Apartamentos_Listado</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="204">
+        <source>Choose an action</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="205">
+        <source>Delete</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="206">
+        <source>go</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="207">
+        <source>Apartamentos_Editar</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="208">
+        <source>Apartamentos_Imagenes</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="209">
+        <source>Apartamentos_ubicacion</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="210">
+        <source>Moneda</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="211">
+        <source>Imagen</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="212">
+        <source>Locacion_nuevo</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="213">
+        <source>Locacion_lista</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="214">
+        <source>Locacion_editar</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="215">
+        <source>Locacion_Imagenes</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="216">
+        <source>usuario_la cuenta esta activa</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="217">
+        <source>usuario_la cuenta no esta activa</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="218">
+        <source>usuario_la cuenta esta bloqueada</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="219">
+        <source>usuario_la cuenta no esta bloqueada</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="220">
+        <source>reserva_estado </source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="221">
+        <source>reserva_cambiar status</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="222">
+        <source>reserva_status</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="223">
+        <source>reserva_message</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="224">
+        <source>reserva_guardar</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="225">
+        <source>Reset</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="226">
+        <source>Filter</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="227">
+        <source>apartament_nombre</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="228">
+        <source>apartament_Moneda</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="229">
+        <source>apartament_precio temporada alta</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="230">
+        <source>apartament_precio temporada media</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="231">
+        <source>apartament_precio temporada baja</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="232">
+        <source>apartament_mas info</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="233">
+        <source>Reservas</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="234">
+        <source>Usuario</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="235">
+        <source>Apartamento</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="236">
+        <source>Desde</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="237">
+        <source>Fecha desde que se alquila</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="238">
+        <source>Hasta</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="239">
+        <source>Fecha hasta que se alquila</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="240">
+        <source>Moneda en que se reservo</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="241">
+        <source>Total</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="242">
+        <source>Total pagado</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="243">
+        <source>Estado</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="244">
+        <source>Estado de los pagos</source>
+        <target/>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

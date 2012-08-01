@@ -3,3 +3,7 @@ all:
     #path: 'C:\Program Files\ImageMagick-6.7.6-Q16\'
     #path: '/usr/local/bin/'
 
+#  i18n-extract-additional:
+#    enabled: true
+#    paths:
+#      - '<?php echo sfConfig::get('sf_plugins_dir') . '/'; ?>'

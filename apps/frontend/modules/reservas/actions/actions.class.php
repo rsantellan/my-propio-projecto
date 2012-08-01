@@ -172,4 +172,8 @@ class reservasActions extends sfActions {
     $this->setTemplate('salePaypalCancel');
   }
 
+  public function executeDummyOk(sfWebRequest $request)
+  {
+    $this->setTemplate('salePaypalOK');
+  }
 }
