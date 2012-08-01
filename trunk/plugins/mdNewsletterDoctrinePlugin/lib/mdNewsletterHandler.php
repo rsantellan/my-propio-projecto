@@ -13,7 +13,7 @@ class mdNewsletterHandler
 		 * @author maui .-
 		 */
 		
-    public static function registerUser($email, $group = null)
+    public static function registerUser($email, $group = null, $name = null)
     {
         if(!mdBasicFunction::validEmail($email))
         {
@@ -25,17 +25,34 @@ class mdNewsletterHandler
             $mdUser = new mdUser();
             $mdUser->setEmail($email);
             $mdUser->save();
+            /*
+            if(!is_null($name))
+            {
+              $mdPassport = new mdPassport();
+              $mdPassport->setMdUser($mdUser);
+              $mdPassport->setUsername(time());
+              $mdPassport->save();
+              $mdUserProfile = new mdUserProfile();
+              $mdUserProfile->setName($name);
+              $mdUserProfile->setMdUserIdTmp($mdUser->getId());
+              $mdUserProfile->save();
+            }
+            */
         }
         $mdNewsLetterUser = Doctrine::getTable("mdNewsLetterUser")->findOneBy("md_user_id", $mdUser->getId());
         if(!$mdNewsLetterUser)
         {
             $mdNewsLetterUser = new mdNewsLetterUser();
+            if(!is_null($name))
+            {
+              $mdNewsLetterUser->setName($name);
+            }
             $mdNewsLetterUser->setMdUserId($mdUser->getId());
             $mdNewsLetterUser->save();
         }
 				if($group !== null){
 					if(is_numeric($group))
-						$group = Doctrine::getTable('mdNewsLetterGroup')->findOne($group);
+						$group = Doctrine::getTable('mdNewsLetterGroup')->find($group);
 					else
 						$group = Doctrine::getTable('mdNewsLetterGroup')->findOneByName($group);
 					
@@ -45,7 +62,7 @@ class mdNewsletterHandler
 				}
         return $mdNewsLetterUser;
     }
-
+    
     public static function retriveAll()
     {
       return Doctrine::getTable("mdNewsLetterUser")->findAll();
@@ -171,14 +188,29 @@ class mdNewsletterHandler
       $data->read($file);
       
       $index = 0;
-      for ($i = $row; $i < count($data->sheets[0]['cells']); $i++) {
+      for ($i = $row; $i <= count($data->sheets[0]['cells']); $i++) {
           $index++;
           
           $my_data = $data->sheets[0]['cells'][$i];
-          
+          $user = null;
+          $name = null;
+          $group = 1;
           if(isset($my_data[1]))
           {
-            self::registerUser($my_data[1]);
+            $user = $my_data[1];
+          }
+          if(isset($my_data[2]))
+          {
+            $name = $my_data[2];
+          }
+          if(isset($my_data[3]))
+          {
+            $group = $my_data[3];
+          }
+          
+          if(!is_null($user))
+          {
+            self::registerUser($user, $group, $name);
           }
           //self::processRow($data->sheets[0]['cells'][$i],$index);
           if ($index == $quantity_of_processing) {

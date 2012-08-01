@@ -14,13 +14,13 @@ class mdUserProfileAdminForm extends BasemdUserProfileForm {
         unset($this ['md_user_content_id']);
 
         if (sfContext::hasInstance ()) {
-            $this->widgetSchema ['country_code'] = new sfWidgetFormI18nChoiceCountry(array('culture' => sfContext::getInstance ()->getUser()->getCulture()));
+            $this->widgetSchema ['country_code'] = new myWidgetFormI18nChoiceCountry(array('culture' => sfContext::getInstance ()->getUser()->getCulture()));
             if( sfConfig::get( 'sf_plugins_user_manage_country_and_city_widget', false ) )
             {
               $this->widgetSchema ['country_code']->setAttribute("onchange", "changeCountry(this);");
             }            
         } else {
-            $this->widgetSchema ['country_code'] = new sfWidgetFormI18nChoiceCountry ( );
+            $this->widgetSchema ['country_code'] = new myWidgetFormI18nChoiceCountry ( );
             if( sfConfig::get( 'sf_plugins_user_manage_country_and_city_widget', false ) )
             {
               $this->widgetSchema ['country_code']->setAttribute("onchange", "changeCountry(this);");

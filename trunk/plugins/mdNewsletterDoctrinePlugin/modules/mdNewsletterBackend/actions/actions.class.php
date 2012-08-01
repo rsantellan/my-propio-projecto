@@ -69,6 +69,12 @@ class mdNewsletterBackendActions extends sfActions
         $letter = (string)(mdBasicFunction::retrieveLeters(0)."1");
         $objPHPExcel->getActiveSheet()
                 ->setCellValue($letter, "Email");
+        $letter = (string)(mdBasicFunction::retrieveLeters(1)."1");
+        $objPHPExcel->getActiveSheet()
+                ->setCellValue($letter, "Nombre");
+        $letter = (string)(mdBasicFunction::retrieveLeters(2)."1");
+        $objPHPExcel->getActiveSheet()
+                ->setCellValue($letter, "Grupo");        
         $index = 2;
         foreach($userList as $user)
         {
@@ -76,6 +82,12 @@ class mdNewsletterBackendActions extends sfActions
             $letter = (string)(mdBasicFunction::retrieveLeters(0).$index);
             $objPHPExcel->getActiveSheet()
                     ->setCellValue($letter, $user->getEmail());
+            $letter = (string)(mdBasicFunction::retrieveLeters(1).$index);
+            $objPHPExcel->getActiveSheet()
+                    ->setCellValue($letter, $user->getMdNewsLetterUser()->getFirst()->getName());
+            $letter = (string)(mdBasicFunction::retrieveLeters(2).$index);
+            $objPHPExcel->getActiveSheet()
+                    ->setCellValue($letter, $user->getMdNewsLetterUser()->getFirst()->getMdNewsLetterGroupUser()->getFirst()->getMdNewsLetterGroup()->getName());            
             $index++;
         }
         header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
@@ -151,7 +163,7 @@ class mdNewsletterBackendActions extends sfActions
             $this->form->bind($request->getParameter($this->form->getName()));
             if($this->form->isValid())
             {
-                $mdNewsLetterUser = mdNewsletterHandler::registerUser($this->form->getValue('mail'));
+                $mdNewsLetterUser = mdNewsletterHandler::registerUser($this->form->getValue('mail'), null, $this->form->getValue('name'));
                 if( sfConfig::get( 'sf_plugins_newsletter_group_enable', false ) )
                 {
                   $groupId = $request->getParameter('newsletter_group', 0);
@@ -176,7 +188,7 @@ class mdNewsletterBackendActions extends sfActions
 
     public function executeRemoveMdNewsletterUser(sfWebRequest $request)
     {
-        $this->form = new mdNewsletterForm();
+        $this->form = new mdNewsletterDeleteForm();
         $ok = false;
         $exists = false;
         $quantity = 0;
@@ -194,6 +206,10 @@ class mdNewsletterBackendActions extends sfActions
                 }
                 $ok = true;
                 $quantity = mdNewsletterHandler::retrieveNumberOfUserInNewsLetter();
+            }
+            else
+            {
+              
             }
         }
         return $this->renderText(mdBasicFunction::basic_json_response($ok, array("exists" => $exists, "quantity"=> $quantity, "body"=>$this->getPartial("removeUser", array("form"=>$this->form)))));

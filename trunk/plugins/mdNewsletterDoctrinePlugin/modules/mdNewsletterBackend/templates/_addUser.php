@@ -2,6 +2,12 @@
     <?php echo $form->renderHiddenFields();?>
     <div style="float: left;">
         <ul class="filter">
+            <li><?php echo $form['name']->renderLabel() ?></li>
+            <li><?php echo $form['name']->render() ?></li>
+            <?php if($form['name']->hasError()): ?>
+              <li class="error"><?php echo $form['name']->renderError();?></li>
+            <?php endif;?>
+            <li><?php echo $form['mail']->renderLabel() ?></li>
             <li><?php echo $form['mail']->render() ?></li>
             <?php if($form['mail']->hasError()): ?>
               <li class="error"><?php echo $form['mail']->renderError();?></li>

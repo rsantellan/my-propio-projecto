@@ -11,7 +11,7 @@
             </li>            
             <li id="remove_user_no_exists_error" style="display:none">
               <h3><?php echo __("newsletter_no existe el mail");?></h3>
-            </li>            
+            </li>
         </ul>
     </div>
     <div class="clear"></div>

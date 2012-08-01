@@ -42,10 +42,18 @@ class userRegisterForm extends sfForm
   {
     $tainted = $this->getTaintedValues();
     $infoEmail = explode('@', $tainted['email']);
-    
+    $auxUser = Doctrine::getTable('mdUser')->findOneByEmail($tainted['email']);
     $mdUser = new mdUser();
-    $mdUser->setEmail($tainted['email']);
-    $mdUser->save();
+    if($auxUser)
+    {
+      $mdUser = $auxUser;
+    }
+    else
+    {
+      $mdUser->setEmail($tainted['email']);
+      $mdUser->save();
+    }
+    
     
     $mdPassport = new mdPassport();
     $mdPassport->setMdUserId($mdUser->getId());
