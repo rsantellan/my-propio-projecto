@@ -3,13 +3,13 @@
 <form action="<?php echo url_for('@changePassword') ?>" method="post" id="form_change_password_ajax">
 <?php //echo $form;?>
 <?php //die("corregir");?>
-  <div class="datos" style="padding-right:15px">
+  <div class="datos">
     <?php echo __('Usuario_clave actual'); ?>
     <?php echo $form['old_password']->render(); ?>
-    <div class="clear"></div>
+    </div><div class="datos">
     <?php echo __('Usuario_clave') ?>
     <?php echo $form['password']->render(); ?>
-    <div class="clear"></div>
+    </div><div class="datos">
     <?php echo __('Usuario_repetir clave'); ?>
     <?php echo $form['password_confirmation']->render(); ?>
   </div>
