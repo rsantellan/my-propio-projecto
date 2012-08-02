@@ -44,11 +44,11 @@ if ($sf_user->isAuthenticated() && $sf_user->getMdUserId() == $mdUser->getId())
 			</div>
 			<div class="clear"></div>
 		</div>
-        <div class="datos" style="padding-right:15px">
-          <?php echo __('Usuario_email') ?>: 
+        <div class="datos" >
+          <?php echo __('Usuario_email') ?>: <br />
           <label id="user_email">
             <?php echo $mdUser->getEmail(); ?>
-          </label>
+          </label><br />
           <a href="javascript:void(0)" onclick="$('#user_change_email').show();"><?php echo __('Usuario_cambiar email') ?></a>
         </div>
         <div id="user_change_email" class="hidden_div">
@@ -70,7 +70,7 @@ if ($sf_user->isAuthenticated() && $sf_user->getMdUserId() == $mdUser->getId())
         </div>
 
         <div class="datos"><?php echo __('Usuario_clave') ?>: 
-          <label>*******</label>
+          <label>*******</label><br />
           <a href="javascript:void(0)" onclick="$('#user_change_pass').show();"><?php echo __('Usuario_cambiar password') ?></a>
         </div>
         <div id="user_change_pass" class="hidden_div">

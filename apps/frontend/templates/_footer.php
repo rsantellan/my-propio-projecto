@@ -7,9 +7,18 @@
             </ul>
         </div>
         <div class="bdiv">
-            <?php include_component("locaciones", "footer");?>
-        </div>  
-        <div class="beba"><img src="/images/logobeba.jpg" width="99" height="80" /></div>      
+            <ul>
+                <li><a href="#">PUNTA DEL ESTE</a></li>
+<!--
+                <li>|</li>
+                <li><a href="#">MONTEVIDEO</a></li>
+                <li>|</li>
+                <li><a href="#">ROCHA</a></li> 
+                <li>|</li> 
+                <li class="green"><a href="#">MORE...</a></li>
+-->
+            </ul>
+        </div>  <div class="beba"><a href="http://www.bebapaezvilaro.com/" target="_blank"><img src="/images/logobeba.jpg" width="99" height="80" border="0" /></a></div>      
     </div>
     <div class="line">
     </div>
@@ -21,7 +30,7 @@
             <li><img width="1" height="21" src="/images/separator.png"></li>
             <li><a href="#"><?php echo __('Global_Sitemap') ?></a></li>
             <li><img width="1" height="21" src="/images/separator.png"></li>
-            <li><a href="<?php echo url_for("@newsletter");?>"><?php echo __('Global_Newsleetter') ?></a></li>
+            <li><a href="#"><?php echo __('Global_Newsleetter') ?></a></li>
         </ul>
         <ul>
             <li><img src="/images/candle.png" width="12" height="14" /></li>
