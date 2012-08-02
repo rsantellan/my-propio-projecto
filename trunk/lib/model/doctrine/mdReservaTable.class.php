@@ -23,4 +23,44 @@ class mdReservaTable extends Doctrine_Table
       $q->addWhere($rootAlias.".fecha_hasta >= NOW()");
       return $q;
     }
+    
+    public function statusEstadistic()
+    {
+      $conn = Doctrine_Manager::getInstance()->getCurrentConnection(); 
+      $sql = "SELECT count(*) as cantidad, status FROM md_reserva m group by status";
+      $r = $conn->fetchAssoc($sql, array());
+      return $r;
+    }
+    
+    public function currencyEstadistic()
+    {
+      $conn = Doctrine_Manager::getInstance()->getCurrentConnection(); 
+      $sql = "SELECT count(*) as cantidad, md_currency_id FROM md_reserva m group by md_currency_id";
+      $r = $conn->fetchAssoc($sql, array());
+      return $r;
+    }
+    
+    public function locationEstadistic()
+    {
+      $conn = Doctrine_Manager::getInstance()->getCurrentConnection(); 
+      $sql = "SELECT count(a.id) as cantidad, a.md_locacion_id FROM md_reserva m, md_apartamento a where m.md_apartamento_id = a.id group by a.md_locacion_id";
+      $r = $conn->fetchAssoc($sql, array());
+      return $r;
+    }
+    
+    public function createdAtEstadistic()
+    {
+      $conn = Doctrine_Manager::getInstance()->getCurrentConnection(); 
+      $sql = "SELECT count(id) as cantidad, MONTH(created_at) as mes FROM md_reserva group by MONTH(created_at) order by mes";
+      $r = $conn->fetchAssoc($sql, array());
+      return $r;
+    }
+    
+    public function fromDateEstadistic()
+    {
+      $conn = Doctrine_Manager::getInstance()->getCurrentConnection(); 
+      $sql = "SELECT count(id) as cantidad, MONTH(fecha_desde) as mes FROM md_reserva group by MONTH(fecha_desde) order by mes";
+      $r = $conn->fetchAssoc($sql, array());
+      return $r;
+    }
 }

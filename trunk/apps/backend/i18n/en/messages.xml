@@ -434,31 +434,31 @@
       </trans-unit>
       <trans-unit id="108">
         <source>mailVenta_subject_cliente </source>
-        <target>Cliente</target>
+        <target>Client</target>
       </trans-unit>
       <trans-unit id="109">
         <source>Mail_subject respuesta confirmacion_</source>
-        <target/>
+        <target>Confirmation</target>
       </trans-unit>
       <trans-unit id="110">
         <source>Mail_Nombre del mail al usuario con confirmacion de pago</source>
-        <target/>
+        <target>Email name</target>
       </trans-unit>
       <trans-unit id="111">
         <source>Mensajes_Description Paypal</source>
-        <target/>
+        <target>Paypal description</target>
       </trans-unit>
       <trans-unit id="112">
         <source>Mensajes_Name item Paypal</source>
-        <target/>
+        <target>Item</target>
       </trans-unit>
       <trans-unit id="113">
         <source>Mensajes_Desc item Paypal</source>
-        <target/>
+        <target>Item description</target>
       </trans-unit>
       <trans-unit id="114">
         <source>Mail_Comission Asunto</source>
-        <target/>
+        <target>Commision</target>
       </trans-unit>
       <trans-unit id="115">
         <source>Mail_Titulo respuesta confirmacion </source>
@@ -466,11 +466,11 @@
       </trans-unit>
       <trans-unit id="116">
         <source>Mail_Respuesta a solicitud de pago</source>
-        <target/>
+        <target>Response</target>
       </trans-unit>
       <trans-unit id="117">
         <source>Mail_Respuesta pago </source>
-        <target/>
+        <target>Payment</target>
       </trans-unit>
       <trans-unit id="118">
         <source>Mail_Admin Final Titulo</source>
@@ -478,39 +478,39 @@
       </trans-unit>
       <trans-unit id="119">
         <source>Mail_Admin Final Cuerpo</source>
-        <target/>
+        <target>Body</target>
       </trans-unit>
       <trans-unit id="120">
         <source>Mail_Admin Final Locacion</source>
-        <target/>
+        <target>Location</target>
       </trans-unit>
       <trans-unit id="121">
         <source>Mail_Admin Final Apartamento</source>
-        <target/>
+        <target>Apartment</target>
       </trans-unit>
       <trans-unit id="122">
         <source>Mail_Admin Final Fecha</source>
-        <target/>
+        <target>Date</target>
       </trans-unit>
       <trans-unit id="123">
         <source>Mail_Admin Final Usuario</source>
-        <target/>
+        <target>User</target>
       </trans-unit>
       <trans-unit id="124">
         <source>Mail_Admin Final Email</source>
-        <target/>
+        <target>Email</target>
       </trans-unit>
       <trans-unit id="125">
         <source>Mail_Usuario Final Asunto</source>
-        <target/>
+        <target>Subject</target>
       </trans-unit>
       <trans-unit id="126">
         <source>Mail_Comission Titulo</source>
-        <target/>
+        <target>Title</target>
       </trans-unit>
       <trans-unit id="127">
         <source>Mail_Comission Cuerpo [url_apartamento]</source>
-        <target/>
+        <target>Commision [url_apartamento]</target>
       </trans-unit>
       <trans-unit id="128">
         <source>Mail_Admin Final Asunto</source>
@@ -790,15 +790,15 @@
       </trans-unit>
       <trans-unit id="197">
         <source>backendLayout_Usuarios</source>
-        <target/>
+        <target>Users</target>
       </trans-unit>
       <trans-unit id="198">
         <source>backendLayout_Textos</source>
-        <target/>
+        <target>Texts</target>
       </trans-unit>
       <trans-unit id="199">
         <source>template_News Letter management</source>
-        <target/>
+        <target>Newsletter</target>
       </trans-unit>
       <trans-unit id="200">
         <source>Apartamentos_Ocupacion</source>
