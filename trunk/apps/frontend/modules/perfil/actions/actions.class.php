@@ -31,6 +31,7 @@ class perfilActions extends sfActions
 	  {
 		return $this->renderText(mdBasicFunction::basic_json_response(false, array()));
 	  }
+      changeAvatarHandler::changeAvatarToLast('mdUserProfile', $request->getParameter('id'));
 	  $src = $mdUserProfile->retrieveAvatar(array(mdWebOptions::WIDTH =>180 , mdWebOptions::HEIGHT =>180 , mdWebOptions::CODE => mdWebCodes::CROPRESIZE ));
 	  return $this->renderText(mdBasicFunction::basic_json_response(true, array('src' => $src)));
   }

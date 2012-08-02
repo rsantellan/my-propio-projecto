@@ -1,3 +1,11 @@
+reservas:
+  url:   /reservas.html
+  param: { module: reservas, action: index }  
+  
+reservaEstadistica:
+  url:   /reservas/estadisticas.html
+  param: { module: reservas, action: estadisticas }  
+
 md_reserva:
   class: sfDoctrineRouteCollection
   options:
