@@ -1,3 +1,6 @@
+<?php
+slot('backend_reservas', 'ok');
+?>
 <div id="md_center_container">
   <div class="md_shadow">
     <div class="md_center">
@@ -22,7 +25,9 @@
           reservas anteriores
         </div>
         <div>
-          Estadisticas
+          <a href="<?php echo url_for("@reservaEstadistica"); ?>">
+            <?php echo __('reservas_manejar nuevas'); ?>
+          </a>
         </div>
       </div>
     </div>

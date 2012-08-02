@@ -56,7 +56,6 @@ MdAvatarAdmin.prototype = {
 
     updateContentSlider: function(obj_id, obj_name, album_id){
         var self = this;
-        
         $.ajax({
             url: __MD_CONTROLLER_BACKEND_SYMFONY + '/mdMediaContentAdmin/updateContentSlider',
             data: {'object_class_name': obj_name, 'object_id': obj_id, 'album_id': album_id},

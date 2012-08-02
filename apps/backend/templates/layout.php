@@ -68,6 +68,7 @@ if(sfContext::getInstance()->getRouting()->hasRouteName('mdTranslator')):?>
         if(sfContext::getInstance()->getRouting()->hasRouteName('backend_mdSale')):?>
                 <li><a href="<?php echo url_for('@backend_mdSale')?>" class="<?php if(has_slot('backend_mdSale')){ echo 'current'; } else { echo ''; } ?>">Ventas</a></li>
         <?php endif;?>
+                <li><a href="<?php echo url_for('@reservas')?>" class="<?php if(has_slot('backend_reservas')){ echo 'current'; } else { echo ''; } ?>">Reservas</a></li>
             </ul>
         <?php endif;?>
         </div><!--MENU-->

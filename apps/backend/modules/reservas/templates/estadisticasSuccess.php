@@ -4,6 +4,7 @@
   use_javascript('jqplot/plugins/jqplot.pieRenderer.js', 'last');
   use_javascript('jqplot/plugins/jqplot.barRenderer.js', 'last');
   use_stylesheet('jqplot/jquery.jqplot.css');
+  slot('backend_reservas', 'ok');
 ?>
 
 <div id="md_center_container">
