@@ -9,7 +9,7 @@ apps/backend/i18n/*
 /config/databases.yml
 /config/app.yml
 #/web/css/*
-
+updateDates.sh
 
 # SCM files
 .arch-params
