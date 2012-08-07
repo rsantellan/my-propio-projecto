@@ -10,5 +10,5 @@ all:
           host:       smtp.gmail.com
           port:       465
           encryption: ssl
-          username:   rsantellan@gmail.com
-          password:   ro4321
+          username:   info@rentnchill.com
+          password:   borja123

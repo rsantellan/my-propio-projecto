@@ -26,30 +26,30 @@ En esta pagina voy a ir poniendo las cosas que faltan
  == Textos agregados ==
 
 === Frontend === 
- Usuario_cambiar password
- Usuario_cambiar email
- Usuario_cambiar imagen
- Submit_PRECIO TEMPORADA MEDIA
- Submit_CANTIDAD DE CUARTOS
- Submit_TIPO DE PROPIEDAD
- Submit_CANTIDAD DE BANIOS
- Submit_MINIMO DE DIAS
- Submit_COSTOS EXTRAS
- Submit_METRAJE
- Submit_BARRIO
- Submit_COMODIDADES
- Submit_Copete
- Submit_CANTIDAD DE PERSONAS
- Apartamento_precio
- Apartamento_Medium season
- novedades_Titulo
- novedades_gracias por registrarse
- novedades_nombre
- novedades_email
- novedades_Enviar
- novedades_te has desregistrado
- locacion_footer more
- Reservas_porcentaje a pagar ahora
+ ~~*Usuario_cambiar password*~~
+ ~~*Usuario_cambiar email*~~
+ ~~*Usuario_cambiar imagen*~~
+ ~~*Submit_PRECIO TEMPORADA MEDIA*~~
+ ~~*Submit_CANTIDAD DE CUARTOS*~~
+ ~~*Submit_TIPO DE PROPIEDAD*~~
+ ~~*Submit_CANTIDAD DE BANIOS*~~
+ ~~*Submit_MINIMO DE DIAS*~~
+ ~~*Submit_COSTOS EXTRAS*~~
+ ~~*Submit_METRAJE*~~
+ ~~*Submit_BARRIO*~~
+ ~~*Submit_COMODIDADES*~~
+ ~~*Submit_Copete*~~
+ ~~*Submit_CANTIDAD DE PERSONAS*~~
+ ~~*Apartamento_precio*~~
+ ~~*Apartamento_Medium season*~~
+ ~~*novedades_Titulo*~~
+ ~~*novedades_gracias por registrarse*~~
+ ~~*novedades_nombre*~~
+ ~~*novedades_email*~~
+ ~~*novedades_Enviar*~~
+ ~~*novedades_te has desregistrado*~~
+ ~~*locacion_footer more*~~
+ ~~*Reservas_porcentaje a pagar ahora*~~
 
 
 === Backend === 
@@ -61,23 +61,23 @@ En esta pagina voy a ir poniendo las cosas que faltan
  reserva_estado cancelPayPal  *Cancelada en paypal*
  reserva_estado errorPayPal  *Error en paypal*
  reserva_estado prePayPal  *Pre paypal*
- reserva_guardar
- reserva_status
- reserva_message
- reserva_cambiar status
- barra_company name
- mdUserDoctrine_text_IsActive
- usuario_la cuenta esta activa
- usuario_la cuenta no esta activa
- mdUserDoctrine_text_IsBlocked
- usuario_la cuenta esta bloqueada
- usuario_la cuenta no esta bloqueada
- apartament_nombre
- apartament_Moneda
- apartament_precio temporada alta
- apartament_precio temporada media
- apartament_precio temporada baja
- apartament_mas info
+ *reserva_guardar*
+ *reserva_status*
+ *reserva_message*
+ *reserva_cambiar status*
+ *barra_company name*
+ *mdUserDoctrine_text_IsActive*
+ *usuario_la cuenta esta activa*
+ *usuario_la cuenta no esta activa*
+ *mdUserDoctrine_text_IsBlocked*
+ *usuario_la cuenta esta bloqueada*
+ *usuario_la cuenta no esta bloqueada*
+ *apartament_nombre*
+ *apartament_Moneda*
+ *apartament_precio temporada alta*
+ *apartament_precio temporada media*
+ *apartament_precio temporada baja*
+ *apartament_mas info*
  
  
 == Sacar cotizaciones desde == 
