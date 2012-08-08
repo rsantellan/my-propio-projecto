@@ -151,7 +151,8 @@ li.dropdown button {
     width: 80px !important;
 }
 .property-left li {
-	font-size:21px;
+	font-size:18px;
+	line-height: 20px;
 }
 .property-right a li {
 	color:#000;

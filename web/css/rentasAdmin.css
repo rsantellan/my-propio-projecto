@@ -122,3 +122,10 @@ div.form_status_field{
 	text-align: center !important;
 }
 
+div.reserva_usuario{
+  width: 600px;
+}
+
+div.reserva_apartamento{
+  width: 600px;
+}

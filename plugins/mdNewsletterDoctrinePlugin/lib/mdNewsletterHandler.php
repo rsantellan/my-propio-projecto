@@ -169,6 +169,36 @@ class mdNewsletterHandler
         }
         
     }
+  
+  public static function importUsersCsv($filename)
+  {
+    if ($fh = fopen($filename, "r"))
+    {
+      while (!feof($fh)) {
+        $line = fgets($fh);
+        $list = explode(',', $line);
+        $group = 1;
+        if(count($list) >= 2)
+        {
+          $name = $list[0];
+          $email = $list[1];
+          if(isset($list[2]))
+          {
+            $group = (int) $list[2];
+          }
+          $name = trim($name);
+          $email = trim($email);
+          //var_dump($name.",".$email);
+          self::registerUser($email, $group, $name);
+        }
+      }
+      fclose($fh);
+    }
+    else
+    {
+      return false;
+    }
+  }
     
   public static function importUsers($file, $extension)
   {
@@ -176,12 +206,14 @@ class mdNewsletterHandler
     {
       $index = 0;
       $row = 2;
-      $return = 1;
+      $return = 0;
+
       $return = self::proccessExcelBulkImport($file, $row);
+      
     }
   }
   
-  private static function proccessExcelBulkImport($file, $row, $quantity_of_processing = 20) {
+  private static function proccessExcelBulkImport($file, $row, $quantity_of_processing = 20000000) {
       $data = new Spreadsheet_Excel_Reader();
       $data->setOutputEncoding('CP1251'); // Set output Encoding.
       
@@ -211,6 +243,10 @@ class mdNewsletterHandler
           if(!is_null($user))
           {
             self::registerUser($user, $group, $name);
+          }
+          else
+          {
+            var_dump($my_data);
           }
           //self::processRow($data->sheets[0]['cells'][$i],$index);
           if ($index == $quantity_of_processing) {
