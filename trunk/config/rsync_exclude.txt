@@ -12,6 +12,7 @@ apps/backend/i18n/*
 updateDates.sh
 /*.sql
 /config/factories.yml
+/*.sh
 
 # SCM files
 .arch-params

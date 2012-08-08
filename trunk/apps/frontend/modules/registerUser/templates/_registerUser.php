@@ -14,7 +14,7 @@
              <li <?php if($form['password']->hasError()) echo 'class="error_list"' ?>><?php echo __('Usuario_clave') ?></li>
              <li <?php if($form['password']->hasError()) echo 'class="error_list"' ?>><?php echo $form['password']->render(array('tabIndex'=>15)); ?></li>
 						<?php if(!isset($register)): ?>
-             <li style="font-size:10px; font-family: 'CourierRegular';"><?php echo __('Usuario_Already have an account') ?>? <a href="<?php echo url_for('@signin') ?>" id="login_opener" class="blue"><?php echo __('Usuario_Login link') ?>.</a></li>
+             <li style="font-size:10px; font-family: 'CourierRegular';"><?php echo __('Usuario_Already have an account') ?> <a href="<?php echo url_for('@signin') ?>" id="login_opener" class="blue"><?php echo __('Usuario_Login link') ?>.</a></li>
 						<script>
 						$(function(){
 							$('#login_opener').fancybox({
