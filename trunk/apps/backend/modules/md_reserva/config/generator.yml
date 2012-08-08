@@ -24,7 +24,7 @@ generator:
       list:    
         title: 'Reservas'
         hide: [created_at, updated_at]
-        display: [id, _md_user_id, _md_apartamento_id, _fecha_desde, _fecha_hasta, _md_currency_id, Lugar, total, _status]
+        display: [id, _md_user_id, _md_apartamento_id, _fecha_desde, _fecha_hasta, _md_currency_id, Lugar, _comission, total, _status]
         #sort: [status]
         object_actions: []
         table_method: retrieveOnlyNew

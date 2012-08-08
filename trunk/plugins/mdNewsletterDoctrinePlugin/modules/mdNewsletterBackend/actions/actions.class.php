@@ -363,8 +363,26 @@ class mdNewsletterBackendActions extends sfActions
               }
               else
               {
-                $this->error = 1;
+                if($extension == ".csv")
+                {
+                  $realPath = sfConfig::get('sf_cache_dir')."/mdNewsletterImport/";
+                  MdFileHandler::checkPathFormat($realPath);
+                  $new_file = $realPath . $file->getOriginalName ();
+                  $hasCopy = copy($file->getTempName(), $new_file);                
+                  chmod($new_file, 0777);
+                  mdNewsletterHandler::importUsersCsv($new_file);
+                  $this->getUser()->setFlash('importNewsletter','Complete');
+                  if($hasCopy)
+                  {
+                    unlink($new_file);
+                  }
+                }
+                else
+                {
+                  $this->error = 1;
+                }
               }
+              
               //$subject = sfConfig::get('app_title_contact');
               //$body = $this->getPartial('mail', array('form' => $this->form));
               //$this->getUser()->setFlash('mdContactSend','Send');

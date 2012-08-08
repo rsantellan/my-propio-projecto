@@ -134,7 +134,7 @@ class mdGenericSaleMailingHandler {
     $fromArray = explode(",", $from);
     
     $mailBody = get_partial('saleMailing/mail_user_finish', array('mdGenericSale' => $mdGenericSale));
-		$subject = get_partial('saleMailing/mail_user_finish_subject', array('mdGenericSale' => $mdGenericSale));
+	$subject = get_partial('saleMailing/mail_user_finish_subject', array('mdGenericSale' => $mdGenericSale));
     
     $options['sender'] = array('name' => __('Mail_Nombre del mail al usuario con confirmacion de pago'), 'email' => $fromArray[0]);
     $options['subject'] = $subject;

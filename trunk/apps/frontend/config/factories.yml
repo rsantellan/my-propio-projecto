@@ -46,3 +46,7 @@ all:
     param:
       session_name: rentNchill
       timeout: 172800
+
+  mailer:
+    param:
+      delivery_strategy: realtime
