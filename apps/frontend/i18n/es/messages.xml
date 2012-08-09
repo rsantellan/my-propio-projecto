@@ -23,7 +23,7 @@ Nullam sed sodales est. Phasellus sed urna vel neque sodales cursus quis et tort
       </trans-unit>
       <trans-unit id="4">
         <source>Mail_Usuario Final Asunto</source>
-        <target>Booking of apartment in[location] : [from] to [untill] </target>
+        <target>Booking of apartment in[locacion] : [desde] to [hasta] </target>
         <note>es</note>
       </trans-unit>
       <trans-unit id="5">
@@ -33,7 +33,7 @@ Nullam sed sodales est. Phasellus sed urna vel neque sodales cursus quis et tort
       </trans-unit>
       <trans-unit id="6">
         <source>Mail_Admin Final Titulo</source>
-        <target>New bookin type [type]</target>
+        <target>New bookin type [tipo]</target>
         <note>es</note>
       </trans-unit>
       <trans-unit id="7">

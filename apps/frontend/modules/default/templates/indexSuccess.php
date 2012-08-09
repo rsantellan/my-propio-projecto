@@ -7,7 +7,7 @@
 </div> 
 <div class="main-content-up">
 	  <div class="col-right">
-				<?php include_component('locaciones','imagen') ?>
+				<?php //include_component('locaciones','imagen') ?>
 	  </div>
 
     <div class="col-left">
@@ -18,6 +18,15 @@
                 <li><a href="<?php echo url_for('@submit') ?>"><img src="/images/property.png" width="41" height="39" /></a></li>
             </div> 
     </div>
+  <div>
+    <?php $index = 0; ?>
+    <?php foreach($images as $image): ?>
+        <a href="javascript:void(0)">
+          <img class="promo" src="<?php echo mdWebImage::getUrl($image, array(mdWebOptions::WIDTH => 1020, mdWebOptions::HEIGHT => 510,  mdWebOptions::CODE => mdWebCodes::RESIZECROP))?>" width="1020" height="510" style="<?php if($index != 0) echo ' display:none;' ?>">
+        </a>
+    <?php $index ++; ?>
+    <?php endforeach;?>
+  </div>
 </div>
 <div class="main-content-down">
     <div class="titulo-down"><img src="/images/hand-black.png" width="14" height="13" />RENT N' CHILL</div>
@@ -28,3 +37,51 @@
 </div>
 
 
+<style>
+.col-right img {
+  bottom: 75px;
+  position: absolute;
+  right: 0;
+}
+.col-right {
+  float: right;
+  height: 421px;
+  margin-right: 30px;
+  position: relative;
+  width: 480px;
+}
+</style>
+<script>
+$(document).ready(function(){
+	function changeImage(){
+		var count = $('img.promo').length;
+		var showItem = Math.floor(Math.random()*count);
+		var i = 0;
+		//console.info(showItem);
+		$('img.promo').each(function(){
+			if($(this).is(":visible")){
+				$(this).fadeOut(500);
+				//console.log(i);
+				if(i == showItem){
+					if(showItem == count-1){
+						$('img.promo').first().fadeIn(500);
+					}else showItem++;
+				}
+				//console.log(showItem);
+			}else{
+				if(i == showItem){
+					$(this).fadeIn(500);
+				}
+			}
+			i++;
+		})
+		timer = setTimeout(function(){changeImage()}, 5000);
+	}
+	var timer = setTimeout(function(){changeImage()}, 5000);
+	$(document).keyup(function(e) {
+
+	  if (e.keyCode == 27) { clearTimeout(timer) }   // esc
+		if(e.keyCode == 39 ){ clearTimeout(timer); changeImage(); }
+	});
+});
+</script>

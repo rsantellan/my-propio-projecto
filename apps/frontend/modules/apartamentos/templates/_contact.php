@@ -1,9 +1,9 @@
 <div class="hosts">
 	<div class="info-img">
 		<?php if($depto->getTipo() == 'fullservice'): ?>
-		<img src="/images/logo.png" width="126" />
+          <img src="/images/logo.png" width="126" />
 		<?php else: ?>
-
+          <img id='user_avatar_image' src="<?php echo $depto->getMdUser()->getMdUserProfile()->retrieveAvatar(array(mdWebOptions::WIDTH =>126 , mdWebOptions::CODE => mdWebCodes::CROPRESIZE ));?>" width="126" />
 		<?php endif; ?>
 		</div>
     <div class="info">
