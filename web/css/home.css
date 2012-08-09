@@ -1,4 +1,3 @@
-
 /*contenet*/
 .content {
     float: left;
@@ -11,49 +10,65 @@
 	margin-right:7px;
 }
 .title {
-    float: left;
-    margin-top: 40px;
-    width: 1020px;
+	float: left;
+	margin-top: 40px;
+	width: 500px;
 	margin-bottom:10px;
 	font-family: 'CourierRegular';
 }
 /*content-up*/
 .main-content-up {
-	height:	346px;
+	height:	585px;
 	background:#FFF;
 	float:left;
 	width:1020px;
-	margin-bottom:5px;
 }
 .col-left {
 	float:left;
-	width:482px;
-	height:320px;
+	width:1020px;
+	height:75px;
 }
 .titulo {
-    font-family: 'BelloSmCp';
-    font-size: 68px;
-    line-height: 47px;
-    margin-left: 30px;
-    margin-top: 20px;
+	font-family: 'BelloSmCp';
+	font-size: 33px;
+	line-height: 30px;
+	margin-left: 20px;
+	margin-top: 5px;
 	margin-bottom:20px;
-    width: 435px;
+	width: 200px;
+	float: left;
 }
+.main-content-up .col-left .busqueda {
+	float: left;
+	width: 800px;
+	height: 75px;
+}
+
 .form-search {
 	float:left;
-	width:480px;
+	width:800px;
+	margin: 0px;
+	height: 75px;
+	/* [disabled]border: 1px solid #C96; */
 }
+.autocompletehome {
+	margin-top: 23px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+}
+
 input {
     border: 1px solid #000000;
     float: left;
 }
 .input-search {
-    border: 1px solid #000000;
-    float: left;
-    height: 35px;
-    position: relative;
-    top: 1px;
-    width: 315px;
+	border: 1px solid #000000;
+	float: left;
+	height: 35px;
+	position: relative;
+	top: 1px;
+	width: 250px;
 	margin-left:30px;
 }
 .search {
@@ -67,16 +82,18 @@ input {
 	border:0px;
 }
 .div-search {
-    float: left;
-    position: relative;
-    right: 5px;
-    width: 111px;
-    z-index: 99;
+	float: right;
+	position: relative;
+	right: 5px;
+	width: 111px;
+	z-index: 99;
+	margin-top: 23px;
 }
 .campos {
 	float:left;
-	margin-left:30px;
-	margin-bottom:30px;
+	margin-left:10px;
+	margin-bottom:40px;
+	width: 330px;
 }
 .campos li {
 	display:inline;
@@ -84,7 +101,10 @@ input {
 }
 .campos li p {
 	font-size:24px;
-	margin: 10px 0 0;
+	margin-top: 0px;
+	margin-right: 0;
+	margin-bottom: 0;
+	margin-left: 0;
 }
 .campos li input {
 	background:#72D400;
@@ -94,10 +114,10 @@ input {
 	text-align:center;
 }
 .property {
-    display: inline-block;
-    float: left;
-    margin-left: 30px;
-    width: 400px;
+	display: inline-block;
+	float: right;
+	margin-left: 30px;
+	width: 200px;
 }
 .property li a{
 	text-decoration:none;
@@ -111,31 +131,36 @@ input {
 .main-content-down {
 	width:1020px;
 	float:left;
-	background:#EBEBEB;
-	height:204px;
+	background:#FFF;
+	height:82px;
+	display: block;
+	font-family: 'BelloProRegular';
+	font-size: 20px;
+	/* [disabled]border: 1px solid #00C; */
 }
-.main-content-down {
-    font-family: 'BelloSmCp';
-    font-size: 24px;
-}
+
 .titulo-down {
 	float:left;
-	margin-left:25px;
-	margin-top:20px;
+	margin-left:10px;
+	margin-top:10px;
 }
 .main-content-down ul {
-    float: left;
-    padding: 0;
-	margin:10px 0 0 25px;
+	float: left;
+	padding: 0;
+	margin-top: 10px;
+	margin-right: 0;
+	margin-bottom: 0;
+	margin-left: 0px;
 }
 .main-content-down ul li{
 	float:left;
 	display:inline;
-	width:470px;
+	width:900px;
 	font-family: 'CourierRegular';
-	font-size:11px;
+	font-size:13px;
 	line-height:13px;
 	margin-right:25px;
+	height: 40px;
 }
 .main-content-down ul li a{
 	text-decoration:none;

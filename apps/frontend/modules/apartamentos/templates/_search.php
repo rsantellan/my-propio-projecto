@@ -1,12 +1,23 @@
-
 <form class="form-search" method="get" id="md_narrow_search" action="<?php echo url_for('@buscador') ?>">
 	<?php echo $form->renderHiddenFields() ?>
 
 <?php if(isset($home)): ?>
+<style type="text/css">
+body,td,th {
+	font-family: "Trebuchet MS", Helvetica, Arial, Verdana, sans-serif;
+}
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+</style>  
+  
 	<div class="autocompletehome">
- 	<?php echo $form['md_locacion_id'] ?>
+ 	<?php echo $form['md_locacion_id']->render() ?>
 	</div>
-	                    <div class="div-search"><button class="search" type="submit"><?php echo __('Search_search') ?></button></div>
+	                  
       <div class="campos">    
 <?php $form['fecha']->getWidget()->setOption('template','
           <li class="date">
@@ -24,7 +35,7 @@
               <div><?php echo $form['cantidad_personas'] ?></div>
           </li>
       </div>   
-
+<div class="div-search"><button class="search" type="submit"><?php echo __('Search_search') ?></button></div>  
 
 <?php $jquery_id = 'li.date div input'; ?>
 <?php else: ?>
@@ -50,12 +61,17 @@
 <?php $jquery_id = 'div.arrival input,div.departure input'; ?>	
 <?php endif; ?>
 </form>
+
+
+
 <script>
 $(function(){
+  
 	var dateformat = 'yy-mm-dd';
-	if($('<?php echo $jquery_id; ?>').val()=='')
+/*
+    if($('<?php echo $jquery_id; ?>').val()=='')
 		$('<?php echo $jquery_id; ?>').val(dateformat);
-	
+*/
 	var dates = $( "<?php echo $jquery_id; ?>" ).datepicker({
 		defaultDate: "+1w",
 		changeMonth: true,
@@ -73,7 +89,7 @@ $(function(){
 			dates.not( this ).datepicker( "option", option, date );
 		}
 	});
-
+    
 	$('form.form-search').submit(function(event){
 		form = $(this);            
 		form.find('<?php echo $jquery_id; ?>').each(function(index, obj){

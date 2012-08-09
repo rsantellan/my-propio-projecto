@@ -6,10 +6,6 @@
     <li class="current"><?php echo __('Global_Home') ?></li>
 </div> 
 <div class="main-content-up">
-	  <div class="col-right">
-				<?php //include_component('locaciones','imagen') ?>
-	  </div>
-
     <div class="col-left">
         <div class="titulo green"><?php echo __('Home_find a place to stay') ?></div>
             <?php include_component('apartamentos','search',array('home'=>true)) ?>
@@ -18,20 +14,19 @@
                 <li><a href="<?php echo url_for('@submit') ?>"><img src="/images/property.png" width="41" height="39" /></a></li>
             </div> 
     </div>
-  <div>
+  
     <?php $index = 0; ?>
     <?php foreach($images as $image): ?>
-        <a href="javascript:void(0)">
+  
           <img class="promo" src="<?php echo mdWebImage::getUrl($image, array(mdWebOptions::WIDTH => 1020, mdWebOptions::HEIGHT => 510,  mdWebOptions::CODE => mdWebCodes::RESIZECROP))?>" width="1020" height="510" style="<?php if($index != 0) echo ' display:none;' ?>">
-        </a>
+  
     <?php $index ++; ?>
     <?php endforeach;?>
-  </div>
+  
 </div>
 <div class="main-content-down">
-    <div class="titulo-down"><img src="/images/hand-black.png" width="14" height="13" />RENT N' CHILL</div>
+    <div class="titulo-down"><img src="/images/hand-black.png" width="14" height="13" /><?php echo __('Home_Texto1') ?></div>
     <ul>
-    <li><?php echo __('Home_Texto1') ?></li>
     <li><?php echo __('Home_Texto2') ?></li>
     </ul>
 </div>
@@ -54,11 +49,11 @@
 <script>
 $(document).ready(function(){
 	function changeImage(){
-		var count = $('img.promo').length;
+		var count = $('img.promo1').length;
 		var showItem = Math.floor(Math.random()*count);
 		var i = 0;
 		//console.info(showItem);
-		$('img.promo').each(function(){
+		$('img.promo1').each(function(){
 			if($(this).is(":visible")){
 				$(this).fadeOut(500);
 				//console.log(i);

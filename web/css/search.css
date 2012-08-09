@@ -78,7 +78,7 @@ input {
 	margin-top:3px;
 }
 .search-inside {
-	background:#72D400;
+	
 	width:282px;
 	float:left;
 	height:39px;
@@ -86,6 +86,7 @@ input {
 .arrival,
 .departure,
 .guests {
+	background:#72D400;
     border: 1px solid #FFFFFF;
     color: #FFFFFF;
     float: left;
