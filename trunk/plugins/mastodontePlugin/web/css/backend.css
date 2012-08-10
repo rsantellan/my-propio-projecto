@@ -1316,5 +1316,6 @@ span.choice_help{
   border-width:1px;
 }
 
-
-
+div.remove{
+  background: url("/mastodontePlugin/images/cerrar.png") repeat scroll 0 0 transparent;
+}

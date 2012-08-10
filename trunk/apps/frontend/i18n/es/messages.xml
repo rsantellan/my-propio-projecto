@@ -23,7 +23,7 @@ Nullam sed sodales est. Phasellus sed urna vel neque sodales cursus quis et tort
       </trans-unit>
       <trans-unit id="4">
         <source>Mail_Usuario Final Asunto</source>
-        <target>Booking of apartment in[location] : [from] to [untill] </target>
+        <target>Booking of apartment in[locacion] : [desde] to [hasta] </target>
         <note>es</note>
       </trans-unit>
       <trans-unit id="5">
@@ -69,7 +69,7 @@ Nullam sed sodales est. Phasellus sed urna vel neque sodales cursus quis et tort
       </trans-unit>
       <trans-unit id="13">
         <source>Mail_Admin Final Asunto</source>
-        <target>Booking of apartment type [type] in [location] : [from] to [untill] </target>
+        <target>Reserva de apartamento tipo [tipo] en [locacion] : [desde] al [hasta] </target>
         <note>es</note>
       </trans-unit>
       <trans-unit id="14">
@@ -90,7 +90,7 @@ Nullam sed sodales est. Phasellus sed urna vel neque sodales cursus quis et tort
       </trans-unit>
       <trans-unit id="17">
         <source>Mail_Comission Asunto</source>
-        <target>Booking of [apartment] : [from] to [untill] </target>
+        <target> Reserva de [apartamento] : [desde] al [hasta] </target>
         <note>es</note>
       </trans-unit>
       <trans-unit id="18">
