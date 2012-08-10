@@ -45,7 +45,7 @@
   width: 480px;
 }
 
-#ui-datepicker-div { display: none; }
+
 
 </style>
 <script>
