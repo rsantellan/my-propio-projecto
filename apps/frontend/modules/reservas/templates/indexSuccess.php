@@ -71,8 +71,9 @@ use_javascript('jquery.scrollTo-min.js');
         <?php endif; ?>
         <div class="div-send">
           <li style="font-size:36px; font-family: 'BelloScript'; display:list-item;"><?php echo __('Reservas_Payment title') ?></li>
-          <li style="font-family: 'CourierRegular'; font-size:11px; display:list-item;">By clicking on "Book it" you confirm <br />
-            that you accept the <a href="#" class="green">Terms of Service.</a>
+          <li style="font-family: 'CourierRegular'; font-size:11px; display:list-item;">
+              <?php echo __('Reservas_Terminos y condiciones') ?>
+<!--              By clicking on "Book it" you confirm <br /> that you accept the <a href="http://rentnchill.com/terms_and_conditions.html" class="green">Terms of Service.</a>-->
           </li>
           <div class="clear"></div>
           <li><img src="/images/paypal.png" width="93" height="27" /></li>

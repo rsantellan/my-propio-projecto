@@ -6,6 +6,7 @@
   </div>
   <div class="info">
     <div class="detalles">
+      <?php  //var_dump($apartamento->getId());	?>
       <div class="title-detalles"><a href="<?php echo url_for('apartamento', $apartamento); ?>"><?php echo $apartamento->getTitulo() ?></a></div>
       <div class="sub-title-detalles"><?php echo $apartamento->getCopete() ?></div>
     </div>
