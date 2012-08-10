@@ -14,7 +14,6 @@
                 <li><a href="<?php echo url_for('@submit') ?>"><img src="/images/property.png" width="41" height="39" /></a></li>
             </div> 
     </div>
-  
     <?php $index = 0; ?>
     <?php foreach($images as $image): ?>
   
@@ -22,7 +21,7 @@
   
     <?php $index ++; ?>
     <?php endforeach;?>
-  
+          
 </div>
 <div class="main-content-down">
     <div class="titulo-down"><img src="/images/hand-black.png" width="14" height="13" /><?php echo __('Home_Texto1') ?></div>
@@ -45,15 +44,18 @@
   position: relative;
   width: 480px;
 }
+
+#ui-datepicker-div { display: none; }
+
 </style>
 <script>
 $(document).ready(function(){
 	function changeImage(){
-		var count = $('img.promo1').length;
+		var count = $('img.promo').length;
 		var showItem = Math.floor(Math.random()*count);
 		var i = 0;
 		//console.info(showItem);
-		$('img.promo1').each(function(){
+		$('img.promo').each(function(){
 			if($(this).is(":visible")){
 				$(this).fadeOut(500);
 				//console.log(i);

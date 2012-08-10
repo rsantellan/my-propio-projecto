@@ -18,7 +18,7 @@ body {
  	<?php echo $form['md_locacion_id']->render() ?>
 	</div>
 	                  
-      <div class="campos">    
+      <div class="campos" >    
 <?php $form['fecha']->getWidget()->setOption('template','
           <li class="date">
               <p>' . __('Search_Arrival') . '</p>
@@ -68,10 +68,10 @@ body {
 $(function(){
   
 	var dateformat = 'yy-mm-dd';
-/*
+
     if($('<?php echo $jquery_id; ?>').val()=='')
 		$('<?php echo $jquery_id; ?>').val(dateformat);
-*/
+
 	var dates = $( "<?php echo $jquery_id; ?>" ).datepicker({
 		defaultDate: "+1w",
 		changeMonth: true,
