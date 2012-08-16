@@ -1,10 +1,14 @@
 
 <div class="modal_bg">
     <div id="modal_center">
-        <div class="cabezal">
-            <h1 class="float_left"><?php echo __("usuario_Recordar contraseña");?></h1>
-        </div>
+      <div class="titulo green"><?php echo __("usuario_Recordar contraseña");?></div>
         <div class="clear"></div>
+        
+        <?php if ($sf_user->hasFlash('mailSended')): ?>
+          <h3>
+            <?php echo __("usuario_Email enviado a su casilla de correo.");?>
+          </h3>
+        <?php else: ?>
         <div>
             <?php if($isAjax != "1"): ?>
               <form action="<?php echo url_for('@resetPassword') ?>" method="post" id="form_reset_password_ajax">
@@ -13,12 +17,18 @@
             <?php endif; ?>
             
                 <?php echo $form->renderHiddenFields();?>
+                <div class="campos-left">
                 <ul>
                     <li>
-                      <?php echo __("usuario_Le enviaremos sus datos de login a su casilla de mail");?>
+                      <h3>
+                        <?php echo __("usuario_Le enviaremos sus datos de login a su casilla de mail");?>
+                      </h3>
                     </li>
                     <li>
-                        <?php echo __("usuario_email");?>
+                      <?php echo __("usuario_email");?>
+                    </li>
+                    <li>
+                        
                         <?php echo $form['email']->render(); ?>
                         <?php echo $form['email']->renderError(); ?>
                         
@@ -35,7 +45,10 @@
                         <div class="clear"></div>
                     </li>
                 </ul>
+                </div>
             </form>
         </div>
+        
+        <?php endif; ?>
     </div>
 </div>

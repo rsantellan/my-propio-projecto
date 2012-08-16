@@ -14,6 +14,8 @@ use_stylesheet('novedades.css');
 <div class="main-content-up">
   <div id="forgot_password_container">
   <?php
+  if(!isset($exception)) $exception = null;
+  if(!isset($isAjax)) $isAjax = false;
   include_partial('mdAuth/forgotPassword', array('form' => $form, 'exception' => $exception, 'isAjax' => $isAjax));
   ?>
   </div>

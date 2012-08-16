@@ -10,7 +10,7 @@ apps/backend/i18n/*
 /config/databases.yml
 /config/app.yml
 #/web/css/*
-/updateDates.sh
+#/updateDates.sh
 /*.sql
 /config/factories.yml
 /*.sh

@@ -37,7 +37,7 @@ all:
     # Enable the database manager
     use_database:           true
 
-    standard_helpers: [Partial, Cache, I18N, Date]
+    standard_helpers: [Partial, Cache, I18N, Date, mdAsset]
 
     #Culture
     i18n:                   on

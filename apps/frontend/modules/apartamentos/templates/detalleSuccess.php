@@ -38,7 +38,7 @@ use_plugin_javascript('mdGoogleMapDoctrinePlugin', 'mdGoogleMap.js', 'last');
          	<li style="font-size:16px; font-weight:bold;" class="green"><?php echo $depto ?></li>
             <li style="font-size:13px;"><?php echo $depto->getCopete() ?></li>
          </div>
-         <button class="back" type="button"><?php echo __('Apartamento_Back to results') ?></button>
+         <button class="back" type="button" onclick="window.location.href='<?php echo url_for("@buscador", true);?>'"><?php echo __('Apartamento_Back to results') ?></button>
 				<div class="clear"></div>
          <div class="like">
          	<iframe src="https://www.facebook.com/plugins/like.php?href=<?php echo url_for('apartamento', $depto, array('absolute'=>true)); ?>" scrolling="no" 

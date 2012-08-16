@@ -272,6 +272,7 @@ class mdAuthActions extends sfActions {
               $mdPassport = mdUserHandler::retrieveMdPassportWithMdUserEmail($email);
               if ($mdPassport) {
                   mdMailHandler::sendConfirmationMail($mdPassport);
+                  $this->getUser()->setFlash('mailSended', true);
               } else {
                   $this->exception = 'No hay usuario con ese email';
               }
