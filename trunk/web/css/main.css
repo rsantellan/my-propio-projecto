@@ -517,3 +517,25 @@ padding: 0;
 }
 
 #ui-datepicker-div { display: none; }
+
+#slider ul{
+  list-style: disc outside none !important;
+}
+
+#slider li{
+  margin-right: 0;
+  
+}
+
+#slider{}	
+#slider ul, #slider li{
+	margin:0;
+	padding:0;
+	list-style:none;
+	}
+#slider li{ 
+	width:1020px;
+	height:510px !important;
+    min-height: 510px !important;
+	overflow:hidden;
+	}

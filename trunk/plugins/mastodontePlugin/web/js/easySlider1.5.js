@@ -52,7 +52,8 @@
 			auto:			false,
 			pause:			2000,
 			continuous:		false,
-			offset: 0
+			offset: 0,
+            myHeight:       false
 		}; 
 		
 		var options = $.extend(defaults, options);  
@@ -62,11 +63,24 @@
 			var s = $("li", obj).length;
 			var w = $("li", obj).width(); 
 			var h = $("li", obj).height(); 
+            
 			obj.width(w); 
-			obj.height(h); 
+            if(options.myHeight == false)
+            {
+              //console.info(h);
+              obj.height(h);
+            }
+            else
+            {
+              //console.info(options.myHeight);
+              obj.height(options.myHeight);
+            }
+			
 			obj.css("overflow","hidden");
 			var ts = s-1;
 			var t = 0;
+            //console.info(s);
+            //console.info(w);
 			$("ul", obj).css('width',s*w);			
 			if(!options.vertical) $("li", obj).css('float','left');
 			

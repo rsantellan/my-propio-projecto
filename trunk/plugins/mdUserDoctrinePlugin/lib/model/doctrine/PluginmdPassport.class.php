@@ -221,6 +221,10 @@ abstract class PluginmdPassport extends BasemdPassport
              }
           }
       }
+      else
+      {
+        return $this->isSuperAdmin();
+      }
       
       return $response;
     }

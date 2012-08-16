@@ -12,6 +12,9 @@
  */
 class mdLocacion extends BasemdLocacion
 {
+  
+  private $isReallyNew = false;
+  
 	/**
 	 * retorna la clase, se usa para los behaviors
 	 *
@@ -38,6 +41,15 @@ class mdLocacion extends BasemdLocacion
 		return $this->retrieveAvatar(array(mdWebOptions::WIDTH =>50 , mdWebOptions::HEIGHT =>50 , mdWebOptions::CODE => mdWebCodes::CROPRESIZE ));
 	}
 	
+    public function preSave($event) {
+      parent::preSave($event);
+      if($this->isNew())
+      {
+        $this->isReallyNew = true;
+      }
+      
+    }
+    
 	public function  postSave($event) {
        parent::postSave($event);
        $manager = mdMediaManager::getInstance(mdMediaManager::MIXED, $this)->load();
@@ -62,6 +74,11 @@ class mdLocacion extends BasemdLocacion
            $manager->createAlbum($params);
        }
        
+       if($this->isReallyNew)
+       {
+         TemporadasDatesHandler::insertLocationFirstYear($this->getId());
+         TemporadasDatesHandler::generateSeasons();
+       }
    }
 
 	public function getSlug(){
