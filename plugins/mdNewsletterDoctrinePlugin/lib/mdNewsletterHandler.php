@@ -150,7 +150,7 @@ class mdNewsletterHandler
     public static function sendAllNotSendedMails()
     {
         $list = self::retrieveNotSendedMails();
-        
+        //var_dump('estoy aca');
         foreach($list as $notSended)
         {
           $users = $notSended->getMdNewsletterSend();
@@ -160,7 +160,8 @@ class mdNewsletterHandler
           {
             
             $email = $user->getMdNewsLetterUser()->getMdUser()->getEmail();
-            mdMailHandler::sendSwiftMail("sistema@algo.com", $email, $notSended->getSubject(), $notSended->getBody(), false, "", array(), false);
+            $from = array("name" => "Rent n' Chill", "email" => "info@rentnchill.com");
+            mdMailHandler::sendSwiftMail($from, $email, $notSended->getSubject(), $notSended->getBody(), false, "", array(), false);
             $count++;
           }
           $notSended->setSendCounter($notSended->getSendCounter() + $count);

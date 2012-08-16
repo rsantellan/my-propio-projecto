@@ -2,8 +2,8 @@
 <?php use_stylesheet("datepicker.css"); ?>
 <?php include_partial('global/includeJQueryUI') ?>
 <?php //use_plugin_javascript("mastodontePlugin", "easySlider1.5.js", "last") ?>
-<?php //use_javascript('easySlider1.7.js', 'last');?>
-<?php use_javascript('easySlider.js', 'last');?>
+<?php use_javascript('easySlider1.7.js', 'last');?>
+<?php //use_javascript('easySlider.js', 'last');?>
 
 
 <div class="title">
@@ -72,7 +72,8 @@ $(document).ready(function(){
 		auto: true,
 		continuous: true ,
         myHeight: 510,
-        controlsShow: false
+        controlsShow: false,
+        pause: 4000,
 	});
     
 });

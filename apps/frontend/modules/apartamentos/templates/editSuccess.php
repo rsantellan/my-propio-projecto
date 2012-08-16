@@ -11,6 +11,10 @@ use_javascript('../fancybox/jquery.fancybox-1.3.4.pack.js');
 use_javascript("http://maps.google.com/maps/api/js?sensor=true");
 use_plugin_javascript('mdGoogleMapDoctrinePlugin', 'mdGoogleMapControlFrontend.js', 'last');
 use_plugin_javascript('mdGoogleMapDoctrinePlugin', 'mdGoogleMap.js', 'last');
+
+use_stylesheet('../js/datepicker/css/datepicker.css');
+use_javascript('datepicker/js/datepicker.js');
+
 ?>
 
 <input type="hidden" id="google-map-save-url" value="<?php echo url_for('@google-map-coordinates');?>" />
@@ -27,6 +31,7 @@ use_plugin_javascript('mdGoogleMapDoctrinePlugin', 'mdGoogleMap.js', 'last');
     <div class="titulo blue"><?php echo __('Apartamento_Editar') ?></div>
     <form class="form-send" method="post">
       <?php echo $form->renderHiddenFields(); ?>
+      <?php //echo $form['ocupacion']->render(); ?>
       <div class="campos-right">
         <div class="campos-right-left">
           <li<?php echo ($form['es']['titulo']->hasError() ? ' class="error_list"' : ''); ?>><?php echo __('Apartamento_TITLE') ?>:</li>
