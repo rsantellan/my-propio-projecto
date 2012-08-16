@@ -22,11 +22,13 @@ slot('backend_reservas', 'ok');
           </a>
         </div>
         <div>
-          reservas anteriores
+          <a href="<?php echo url_for("@md_reserva_2"); ?>">
+            <?php echo __('reservas_manejar todas las reservas'); ?>
+          </a>
         </div>
         <div>
           <a href="<?php echo url_for("@reservaEstadistica"); ?>">
-            <?php echo __('reservas_manejar nuevas'); ?>
+            <?php echo __('reservas_mirar estadisticas'); ?>
           </a>
         </div>
       </div>
