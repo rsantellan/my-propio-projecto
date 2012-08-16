@@ -1,3 +1,12 @@
+md_reserva_md_reserva_2:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                mdReserva
+    module:               md_reserva_2
+    prefix_path:          /md_reserva_2
+    column:               id
+    with_wildcard_routes: true
+
 reservas:
   url:   /reservas.html
   param: { module: reservas, action: index }  
@@ -5,6 +14,15 @@ reservas:
 reservaEstadistica:
   url:   /reservas/estadisticas.html
   param: { module: reservas, action: estadisticas }  
+
+md_reserva_2:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                mdReserva
+    module:               md_reserva_2
+    prefix_path:          /md_reserva_2
+    column:               id
+    with_wildcard_routes: true
 
 md_reserva:
   class: sfDoctrineRouteCollection
