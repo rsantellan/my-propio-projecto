@@ -40,7 +40,7 @@
                     </li>
                     <li>
                         <div class="float_right">
-                            <input type="submit" value="<?php echo __("usuario_Enviar clave");?>">
+                            <input type="submit" class="send" value="<?php echo __("usuario_Enviar clave");?>">
                         </div>
                         <div class="clear"></div>
                     </li>

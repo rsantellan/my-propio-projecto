@@ -18,7 +18,8 @@
 						<script>
 						$(function(){
 							$('#login_opener').fancybox({
-								'hideOnContentClick': false
+								'hideOnContentClick': false,
+                                'autoDimensions': true
 							});
 						});
 

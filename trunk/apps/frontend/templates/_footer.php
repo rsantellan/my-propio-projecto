@@ -36,11 +36,11 @@
             <img width="1" height="21" src="/images/separator.png">
 
             <a href="<?php echo url_for('@terminos') ?>"><?php echo __('Global_Terms of Service') ?></a>
-
+<!--
             <img width="1" height="21" src="/images/separator.png">
-
+            
             <a href="#"><?php echo __('Global_Sitemap') ?></a>
-
+-->
             <img width="1" height="21" src="/images/separator.png">
 
             <a href="<?php echo url_for("@newsletter");?>"><?php echo __('Global_Newsleetter') ?></a>
