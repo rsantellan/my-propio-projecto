@@ -1,0 +1,160 @@
+/* 
+    Document   : forgot
+    Created on : Aug 17, 2012, 11:07:33 AM
+    Author     : Rodrigo Santellan <rodrigo.santellan at gmail.com>
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+.send {
+    background: url("../images/botton-green.png") no-repeat scroll 0 0 transparent;
+    border: 0 none;
+    color: #FFFFFF !important;
+    font-family: 'BelloProRegular';
+    font-size: 23px;
+    height: 62px !important;
+    margin-bottom: 10px;
+    padding-left: 25px;
+    width: 247px;
+}
+
+
+/*contenet*/
+.content {
+    float: left;
+    width: 1020px;
+	list-style:none;
+	font-family: 'BelloSmCp';
+}
+.content li {
+	display:inline;
+	margin-right:7px;
+}
+.title {
+    float: left;
+    margin-top: 40px;
+    width: 1020px;
+	margin-bottom:10px;
+	font-family: 'CourierRegular';
+}
+.main-content-up {
+	height:	250px;
+	background:#FFF;
+	float:left;
+	width:1020px;
+	margin-bottom:5px;
+}
+.col-left {
+	float:left;
+	width:482px;
+	height:320px;
+}
+.titulo {
+    font-family: 'BelloSmCp';
+    font-size: 68px;
+    line-height: 47px;
+    margin-left: 30px;
+    margin-top: 20px;
+	margin-bottom:20px;
+    width: 435px;
+}
+.form-send {
+	float:left;
+	width:600px;
+}
+input {
+    border: 1px solid #000000;
+    float: left;
+}
+.campos-left {
+	float:left;
+	margin-left:25px;
+	width:250px;
+}
+.campos-left li {
+    display: block;
+    float: left;
+}
+.campos-left li input{
+	float:none;
+	width:244px;
+	height:29px;
+	color:#72D400;
+}
+.campos-right {
+    float: left;
+    margin-left: 14px;
+    position: relative;
+    top: -2px;
+    width: 250px;
+}
+.campos-right li {
+    display: block;
+    float: left;
+}
+.campos-right li textarea{
+	float:none;
+	width:244px;
+	height:88px;
+	color:#72D400;
+}
+.send {
+    background: url("../images/botton-green.png") no-repeat scroll 0 0 transparent;
+    color: #FFFFFF;
+    height: 62px;
+	font-family: 'BelloProRegular';
+    width: 247px;
+	font-size:23px;
+	padding-left: 25px;
+	border:0px;
+	margin-bottom:10px;
+}
+.div-send {
+	margin-top:10px;
+	float:left;
+}
+.property {
+    display: inline-block;
+    float: left;
+    margin-left: 30px;
+    width: 400px;
+}
+.property li a{
+	text-decoration:none;
+	color:black;
+}
+.col-right {
+	float:right;
+}
+.main-content-down {
+	width:1020px;
+	float:left;
+	background:#EBEBEB;
+	height:204px;
+}
+.main-content-down {
+    font-family: 'BelloSmCp';
+    font-size: 24px;
+}
+.titulo-down {
+	float:left;
+	margin-left:25px;
+	margin-top:20px;
+}
+.main-content-down ul {
+    float: left;
+    padding: 0;
+	margin:10px 0 0 25px;
+}
+.main-content-down ul li{
+	float:left;
+	display:inline;
+	width:470px;
+	font-family: 'CourierRegular';
+	font-size:11px;
+	line-height:13px;
+	margin-right:25px;
+}
+.main-content-down ul li a{
+	text-decoration:none;
+}

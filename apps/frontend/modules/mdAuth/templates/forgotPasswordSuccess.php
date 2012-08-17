@@ -1,7 +1,8 @@
 <?php
 slot('novedades', true);
 
-use_stylesheet('novedades.css');
+//use_stylesheet('novedades.css');
+use_stylesheet('forgot.css');
 
 ?>
 <div class="title">

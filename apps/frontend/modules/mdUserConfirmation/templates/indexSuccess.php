@@ -1,7 +1,7 @@
 <?php
 slot('novedades', true);
 
-use_stylesheet('novedades.css');
+use_stylesheet('forgot.css');
 
 ?>
 <div class="title">
@@ -41,7 +41,7 @@ use_stylesheet('novedades.css');
         <div class="clear"></div>  
         <?php echo $form['password_confirmation']->render();?> <?php echo $form['password_confirmation']->renderError();?>
         <div class="clear"></div>  
-        <input type="submit" value="Ingresar"/>
+        <input type="submit" class="send" value="Ingresar"/>
         <div class="clear"></div>  
         </li>
 </ul>

@@ -5,6 +5,7 @@ use_stylesheet('../fancybox/jquery.fancybox-1.3.4.css');
 use_javascript('../fancybox/jquery.fancybox-1.3.4.pack.js');
 
 use_javascript('regiterUser.js');
+
 use_javascript('jquery.scrollTo-min.js');
 ?>
 

@@ -1214,3 +1214,46 @@ footer li a {
 
 }
 
+
+
+#login .titulo {
+    font-family: 'BelloSmCp';
+    font-size: 68px;
+    line-height: 47px;
+    margin-left: 30px;
+    margin-top: 20px;
+	margin-bottom:20px;
+}
+
+#login input {
+    border: 1px solid #000000;
+    float: left;
+}
+#login .campos-left {
+	float:left;
+	margin-left:25px;
+	width:250px;
+}
+#login .campos-left li {
+    display: block;
+    float: left;
+}
+#login .campos-left li input{
+	float:none;
+	width:244px;
+	height:29px;
+	color:#72D400;
+	font-family: 'CourierRegular';
+}
+
+#login {
+  font-family: 'BelloSmCp';
+  list-style: none outside none;
+  width: 350px !important;
+}
+
+#login .remember {
+    color: #72D400;
+    font-family: 'CourierRegular';
+    font-size: 12px;
+}
