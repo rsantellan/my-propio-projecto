@@ -69,6 +69,8 @@ class reservasActions extends sfActions {
 
     $this->noches = count(mdBasicFunction::makeDayArray($reserva->getFechaDesde(), $reserva->getFechaHasta())) - 1;
     $this->reserva = $reserva;
+    
+    $this->setTemplate('salePaypalOK');
   }
 
   public function executeSalePaypalOK(sfWebRequest $request) {
@@ -106,9 +108,9 @@ class reservasActions extends sfActions {
         rentMailHandler::sendComissionMail($mdGenericSale);
 
       $track = $track . '?sale=' . $mdSaleId;
-      echo $track;
+      //echo $track;
       //die();
-      //$this->redirect($track);
+      $this->redirect($track);
     }
     else 
     {
@@ -129,7 +131,7 @@ class reservasActions extends sfActions {
       $reserva->setStatus(mdReserva::CANCELPAYPAL);
       $reserva->save();
     }
-    //$this->redirect('@homepage');
+    $this->redirect('@homepage');
   }
 
   public function executeSalePaypalError(sfWebRequest $request) {
@@ -158,8 +160,14 @@ class reservasActions extends sfActions {
     $hasta = $request->getParameter('hasta', false);
 
     if ((!$deptoId) or (!$desde) or (!$hasta)) {
-      return $this->renderText(mdBasicFunction::basic_json_response(false, array()));
+      return $this->renderText(mdBasicFunction::basic_json_response(false, array('ocupado' => false)));
     } else {
+        
+      $diasOcupado = (int) Doctrine::getTable('mdOcupacion')->getDiasOcupados($deptoId, $desde, $hasta);
+      if($diasOcupado > 0)
+      {
+        return $this->renderText(mdBasicFunction::basic_json_response(false, array('ocupado' => true)));
+      }
       $depto = Doctrine::getTable('mdApartamento')->find($deptoId);
       $total = 0;
       $total = $depto->getPrecio($desde, $hasta);

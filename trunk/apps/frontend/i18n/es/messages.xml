@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN" "http://www.oasis-open.org/committees/xliff/documents/xliff.dtd">
 <xliff version="1.0">
-  <file source-language="EN" target-language="es" datatype="plaintext" original="messages" date="2012-08-09T17:41:09Z" product-name="messages">
+  <file source-language="EN" target-language="es" datatype="plaintext" original="messages" date="2012-08-19T12:08:10Z" product-name="messages">
     <header/>
     <body>
       <trans-unit id="1">
@@ -1222,6 +1222,28 @@ Cualquier duda ya seas inquilino o propietario estaremos disponibles para ayudar
       <trans-unit id="243">
         <source>Reservas_porcentaje a pagar ahora</source>
         <target>Porcentaje a pagar ahora</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="244">
+        <source>reserva_Navegacion</source>
+        <target>Volver</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="245">
+        <source>reserva_OK titulo</source>
+        <target>La reserva se ha realizado con éxito!</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="246">
+        <source>reserva_OK texto</source>
+        <target>Dentro de las siguientes 24 hs, recibirás un mail de confirmación de la reserva con todas
+las indicaciones que debes seguir.
+
+Gracias por elegirnos!
+
+Ante cualquier consulta, no dudes en comunicarte con nosotros:
+info@rentandchill.com
+(00598) 93702506 / 9456 3139 / 4277 3278 - Punta del Este, Uruguay</target>
         <note>es</note>
       </trans-unit>
     </body>
