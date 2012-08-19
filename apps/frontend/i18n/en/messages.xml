@@ -1144,6 +1144,6 @@ Cualquier duda ya seas inquilino o propietario estaremos disponibles para ayudar
         <target> </target>
         <note>en</note>
       </trans-unit>
-    </body>
+    <trans-unit id="237"><source>reserva_Navegacion</source><target> </target><note>en</note></trans-unit><trans-unit id="238"><source>reserva_OK titulo</source><target> </target><note>en</note></trans-unit><trans-unit id="239"><source>reserva_OK texto</source><target> </target><note>en</note></trans-unit></body>
   </file>
 </xliff>

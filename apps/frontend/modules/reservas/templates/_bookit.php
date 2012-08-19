@@ -27,6 +27,10 @@
     <li><?php echo __('Reserva_subtotal') ?></li>
     </div>
     </div>
+    <label id="esta_reservado" style="display: none">
+        <?php echo __('Reserva_se encuentra ya reservado'); ?>
+    </label>
+    
     <button class="book" type="submit"><?php echo __('Reserva_Bookit') ?></button>
 </div>
 </form>
@@ -99,12 +103,26 @@ function calculateTotal(){
 		type: 'post',
 		dataType: 'json',
 		success: function(json){
+                    $('#esta_reservado').hide();
 			if(json.response == 'OK'){
+                            $('.book').show();
 				$('span#total').html(json.options.total);
 				$('#md_reserva_total').val(json.options.total);
 			}else{
-				$('span#total').html('');
-				$('#md_reserva_total').val('');
+                            $('.book').hide();
+                            if(json.options.ocupado == true)
+                            {
+                                $('span#total').html('');
+                                $('#md_reserva_total').val('');
+                                console.info('esta ocupado');
+                                $('#esta_reservado').show();
+                            }
+                            else
+                            {
+                                $('span#total').html('');
+                                $('#md_reserva_total').val('');
+                            }
+				
 			}
 		}
 	})
