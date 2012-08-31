@@ -5,28 +5,66 @@ $reserva = $item->getObject();
 $depto = $reserva->getmdApartamento();
 use_helper('Text');
 ?>
-<html>
-<body style="background-color:#F5F5F5">
-    <title><?php echo __('Mail_Comission Titulo'); ?></title>
-    <table width="732" cellpadding="0" cellspacing="0" align="center">
-    	<tr>
-          <td><?php echo image_tag('/images/header-email.png', array('absolute' => true)); ?></td>
-        </tr>
-        <tr style="background-color:#FFFFFF">
-          <td><b style="font-family:Arial; color:#00B800; font-size:18px; padding-left:24px; padding-top:20px; padding-bottom:10px">
-					<?php echo __('Mail_Comission Titulo'); ?></b>
-					</td>
-        </tr>
-        <tr style="background-color:#FFFFFF"><td height="10"></td></tr>
-        <tr style="background-color:#FFFFFF">
-          <td style="color:#414141; padding-left:24px; font-family:arial; font-size:12px">
-            <?php echo simple_format_text(__('Mail_Comission Cuerpo [url_apartamento]', array(
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<td><?php echo image_tag('/images/header-email.png', array('absolute' => true)); ?></td>
+<style type="text/css">
+body,td,th {
+	font-family: "Courier New", Courier, monospace;
+	font-size: 12px;
+	color: #000;
+}
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+a:link {
+	color: #3DA333;
+	text-decoration: none;
+}
+a:visited {
+	color: #3DA333;
+	text-decoration: none;
+}
+a:hover {
+	color: #7FB61A;
+	text-decoration: none;
+}
+a:active {
+	color: #3DA333;
+	text-decoration: none;
+}
+</style>
+</head>
+
+<body>
+<table width="300" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <?php echo image_tag('/images/cabezal_mail.jpg', array('absolute' => true, 'width' => 600, 'height' => 140)); ?>
+  </tr>
+  <tr>
+    <td width="20" rowspan="3">&nbsp;</td>
+    <td width="560">&nbsp;</td>
+    <td width="20" rowspan="3">&nbsp;</td>
+  </tr>
+  <tr>
+    <td>
+    <?php echo simple_format_text(__('Mail_Comission Cuerpo [url_apartamento]', array(
 									'[url_apartamento]'=>url_for('apartamento',$depto, array('absolute'=>true)),
 									))); ?>
-          </td>
-        </tr>
-        <tr style="background-color:#FFFFFF"><td height="20"></td></tr>
-        <tr><td height="2" bgcolor="#72D400"></td></tr>
-    </table>
+    </td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="5" colspan="3" bgcolor="#000000"></td>
+  </tr>
+</table>
 </body>
 </html>
