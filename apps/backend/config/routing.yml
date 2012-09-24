@@ -15,6 +15,10 @@ reservaEstadistica:
   url:   /reservas/estadisticas.html
   param: { module: reservas, action: estadisticas }  
 
+reservaEstadisticaUsuarios:
+  url:   /reservas/usuarios/estadisticas.html
+  param: { module: reservas, action: estadisticasUsuarios }
+  
 md_reserva_2:
   class: sfDoctrineRouteCollection
   options:

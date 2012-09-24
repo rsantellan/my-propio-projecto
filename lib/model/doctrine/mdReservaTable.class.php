@@ -63,4 +63,12 @@ class mdReservaTable extends Doctrine_Table
       $r = $conn->fetchAssoc($sql, array());
       return $r;
     }
+    
+    public function retrieveUsersWithEspecifications($status = "pending")
+    {
+      $sql = "select count(m.id) as suma, m.status, m.md_user_id, u.email, u.culture, p.username, up.name, up.last_name, up.country_code from md_user u, md_content c, md_user_profile up, md_passport p, md_reserva m where c.object_class = 'mdUserProfile' and c.md_user_id = u.id and c.object_id = up.id and u.id = p.md_user_id and m.md_user_id = u.id and m.status = ? group by m.md_user_id order by suma desc";
+      $conn = Doctrine_Manager::getInstance()->getCurrentConnection();
+      $r = $conn->fetchAssoc($sql, array($status));
+      return $r;
+    }
 }

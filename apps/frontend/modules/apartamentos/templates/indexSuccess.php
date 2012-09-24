@@ -11,7 +11,9 @@
     <?php include_component('apartamentos', 'search', (isset($filter) ? array('form' => $filter) : array())) ?>
     <div id="results_loading" style="display:none"></div>
     <div class="results" id="results">
-      <?php include_partial('results', array('pager' => $pager)) ?>
+      <?php 
+      include_partial('results', array('pager' => $pager));
+      ?>
     </div>
   </div>
   <div class="col-right">

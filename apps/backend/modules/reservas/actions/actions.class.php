@@ -65,4 +65,32 @@ class reservasActions extends sfActions
     
     $this->from_date = $auxMeses1;
   }
+  
+  public function executeEstadisticasUsuarios(sfWebRequest $request)
+  {
+    sfContext::getInstance()->getConfiguration()->loadHelpers(array('I18N'));
+    $estados = array(
+            'pending' => __('reserva_estado pending'), 
+            'confirm' => __('reserva_estado confirm'), 
+            'efective' => __('reserva_estado efective'), 
+            'cancel' => __('reserva_estado cancel'), 
+            'cancelPayPal' => __('reserva_estado cancelPayPal'), 
+            'errorPayPal' => __('reserva_estado errorPayPal'), 
+            'prePayPal' => __('reserva_estado prePayPal')
+            );
+    $lista = array();
+    foreach($estados as $key => $value)
+    {
+      $aux = array('datos' => Doctrine::getTable('mdReserva')->retrieveUsersWithEspecifications($key),
+            'titulo' => $value
+          );
+      if(count($aux['datos']) > 0)
+      {
+        $lista[$key] = $aux;
+      }
+      
+    }
+    $this->listados = $lista;
+    //var_dump($lista);
+  }
 }
