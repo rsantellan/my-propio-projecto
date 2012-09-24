@@ -31,6 +31,11 @@ slot('backend_reservas', 'ok');
             <?php echo __('reservas_mirar estadisticas'); ?>
           </a>
         </div>
+        <div>
+          <a href="<?php echo url_for("@reservaEstadisticaUsuarios"); ?>">
+            <?php echo __('reservas_mirar estadisticas usuarios'); ?>
+          </a>
+        </div>
       </div>
     </div>
   </div>

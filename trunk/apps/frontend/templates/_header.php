@@ -24,8 +24,8 @@
         <li><img width="1" height="21" src="/images/separator.png"></li>
         <li><a href="<?php echo url_for('@contacto') ?>"><?php echo __('Global_CONTACT') ?></a></li>
         <li><img width="1" height="21" src="/images/separator.png"></li>
-        <li class="redes-sociales"><a href="<?php echo __('Global_Link Twitter') ?>"><img src="/images/twitter.png"></a></li>
-        <li class="redes-sociales"><a href="<?php echo __('Global_Link Facebook') ?>"><img src="/images/facebook.png"></a></li>
+        <li class="redes-sociales"><a href="<?php echo __('Global_Link Twitter') ?>" target="_blank" ><img src="/images/twitter.png"></a></li>
+        <li class="redes-sociales"><a href="<?php echo __('Global_Link Facebook') ?>" target="_blank"><img src="/images/facebook.png"></a></li>
         <li><img width="1" height="21" src="/images/separator.png"></li>
 <?php  $currency = mdCurrencyHandler::getCurrent(); ?>
         <li class="eur"><a class="green" href="#"><?php echo $currency->getSymbol() . ' ' . $currency->getCode() ?></a>
