@@ -11,9 +11,10 @@
 					<li class="error"><?php echo $exception; ?></li>
 					<?php endif; ?>
          <li><a href="<?php echo url_for("mdAuth/forgotPassword");?>"><?php echo __('Usuario_Forgot your password?') ?></a></li>
-         <li>
+        
+         
           <div class="remember"><?php echo $form['remember']->render()?><?php echo $form['username']->renderLabel(__('Usuario_recordarme'))?></div>
-         </li>
-         <div class="div-send"><button class="send" type="submit"><?php echo __('Login_boton') ?></button></div>
+        
+         <li><div class="div-send"><button class="send" type="submit"><?php echo __('Login_boton') ?></button></div></li>
      </div>
 </form>

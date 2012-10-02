@@ -32,7 +32,14 @@
 .col-left {
 	float:left;
 	width:382px;
-	height:320px;
+	height:370px;
+}
+
+.col-left a{
+	color: #000;
+}
+.col-left a:hover {
+	color: #00B800;
 }
 .titulo {
     font-family: 'BelloSmCp';
@@ -91,16 +98,7 @@ input {
 	margin-top:10px;
 	float:left;
 }
-.remember {
-	color:#72D400;
-    float: left;
-	font-size:12px;
-	font-family: 'CourierRegular';
 
-}
-.remember input {
-	margin-right:10px;
-}
 .col-right {
 	float:right;
 }
@@ -136,4 +134,25 @@ input {
 .property-right {
     float: left;
     width: 121px;
+}
+
+.remember {
+	width: 200px;
+	height: 20px;
+	/* [disabled]float: left; */
+	color:#72D400;
+	float: left;
+	font-size:12px;
+	font-family: 'CourierRegular';
+	margin-top: 10px;
+}
+.remeber login_remember {
+	height: 20px;
+	width: 20px;
+}
+.remember label {
+	width: 200px;
+	vertical-align: top;
+	text-align: left;
+	margin-left: 5px;
 }
