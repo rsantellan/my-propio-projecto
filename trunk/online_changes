@@ -1,0 +1,37 @@
+apps/frontend/modules/saleMailing/templates/_mail_admin_new.php
+
+      <?php 
+        $usuario = $reserva->getMdUser();
+        $usu_profile = $usuario->getMdUserProfile();
+        echo __('Mail_Admin Final Cuerpo', array(
+        '[locacion]' => $depto->getmdLocacion()->getNombre(),
+        '[url]' => url_for('apartamento',$depto, array('absolute'=>true)),
+        '[depto]' => $depto->getTitulo(),
+        '[fecha_desde]' => $reserva->getDateTimeObject('fecha_desde')->format('Y/m/d'),
+        '[fecha_hasta]' => $reserva->getDateTimeObject('fecha_hasta')->format('Y/m/d'),
+        '[usuario_url]' => url_for('profile',$usuario,array('absolute'=>true)),
+        '[usuario_nombre]' => $usu_profile->getName() . ' ' .$usu_profile->getLastName(),
+        '[usuario_email]' => $usuario->getEmail(),
+        '[pago]' => round($reserva->getTotal() * 0.125, 0),
+        '[pago_total]' => $reserva->getTotal()
+        )); ?>
+        
+        
+
+apps/frontend/modules/saleMailing/templates/_mail_user_finish.php
+
+      <?php 
+        $usuario = $reserva->getMdUser();
+        $usu_profile = $usuario->getMdUserProfile();
+
+        echo __('Mail_Usuario Final Cuerpo [url_reserva] [url_apartamento]', array(
+                                                                        '[url_reserva]'=>url_for('reservas/done?sale='. $mdGenericSale->getId(), array('absolute'=>true)),
+                                                                        '[url_apartamento]'=>url_for('apartamento',$depto, array('absolute'=>true)),
+                                    '[pago]' => round($reserva->getTotal() * 0.125, 0),
+                                    '[pago_total]' => $reserva->getTotal(),
+                                    '[usuario_nombre]' => $usu_profile->getName() . ' ' .$usu_profile->getLastName(),
+                                    '[depto]' => $depto->getTitulo(),
+                                    '[moneda]' => $reserva->getMdCurrency()->getSymbol()
+                                                                        )); ?>
+
+
