@@ -45,10 +45,13 @@ use_helper('Text');
         <!--              <a href="help">help</a>-->
         <button type="button" rel="fullservice" class="mfancy full <?php if ($type == 'fullservice') echo 'full-press'; ?>"><?php echo __('Submit_Full Service') ?></button>
       </div>
-      <div class="div-send">
+      
+<div class="div-send">
         <!--              <a href="help">help</a>-->
         <button type="button" rel="comission" class="mfancy comission <?php if ($type == 'comission') echo 'comission-press'; ?>"><?php echo __('Submit_Comission') ?></button>
       </div>
+
+       <div style="margin-left:25px; margin-bottom:20px;width:220px; border:thin; float:left" ><a href="#" style="color:#000">Ayuda</a> </div> <div style="margin-left:52px; margin-bottom:20px;width:200px; border:thin; float:left"><a href="#" style="color:#000">Ayuda</a> </div>
     </div>
     <?php if ($sf_user->isAuthenticated()): ?>
       <?php include_partial('registerUser/userInfo') ?>
