@@ -35,5 +35,16 @@ class defaultActions extends sfActions
     public function executeError404(sfWebRequest $request)
     {
         
-    }      
+    }
+    
+    public function executeDummy(sfWebRequest $request)
+    {
+      //var_dump($this->getUser()->getCulture());
+      $mdGenericSale = Doctrine::getTable('mdGenericSale')->find(35);
+      //mdGenericSaleMailingHandler::sendConfirmAdminMail($mdGenericSale);
+      //mdGenericSaleMailingHandler::sendSaleFinishMail($mdGenericSale);
+      rentMailHandler::sendComissionMail($mdGenericSale);
+      die('aca....');
+      // 35
+    }
 }

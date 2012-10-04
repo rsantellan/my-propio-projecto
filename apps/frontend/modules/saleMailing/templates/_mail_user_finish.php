@@ -10,39 +10,10 @@ use_helper('Text');
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<?php echo __('Mail_Usuario Final Titulo'); ?>
-<style type="text/css">
-body,td,th {
-	font-family: "Courier New", Courier, monospace;
-	font-size: 12px;
-	color: #000;
-}
-body {
-	margin-left: 0px;
-	margin-top: 0px;
-	margin-right: 0px;
-	margin-bottom: 0px;
-}
-a:link {
-	color: #3DA333;
-	text-decoration: none;
-}
-a:visited {
-	color: #3DA333;
-	text-decoration: none;
-}
-a:hover {
-	color: #7FB61A;
-	text-decoration: none;
-}
-a:active {
-	color: #3DA333;
-	text-decoration: none;
-}
-</style>
+<title><?php echo __('Mail_Usuario Final Titulo'); ?></title>
 </head>
 
-<body>
+<body style="font-family:'Courier New', Courier, monospace; color:#000; font-size:14px; margin:0px" >
 <table width="300" border="0" cellspacing="0" cellpadding="0">
   <tr>
     <td colspan="3">
@@ -56,10 +27,19 @@ a:active {
   </tr>
   <tr>
     <td>
-      <?php echo simple_format_text(__('Mail_Usuario Final Cuerpo [url_reserva] [url_apartamento]', array(
-									'[url_reserva]'=>url_for('reservas/done?sale='. $mdGenericSale->getId(), array('absolute'=>true)),
-									'[url_apartamento]'=>url_for('apartamento',$depto, array('absolute'=>true)),
-									))); ?>
+        <?php 
+        $usuario = $reserva->getMdUser();
+        $usu_profile = $usuario->getMdUserProfile();
+
+        echo __('Mail_Usuario Final Cuerpo [url_reserva] [url_apartamento]', array(
+                                                                        '[url_reserva]'=>url_for('reservas/done?sale='. $mdGenericSale->getId(), array('absolute'=>true)),
+                                                                        '[url_apartamento]'=>url_for('apartamento',$depto, array('absolute'=>true)),
+                                    '[pago]' => round($reserva->getTotal() * 0.125, 0),
+                                    '[pago_total]' => $reserva->getTotal(),
+                                    '[usuario_nombre]' => $usu_profile->getName() . ' ' .$usu_profile->getLastName(),
+                                    '[depto]' => $depto->getTitulo(),
+                                    '[moneda]' => $reserva->getMdCurrency()->getSymbol()
+                                                                        )); ?>
     </td>
   </tr>
   <tr>

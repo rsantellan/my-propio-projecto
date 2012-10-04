@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN" "http://www.oasis-open.org/committees/xliff/documents/xliff.dtd">
 <xliff version="1.0">
-  <file source-language="EN" target-language="es" datatype="plaintext" original="messages" date="2012-05-08T18:50:08Z" product-name="messages">
+  <file source-language="EN" target-language="es" datatype="plaintext" original="messages" date="2012-08-22T12:00:39Z" product-name="messages">
     <header/>
     <body>
       <trans-unit id="1">
         <source>Apartamento_cuartos</source>
-        <target>Habitaciones</target>
-        <note>es</note>
+        <target>Quartos</target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="2">
         <source>Mail_Usuario Final Titulo</source>
@@ -33,13 +33,19 @@ Nullam sed sodales est. Phasellus sed urna vel neque sodales cursus quis et tort
       </trans-unit>
       <trans-unit id="6">
         <source>Mail_Admin Final Titulo</source>
-        <target>New bookin type [type]</target>
+        <target>Administrador:  New bookin type [type]</target>
         <note>es</note>
       </trans-unit>
       <trans-unit id="7">
         <source>Mail_Admin Final Cuerpo</source>
-        <target>Vestibulum commodo dapibus vulputate. Donec adipiscing, magna eu iaculis iaculis, dui mauris viverra magna, id condimentum sapien elit id ligula. Vivamus sit amet felis mi, vitae lacinia arcu. Praesent a enim ligula, a semper augue. Etiam nec felis nunc. Vivamus at fringilla orci. Sed tincidunt nunc venenatis lacus aliquet pulvinar elementum odio pellentesque. Proin iaculis, magna in dictum volutpat, lorem augue vestibulum augue, nec hendrerit nisi velit a orci. Mauris interdum elit et nisi eleifend suscipit. Vestibulum et fringilla magna. Aliquam molestie hendrerit libero. In hac habitasse platea dictumst. Sed vel diam eu felis porttitor tempor sed quis felis. Integer justo quam, iaculis ac ullamcorper et, faucibus at orci. Proin a est sit amet sapien blandit luctus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac tu.
-</target>
+        <target>&lt;p&gt;
+        El usuario [usuario_nombre] hizo la reserva de &lt;a href='[url]'&gt;[depto]&lt;/a&gt; de la localidad [locacion]
+        entre las fechas &lt;strong&gt;[fecha_desde] : [fecha_hasta] &lt;/strong&gt; pagando el monto de &lt;strong&gt;[pago]&lt;/strong&gt; del total de [pago_total]
+    &lt;/p&gt;
+    &lt;p&gt;
+        Mas informacion del usuario se puede ver en &lt;a href='[usuario_url]'&gt;[usuario_url]&lt;/a&gt; o se le puede mandar
+        mail directamente con &lt;a href="mailto:[usuario_email]" style="color:#3DA333; text-decoration:none"&gt;[usuario_email]&lt;/a&gt;
+&lt;/p&gt;        </target>
         <note>es</note>
       </trans-unit>
       <trans-unit id="8">
@@ -95,8 +101,8 @@ Nullam sed sodales est. Phasellus sed urna vel neque sodales cursus quis et tort
       </trans-unit>
       <trans-unit id="18">
         <source>Global_GET TO KNOW</source>
-        <target>Visite</target>
-        <note>es</note>
+        <target>visitar</target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="19">
         <source>Global_About us</source>
@@ -105,13 +111,13 @@ Nullam sed sodales est. Phasellus sed urna vel neque sodales cursus quis et tort
       </trans-unit>
       <trans-unit id="20">
         <source>Global_Sitemap</source>
-        <target>Mapa del sitio</target>
-        <note>es</note>
+        <target>Mapa do site</target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="21">
         <source>Global_Newsleetter</source>
-        <target>Newsletter</target>
-        <note>es</note>
+        <target>Receba as notícias</target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="22">
         <source>Global_Safe server site</source>
@@ -120,13 +126,13 @@ Nullam sed sodales est. Phasellus sed urna vel neque sodales cursus quis et tort
       </trans-unit>
       <trans-unit id="23">
         <source>Global_Footer contact</source>
-        <target>Rent n´Chill - &lt;a href="mailto:info@rentandchill.com"&gt;info@rentandchill.com&lt;/a&gt; - (00598) 93702506 / 94563139 / 42773278 - Punta del Este, Uruguay</target>
-        <note>es</note>
+        <target>Rent n´Chill - &lt;a href="mailto:info@rentandchill.com"&gt;info@rentandchill.com&lt;/a&gt; - (00598) 9370 2506 / 9456 3139 / 4277 3278 - Punta del Este, Uruguay</target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="24">
         <source>Global_Footer Payment Methods</source>
-        <target>Metodos de pago</target>
-        <note>es</note>
+        <target>Método de pagamento</target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="25">
         <source>Global_slogan</source>
@@ -135,73 +141,73 @@ Nullam sed sodales est. Phasellus sed urna vel neque sodales cursus quis et tort
       </trans-unit>
       <trans-unit id="26">
         <source>Usuario_Ver perfil</source>
-        <target>mi perfil</target>
-        <note>es</note>
+        <target>Meu Perfil</target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="27">
         <source>Usuario_Salir</source>
-        <target>salir</target>
-        <note>es</note>
+        <target>Deixar</target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="28">
         <source>Global_LOG IN / SIGN UP</source>
-        <target>INGRESE / REGISTRESE</target>
-        <note>es</note>
+        <target>ENTRAR</target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="29">
         <source>Global_HOW IT WORKS</source>
-        <target>COMO FUNCIONA ?</target>
-        <note>es</note>
+        <target>COMO ELE FUNCIONA</target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="30">
         <source>Global_TOURIST INFO</source>
-        <target>GUIA DE CIUDADES</target>
-        <note>es</note>
+        <target>GUIA DA CIDADE</target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="31">
         <source>Global_CONTACT</source>
-        <target>CONTACTO</target>
-        <note>es</note>
+        <target>CONTATO</target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="32">
         <source>Global_Link Twitter</source>
-        <target>#</target>
-        <note>es</note>
+        <target>https://twitter.com/RentnChill</target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="33">
         <source>Global_Link Facebook</source>
-        <target>#</target>
-        <note>es</note>
+        <target>https://www.facebook.com/RentnChill</target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="34">
         <source>Global_Choose currency</source>
-        <target>Moneda</target>
-        <note>es</note>
+        <target>Moeda</target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="35">
         <source>Apartamento_Host</source>
-        <target>administrador</target>
-        <note>es</note>
+        <target>Administrador</target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="36">
         <source>Apartamento_More info</source>
-        <target>mas info</target>
-        <note>es</note>
+        <target>Mais info</target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="37">
         <source>Apartamento_Contact</source>
-        <target>Contacto</target>
-        <note>es</note>
+        <target>Contato</target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="38">
         <source>Search_Price range</source>
-        <target>Rango de precio</target>
-        <note>es</note>
+        <target>Faixa de preço</target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="39">
         <source>Search_Precio en</source>
-        <target>Moneda</target>
-        <note>es</note>
+        <target>Moeda</target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="40">
         <source>Search_Filter by</source>
@@ -210,28 +216,28 @@ Nullam sed sodales est. Phasellus sed urna vel neque sodales cursus quis et tort
       </trans-unit>
       <trans-unit id="41">
         <source>Search_Order by</source>
-        <target>Ordernar por</target>
-        <note>es</note>
+        <target>Classificar por</target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="42">
         <source>Apartamento_per night</source>
-        <target>por noche</target>
-        <note>es</note>
+        <target>Por noite</target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="43">
         <source>Apartamento_search</source>
-        <target>buscar</target>
-        <note>es</note>
+        <target>pesquisar</target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="44">
         <source>Apartamento_guests</source>
-        <target>guests</target>
-        <note>es</note>
+        <target>Pessoas</target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="45">
         <source>Apartamento_Select photos</source>
-        <target>seleccionar las fotos</target>
-        <note>es</note>
+        <target>Selecionar as fotos</target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="46">
         <source>Global_Home</source>
@@ -240,23 +246,23 @@ Nullam sed sodales est. Phasellus sed urna vel neque sodales cursus quis et tort
       </trans-unit>
       <trans-unit id="47">
         <source>Apartamento_Detalle navegacion</source>
-        <target>Property details</target>
-        <note>es</note>
+        <target>Detalhes do imóvel</target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="48">
         <source>Apartamento_Back to results</source>
-        <target>Volver</target>
-        <note>es</note>
+        <target>voltar</target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="49">
         <source>Apartamento_HIGH SEASON</source>
-        <target>Temporada Alta</target>
-        <note>es</note>
+        <target>Alta Temporada </target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="50">
         <source>Apartamento_LOW SEASON</source>
-        <target>Temporada Baja</target>
-        <note>es</note>
+        <target>Baixa Temporada</target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="51">
         <source>Apartamento_Editar</source>
@@ -265,8 +271,8 @@ Nullam sed sodales est. Phasellus sed urna vel neque sodales cursus quis et tort
       </trans-unit>
       <trans-unit id="52">
         <source>Apartamento_Description</source>
-        <target>Descripción</target>
-        <note>es</note>
+        <target>Descrição</target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="53">
         <source>Apartamento_Maps</source>
@@ -275,58 +281,58 @@ Nullam sed sodales est. Phasellus sed urna vel neque sodales cursus quis et tort
       </trans-unit>
       <trans-unit id="54">
         <source>Apartamento_Details</source>
-        <target>Detalles</target>
-        <note>es</note>
+        <target>Detalhes</target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="55">
         <source>Apartamento_Room type</source>
-        <target>Tipo de habitación   </target>
-        <note>es</note>
+        <target>Tipo de quarto  </target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="56">
         <source>Apartamento_Bed type</source>
-        <target>Tipo de cama</target>
-        <note>es</note>
+        <target>Cama</target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="57">
         <source>Apartamento_Accommodates</source>
-        <target>Accommodates</target>
-        <note>es</note>
+        <target>Amenidades</target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="58">
         <source>Apartamento_Bedrooms</source>
-        <target>Bedrooms</target>
-        <note>es</note>
+        <target>Quartos</target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="59">
         <source>Apartamento_Bathrooms</source>
-        <target>Baños</target>
-        <note>es</note>
+        <target>Banheiros</target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="60">
         <source>Apartamento_Extra people</source>
-        <target>Persona extra</target>
-        <note>es</note>
+        <target>Pessoa extra</target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="61">
         <source>Apartamento_Minimum Stay</source>
-        <target>Estadía mínima  </target>
-        <note>es</note>
+        <target>Estadía mínima</target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="62">
         <source>Apartamento_Neighborhood</source>
-        <target>Barrio</target>
-        <note>es</note>
+        <target>Bairro</target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="63">
         <source>Apartamento_Size</source>
-        <target>Tamaño</target>
-        <note>es</note>
+        <target>Tamanho</target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="64">
         <source>Apartamento_Amenities</source>
-        <target>Amenities</target>
-        <note>es</note>
+        <target>Amenidades</target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="65">
         <source>Apartamento_Editar navegacion</source>
@@ -340,18 +346,18 @@ Nullam sed sodales est. Phasellus sed urna vel neque sodales cursus quis et tort
       </trans-unit>
       <trans-unit id="67">
         <source>Apartamento_SHORT DESCRIPTION</source>
-        <target>Descripción corta</target>
-        <note>es</note>
+        <target>Breve Descrição</target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="68">
         <source>Apartamento_CITY</source>
-        <target>Ciudad</target>
-        <note>es</note>
+        <target>Cidade</target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="69">
         <source>Apartamento_Gallery</source>
-        <target>Galería</target>
-        <note>es</note>
+        <target>Galeria</target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="70">
         <source>Apartamento_Map</source>
@@ -360,28 +366,28 @@ Nullam sed sodales est. Phasellus sed urna vel neque sodales cursus quis et tort
       </trans-unit>
       <trans-unit id="71">
         <source>Apartamento_Per person</source>
-        <target>Por persona</target>
-        <note>es</note>
+        <target>Por pessoa</target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="72">
         <source>Apartamento_Low season</source>
-        <target>Temporada baja</target>
-        <note>es</note>
+        <target>Baixa Temporada</target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="73">
         <source>Apartamento_High season</source>
-        <target>Temporada alta</target>
-        <note>es</note>
+        <target>Alta Temporada </target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="74">
         <source>Apartamento_INSURANCE</source>
-        <target>Seguro</target>
-        <note>es</note>
+        <target>Segurança</target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="75">
         <source>Apartamento_INSURANCE descripcion</source>
-        <target>Descripción del seguro</target>
-        <note>es</note>
+        <target>Descrição de Segurança</target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="76">
         <source>Apartamento_Submit</source>
@@ -390,48 +396,48 @@ Nullam sed sodales est. Phasellus sed urna vel neque sodales cursus quis et tort
       </trans-unit>
       <trans-unit id="77">
         <source>Search_navegacion</source>
-        <target>Buscar</target>
-        <note>es</note>
+        <target>Pesquisar</target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="78">
         <source>Submit_FullService Property submited</source>
-        <target>Has enviado tu propiedad!</target>
-        <note>es</note>
+        <target>Você enviou a sua propriedade!</target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="79">
         <source>Submit_FullService Texto</source>
-        <target>Nos has enviado la información de tu propiedad. Nuestro equipo se podrá en contacto contigo.</target>
-        <note>es</note>
+        <target>Você enviou as informações em sua propriedade. Nossa equipe entrará em contato com você.</target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="80">
         <source>Submit_navegacion</source>
-        <target>Publicar propiedad</target>
-        <note>es</note>
+        <target>publicar uma propriedade</target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="81">
         <source>Submit_HOSTING</source>
-        <target>Publique su propiedad</target>
-        <note>es</note>
+        <target>Publicar uma propriedade</target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="82">
         <source>Submit_Place select your hosting plan</source>
-        <target>Seleccione su hosting plan</target>
-        <note>es</note>
+        <target>Selecionar hosting plan</target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="83">
         <source>Submit_Full Service</source>
-        <target>Servicio completo</target>
-        <note>es</note>
+        <target>Serviço completo</target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="84">
         <source>Submit_Comission</source>
-        <target>Servicio simple</target>
-        <note>es</note>
+        <target>serviço simple</target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="85">
         <source>Submit_Property info</source>
-        <target>Info propiedad</target>
-        <note>es</note>
+        <target>Info propriedade</target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="86">
         <source>Submit_TITLE</source>
@@ -440,28 +446,28 @@ Nullam sed sodales est. Phasellus sed urna vel neque sodales cursus quis et tort
       </trans-unit>
       <trans-unit id="87">
         <source>Submit_PRECIO TEMPORADA ALTA</source>
-        <target>Precio temporada alta</target>
-        <note>es</note>
+        <target>Preço de alta temporada</target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="88">
         <source>Submit_Description</source>
-        <target>Descripción</target>
-        <note>es</note>
+        <target>Descrição</target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="89">
         <source>Submit_Boton</source>
-        <target>Publique</target>
-        <note>es</note>
+        <target>Publicar</target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="90">
         <source>Submit_CITY</source>
-        <target>Ciudad</target>
-        <note>es</note>
+        <target>Cidade</target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="91">
         <source>Submit_PRECIO TEMPORADA BAJA</source>
-        <target>Precio temporada baja</target>
-        <note>es</note>
+        <target>Preço Temporada Baixa</target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="92">
         <source>Funcionamiento_navegacion</source>
@@ -550,34 +556,23 @@ Nullam sed sodales est. Phasellus sed urna vel neque sodales cursus quis et tort
       </trans-unit>
       <trans-unit id="109">
         <source>Home_find a place to stay</source>
-        <target>Encuentra donde quedarte</target>
-        <note>es</note>
+        <target>Encontre onde ficar</target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="110">
         <source>Global_submit your property</source>
-        <target>Publique su propiedad</target>
-        <note>es</note>
+        <target>Publique o seu imóvel</target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="111">
         <source>Home_Texto1</source>
-        <target>&lt;p style="text-align: justify;"&gt;&lt;span style="font-family: 'courier new', courier; font-size: small;"&gt;&lt;strong&gt;Por qué utilizar el servicio de Rent n´Chill?&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;p style="text-align: justify;"&gt;&lt;strong style="font-family: 'courier new', courier; font-size: small;"&gt;Rent n´Chill te ayuda a ganar dinero alquilando tu hogar.&lt;/strong&gt;&lt;/p&gt;
-&lt;p style="text-align: justify;"&gt;&lt;span style="font-size: small;"&gt;&lt;span style="font-family: 'courier new', courier;"&gt;&lt;strong&gt;&lt;span style="font-family: 'courier new', courier;"&gt;Públicar es gratis&lt;/span&gt;&lt;/strong&gt;&lt;strong&gt;¿&lt;/strong&gt;&lt;/span&gt;&lt;strong style="font-size: small;"&gt;&lt;span style="font-family: 'courier new', courier;"&gt;, &lt;/span&gt;&lt;/strong&gt;&lt;span style="font-family: 'courier new', courier;"&gt;sólo pagas una comisión por cada reserva confirmada.&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;p style="text-align: justify;"&gt;&lt;span style="font-size: small;"&gt;&lt;strong&gt;&lt;span style="font-family: 'courier new', courier;"&gt;Transacciones online,&lt;/span&gt;&lt;/strong&gt;&lt;span style="font-family: 'courier new', courier;"&gt; gestionamos todos los pagos para garantizar que cobres puntualmente.&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;p style="text-align: justify;"&gt;&lt;span style="font-size: small;"&gt;&lt;strong&gt;&lt;span style="font-family: 'courier new', courier;"&gt;Atención al cliente, &lt;/span&gt;&lt;/strong&gt;&lt;span style="font-family: 'courier new', courier;"&gt;estamos disponibles siempre que nos necesite, ante cualquier duda.&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;p style="text-align: justify;"&gt;&lt;strong&gt;&lt;span style="font-size: small; font-family: 'courier new', courier;"&gt;Google, &lt;/span&gt;&lt;/strong&gt;&lt;span style="font-size: small; font-family: 'courier new', courier;"&gt;trabajamos con google para maximizar la difusión y las visitas a nuestra página de Rent n´Chill.&lt;/span&gt;&lt;/p&gt;
-&lt;p style="text-align: justify;"&gt;&lt;span style="font-size: small;"&gt;&lt;strong&gt;&lt;span style="font-family: 'courier new', courier;"&gt;Redes sociales,&lt;/span&gt;&lt;/strong&gt; &lt;span style="font-family: 'courier new', courier;"&gt;estamos conectados a redes sociales como facebook y twiter.&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;</target>
-        <note>es</note>
+        <target>Organizar uma viagem a lugares incríveis, planejar suas férias ou a planear uma viagem de negócios.</target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="112">
         <source>Home_Texto2</source>
-        <target>&lt;p style="text-align: justify;"&gt;&lt;strong style="font-size: 8px;"&gt;&lt;span style="font-size: small; font-family: 'courier new', courier;"&gt;Fotografo profesional, &lt;/span&gt;&lt;/strong&gt;&lt;span style="font-size: small; font-family: 'courier new', courier;"&gt;enviaremos un fotógrafo profesional sin ningún coste o muy poco.&lt;/span&gt;&lt;/p&gt;
-&lt;p style="text-align: justify;"&gt;&lt;span style="font-size: small;"&gt;&lt;strong&gt;&lt;span style="font-family: 'courier new', courier;"&gt;Calendario, &lt;/span&gt;&lt;/strong&gt;&lt;span style="font-family: 'courier new', courier;"&gt;gestiona tu disponibilidad y reservas de una forma sencilla.&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;p style="text-align: justify;"&gt;&lt;span style="font-size: small;"&gt;&lt;strong&gt;&lt;span style="font-family: 'courier new', courier;"&gt;Política de cancelación, &lt;/span&gt;&lt;/strong&gt;&lt;span style="font-family: 'courier new', courier;"&gt;defenderemos por ti cualquier problema con nuestra política de cancelación.&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;p style="text-align: justify;"&gt;&lt;span style="font-size: small;"&gt;&lt;strong&gt;&lt;span style="font-family: 'courier new', courier;"&gt;Precio flexible, &lt;/span&gt;&lt;/strong&gt;&lt;span style="font-family: 'courier new', courier;"&gt;adapta tus tarifas a la temporada desde tu cuenta.&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;p style="text-align: justify;"&gt;&lt;span style="font-size: small;"&gt;&lt;strong&gt;&lt;span style="font-family: 'courier new', courier;"&gt;Anuncio en un click, &lt;/span&gt;&lt;/strong&gt;&lt;span style="font-family: 'courier new', courier;"&gt;pública y tu anuncio estará activo cuando quieras. &lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;p style="text-align: justify;"&gt;&lt;span style="font-size: small;"&gt;&lt;strong&gt;&lt;span style="font-family: 'courier new', courier;"&gt;Traducciones, &lt;/span&gt;&lt;/strong&gt;&lt;span style="font-family: 'courier new', courier;"&gt;traducimos tu anuncio a varios idiomas, como inglés, portugués, español, etc.&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;</target>
-        <note>es</note>
+        <target>Rent n' Chill é uma nova empresa de locação de apartamento temporários online. Nós convidamos você a ver as propriedades disponíveis e reserve online com os melhores preços!</target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="113">
         <source>Ciudad_Propierties</source>
@@ -591,8 +586,8 @@ Nullam sed sodales est. Phasellus sed urna vel neque sodales cursus quis et tort
       </trans-unit>
       <trans-unit id="115">
         <source>Apartamento_property</source>
-        <target>Propiedad</target>
-        <note>es</note>
+        <target>Propriedade</target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="116">
         <source>Ciudad_get to know</source>
@@ -641,18 +636,18 @@ Nullam sed sodales est. Phasellus sed urna vel neque sodales cursus quis et tort
       </trans-unit>
       <trans-unit id="125">
         <source>Usuario_clave</source>
-        <target>clave</target>
-        <note>es</note>
+        <target>Chave</target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="126">
         <source>Usuario_Forgot your password?</source>
-        <target>Olvide mi clave</target>
-        <note>es</note>
+        <target>Esqueci minha chave</target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="127">
         <source>Usuario_recordarme</source>
-        <target>recordarme</target>
-        <note>es</note>
+        <target>Lembrar</target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="128">
         <source>Login_boton</source>
@@ -666,13 +661,13 @@ Nullam sed sodales est. Phasellus sed urna vel neque sodales cursus quis et tort
       </trans-unit>
       <trans-unit id="130">
         <source>Usuario_Nombre</source>
-        <target>Nombre</target>
-        <note>es</note>
+        <target>Nome</target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="131">
         <source>Usuario_Telefono</source>
-        <target>Telefono</target>
-        <note>es</note>
+        <target>Telefone</target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="132">
         <source>Usuario_Pais</source>
@@ -686,18 +681,18 @@ Nullam sed sodales est. Phasellus sed urna vel neque sodales cursus quis et tort
       </trans-unit>
       <trans-unit id="134">
         <source>Usuario_Properties</source>
-        <target>Propiedades</target>
-        <note>es</note>
+        <target>Propriedades</target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="135">
         <source>Usuario_Properties Reserved</source>
-        <target>Reservadas</target>
-        <note>es</note>
+        <target>Assunto</target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="136">
         <source>Usuario_Properties Visited</source>
         <target>Visitadas</target>
-        <note>es</note>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="137">
         <source>Mensajes_Error</source>
@@ -705,8 +700,8 @@ Nullam sed sodales est. Phasellus sed urna vel neque sodales cursus quis et tort
       </trans-unit>
       <trans-unit id="138">
         <source>Usuario_nombre</source>
-        <target>nombre</target>
-        <note>es</note>
+        <target>Nome</target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="139">
         <source>Usuario_acepto los terminos</source>
@@ -715,38 +710,38 @@ Nullam sed sodales est. Phasellus sed urna vel neque sodales cursus quis et tort
       </trans-unit>
       <trans-unit id="140">
         <source>Global_Terms of Service</source>
-        <target>Términos y condiciones</target>
-        <note>es</note>
+        <target>Termos e condições</target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="141">
         <source>Usuario_apellido</source>
-        <target>apellido</target>
-        <note>es</note>
+        <target>Sobrenome</target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="142">
         <source>Usuario_Already have an account</source>
-        <target>Ya tengo una cuenta</target>
-        <note>es</note>
+        <target>Eu tenho uma conta</target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="143">
         <source>Usuario_Login link</source>
-        <target>ingresar</target>
-        <note>es</note>
+        <target>Ingresar</target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="144">
         <source>Usuario_pais</source>
-        <target>país</target>
-        <note>es</note>
+        <target>País</target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="145">
         <source>Usuario_Son estos datos correctos</source>
-        <target>Son estos datos correctos</target>
-        <note>es</note>
+        <target>Estes dados estão correctos</target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="146">
         <source>Usuario_Cambiar usuario</source>
-        <target>Cambiar usuario</target>
-        <note>es</note>
+        <target>Alterar Usuário</target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="147">
         <source>Usuario_Login titulo</source>
@@ -755,13 +750,13 @@ Nullam sed sodales est. Phasellus sed urna vel neque sodales cursus quis et tort
       </trans-unit>
       <trans-unit id="148">
         <source>Usuario_create free account</source>
-        <target>Create &lt;span style="font-size:36px; color:black; font-family:'BelloScript';"&gt;una&lt;/span&gt; cuenta</target>
-        <note>es</note>
+        <target>Criar &lt;span style="font-size:36px; color:black; font-family:'BelloScript';"&gt;&lt;/span&gt; uma conta</target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="149">
         <source>Usuario_Create</source>
-        <target>Crear</target>
-        <note>es</note>
+        <target>Criar</target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="150">
         <source>Reserva_Arrival</source>
@@ -848,8 +843,8 @@ Nullam sed sodales est. Phasellus sed urna vel neque sodales cursus quis et tort
       </trans-unit>
       <trans-unit id="168">
         <source>Global_Contact</source>
-        <target>Contacto</target>
-        <note>es</note>
+        <target>Contato</target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="169">
         <source>Reservas_navegacion</source>
@@ -903,7 +898,8 @@ Nullam sed sodales est. Phasellus sed urna vel neque sodales cursus quis et tort
       </trans-unit>
       <trans-unit id="179">
         <source>Usuario_Login navegacion</source>
-        <target/>
+        <target>Log in Navegación</target>
+        <note>pt</note>
       </trans-unit>
       <trans-unit id="180">
         <source>Contacto_Navegacion</source>
@@ -1106,25 +1102,302 @@ Paso 4. Leer atentamente las condiciones de uso</target>
       </trans-unit>
       <trans-unit id="199">
         <source>AcercaDe_Texto</source>
-        <target>
-Rent n`Chill es un proyecto nuevo y moderno de alquileres de apartamentos temporales online.
-Es un sistema muy practico y fácil tanto como para el inquilino como para el propietario. A
-través de Rent n`Chill podes organizar tus viajes ya sean de negocios, estudios, vacaciones,
-etc. Y también te permite publicar tu propiedad en pocos minutos desde cualquier lugar y
-publicitarla a través de la red a nivel global. Alquilar una propiedad en el destino programado es
-ideal si te gusta cocinar, si necesitas tener un espacio, ya sea para trabajar o recibir invitados,
-en otras palabras para vivir el lugar como un autentico lugareño.
-Ademas del alquiler, podes contratar servicios adicionales de limpieza, gastronomía y turismo,
-alquiler de autos, entre otros.
-No será difícil encontrar una opción perfecta para tu viaje, ya que ofrecemos opciones que se
-ajustan a todos.
-Nuestros equipo controla regularmente todos y cada una de las propiedades con el objetivo de
-asegurar un nivel de satisfacción y confort óptimo.
-Cualquier duda ya seas inquilino o propietario estaremos disponibles para ayudarlo, no dude en
-contactarnos.
-</target>
-        <note>es</note>
+        <target>Rent n' Chill es un emprendimiento de alquileres temporales de apartamentos online. Es un sistema muy práctico y fácil!
+
+¿Buscas un lugar donde quedarte? 
+A través de Rent n’ Chill puedes organizar tu viaje de una forma muy práctica. Podrás elegir la propiedad que más te guste en el lugar que prefieras, y reservar online de forma fácil, segura y con los mejores precios.
+
+Además, puedes contratar servicios adicionales de limpieza, gastronomía, turismo, alquiler de autos, entre otros.
+
+¿Quieres alquilar tu propiedad? 
+Rent n’ Chill te permite publicar tu propiedad en pocos minutos y desde cualquier lugar. Además, podrás publicitarla a través de nuestra red a nivel global, donde personas de todo el mundo ingresan diariamente a buscar el mejor lugar para quedarse.</target>
+        <note>pt</note>
       </trans-unit>
-    <trans-unit id="200"><source>Search_Filter Tipo Propiedad: apartment</source><target> </target><note>es</note></trans-unit><trans-unit id="201"><source>Search_Filter Tipo Propiedad: house</source><target> </target><note>pt</note></trans-unit><trans-unit id="202"><source>Search_Filter Tipo Propiedad: bedNbreakfast</source><target> </target><note>pt</note></trans-unit><trans-unit id="203"><source>Search_Filter Tipo Propiedad: cabin</source><target> </target><note>pt</note></trans-unit><trans-unit id="204"><source>Search_Filter Tipo Propiedad: villa</source><target> </target><note>pt</note></trans-unit><trans-unit id="205"><source>Search_Filter Tipo Propiedad: castle</source><target> </target><note>pt</note></trans-unit><trans-unit id="206"><source>Search_Filter Tipo Propiedad: dorm</source><target> </target><note>pt</note></trans-unit><trans-unit id="207"><source>Search_Filter Tipo Propiedad: treehouse</source><target> </target><note>pt</note></trans-unit><trans-unit id="208"><source>Search_Filter Tipo Propiedad: boat</source><target> </target><note>pt</note></trans-unit><trans-unit id="209"><source>Search_Filter Tipo Propiedad: automobile</source><target> </target><note>pt</note></trans-unit><trans-unit id="210"><source>Search_Filter Tipo Propiedad: igloo</source><target> </target><note>pt</note></trans-unit><trans-unit id="211"><source>Search_Filter Tipo de Propiedad</source><target> </target><note>pt</note></trans-unit><trans-unit id="212"><source>Search_Filter OrderBy: price</source><target> </target><note>pt</note></trans-unit><trans-unit id="213"><source>Search_Filter OrderBy: rooms</source><target> </target><note>pt</note></trans-unit><trans-unit id="214"><source>Search_Filter OrderBy: mts</source><target> </target><note>pt</note></trans-unit><trans-unit id="215"><source>Search_search</source><target> </target><note>pt</note></trans-unit><trans-unit id="216"><source>Search_Arrival</source><target> </target><note>pt</note></trans-unit><trans-unit id="217"><source>Search_Departure</source><target> </target><note>pt</note></trans-unit><trans-unit id="218"><source>Search_guests</source><target> </target><note>pt</note></trans-unit><trans-unit id="219"><source>novedades_Navegacion</source><target> </target><note>pt</note></trans-unit><trans-unit id="220"><source>novedades_Titulo</source><target> </target><note>pt</note></trans-unit><trans-unit id="221"><source>novedades_Enviar</source><target> </target><note>pt</note></trans-unit><trans-unit id="222"><source>novedades_email</source><target> </target><note>pt</note></trans-unit><trans-unit id="223"><source>novedades_nombre</source><target> </target><note>pt</note></trans-unit><trans-unit id="224"><source>Usuario_cambiar password</source><target> </target><note>pt</note></trans-unit><trans-unit id="225"><source>Usuario_cambiar email</source><target> </target><note>pt</note></trans-unit><trans-unit id="226"><source>Usuario_cambiar imagen</source><target> </target><note>pt</note></trans-unit><trans-unit id="227"><source>Submit_PRECIO TEMPORADA MEDIA</source><target> </target><note>pt</note></trans-unit><trans-unit id="228"><source>Submit_CANTIDAD DE CUARTOS</source><target> </target><note>pt</note></trans-unit><trans-unit id="229"><source>Submit_TIPO DE PROPIEDAD</source><target> </target><note>pt</note></trans-unit><trans-unit id="230"><source>Submit_CANTIDAD DE BANIOS</source><target> </target><note>pt</note></trans-unit><trans-unit id="231"><source>Submit_MINIMO DE DIAS</source><target> </target><note>pt</note></trans-unit><trans-unit id="232"><source>Submit_COSTOS EXTRAS</source><target> </target><note>pt</note></trans-unit><trans-unit id="233"><source>Submit_METRAJE</source><target> </target><note>pt</note></trans-unit><trans-unit id="234"><source>Submit_BARRIO</source><target> </target><note>pt</note></trans-unit><trans-unit id="235"><source>Submit_COMODIDADES</source><target> </target><note>pt</note></trans-unit><trans-unit id="236"><source>Submit_Copete</source><target> </target><note>pt</note></trans-unit><trans-unit id="237"><source>Submit_CANTIDAD DE PERSONAS</source><target> </target><note>pt</note></trans-unit><trans-unit id="238"><source>Apartamento_precio</source><target> </target><note>pt</note></trans-unit><trans-unit id="239"><source>Apartamento_Medium season</source><target> </target><note>pt</note></trans-unit><trans-unit id="240"><source>novedades_gracias por registrarse</source><target> </target><note>pt</note></trans-unit><trans-unit id="241"><source>novedades_te has desregistrado</source><target> </target><note>pt</note></trans-unit><trans-unit id="242"><source>locacion_footer more</source><target> </target><note>pt</note></trans-unit><trans-unit id="243"><source>Reservas_porcentaje a pagar ahora</source><target> </target><note>pt</note></trans-unit><trans-unit id="244"><source>reserva_Navegacion</source><target> </target><note>pt</note></trans-unit><trans-unit id="245"><source>reserva_OK titulo</source><target> </target><note>pt</note></trans-unit><trans-unit id="246"><source>reserva_OK texto</source><target> </target><note>pt</note></trans-unit></body>
+      <trans-unit id="200">
+        <source>Search_Filter Tipo Propiedad: apartment</source>
+        <target> </target>
+        <note>pt</note>
+      </trans-unit>
+      <trans-unit id="201">
+        <source>Search_Filter Tipo Propiedad: house</source>
+        <target> </target>
+        <note>pt</note>
+      </trans-unit>
+      <trans-unit id="202">
+        <source>Search_Filter Tipo Propiedad: bedNbreakfast</source>
+        <target> </target>
+        <note>pt</note>
+      </trans-unit>
+      <trans-unit id="203">
+        <source>Search_Filter Tipo Propiedad: cabin</source>
+        <target> </target>
+        <note>pt</note>
+      </trans-unit>
+      <trans-unit id="204">
+        <source>Search_Filter Tipo Propiedad: villa</source>
+        <target> </target>
+        <note>pt</note>
+      </trans-unit>
+      <trans-unit id="205">
+        <source>Search_Filter Tipo Propiedad: castle</source>
+        <target> </target>
+        <note>pt</note>
+      </trans-unit>
+      <trans-unit id="206">
+        <source>Search_Filter Tipo Propiedad: dorm</source>
+        <target> </target>
+        <note>pt</note>
+      </trans-unit>
+      <trans-unit id="207">
+        <source>Search_Filter Tipo Propiedad: treehouse</source>
+        <target> </target>
+        <note>pt</note>
+      </trans-unit>
+      <trans-unit id="208">
+        <source>Search_Filter Tipo Propiedad: boat</source>
+        <target> </target>
+        <note>pt</note>
+      </trans-unit>
+      <trans-unit id="209">
+        <source>Search_Filter Tipo Propiedad: automobile</source>
+        <target> </target>
+        <note>pt</note>
+      </trans-unit>
+      <trans-unit id="210">
+        <source>Search_Filter Tipo Propiedad: igloo</source>
+        <target> </target>
+        <note>pt</note>
+      </trans-unit>
+      <trans-unit id="211">
+        <source>Search_Filter Tipo de Propiedad</source>
+        <target> </target>
+        <note>pt</note>
+      </trans-unit>
+      <trans-unit id="212">
+        <source>Search_Filter OrderBy: price</source>
+        <target> </target>
+        <note>pt</note>
+      </trans-unit>
+      <trans-unit id="213">
+        <source>Search_Filter OrderBy: rooms</source>
+        <target> </target>
+        <note>pt</note>
+      </trans-unit>
+      <trans-unit id="214">
+        <source>Search_Filter OrderBy: mts</source>
+        <target> </target>
+        <note>pt</note>
+      </trans-unit>
+      <trans-unit id="215">
+        <source>Search_search</source>
+        <target> </target>
+        <note>pt</note>
+      </trans-unit>
+      <trans-unit id="216">
+        <source>Search_Arrival</source>
+        <target> </target>
+        <note>pt</note>
+      </trans-unit>
+      <trans-unit id="217">
+        <source>Search_Departure</source>
+        <target> </target>
+        <note>pt</note>
+      </trans-unit>
+      <trans-unit id="218">
+        <source>Search_guests</source>
+        <target> </target>
+        <note>pt</note>
+      </trans-unit>
+      <trans-unit id="219">
+        <source>novedades_Navegacion</source>
+        <target> </target>
+        <note>pt</note>
+      </trans-unit>
+      <trans-unit id="220">
+        <source>novedades_Titulo</source>
+        <target> </target>
+        <note>pt</note>
+      </trans-unit>
+      <trans-unit id="221">
+        <source>novedades_Enviar</source>
+        <target> </target>
+        <note>pt</note>
+      </trans-unit>
+      <trans-unit id="222">
+        <source>novedades_email</source>
+        <target> </target>
+        <note>pt</note>
+      </trans-unit>
+      <trans-unit id="223">
+        <source>novedades_nombre</source>
+        <target> </target>
+        <note>pt</note>
+      </trans-unit>
+      <trans-unit id="224">
+        <source>Usuario_cambiar password</source>
+        <target>Alterar senha</target>
+        <note>pt</note>
+      </trans-unit>
+      <trans-unit id="225">
+        <source>Usuario_cambiar email</source>
+        <target> alterar email</target>
+        <note>pt</note>
+      </trans-unit>
+      <trans-unit id="226">
+        <source>Usuario_cambiar imagen</source>
+        <target>Alterar imagem</target>
+        <note>pt</note>
+      </trans-unit>
+      <trans-unit id="227">
+        <source>Submit_PRECIO TEMPORADA MEDIA</source>
+        <target> Preço Temporada Média</target>
+        <note>pt</note>
+      </trans-unit>
+      <trans-unit id="228">
+        <source>Submit_CANTIDAD DE CUARTOS</source>
+        <target> Número de quartos</target>
+        <note>pt</note>
+      </trans-unit>
+      <trans-unit id="229">
+        <source>Submit_TIPO DE PROPIEDAD</source>
+        <target>Tipo de propriedade</target>
+        <note>pt</note>
+      </trans-unit>
+      <trans-unit id="230">
+        <source>Submit_CANTIDAD DE BANIOS</source>
+        <target> Número de banheiros</target>
+        <note>pt</note>
+      </trans-unit>
+      <trans-unit id="231">
+        <source>Submit_MINIMO DE DIAS</source>
+        <target>Minimo de dias</target>
+        <note>pt</note>
+      </trans-unit>
+      <trans-unit id="232">
+        <source>Submit_COSTOS EXTRAS</source>
+        <target> </target>
+        <note>pt</note>
+      </trans-unit>
+      <trans-unit id="233">
+        <source>Submit_METRAJE</source>
+        <target> </target>
+        <note>pt</note>
+      </trans-unit>
+      <trans-unit id="234">
+        <source>Submit_BARRIO</source>
+        <target> </target>
+        <note>pt</note>
+      </trans-unit>
+      <trans-unit id="235">
+        <source>Submit_COMODIDADES</source>
+        <target> </target>
+        <note>pt</note>
+      </trans-unit>
+      <trans-unit id="236">
+        <source>Submit_Copete</source>
+        <target> </target>
+        <note>pt</note>
+      </trans-unit>
+      <trans-unit id="237">
+        <source>Submit_CANTIDAD DE PERSONAS</source>
+        <target> </target>
+        <note>pt</note>
+      </trans-unit>
+      <trans-unit id="238">
+        <source>Apartamento_precio</source>
+        <target>Preço</target>
+        <note>pt</note>
+      </trans-unit>
+      <trans-unit id="239">
+        <source>Apartamento_Medium season</source>
+        <target> Média Temporada</target>
+        <note>pt</note>
+      </trans-unit>
+      <trans-unit id="240">
+        <source>novedades_gracias por registrarse</source>
+        <target> </target>
+        <note>pt</note>
+      </trans-unit>
+      <trans-unit id="241">
+        <source>novedades_te has desregistrado</source>
+        <target> </target>
+        <note>pt</note>
+      </trans-unit>
+      <trans-unit id="242">
+        <source>locacion_footer more</source>
+        <target> </target>
+        <note>pt</note>
+      </trans-unit>
+      <trans-unit id="243">
+        <source>Reservas_porcentaje a pagar ahora</source>
+        <target> </target>
+        <note>pt</note>
+      </trans-unit>
+      <trans-unit id="244">
+        <source>Reservas_Terminos y condiciones</source>
+        <target> </target>
+        <note>pt</note>
+      </trans-unit>
+      <trans-unit id="245">
+        <source>usuario_Recordar contraseña</source>
+        <target> </target>
+        <note>pt</note>
+      </trans-unit>
+      <trans-unit id="246">
+        <source>usuario_Email enviado a su casilla de correo.</source>
+        <target> </target>
+        <note>pt</note>
+      </trans-unit>
+      <trans-unit id="247">
+        <source>usuario_usuario_Le enviaremos sus datos de login a su casilla de mail</source>
+        <target> </target>
+        <note>pt</note>
+      </trans-unit>
+      <trans-unit id="248">
+        <source>usuario_Le enviaremos sus datos de login a su casilla de mail</source>
+        <target> </target>
+        <note>pt</note>
+      </trans-unit>
+      <trans-unit id="249">
+        <source>usuario_email</source>
+        <target> </target>
+        <note>pt</note>
+      </trans-unit>
+      <trans-unit id="250">
+        <source>usuario_Enviar clave</source>
+        <target> </target>
+        <note>pt</note>
+      </trans-unit>
+      <trans-unit id="251">
+        <source>Reserva_se encuentra ya reservado</source>
+        <target> </target>
+        <note>pt</note>
+      </trans-unit>
+      <trans-unit id="252">
+        <source>reserva_Navegacion</source>
+        <target> </target>
+        <note>pt</note>
+      </trans-unit>
+      <trans-unit id="253">
+        <source>reserva_Error titulo</source>
+        <target> </target>
+        <note>pt</note>
+      </trans-unit>
+      <trans-unit id="254">
+        <source>reserva_Error texto</source>
+        <target> </target>
+        <note>pt</note>
+      </trans-unit>
+      <trans-unit id="255">
+        <source>reserva_OK titulo</source>
+        <target> </target>
+        <note>pt</note>
+      </trans-unit>
+      <trans-unit id="256">
+        <source>reserva_OK texto</source>
+        <target> </target>
+        <note>pt</note>
+      </trans-unit>
+    </body>
   </file>
 </xliff>
