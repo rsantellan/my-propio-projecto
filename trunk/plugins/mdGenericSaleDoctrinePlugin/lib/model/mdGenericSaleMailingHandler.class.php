@@ -13,9 +13,9 @@ class mdGenericSaleMailingHandler {
   {
     sfContext::getInstance()->getConfiguration()->loadHelpers(array('I18N','Url', 'Partial'));
 
-		$mailBody = get_partial('saleMailing/mail_admin_new', array('mdGenericSale' => $mdGenericSale));
-		$subject = get_partial('saleMailing/mail_admin_new_subject', array('mdGenericSale' => $mdGenericSale));
-    
+    $mailBody = get_partial('saleMailing/mail_admin_new', array('mdGenericSale' => $mdGenericSale));
+    $subject = get_partial('saleMailing/mail_admin_new_subject', array('mdGenericSale' => $mdGenericSale));
+    //var_dump($mailBody);die;
     $mdSaleXMLHandler = new mdSaleXMLHandler();
     $from = (string) $mdSaleXMLHandler->getInformSaleEmail();
     $fromArray = explode(",", $from);

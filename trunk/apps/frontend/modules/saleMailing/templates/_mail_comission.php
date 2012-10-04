@@ -10,42 +10,19 @@ use_helper('Text');
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<td><?php echo image_tag('/images/header-email.png', array('absolute' => true)); ?></td>
-<style type="text/css">
-body,td,th {
-	font-family: "Courier New", Courier, monospace;
-	font-size: 12px;
-	color: #000;
-}
-body {
-	margin-left: 0px;
-	margin-top: 0px;
-	margin-right: 0px;
-	margin-bottom: 0px;
-}
-a:link {
-	color: #3DA333;
-	text-decoration: none;
-}
-a:visited {
-	color: #3DA333;
-	text-decoration: none;
-}
-a:hover {
-	color: #7FB61A;
-	text-decoration: none;
-}
-a:active {
-	color: #3DA333;
-	text-decoration: none;
-}
-</style>
+<title><?php echo __('Mail_Comission Asunto', array(
+	'[apartamento]' => $reserva->getMdApartamento()->getTitulo(),
+	'[desde]'=> $reserva->getDateTimeObject('fecha_desde')->format('Y-m-d'),
+	'[hasta]'=> $reserva->getDateTimeObject('fecha_hasta')->format('Y-m-d')
+	)); ?></title>
 </head>
 
-<body>
+<body style="font-family:'Courier New', Courier, monospace; color:#000; font-size:14px; margin:0px" >
 <table width="300" border="0" cellspacing="0" cellpadding="0">
   <tr>
-    <?php echo image_tag('/images/cabezal_mail.jpg', array('absolute' => true, 'width' => 600, 'height' => 140)); ?>
+    <td colspan="3">
+        <?php echo image_tag('/images/cabezal_mail.jpg', array('absolute' => true, 'width' => 600, 'height' => 140)); ?>
+    </td>
   </tr>
   <tr>
     <td width="20" rowspan="3">&nbsp;</td>
@@ -54,9 +31,18 @@ a:active {
   </tr>
   <tr>
     <td>
-    <?php echo simple_format_text(__('Mail_Comission Cuerpo [url_apartamento]', array(
+        <?php 
+        $owner = $depto->getMdUser();
+        $owner_profile = $owner->getMdUserProfile();
+        $owner_name = $owner_profile->getName() . ' ' . $owner_profile->getLastName();
+        ?>
+        <?php echo __('Mail_Comission Cuerpo [url_apartamento]', array(
 									'[url_apartamento]'=>url_for('apartamento',$depto, array('absolute'=>true)),
-									))); ?>
+                                    '[fecha_desde]' => $reserva->getDateTimeObject('fecha_desde')->format('Y/m/d'),
+                                    '[fecha_hasta]' => $reserva->getDateTimeObject('fecha_hasta')->format('Y/m/d'),
+                                    '[usuario_nombre]' => $owner_name,
+                                    '[depto]' => $depto->getTitulo()
+									)); ?>
     </td>
   </tr>
   <tr>

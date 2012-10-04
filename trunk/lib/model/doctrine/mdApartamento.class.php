@@ -12,6 +12,9 @@
  */
 class mdApartamento extends BasemdApartamento {
 
+  const PORCENTAJESIMPLE = 0.10;
+  const PORCENTAJECOMPLETO = 0.20;
+  
   /**
    * retorna la clase, se usa para los behaviors
    *
@@ -83,7 +86,7 @@ class mdApartamento extends BasemdApartamento {
           break;
       }
     }
-    
+    $precio = $precio * (1 + $this->calculatePercentage());
     if (!$currency) {
       $currency = mdCurrencyHandler::getCurrent();
     } else {
@@ -139,7 +142,7 @@ class mdApartamento extends BasemdApartamento {
           break;
       }
     }
-    
+    $precio = $precio * (1 + $this->calculatePercentage());
     if (!$currency) {
       $currency = mdCurrencyHandler::getCurrent();
     } else {
@@ -154,6 +157,18 @@ class mdApartamento extends BasemdApartamento {
       $precio = mdCurrencyConvertion::convert($this->getmdCurrency()->getCode(), $currency->getCode(), $precio);
     }
     return round($precio, 0);
+  }
+  
+  private function calculatePercentage()
+  {
+    if($this->getTipo() == "comission")
+    {
+      return self::PORCENTAJESIMPLE;
+    }
+    else
+    {
+      return self::PORCENTAJECOMPLETO;
+    }
   }
   
   public function postSave($event) {

@@ -11,42 +11,13 @@ use_helper('Text');
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title><?php echo __('Mail_Admin Final Titulo', array('[tipo]'=>$depto->getTipo())); ?></title>
-<style type="text/css">
-body,td,th {
-	font-family: "Courier New", Courier, monospace;
-	font-size: 12px;
-	color: #000;
-}
-body {
-	margin-left: 0px;
-	margin-top: 0px;
-	margin-right: 0px;
-	margin-bottom: 0px;
-}
-a:link {
-	color: #3DA333;
-	text-decoration: none;
-}
-a:visited {
-	color: #3DA333;
-	text-decoration: none;
-}
-a:hover {
-	color: #7FB61A;
-	text-decoration: none;
-}
-a:active {
-	color: #3DA333;
-	text-decoration: none;
-}
-</style>
 </head>
 
-<body>
+<body style="font-family:'Courier New', Courier, monospace; color:#000; font-size:14px; margin:0px" >
 <table width="300" border="0" cellspacing="0" cellpadding="0">
   <tr>
     <td colspan="3">
-      <?php echo image_tag('/images/cabezal_mail.jpg', array('absolute' => true, 'width' => 600, 'height' => 140)); ?>
+        <?php echo image_tag('/images/cabezal_mail.jpg', array('absolute' => true, 'width' => 600, 'height' => 140)); ?>
     </td>
   </tr>
   <tr>
@@ -56,64 +27,22 @@ a:active {
   </tr>
   <tr>
     <td>
-      <?php echo simple_format_text(__('Mail_Admin Final Cuerpo')); ?>      
-    </td>
-  </tr>
-  <tr>
-    <td>
-        <?php echo $depto->getmdLocacion()->getNombre() ?>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <b>
-        <?php echo __('Mail_Admin Final Apartamento'); ?>
-      </b>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <a href="<?php echo url_for('apartamento',$depto, array('absolute'=>true)) ?>"><?php echo $depto->getTitulo() ?></a>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <b>
-        <?php echo __('Mail_Admin Final Fecha'); ?>
-      </b>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <?php echo $reserva->getDateTimeObject('fecha_desde')->format('Y/m/d') ?> - 
-      <?php echo $reserva->getDateTimeObject('fecha_hasta')->format('Y/m/d') ?></a>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <b>
-        <?php echo __('Mail_Admin Final Usuario'); ?>
-      </b>
-    </td>
-  </tr>
-  <tr>  
-    <td>
-      <a href="<?php echo url_for('profile',$depto->getMdUser(),array('absolute'=>true)) ?>">
-        <?php echo $depto->getMdUser()->getMdUserProfile()->getName() . ' ' .$depto->getMdUser()->getMdUserProfile()->getLastName()?>
-      </a>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <b>
-        <?php echo __('Mail_Admin Final Email'); ?>
-      </b>
-    </td>
-  </tr>
-  <tr>  
-    <td>
-      <a href="mailto:<?php echo $depto->getMdUser()->getEmail()?>">
-        <?php echo $depto->getMdUser()->getEmail()?></a>
+        <?php 
+        $usuario = $reserva->getMdUser();
+        $usu_profile = $usuario->getMdUserProfile();
+        echo __('Mail_Admin Final Cuerpo', array(
+        '[locacion]' => $depto->getmdLocacion()->getNombre(),
+        '[url]' => url_for('apartamento',$depto, array('absolute'=>true)),
+        '[depto]' => $depto->getTitulo(),
+        '[fecha_desde]' => $reserva->getDateTimeObject('fecha_desde')->format('Y/m/d'),
+        '[fecha_hasta]' => $reserva->getDateTimeObject('fecha_hasta')->format('Y/m/d'),
+        '[usuario_url]' => url_for('profile',$usuario,array('absolute'=>true)),
+        '[usuario_nombre]' => $usu_profile->getName() . ' ' .$usu_profile->getLastName(),
+        '[usuario_email]' => $usuario->getEmail(),
+        '[pago]' => round($reserva->getTotal() * 0.125, 0),
+        '[pago_total]' => $reserva->getTotal()
+        )); ?>
+      
     </td>
   </tr>
   <tr>
