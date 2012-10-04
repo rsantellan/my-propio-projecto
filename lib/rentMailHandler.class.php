@@ -24,7 +24,11 @@ class rentMailHandler {
     $options['sender'] = array('name' => __('Mail_Nombre del mail al usuario con confirmacion de pago'), 'email' => $fromArray[0]);
     $options['subject'] = $subject;
     $options['body'] = $mailBody;
-    $options['recipients'] = $mdGenericSale->getMdUser()->getEmail();
+    $lista = $mdGenericSale->getMdGenericSaleItem();
+    $item = $lista[0];
+    $reserva = $item->getObject();
+    $depto = $reserva->getmdApartamento();
+    $options['recipients'] = $depto->getMdUser()->getEmail();
     
     mdMailHandler::sendMail($options);    
   }
