@@ -71,7 +71,7 @@ use_helper('Text');
 <div style="display:none">
     <div id="data2">
     	<img src="/images/house.png" width="48" height="40" style="float:left"/>
-        <div class="texto-titulo-right-fancy"><?php echo __('Funcionamiento_Comission') ?></div>
+        <div class="texto-titulo-right-fancy"><?php echo __('Funcionamiento_comission') ?></div>
         <div class="texto-subtitulo-right" style="float:left">
 					<?php echo simple_format_text(__('Funcionamiento_Comission modal')) ?>
             <div class="div-submit"><a href="<?php echo url_for('@submit_type?type=comission') ?>"><button class="submit" type="button"><?php echo __('Funcionamiento_Submit') ?></button></a></div>
