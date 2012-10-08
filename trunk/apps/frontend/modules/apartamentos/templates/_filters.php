@@ -1,6 +1,16 @@
 <?php include_partial('global/includeJQueryUI') ?>
 <form id="md_narrow_search_form_2">
-  	<div class="price-range">
+      <div class="filter-by" style="float:left; width:284px;">
+      	<div class="titulo-filter-range"><?php echo __('Search_Filter by') ?></div>
+          <div class="separator"><img src="/images/separator2.png" width="285" height="7" /> </div>
+          <div class="filter">
+              <ul>
+              	<li style="font-size:20px; font-family: 'BelloSmCp';"><?php echo __('Search_Filter Tipo de Propiedad') ?></li>
+                  <li><?php echo $form['tipo_propiedad']->render() ?></li>
+              </ul>
+          </div>
+      </div>
+    <div class="price-range">
       	<div class="titulo-price-range"><?php echo __('Search_Price range') ?></div>
           <div class="separator"><img src="/images/separator2.png" width="285" height="7" /> </div>
           <div class="demo" style="float: left;">
@@ -13,18 +23,8 @@
                   <a class="ui-slider-handle ui-state-default ui-corner-all" style="left: 15%;" href="#"></a>
                   <a class="ui-slider-handle ui-state-default ui-corner-all" style="left: 60%;" href="#"></a>
               </div>                
-</div>
-      </div>
-      <div class="filter-by" style="float:left; width:284px;">
-      	<div class="titulo-filter-range"><?php echo __('Search_Filter by') ?></div>
-          <div class="separator"><img src="/images/separator2.png" width="285" height="7" /> </div>
-          <div class="filter">
-              <ul>
-              	<li style="font-size:20px; font-family: 'BelloSmCp';"><?php echo __('Search_Filter Tipo de Propiedad') ?></li>
-                  <li><?php echo $form['tipo_propiedad']->render() ?></li>
-              </ul>
-          </div>
-      </div>
+     </div>
+      </div>      
       <div class="order-by" style="float:left; width:284px;">
       	<div class="titulo-order-range"><?php echo __('Search_Order by') ?></div>
           <div class="separator"><img src="/images/separator2.png" width="285" height="7" /> </div>
