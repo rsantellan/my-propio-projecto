@@ -225,3 +225,34 @@ textarea {
 	border:0px;
 	margin-top:15px;
 }
+
+/** Cambios para el fancy **/
+.texto-titulo-right-fancy {
+    font-family: 'BelloSmCp';
+    text-indent: 10px;
+}
+
+.texto-subtitulo-right {
+    font-family: 'CourierRegular';
+    font-size: 11px;
+    line-height: 13px;
+    width: 350px;
+}
+
+.div-submit {
+    float: left;
+    margin-top: 10px;
+}
+
+
+div.fancy_div .submit {
+    background: url("../images/botton-blue.png") no-repeat scroll 0 0 transparent;
+    border: 0 none;
+    color: #FFFFFF;
+    font-family: 'BelloProRegular';
+    font-size: 23px;
+    height: 62px;
+    margin-bottom: 10px;
+    padding-left: 25px;
+    width: 247px;
+}

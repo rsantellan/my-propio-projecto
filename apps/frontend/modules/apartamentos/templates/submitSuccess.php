@@ -7,6 +7,10 @@ use_javascript('../fancybox/jquery.fancybox-1.3.4.pack.js');
 
 use_javascript('regiterUser.js');
 use_javascript('jquery.scrollTo-min.js');
+
+use_stylesheet('../js/datepicker/css/datepicker.css');
+use_javascript('datepicker/js/datepicker.js');
+
 use_helper('Text');
 ?>
 <div class="title">
@@ -18,7 +22,7 @@ use_helper('Text');
 <?php echo include_component('locaciones', 'title_right'); ?>
 
 <div style="display:none">
-  <div id="data">
+  <div id="data" class="fancy_div">
     <img src="/images/key.png" width="48" height="40" style="float:left"/>
     <div class="texto-titulo-right-fancy"><?php echo __('Funcionamiento_Full service') ?></div>
     <div class="texto-subtitulo-right" style="float:left">
@@ -27,7 +31,7 @@ use_helper('Text');
   </div>
 </div>
 <div style="display:none">
-  <div id="data2">
+  <div id="data2" class="fancy_div">
     <img src="/images/house.png" width="48" height="40" style="float:left"/>
     <div class="texto-titulo-right-fancy"><?php echo __('Funcionamiento_Comission') ?></div>
     <div class="texto-subtitulo-right" style="float:left">
@@ -43,15 +47,20 @@ use_helper('Text');
     <div class="buttons">
       <div class="div-send">
         <!--              <a href="help">help</a>-->
-        <button type="button" rel="fullservice" class="mfancy full <?php if ($type == 'fullservice') echo 'full-press'; ?>"><?php echo __('Submit_Full Service') ?></button>
+        <button type="button" rel="fullservice" class="full <?php if ($type == 'fullservice') echo 'full-press'; ?>"><?php echo __('Submit_Full Service') ?></button>
       </div>
       
-<div class="div-send">
+    <div class="div-send">
         <!--              <a href="help">help</a>-->
-        <button type="button" rel="comission" class="mfancy comission <?php if ($type == 'comission') echo 'comission-press'; ?>"><?php echo __('Submit_Comission') ?></button>
+        <button type="button" rel="comission" class="comission <?php if ($type == 'comission') echo 'comission-press'; ?>"><?php echo __('Submit_Comission') ?></button>
       </div>
 
-       <div style="margin-left:25px; margin-bottom:20px;width:220px; border:thin; float:left" ><a href="#" style="color:#000">Ayuda</a> </div> <div style="margin-left:52px; margin-bottom:20px;width:200px; border:thin; float:left"><a href="#" style="color:#000">Ayuda</a> </div>
+       <div style="margin-left:25px; margin-bottom:20px;width:220px; border:thin; float:left" >
+           <a class="mfancy" href="#data" style="color:#000">Ayuda</a> 
+       </div> 
+       <div style="margin-left:52px; margin-bottom:20px;width:200px; border:thin; float:left">
+           <a class="mfancy" href="#data2" style="color:#000">Ayuda</a> 
+       </div>
     </div>
     <?php if ($sf_user->isAuthenticated()): ?>
       <?php include_partial('registerUser/userInfo') ?>
@@ -63,12 +72,12 @@ use_helper('Text');
     <div class="line2"></div>
     <div class="sub-title"><?php echo __('Submit_Property info') ?></div>
     <form class="form-send" id="apart_form" method="POST" onsubmit="return submitPropertyForm();">
+      <div style="display:none">
       <?php 
         echo $form->renderHiddenFields();
         //echo $form['detalle']['tipo_propiedad']->render();
-        
       ?>
-      
+      </div>
       <div class="campos-right">
         <div class="campos-right-left">
           <li<?php if ($form[$sf_user->getCulture()]['titulo']->hasError()) echo ' class="error_list"' ?>><?php echo __('Submit_TITLE') ?>:</li>
@@ -148,17 +157,10 @@ use_helper('Text');
 </div>
 <script>
   $(document).ready(function() {
-    /*
-    $(".mfancy").fancybox({
-        'titlePosition'	:	'over',
-        'onComplete'	:	function() {
-            $("#fancybox-wrap").hover(function() {
-                $("#fancybox-title").show();
-            }, function() {
-                $("#fancybox-title").hide();
-            });
-        }
+    
+    $("a.mfancy").fancybox({
+        'hideOnContentClick': false
     });
-     */
+    
   });
 </script>
