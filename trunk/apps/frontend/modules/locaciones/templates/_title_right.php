@@ -13,7 +13,7 @@
 	<div class="property-right">
 			<a href="<?php echo url_for('locacion', $mdLocacion) ?>">
     	<li style="font-size:19px; font-family:'BelloProRegular';" class="green"><img src="/images/hand-green.png" width="14" height="14" /><?php echo __('Ciudad_get to know') ?></li>
-        <li style="font-size:21px; font-family:'BelloSmCp';"><?php echo $mdLocacion->getNombre() ?></li>
+        <li style="font-size:19px; font-family:'BelloSmCp';"><?php echo $mdLocacion->getNombre() ?></li>
 			</a>
     </div>
 <?php endif; ?>
