@@ -41,7 +41,7 @@ class md_reservaActions extends autoMd_reservaActions
     $form->bind($parameters);
     if ($form->isValid())
     {
-      //$organo = $form->save();
+      $form->save();
       //$form = new OrganosForm($organo);
       //$body = $this->getPartial('small_form', array('form'=>$form));
 

@@ -98,6 +98,13 @@ class apartamentosActions extends sfActions {
 
       if ($this->form->isValid()) {
         $mdApartamento = $this->form->save();
+        //var_dump($parameters);die;
+        
+        $nombre = $parameters['es']['titulo']; //$mdApartamento->getTitle();
+        $lugar = $mdApartamento->getMdLocacion()->getNombre();
+        $email = $mdApartamento->getMdUser()->getEmail();
+        
+        rentMailHandler::sendNewPropertySubmitedMail($email, $nombre, $lugar);
         if ($mdApartamento->getTipo() == 'fullservice')
           $this->redirect('fullService', $mdApartamento);
         else {
