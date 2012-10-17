@@ -32,4 +32,20 @@ class rentMailHandler {
     
     mdMailHandler::sendMail($options);    
   }
+  
+  public static function sendNewPropertySubmitedMail($userEmail, $property, $location)
+  {
+    $mdSaleXMLHandler = new mdSaleXMLHandler();
+    $from = (string) $mdSaleXMLHandler->getInformSaleEmail();
+    $fromArray = explode(",", $from);
+    
+    $mailBody = "El usuario: '".$userEmail."' a subido la propiedad: '".$property."' en la locacion: '".$location."'";
+    $mailSubject = "Nueva propiedad agregada";
+    $options = array();
+    $options['sender'] = array('name' => 'Admin', 'email' => $fromArray[0]);
+    $options['subject'] = $mailSubject;
+    $options['body'] = $mailBody;
+    $options['recipients'] = $fromArray;
+    mdMailHandler::sendMail($options);
+  }
 }
