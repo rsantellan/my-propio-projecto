@@ -17,50 +17,60 @@ class mdNewsletterHandler
     {
         if(!mdBasicFunction::validEmail($email))
         {
+          sfContext::getInstance()->getLogger()->err(" Email invalido ".$email);
           return false;
         }
-        $mdUser = Doctrine::getTable("mdUser")->findOneBy("email", $email);
-        if(!$mdUser)
+        try
         {
-            $mdUser = new mdUser();
-            $mdUser->setEmail($email);
-            $mdUser->save();
-            /*
-            if(!is_null($name))
+            $conn = Doctrine_Manager::getInstance()->getCurrentConnection(); 
+            $sql = "SELECT m.id AS id FROM md_user m WHERE (m.email = ?) LIMIT 1";
+            //$email = "1051@asdas.com";
+            $r = $conn->fetchOne($sql, array($email));
+            if(!$r)
             {
-              $mdPassport = new mdPassport();
-              $mdPassport->setMdUser($mdUser);
-              $mdPassport->setUsername(time());
-              $mdPassport->save();
-              $mdUserProfile = new mdUserProfile();
-              $mdUserProfile->setName($name);
-              $mdUserProfile->setMdUserIdTmp($mdUser->getId());
-              $mdUserProfile->save();
+                $sql_insert_user = "INSERT INTO md_user (super_admin, email, culture, created_at, updated_at) VALUES (0, ?, 'es', '2012-10-18 16:07:37', '2012-10-18 16:07:37')";
+                $sql_insert_user_search = "INSERT INTO md_user_search (active, blocked, admin, show_email, md_user_id, email, created_at, updated_at) VALUES (0, 0, 0, 0, ?, ?, '2012-10-18 16:07:37', '2012-10-18 16:07:37')";
+                //var_dump(get_class($conn));
+                $resultado = $conn->execute($sql_insert_user, array($email));
+                $r = $conn->lastInsertId('id');
+                $conn->execute($sql_insert_user_search, array($r, $email));
+                /*
+                var_dump('aca??');
+                $email = $email."a";
+                $mdUser = new mdUser();
+                $mdUser->setEmail($email);
+                $mdUser->save();
+                */
             }
-            */
+//            die('term,in');
+//            throw new Exception("oh no", 564654);
+
+            $sql_news_letter_user = "SELECT m.id AS id FROM md_news_letter_user m WHERE (m.md_user_id = ?) LIMIT 1";
+            $id_newsletter = $conn->fetchOne($sql_news_letter_user, array($r));
+            if(!$id_newsletter)
+            {
+                $sql_insert_news_letter_user = "INSERT INTO md_news_letter_user (name, md_user_id, created_at, updated_at) VALUES (?, ?, '2012-10-18 16:48:28', '2012-10-18 16:48:28')";
+                $conn->execute($sql_insert_news_letter_user, array($name, $r));
+                $id_newsletter = $conn->lastInsertId('id');
+            }
+            
+            if($group !== null)
+            {
+                $sql_insert_groups = "REPLACE INTO md_news_letter_group_user (md_newsletter_group_id, md_newsletter_user_id, created_at, updated_at) VALUES (?, ?, '2012-10-18 16:48:29', '2012-10-18 16:48:29')";
+                $conn->execute($sql_insert_groups, array(intval($group), $id_newsletter));
+            }
+            return true;
         }
-        $mdNewsLetterUser = Doctrine::getTable("mdNewsLetterUser")->findOneBy("md_user_id", $mdUser->getId());
-        if(!$mdNewsLetterUser)
+        catch(Exception $e)
         {
-            $mdNewsLetterUser = new mdNewsLetterUser();
-            if(!is_null($name))
-            {
-              $mdNewsLetterUser->setName($name);
-            }
-            $mdNewsLetterUser->setMdUserId($mdUser->getId());
-            $mdNewsLetterUser->save();
+            sfContext::getInstance()->getLogger()->err(" Error en mdNewsletterHandler ".$e->getMessage());
+            throw $e;
         }
-				if($group !== null){
-					if(is_numeric($group))
-						$group = Doctrine::getTable('mdNewsLetterGroup')->find($group);
-					else
-						$group = Doctrine::getTable('mdNewsLetterGroup')->findOneByName($group);
-					
-					if($group){
-						$group->addUser($mdNewsLetterUser);
-					}
-				}
-        return $mdNewsLetterUser;
+        
+        return false;
+        
+				
+        
     }
     
     public static function retriveAll()
@@ -221,6 +231,7 @@ class mdNewsletterHandler
       $data->read($file);
       
       $index = 0;
+      $counter = 0;
       for ($i = $row; $i <= count($data->sheets[0]['cells']); $i++) {
           $index++;
           
@@ -243,16 +254,26 @@ class mdNewsletterHandler
           
           if(!is_null($user))
           {
+            sfContext::getInstance()->getLogger()->info(" Usuario: ".$user);  
+            sfContext::getInstance()->getLogger()->info(" Grupo: ".$group);  
+            sfContext::getInstance()->getLogger()->info(" Nombre: ".$name);  
             self::registerUser($user, $group, $name);
           }
           else
           {
-            var_dump($my_data);
+            sfContext::getInstance()->getLogger()->err(" Error al guardar newsletter ".implode("|", $my_data));  
           }
           //self::processRow($data->sheets[0]['cells'][$i],$index);
           if ($index == $quantity_of_processing) {
               break;
           }
+          if($counter == 50)
+          {
+              sleep(5);
+              $counter = 0;
+              set_time_limit ( 90 );
+          }
+          $counter ++;
       }
       return $index;
   }  
