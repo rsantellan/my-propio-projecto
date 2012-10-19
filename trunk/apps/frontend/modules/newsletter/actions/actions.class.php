@@ -47,6 +47,38 @@ class newsletterActions extends sfActions
     }
   }
   
+  public function executeFacebooktab(sfWebRequest $request)
+  {
+    $this->form = new newsletterForm();
+    if ($request->isMethod('post')) 
+    {
+      $this->form->bind($request->getParameter($this->form->getName()));
+      if($this->form->isValid())
+      {
+        $email = $this->form->getValue('email');
+        $nombre = $this->form->getValue('nombre');
+        $cultura = $this->getUser()->getCulture();
+        $auxCultura = 1;
+        switch ($cultura) {
+          case "es":
+              $auxCultura= 1;
+            break;
+          case "en":
+              $auxCultura= 2;
+            break;
+          case "pt":
+              $auxCultura= 3;
+            break;          
+          default:
+            break;
+        }
+        mdNewsletterHandler::registerUser($email, $auxCultura, $nombre);
+        //var_dump($email.' - '.$nombre.' - '.$cultura);
+        $this->getUser()->setFlash('ok', 'guardado ok');
+      }
+    }
+  }
+  
   public function executeDesvincularse(sfWebRequest $request) 
   {
     $this->form = new mdNewsletterDeleteForm();
