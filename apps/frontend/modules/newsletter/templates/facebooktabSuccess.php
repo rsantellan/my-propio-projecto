@@ -2,7 +2,7 @@
 use_stylesheet('facebooktab.css');
 
 ?>
-<form name="<?php echo $form->getName();?>" class="form-send" method="POST" action="<?php echo url_for('@newsletter') ?>">
+<form name="<?php echo $form->getName();?>" class="form-send" method="POST" action="<?php echo url_for('@facebooktab') ?>">
       <?php echo $form->renderHiddenFields() ?>
     <div class="campos-left">
         <li><?php echo __('novedades_nombre') ?></li>
