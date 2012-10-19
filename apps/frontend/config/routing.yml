@@ -1,5 +1,10 @@
 # You can find more information about this file on the symfony website:
 # http://www.symfony-project.org/reference/1_4/en/10-Routing
+
+facebooktab:
+  url: /:sf_culture/newsletter.html
+  param: {module: newsletter, action: facebooktab }
+
 newsletterDesvincularse:
   url: /novedades-desvincularse.html
   param: {module: newsletter, action: desvincularse }
