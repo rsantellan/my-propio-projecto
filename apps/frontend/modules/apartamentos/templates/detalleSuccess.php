@@ -67,17 +67,25 @@ use_plugin_javascript('mdGoogleMapDoctrinePlugin', 'mdGoogleMap.js', 'last');
     </div>
     <div class="col-right">
     	<div class="pre-precio">
-        	<div class="price-pn"><?php echo mdCurrencyHandler::getCurrentSymbol() ?><?php echo $depto->getPrecioHoy() ?></div>
+        	<div class="price-pn" id="apartment_price_per_day">
+                <?php
+                $search_values = $sf_user->getAttribute('search_values');
+                $precio = $depto->getPrecioPerDia($search_values['fecha']['from'], $search_values['fecha']['to']);
+                ?>
+                <?php echo mdCurrencyHandler::getCurrentSymbol() ?><?php echo $precio ?>
+            </div>
             <div class="price-pn-details">
             <li><?php echo __('Apartamento_per night') ?><br />
-							(
-                            
+						<!-- 	
+                          (
 							<?php //if($depto->getMdLocacion()->esTemporadaAlta()): $temporada = $depto->getMdLocacion()->getTemporada();?>
 								<?php //echo __('Apartamento_HIGH SEASON') ?> - <?php  //echo $temporada->getDesde() . ' : ' . $temporada->getHasta()?>
 							<?php //else: ?>
 								<?php //echo __('Apartamento_LOW SEASON') ?>
 							<?php //endif; ?>
-							)</li>
+                            ) 
+                            -->
+                            </li>
             </div>
         </div>
         <div class="separator"><img width="285" height="7" src="/images/separator2.png"></div>
@@ -87,6 +95,7 @@ use_plugin_javascript('mdGoogleMapDoctrinePlugin', 'mdGoogleMap.js', 'last');
 				</div>
 <?php else: ?>
 				<div id="bookIt">
+                  
         <?php echo include_component('reservas', 'bookit', array('mdApartamentoId'=>$depto->getId())); ?>
 				</div>
         <div class="separator"><img width="285" height="7" src="/images/separator2.png"> </div>

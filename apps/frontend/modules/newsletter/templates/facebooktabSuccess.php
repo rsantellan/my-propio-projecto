@@ -32,7 +32,10 @@ use_stylesheet('https://www.rentnchill.com/webfontkit-20111024-094554/stylesheet
                   </ul>
                   <div class="clear"></div>
 </form>
-</div><div id="web">Visitanos en <a href="http://www.rentnchill.com" target="_blank">www.rentnchill.com</a> | Seguinos en <a href="https://twitter.com/RentnChill" target="_blank"><img src="http://www.rentnchill.com/images/tw.jpg" width="26" height="27" border="0" /></a></div>
+</div>
+  <div id="web">
+    <?php echo __('novedades_facebook tab contacto') ?>
+  </div>
 <div id="compart"><script> 
   window.fbAsyncInit = function() {
     FB.init({

@@ -104,17 +104,21 @@ function calculateTotal(){
 		dataType: 'json',
 		success: function(json){
                     $('#esta_reservado').hide();
-			if(json.response == 'OK'){
+                    if($("#apartment_price_per_day").length > 0)
+                    {
+                      $("#apartment_price_per_day").html(json.options.precio);
+                    }
+                    if(json.response == 'OK'){
                             $('.book').show();
-				$('span#total').html(json.options.total);
-				$('#md_reserva_total').val(json.options.total);
-			}else{
+                            $('span#total').html(json.options.total);
+                            $('#md_reserva_total').val(json.options.total);
+                    }else{
                             $('.book').hide();
                             if(json.options.ocupado == true)
                             {
                                 $('span#total').html('');
                                 $('#md_reserva_total').val('');
-                                console.info('esta ocupado');
+                                //console.info('esta ocupado');
                                 $('#esta_reservado').show();
                             }
                             else
