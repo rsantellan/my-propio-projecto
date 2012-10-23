@@ -102,6 +102,22 @@ class mdApartamento extends BasemdApartamento {
     }
     return round($precio, 0);
   }
+  
+  public function getPrecioPerDia($dateFrom, $dateTo, $currency = null)
+  {
+    $resultadosDias = Doctrine::getTable('temporadaAnual')->retrieveSeasonRange($this->getMdLocacionId(), $dateFrom, $dateTo);
+    $cantidad_dias = 0;
+    foreach($resultadosDias as $dias)
+    {
+      $cantidad_dias = $cantidad_dias + (int) $dias['cantidad'];
+    }
+    
+    sfContext::getInstance()->getLogger()->info("Cantidad de dias es: ".$cantidad_dias);
+    if(count($resultadosDias) == 0) return 0;
+    $precio = $this->getPrecio($dateFrom, $dateTo, $currency);
+    sfContext::getInstance()->getLogger()->info("Precio dividido cantidad es: ".($precio / $cantidad_dias));
+    return round(($precio / $cantidad_dias), 0);
+  }
 
   public static function calculatePriceOfConversion($precio, $currencyNew, $currencyOld)
   {

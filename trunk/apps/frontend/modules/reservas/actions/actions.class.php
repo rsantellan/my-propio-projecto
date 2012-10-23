@@ -158,20 +158,22 @@ class reservasActions extends sfActions {
     $deptoId = $request->getParameter('md_apartamento_id', false);
     $desde = $request->getParameter('desde', false);
     $hasta = $request->getParameter('hasta', false);
-
+    $precio = mdCurrencyHandler::getCurrentSymbol()." 0";
+    $total = 0;
     if ((!$deptoId) or (!$desde) or (!$hasta)) {
-      return $this->renderText(mdBasicFunction::basic_json_response(false, array('ocupado' => false)));
+      return $this->renderText(mdBasicFunction::basic_json_response(false, array('ocupado' => false, 'precio' => $precio)));
     } else {
         
       $diasOcupado = (int) Doctrine::getTable('mdOcupacion')->getDiasOcupados($deptoId, $desde, $hasta);
       if($diasOcupado > 0)
       {
-        return $this->renderText(mdBasicFunction::basic_json_response(false, array('ocupado' => true)));
+        return $this->renderText(mdBasicFunction::basic_json_response(false, array('ocupado' => true, 'precio' => $precio)));
       }
       $depto = Doctrine::getTable('mdApartamento')->find($deptoId);
-      $total = 0;
+      
       $total = $depto->getPrecio($desde, $hasta);
-      return $this->renderText(mdBasicFunction::basic_json_response(true, array('total' => $total)));
+      $precio = mdCurrencyHandler::getCurrentSymbol()." ".$depto->getPrecioPerDia($desde, $hasta);
+      return $this->renderText(mdBasicFunction::basic_json_response(true, array('total' => $total, 'precio' => $precio)));
     }
   }
   
