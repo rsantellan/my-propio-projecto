@@ -2,7 +2,7 @@
 # http://www.symfony-project.org/reference/1_4/en/10-Routing
 
 facebooktab:
-  url: /:sf_culture/newsletter.html
+  url: /:sf_culture/newsletter.php/
   param: {module: newsletter, action: facebooktab }
 
 newsletterDesvincularse:
