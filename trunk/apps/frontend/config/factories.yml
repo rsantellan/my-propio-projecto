@@ -48,5 +48,7 @@ all:
       timeout: 172800
 
   mailer:
+    class: sfMailer
     param:
       delivery_strategy: realtime
+      

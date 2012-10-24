@@ -15,6 +15,7 @@ apps/backend/i18n/*
 /config/factories.yml
 /*.sh
 /config/*.xml
+/web/*
 
 # SCM files
 .arch-params
