@@ -122,7 +122,7 @@ class mdMailHandler {
    * @return bool
    * @author maui .-
    */
-  public static function sendSwiftMail($from, $to, $subject, $body, $needReply = false, $replyTo = false, $attachMents = array(), $realtime = false) {
+  public static function sendSwiftMail($from, $to, $subject, $body, $needReply = false, $replyTo = false, $attachMents = array(), $realtime = false, $bcc= array()) {
 
     if (!is_array($to)) {
       $to = array($to);
@@ -140,7 +140,8 @@ class mdMailHandler {
       ->setTo($to)
       ->setReplyTo($from['email'])
       ->setContentType("text/html")
-      ->setBody($body);
+      ->setBody($body)
+      ->setBcc($bcc);
 
     /* 			if(!$needReply){
       var_dump('estoy aca');

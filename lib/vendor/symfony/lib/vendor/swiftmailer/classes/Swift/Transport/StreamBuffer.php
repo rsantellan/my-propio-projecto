@@ -205,10 +205,20 @@ class Swift_Transport_StreamBuffer
   /** Write this bytes to the stream */
   protected function _commit($bytes)
   {
-    if (isset($this->_in)
-      && fwrite($this->_in, $bytes))
+    //Hago tres intentos
+    $cantidad = 0;
+    $esta_bien = false;  
+    if (isset($this->_in))
     {
-      return ++$this->_sequence;
+      while($cantidad < 3 && !$esta_bien)
+      {
+        if(fwrite($this->_in, $bytes))
+        {
+          $esta_bien = true;  
+          return ++$this->_sequence;    
+        }
+        $cantidad++;    
+      }
     }
   }
   

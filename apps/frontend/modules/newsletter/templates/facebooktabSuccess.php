@@ -13,7 +13,7 @@ use_stylesheet('https://www.rentnchill.com/webfontkit-20111024-094554/stylesheet
 <?php echo __('novedades_facebook tab text') ?>    
 </div>
 <div id="fbcamp">
-<form name="<?php echo $form->getName();?>" class="form-send" method="POST" action="<?php echo url_for('@facebooktab') ?>">
+<form name="<?php echo $form->getName();?>" class="form-send" method="POST" action="<?php echo url_for('@facebooktabSave') ?>">
       <?php echo $form->renderHiddenFields() ?>
     <div class="fbcampos-left">
         <li class="label"><?php echo __('novedades_nombre') ?></li>

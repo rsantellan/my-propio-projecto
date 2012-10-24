@@ -25,6 +25,32 @@ class PluginmdNewsletterContentSendedTable extends Doctrine_Table
       return $query->execute();
     }
     
+    public function retrieveNotSendedRaw()
+    {
+      $sql = "SELECT m.id AS id, m.subject AS subject, m.body AS body, m.send_counter AS send_counter, m.sending_date AS sending_date, m.sended AS sended, m.for_status AS for_status, m.md_newsletter_content_id AS md_newsletter_content_id FROM md_newsletter_content_sended m WHERE (m.sended = ? AND m.sending_date <= ?)";
+      $params = array(0, date('Y-m-d H:i:s',time()));
+      $conn = Doctrine_Manager::getInstance()->getCurrentConnection();
+      $r = $conn->fetchAssoc($sql, $params);
+      return $r;
+    }
+    
+    
+    public function retrieveNotContententSendUsers($md_newsletter_content_sended_id)
+    {
+     $sql = "select mdu.email from md_user mdu, md_news_letter_user mdn, md_newsletter_send mdns where mdu.id = mdn.md_user_id and mdn.id = mdns.md_news_letter_user_id and mdns.md_newsletter_content_sended_id = ?";
+     $params = array($md_newsletter_content_sended_id);
+     $conn = Doctrine_Manager::getInstance()->getCurrentConnection();
+     $r = $conn->fetchAssoc($sql, $params);
+     return $r;
+    }
+    
+    public function setAsSended($md_newsletter_content_sended_id, $quantity)
+    {
+      $sql = "UPDATE md_newsletter_content_sended SET send_counter=?,sended=1 WHERE id=?";
+      $params = array($quantity, $md_newsletter_content_sended_id);
+      $conn = Doctrine_Manager::getInstance()->getCurrentConnection();
+      $r = $conn->execute($sql, $params);
+    }
     public function retrieveAllMdNewsletterContentSendedOfId($id)
     {
       $query = $this->createQuery("mdNLCS")

@@ -149,6 +149,7 @@ class mdNewsletterHandler
     
     public static function retrieveNotSendedMails()
     {
+      return Doctrine::getTable("mdNewsletterContentSended")->retrieveNotSendedRaw();
       return Doctrine::getTable("mdNewsletterContentSended")->retrieveNotSended();
     }
     
@@ -160,23 +161,31 @@ class mdNewsletterHandler
     public static function sendAllNotSendedMails()
     {
         $list = self::retrieveNotSendedMails();
-        //var_dump('estoy aca');
         foreach($list as $notSended)
         {
-          $users = $notSended->getMdNewsletterSend();
+          $users = Doctrine::getTable("mdNewsletterContentSended")->retrieveNotContententSendUsers($notSended["id"]);//$notSended->getMdNewsletterSend();
           $count = 0;
-          
+          $sending = array();
+          $from = array("name" => "Rent n' Chill", "email" => "info@rentnchill.com");
           foreach($users as $user)
           {
             
-            $email = $user->getMdNewsLetterUser()->getMdUser()->getEmail();
-            $from = array("name" => "Rent n' Chill", "email" => "info@rentnchill.com");
-            mdMailHandler::sendSwiftMail($from, $email, $notSended->getSubject(), $notSended->getBody(), false, "", array(), false);
+            $email = $user["email"];//$user->getMdNewsLetterUser()->getMdUser()->getEmail();
+            $sending[] = $email;
             $count++;
+            if($count % 30 == 0)
+            {
+              mdMailHandler::sendSwiftMail($from, array(), $notSended["subject"], $notSended["body"], false, "", array(), false, $sending);
+              $sending = array();
+              sleep(2);
+            }
+            
           }
-          $notSended->setSendCounter($notSended->getSendCounter() + $count);
-          $notSended->setSended(true);
-          $notSended->save();
+          if(count($sending)>0)
+          {
+            mdMailHandler::sendSwiftMail($from, array(), $notSended["subject"], $notSended["body"], false, "", array(), false, $sending);
+          }
+          Doctrine::getTable("mdNewsletterContentSended")->setAsSended($notSended["id"], ((int) $notSended["send_counter"] + $count));
         }
         
     }

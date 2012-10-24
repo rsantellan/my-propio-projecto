@@ -50,6 +50,11 @@ class newsletterActions extends sfActions
   public function executeFacebooktab(sfWebRequest $request)
   {
     $this->form = new newsletterForm();
+  }
+  
+  public function executeSaveFacebooktab(sfWebRequest $request)
+  {
+    $this->form = new newsletterForm();
     if ($request->isMethod('post')) 
     {
       $this->form->bind($request->getParameter($this->form->getName()));
@@ -77,6 +82,7 @@ class newsletterActions extends sfActions
         $this->getUser()->setFlash('ok', 'guardado ok');
       }
     }
+    $this->setTemplate("facebooktab");
   }
   
   public function executeDesvincularse(sfWebRequest $request) 
