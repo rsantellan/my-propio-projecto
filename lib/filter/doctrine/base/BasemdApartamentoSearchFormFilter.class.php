@@ -21,6 +21,7 @@ abstract class BasemdApartamentoSearchFormFilter extends BaseFormFilterDoctrine
       'tipo_propiedad'    => new sfWidgetFormChoice(array('choices' => array('' => '', 'apartment' => 'apartment', 'house' => 'house', 'bedNbreakfast' => 'bedNbreakfast', 'cabin' => 'cabin', 'villa' => 'villa', 'castle' => 'castle', 'dorm' => 'dorm', 'treehouse' => 'treehouse', 'boat' => 'boat', 'automobile' => 'automobile', 'igloo' => 'igloo'))),
       'metraje'           => new sfWidgetFormFilterInput(),
       'cuartos'           => new sfWidgetFormFilterInput(),
+      'minimo_dias'       => new sfWidgetFormFilterInput(),
     ));
 
     $this->setValidators(array(
@@ -32,6 +33,7 @@ abstract class BasemdApartamentoSearchFormFilter extends BaseFormFilterDoctrine
       'tipo_propiedad'    => new sfValidatorChoice(array('required' => false, 'choices' => array('apartment' => 'apartment', 'house' => 'house', 'bedNbreakfast' => 'bedNbreakfast', 'cabin' => 'cabin', 'villa' => 'villa', 'castle' => 'castle', 'dorm' => 'dorm', 'treehouse' => 'treehouse', 'boat' => 'boat', 'automobile' => 'automobile', 'igloo' => 'igloo'))),
       'metraje'           => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
       'cuartos'           => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
+      'minimo_dias'       => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
     ));
 
     $this->widgetSchema->setNameFormat('md_apartamento_search_filters[%s]');
@@ -60,6 +62,7 @@ abstract class BasemdApartamentoSearchFormFilter extends BaseFormFilterDoctrine
       'tipo_propiedad'    => 'Enum',
       'metraje'           => 'Number',
       'cuartos'           => 'Number',
+      'minimo_dias'       => 'Number',
     );
   }
 }

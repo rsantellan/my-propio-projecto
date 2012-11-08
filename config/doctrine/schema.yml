@@ -263,6 +263,10 @@ mdApartamentoSearch:
     cuartos:
       type: integer(4)
       notnull: false
+    minimo_dias:
+      type: integer(4)
+      notnull: false
+      default: 1      
   relations:
     mdApartamento:
       class: mdApartamento
