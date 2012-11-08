@@ -169,8 +169,14 @@ class reservasActions extends sfActions {
       {
         return $this->renderText(mdBasicFunction::basic_json_response(false, array('ocupado' => true, 'precio' => $precio)));
       }
-      $depto = Doctrine::getTable('mdApartamento')->find($deptoId);
       
+      $search = Doctrine::getTable('mdApartamentoSearch')->find($deptoId);
+      $day_list = mdBasicFunction::makeDayArray($desde, $hasta);
+      if(count($day_list) < $search->getMinimoDias())
+      {
+        return $this->renderText(mdBasicFunction::basic_json_response(false, array('ocupado' => true, 'precio' => $precio)));
+      }
+      $depto = Doctrine::getTable('mdApartamento')->find($deptoId);
       $total = $depto->getPrecio($desde, $hasta);
       $precio = mdCurrencyHandler::getCurrentSymbol()." ".$depto->getPrecioPerDia($desde, $hasta);
       return $this->renderText(mdBasicFunction::basic_json_response(true, array('total' => $total, 'precio' => $precio)));
