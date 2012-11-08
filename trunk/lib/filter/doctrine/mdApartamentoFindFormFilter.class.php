@@ -80,14 +80,12 @@ class mdApartamentoFindFormFilter extends BasemdApartamentoSearchFormFilter
         $this->widgetSchema->setNameFormat('m[%s]');
   }
 
-
   protected function addMdLocacionIdColumnQuery(Doctrine_Query $query, $field, $values){
 		$query->addWhere($query->getRootAlias() . '.md_locacion_id=?', $values);
 		return $query;
 	}
 
   protected function addFechaColumnQuery(Doctrine_Query $query, $field, $values){
-
 		if($values['from']!='')
 			$from = date_create_from_format('Y-m-d',$values['from']);
 		if($values['to']!='')
@@ -106,8 +104,12 @@ class mdApartamentoFindFormFilter extends BasemdApartamentoSearchFormFilter
 			$from = $to;
 			$from->sub(date_interval_create_from_date_string('10 day'));
 		}
-		if($addFilter)
-			$query->addWhere($query->getRootAlias() . '.id NOT IN (select md_apartamento_id from md_ocupacion where fecha between ? and ?)', array($from->format('Y-m-d 00:00:00'),$to->format('Y-m-d 23:59:59')) );
+		if($addFilter){
+          $query->addWhere($query->getRootAlias() . '.id NOT IN (select md_apartamento_id from md_ocupacion where fecha between ? and ?)', array($from->format('Y-m-d 00:00:00'),$to->format('Y-m-d 23:59:59')) );
+          $day_list = mdBasicFunction::makeDayArray($from->format('Y-m-d 00:00:00'), $to->format('Y-m-d 23:59:59'));
+          $query->addWhere($query->getRootAlias().".minimo_dias <= ?", array(count($day_list)));
+        }
+			
 
 		return $query;
 	}
@@ -161,7 +163,7 @@ class mdApartamentoFindFormFilter extends BasemdApartamentoSearchFormFilter
 	}
 
   protected function addCantidadPersonasColumnQuery(Doctrine_Query $query, $field, $values){
-		if($values['text']>0)
+      if($values['text']>0)
 			$query->addWhere($query->getRootAlias() . '.' . $field . ' >= ?', $values['text']);
 				
 		return $query;

@@ -14,6 +14,7 @@
  * @property enum $tipo_propiedad
  * @property integer $metraje
  * @property integer $cuartos
+ * @property integer $minimo_dias
  * @property mdApartamento $mdApartamento
  * 
  * @method integer             getId()                Returns the current record's "id" value
@@ -25,6 +26,7 @@
  * @method enum                getTipoPropiedad()     Returns the current record's "tipo_propiedad" value
  * @method integer             getMetraje()           Returns the current record's "metraje" value
  * @method integer             getCuartos()           Returns the current record's "cuartos" value
+ * @method integer             getMinimoDias()        Returns the current record's "minimo_dias" value
  * @method mdApartamento       getMdApartamento()     Returns the current record's "mdApartamento" value
  * @method mdApartamentoSearch setId()                Sets the current record's "id" value
  * @method mdApartamentoSearch setMdLocacionId()      Sets the current record's "md_locacion_id" value
@@ -35,6 +37,7 @@
  * @method mdApartamentoSearch setTipoPropiedad()     Sets the current record's "tipo_propiedad" value
  * @method mdApartamentoSearch setMetraje()           Sets the current record's "metraje" value
  * @method mdApartamentoSearch setCuartos()           Sets the current record's "cuartos" value
+ * @method mdApartamentoSearch setMinimoDias()        Sets the current record's "minimo_dias" value
  * @method mdApartamentoSearch setMdApartamento()     Sets the current record's "mdApartamento" value
  * 
  * @package    rentNchill
@@ -100,6 +103,12 @@ abstract class BasemdApartamentoSearch extends sfDoctrineRecord
         $this->hasColumn('cuartos', 'integer', 4, array(
              'type' => 'integer',
              'notnull' => false,
+             'length' => 4,
+             ));
+        $this->hasColumn('minimo_dias', 'integer', 4, array(
+             'type' => 'integer',
+             'notnull' => false,
+             'default' => 1,
              'length' => 4,
              ));
     }

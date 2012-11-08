@@ -24,6 +24,7 @@ abstract class BasemdApartamentoSearchForm extends BaseFormDoctrine
       'tipo_propiedad'    => new sfWidgetFormChoice(array('choices' => array('apartment' => 'apartment', 'house' => 'house', 'bedNbreakfast' => 'bedNbreakfast', 'cabin' => 'cabin', 'villa' => 'villa', 'castle' => 'castle', 'dorm' => 'dorm', 'treehouse' => 'treehouse', 'boat' => 'boat', 'automobile' => 'automobile', 'igloo' => 'igloo'))),
       'metraje'           => new sfWidgetFormInputText(),
       'cuartos'           => new sfWidgetFormInputText(),
+      'minimo_dias'       => new sfWidgetFormInputText(),
     ));
 
     $this->setValidators(array(
@@ -36,6 +37,7 @@ abstract class BasemdApartamentoSearchForm extends BaseFormDoctrine
       'tipo_propiedad'    => new sfValidatorChoice(array('choices' => array(0 => 'apartment', 1 => 'house', 2 => 'bedNbreakfast', 3 => 'cabin', 4 => 'villa', 5 => 'castle', 6 => 'dorm', 7 => 'treehouse', 8 => 'boat', 9 => 'automobile', 10 => 'igloo'), 'required' => false)),
       'metraje'           => new sfValidatorInteger(array('required' => false)),
       'cuartos'           => new sfValidatorInteger(array('required' => false)),
+      'minimo_dias'       => new sfValidatorInteger(array('required' => false)),
     ));
 
     $this->widgetSchema->setNameFormat('md_apartamento_search[%s]');

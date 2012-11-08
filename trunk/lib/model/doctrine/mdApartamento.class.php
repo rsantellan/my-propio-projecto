@@ -12,8 +12,8 @@
  */
 class mdApartamento extends BasemdApartamento {
 
-  const PORCENTAJESIMPLE = 0.10;
-  const PORCENTAJECOMPLETO = 0.20;
+  const PORCENTAJESIMPLE = 0.125;
+  const PORCENTAJECOMPLETO = 0.125;
   
   /**
    * retorna la clase, se usa para los behaviors

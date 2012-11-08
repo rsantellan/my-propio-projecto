@@ -20,7 +20,7 @@ class mdDetalle extends BasemdDetalle
 				$mdApartamentoSearch->setMetraje($this->getMetraje());
 				$mdApartamentoSearch->setCuartos($this->getCuartos());
 				$mdApartamentoSearch->setTipoPropiedad($this->getTipoPropiedad());
-
+                $mdApartamentoSearch->setMinimoDias($this->getMinimoDias());
 				$mdApartamentoSearch->save();
 			}
 	}
