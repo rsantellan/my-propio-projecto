@@ -78,14 +78,17 @@ use_helper('Text');
         //echo $form['detalle']['tipo_propiedad']->render();
       ?>
       </div>
+      <?php //echo $form; ?>
       <div class="campos-right">
         <div class="campos-right-left">
           <li<?php if ($form[$sf_user->getCulture()]['titulo']->hasError()) echo ' class="error_list"' ?>><?php echo __('Submit_TITLE') ?>:</li>
           <li<?php if ($form[$sf_user->getCulture()]['titulo']->hasError()) echo ' class="error_list"' ?>><?php echo $form[$sf_user->getCulture()]['titulo']->render(); ?></li>
-          <li<?php if ($form['precio_alta']->hasError()) echo ' class="error_list"' ?>><?php echo __('Submit_PRECIO TEMPORADA ALTA') ?>:</li>
+          <li<?php if ($form['precio_alta']->hasError()) echo ' class="error_list"' ?>><?php echo __('Submit_PRECIO TEMPORADA ENERO') ?>:</li>
           <li<?php if ($form['precio_alta']->hasError()) echo ' class="error_list"' ?>><?php echo $form['precio_alta']->render(); ?></li>
-          <li<?php if ($form['precio_baja']->hasError()) echo ' class="error_list"' ?>><?php echo __('Submit_PRECIO TEMPORADA BAJA') ?>:</li>
+          <li<?php if ($form['precio_baja']->hasError()) echo ' class="error_list"' ?>><?php echo __('Submit_PRECIO TEMPORADA INVIERNO') ?>:</li>
           <li<?php if ($form['precio_baja']->hasError()) echo ' class="error_list"' ?>><?php echo $form['precio_baja']->render(); ?></li>
+          <li<?php if ($form['precio_revellion']->hasError()) echo ' class="error_list"' ?>><?php echo __('Submit_PRECIO TEMPORADA REVELLION') ?>:</li>
+          <li<?php if ($form['precio_revellion']->hasError()) echo ' class="error_list"' ?>><?php echo $form['precio_revellion']->render(); ?></li>
           <li<?php if ($form['detalle']['cuartos']->hasError()) echo ' class="error_list"' ?>><?php echo __('Submit_CANTIDAD DE CUARTOS') ?>:</li>
           <li<?php if ($form['detalle']['cuartos']->hasError()) echo ' class="error_list"' ?>><?php echo $form['detalle']['cuartos']->render(); ?></li>
           <li<?php if ($form['detalle']['minimo_dias']->hasError()) echo ' class="error_list"' ?>><?php echo __('Submit_MINIMO DE DIAS') ?>:</li>
@@ -107,8 +110,12 @@ use_helper('Text');
         <div class="campos-right-right">
           <li<?php if ($form['md_locacion_id']->hasError()) echo ' class="error_list"' ?>><?php echo __('Submit_CITY') ?>:</li>
           <li class="dropdown<?php if ($form['md_locacion_id']->hasError()) echo ' error_list' ?>"><?php echo $form['md_locacion_id']->render(); ?></li>
-          <li<?php if ($form['precio_media']->hasError()) echo ' class="error_list"' ?>><?php echo __('Submit_PRECIO TEMPORADA MEDIA') ?>:</li>
+          <li<?php if ($form['precio_media']->hasError()) echo ' class="error_list"' ?>><?php echo __('Submit_PRECIO TEMPORADA OTONO PRIMAVERA') ?>:</li>
           <li<?php if ($form['precio_media']->hasError()) echo ' class="error_list"' ?>><?php echo $form['precio_media']->render(); ?></li>
+          <li<?php if ($form['precio_febrero']->hasError()) echo ' class="error_list"' ?>><?php echo __('Submit_PRECIO TEMPORADA FEBRERO') ?>:</li>
+          <li<?php if ($form['precio_febrero']->hasError()) echo ' class="error_list"' ?>><?php echo $form['precio_febrero']->render(); ?></li>
+          <li<?php if ($form['contacto']->hasError()) echo ' class="error_list"' ?>><?php echo __('Submit_CONTACTO') ?>:</li>
+          <li<?php if ($form['contacto']->hasError()) echo ' class="error_list"' ?>><?php echo $form['contacto']->render(); ?></li>
           <li<?php if ($form['detalle']['tipo_propiedad']->hasError()) echo ' class="error_list"' ?>><?php echo __('Submit_TIPO DE PROPIEDAD') ?>:</li>
           <li class="dropdown<?php if ($form['detalle']['tipo_propiedad']->hasError()) echo ' error_list' ?>"><?php echo $form['detalle']['tipo_propiedad']->render(); ?></li>
           <li<?php if ($form['detalle']['banios']->hasError()) echo ' class="error_list"' ?>><?php echo __('Submit_CANTIDAD DE BANIOS') ?>:</li>

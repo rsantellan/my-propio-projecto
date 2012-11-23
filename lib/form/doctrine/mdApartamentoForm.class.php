@@ -43,9 +43,19 @@ class mdApartamentoForm extends BasemdApartamentoForm
 		$this->setValidator('ocupacion', new sfValidatorString(array('required'=>false)));
 		$this->widgetSchema->moveField('ocupacion', 'after', 'detalle');
 
-
-    $this->widgetSchema['md_comodidad_list'] = new sfWidgetFormDoctrineChoice(array('multiple' => true, 'expanded' => true, 'model' => 'mdComodidad', 'label' => 'Comodidades'));
-    $this->validatorSchema['md_comodidad_list'] = new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'mdComodidad', 'required' => false));
+        $listado_contactos = array();
+        if(!$this->isNew() || !is_null($this->getObject()->getMdUserId()))
+        {
+          $listado_contactos_aux = Doctrine::getTable('mdApartamento')->getMdUserContactNumbers($this->getObject()->getMdUserId());
+          foreach($listado_contactos_aux as $aux_contacto)
+          {
+            array_push($listado_contactos, $aux_contacto["contacto"]);
+          }
+        }
+        $this->widgetSchema['contacto'] = new sfWidgetFormInputAutocomplete(array('choices' => $listado_contactos));
+        $this->validatorSchema['contacto']        = new sfValidatorString(array('max_length' => 20, 'required' => true));
+        $this->widgetSchema['md_comodidad_list'] = new sfWidgetFormDoctrineChoice(array('multiple' => true, 'expanded' => true, 'model' => 'mdComodidad', 'label' => 'Comodidades'));
+        $this->validatorSchema['md_comodidad_list'] = new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'mdComodidad', 'required' => false));
 		$this->widgetSchema->moveField('md_comodidad_list', 'after', 'detalle');
 		
   }

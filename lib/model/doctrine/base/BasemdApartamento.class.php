@@ -17,7 +17,10 @@
  * @property float $precio_alta
  * @property float $precio_media
  * @property float $precio_baja
+ * @property float $precio_febrero
+ * @property float $precio_revellion
  * @property integer $cantidad_personas
+ * @property string $contacto
  * @property mdLocacion $mdLocacion
  * @property mdUser $mdUser
  * @property mdCurrency $mdCurrency
@@ -39,7 +42,10 @@
  * @method float               getPrecioAlta()          Returns the current record's "precio_alta" value
  * @method float               getPrecioMedia()         Returns the current record's "precio_media" value
  * @method float               getPrecioBaja()          Returns the current record's "precio_baja" value
+ * @method float               getPrecioFebrero()       Returns the current record's "precio_febrero" value
+ * @method float               getPrecioRevellion()     Returns the current record's "precio_revellion" value
  * @method integer             getCantidadPersonas()    Returns the current record's "cantidad_personas" value
+ * @method string              getContacto()            Returns the current record's "contacto" value
  * @method mdLocacion          getMdLocacion()          Returns the current record's "mdLocacion" value
  * @method mdUser              getMdUser()              Returns the current record's "mdUser" value
  * @method mdCurrency          getMdCurrency()          Returns the current record's "mdCurrency" value
@@ -60,7 +66,10 @@
  * @method mdApartamento       setPrecioAlta()          Sets the current record's "precio_alta" value
  * @method mdApartamento       setPrecioMedia()         Sets the current record's "precio_media" value
  * @method mdApartamento       setPrecioBaja()          Sets the current record's "precio_baja" value
+ * @method mdApartamento       setPrecioFebrero()       Sets the current record's "precio_febrero" value
+ * @method mdApartamento       setPrecioRevellion()     Sets the current record's "precio_revellion" value
  * @method mdApartamento       setCantidadPersonas()    Sets the current record's "cantidad_personas" value
+ * @method mdApartamento       setContacto()            Sets the current record's "contacto" value
  * @method mdApartamento       setMdLocacion()          Sets the current record's "mdLocacion" value
  * @method mdApartamento       setMdUser()              Sets the current record's "mdUser" value
  * @method mdApartamento       setMdCurrency()          Sets the current record's "mdCurrency" value
@@ -142,11 +151,27 @@ abstract class BasemdApartamento extends sfDoctrineRecord
              'type' => 'float',
              'notnull' => true,
              ));
+        $this->hasColumn('precio_febrero', 'float', null, array(
+             'type' => 'float',
+             'notnull' => true,
+             'default' => 0,
+             ));
+        $this->hasColumn('precio_revellion', 'float', null, array(
+             'type' => 'float',
+             'notnull' => true,
+             'default' => 0,
+             ));
         $this->hasColumn('cantidad_personas', 'integer', 4, array(
              'type' => 'integer',
              'notnull' => true,
              'default' => 2,
              'length' => 4,
+             ));
+        $this->hasColumn('contacto', 'string', 20, array(
+             'type' => 'string',
+             'notnull' => true,
+             'default' => '',
+             'length' => 20,
              ));
     }
 

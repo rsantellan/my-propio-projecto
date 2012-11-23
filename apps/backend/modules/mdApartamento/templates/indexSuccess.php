@@ -1,7 +1,7 @@
 <?php use_helper('I18N', 'Date') ?>
 <?php include_partial('mdApartamento/assets') ?>
 
-<div id="sf_admin_container">
+<div id="sf_admin_container" style="width: 1060px !important;">
   <h1><?php echo __('Apartamentos_Listado', array(), 'messages') ?></h1>
 
   <?php include_partial('mdApartamento/flashes') ?>

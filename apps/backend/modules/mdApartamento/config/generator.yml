@@ -14,7 +14,12 @@ generator:
     config:
       actions: ~
       fields:
-        md_currency_id: { name: Moneda }
+        md_currency_id: { label: Moneda }
+        precio_alta: { label: 'Precio Enero'}
+        precio_media: { label: 'Precio Otoño / Primavera'}
+        precio_baja: { label: 'Precio Invierno'}
+        md_user_id: { label: 'Usuario'}
+        md_locacion_id: { label: 'Locacion'}
       list:
         display:        [activo, _imagen, =titulo, mdLocacion, tipo]
         fields:

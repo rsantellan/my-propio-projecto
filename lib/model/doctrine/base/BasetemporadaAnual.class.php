@@ -42,11 +42,13 @@ abstract class BasetemporadaAnual extends sfDoctrineRecord
              'type' => 'enum',
              'values' => 
              array(
-              0 => 'A',
-              1 => 'M',
-              2 => 'B',
+              0 => 'Invierno',
+              1 => 'Primavera / Otoño',
+              2 => 'Reveillon',
+              3 => 'Enero',
+              4 => 'Febrero',
              ),
-             'default' => 'B',
+             'default' => 'Enero',
              'notnull' => true,
              ));
     }

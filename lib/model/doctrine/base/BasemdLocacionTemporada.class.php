@@ -58,10 +58,13 @@ abstract class BasemdLocacionTemporada extends sfDoctrineRecord
              'type' => 'enum',
              'values' => 
              array(
-              0 => 'A',
-              1 => 'M',
+              0 => 'Invierno',
+              1 => 'Primavera / Otoño',
+              2 => 'Reveillon',
+              3 => 'Enero',
+              4 => 'Febrero',
              ),
-             'default' => 'A',
+             'default' => 'Enero',
              'notnull' => true,
              ));
     }

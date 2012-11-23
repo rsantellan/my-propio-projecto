@@ -85,16 +85,24 @@ use_javascript('datepicker/js/datepicker.js');
       <div class="price">
         <li><?php echo __('Apartamento_precio');?> <span>(<?php echo mdCurrencyHandler::getCurrent()->getCode() ?>)</span></li>
         <ul<?php echo ($form['precio_baja']->hasError() ? ' class="error_list"' : ''); ?>>
-          <li><?php echo __('Apartamento_Per person'); ?> (<?php echo __('Apartamento_Low season') ?>)</li>
+          <li><?php echo __('Apartamento_Per person'); ?> (<?php echo __('Apartamento_PRECIO TEMPORADA INVIERNO') ?>)</li>
           <li><?php echo $form['precio_baja']->render() ?></li>
         </ul>
         <ul<?php echo ($form['precio_media']->hasError() ? ' class="error_list"' : ''); ?>>
-          <li><?php echo __('Apartamento_Per person'); ?> (<?php echo __('Apartamento_Medium season') ?>)</li>
+          <li><?php echo __('Apartamento_Per person'); ?> (<?php echo __('Apartamento_PRECIO TEMPORADA OTONO PRIMAVERA') ?>)</li>
           <li><?php echo $form['precio_media']->render() ?></li>
         </ul>
         <ul<?php echo ($form['precio_alta']->hasError() ? ' class="error_list"' : ''); ?>>
-          <li><?php echo __('Apartamento_Per person'); ?> (<?php echo __('Apartamento_High season') ?>)</li>
+          <li><?php echo __('Apartamento_Per person'); ?> (<?php echo __('Apartamento_PRECIO TEMPORADA ENERO') ?>)</li>
           <li><?php echo $form['precio_alta']->render() ?></li>
+        </ul>
+        <ul<?php echo ($form['precio_febrero']->hasError() ? ' class="error_list"' : ''); ?>>
+          <li><?php echo __('Apartamento_Per person'); ?> (<?php echo __('Apartamento_PRECIO TEMPORADA FEBRERO') ?>)</li>
+          <li><?php echo $form['precio_febrero']->render() ?></li>
+        </ul>
+        <ul<?php echo ($form['precio_revellion']->hasError() ? ' class="error_list"' : ''); ?>>
+          <li><?php echo __('Apartamento_Per person'); ?> (<?php echo __('Apartamento_PRECIO TEMPORADA REVELLION') ?>)</li>
+          <li><?php echo $form['precio_revellion']->render() ?></li>
         </ul>
       </div>
       <div class="guests">
@@ -131,6 +139,10 @@ use_javascript('datepicker/js/datepicker.js');
         <li<?php echo ($form['detalle']['metraje']->hasError() ? ' class="error_list"' : ''); ?>><?php echo __('Submit_METRAJE') ?></li>
         <ul>
           <li><?php echo $form['detalle']['metraje']->render() ?></li>
+        </ul>
+        <li<?php echo ($form['contacto']->hasError() ? ' class="error_list"' : ''); ?>><?php echo __('Submit_CONTACTO') ?></li>
+        <ul>
+          <li><?php echo $form['contacto']->render(); ?></li>
         </ul>
       </div>
       <div class="insurance">
