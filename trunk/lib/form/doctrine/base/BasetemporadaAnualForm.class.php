@@ -17,13 +17,13 @@ abstract class BasetemporadaAnualForm extends BaseFormDoctrine
     $this->setWidgets(array(
       'fecha'          => new sfWidgetFormInputHidden(),
       'md_locacion_id' => new sfWidgetFormInputHidden(),
-      'tipo'           => new sfWidgetFormChoice(array('choices' => array('A' => 'A', 'M' => 'M', 'B' => 'B'))),
+      'tipo'           => new sfWidgetFormChoice(array('choices' => array('Invierno' => 'Invierno', 'Primavera / Otoño' => 'Primavera / Otoño', 'Reveillon' => 'Reveillon', 'Enero' => 'Enero', 'Febrero' => 'Febrero'))),
     ));
 
     $this->setValidators(array(
       'fecha'          => new sfValidatorChoice(array('choices' => array($this->getObject()->get('fecha')), 'empty_value' => $this->getObject()->get('fecha'), 'required' => false)),
       'md_locacion_id' => new sfValidatorChoice(array('choices' => array($this->getObject()->get('md_locacion_id')), 'empty_value' => $this->getObject()->get('md_locacion_id'), 'required' => false)),
-      'tipo'           => new sfValidatorChoice(array('choices' => array(0 => 'A', 1 => 'M', 2 => 'B'), 'required' => false)),
+      'tipo'           => new sfValidatorChoice(array('choices' => array(0 => 'Invierno', 1 => 'Primavera / Otoño', 2 => 'Reveillon', 3 => 'Enero', 4 => 'Febrero'), 'required' => false)),
     ));
 
     $this->widgetSchema->setNameFormat('temporada_anual[%s]');

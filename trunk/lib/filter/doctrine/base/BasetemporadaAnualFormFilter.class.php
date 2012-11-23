@@ -13,11 +13,11 @@ abstract class BasetemporadaAnualFormFilter extends BaseFormFilterDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'tipo'           => new sfWidgetFormChoice(array('choices' => array('' => '', 'A' => 'A', 'M' => 'M', 'B' => 'B'))),
+      'tipo'           => new sfWidgetFormChoice(array('choices' => array('' => '', 'Invierno' => 'Invierno', 'Primavera / Otoño' => 'Primavera / Otoño', 'Reveillon' => 'Reveillon', 'Enero' => 'Enero', 'Febrero' => 'Febrero'))),
     ));
 
     $this->setValidators(array(
-      'tipo'           => new sfValidatorChoice(array('required' => false, 'choices' => array('A' => 'A', 'M' => 'M', 'B' => 'B'))),
+      'tipo'           => new sfValidatorChoice(array('required' => false, 'choices' => array('Invierno' => 'Invierno', 'Primavera / Otoño' => 'Primavera / Otoño', 'Reveillon' => 'Reveillon', 'Enero' => 'Enero', 'Febrero' => 'Febrero'))),
     ));
 
     $this->widgetSchema->setNameFormat('temporada_anual_filters[%s]');

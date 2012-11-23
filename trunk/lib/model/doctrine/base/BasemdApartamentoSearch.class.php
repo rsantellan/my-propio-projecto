@@ -10,6 +10,8 @@
  * @property float $precio_alta
  * @property float $precio_media
  * @property float $precio_baja
+ * @property float $precio_febrero
+ * @property float $precio_revellion
  * @property integer $cantidad_personas
  * @property enum $tipo_propiedad
  * @property integer $metraje
@@ -22,6 +24,8 @@
  * @method float               getPrecioAlta()        Returns the current record's "precio_alta" value
  * @method float               getPrecioMedia()       Returns the current record's "precio_media" value
  * @method float               getPrecioBaja()        Returns the current record's "precio_baja" value
+ * @method float               getPrecioFebrero()     Returns the current record's "precio_febrero" value
+ * @method float               getPrecioRevellion()   Returns the current record's "precio_revellion" value
  * @method integer             getCantidadPersonas()  Returns the current record's "cantidad_personas" value
  * @method enum                getTipoPropiedad()     Returns the current record's "tipo_propiedad" value
  * @method integer             getMetraje()           Returns the current record's "metraje" value
@@ -33,6 +37,8 @@
  * @method mdApartamentoSearch setPrecioAlta()        Sets the current record's "precio_alta" value
  * @method mdApartamentoSearch setPrecioMedia()       Sets the current record's "precio_media" value
  * @method mdApartamentoSearch setPrecioBaja()        Sets the current record's "precio_baja" value
+ * @method mdApartamentoSearch setPrecioFebrero()     Sets the current record's "precio_febrero" value
+ * @method mdApartamentoSearch setPrecioRevellion()   Sets the current record's "precio_revellion" value
  * @method mdApartamentoSearch setCantidadPersonas()  Sets the current record's "cantidad_personas" value
  * @method mdApartamentoSearch setTipoPropiedad()     Sets the current record's "tipo_propiedad" value
  * @method mdApartamentoSearch setMetraje()           Sets the current record's "metraje" value
@@ -71,6 +77,16 @@ abstract class BasemdApartamentoSearch extends sfDoctrineRecord
         $this->hasColumn('precio_baja', 'float', null, array(
              'type' => 'float',
              'notnull' => true,
+             ));
+        $this->hasColumn('precio_febrero', 'float', null, array(
+             'type' => 'float',
+             'notnull' => true,
+             'default' => 0,
+             ));
+        $this->hasColumn('precio_revellion', 'float', null, array(
+             'type' => 'float',
+             'notnull' => true,
+             'default' => 0,
              ));
         $this->hasColumn('cantidad_personas', 'integer', 4, array(
              'type' => 'integer',

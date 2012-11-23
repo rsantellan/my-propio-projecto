@@ -16,14 +16,14 @@ abstract class BasemdLocacionTemporadaFormFilter extends BaseFormFilterDoctrine
       'md_locacion_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('mdLocacion'), 'add_empty' => true)),
       'date_from'      => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate(), 'with_empty' => false)),
       'date_to'        => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate(), 'with_empty' => false)),
-      'tipo'           => new sfWidgetFormChoice(array('choices' => array('' => '', 'A' => 'A', 'M' => 'M'))),
+      'tipo'           => new sfWidgetFormChoice(array('choices' => array('' => '', 'Invierno' => 'Invierno', 'Primavera / Otoño' => 'Primavera / Otoño', 'Reveillon' => 'Reveillon', 'Enero' => 'Enero', 'Febrero' => 'Febrero'))),
     ));
 
     $this->setValidators(array(
       'md_locacion_id' => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('mdLocacion'), 'column' => 'id')),
       'date_from'      => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDate(array('required' => false)), 'to_date' => new sfValidatorDateTime(array('required' => false)))),
       'date_to'        => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDate(array('required' => false)), 'to_date' => new sfValidatorDateTime(array('required' => false)))),
-      'tipo'           => new sfValidatorChoice(array('required' => false, 'choices' => array('A' => 'A', 'M' => 'M'))),
+      'tipo'           => new sfValidatorChoice(array('required' => false, 'choices' => array('Invierno' => 'Invierno', 'Primavera / Otoño' => 'Primavera / Otoño', 'Reveillon' => 'Reveillon', 'Enero' => 'Enero', 'Febrero' => 'Febrero'))),
     ));
 
     $this->widgetSchema->setNameFormat('md_locacion_temporada_filters[%s]');

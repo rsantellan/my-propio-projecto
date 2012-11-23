@@ -37,6 +37,6 @@ EOF;
 	
 	TemporadasDatesHandler::insertLocationFirstYear();
 	TemporadasDatesHandler::generateSeasons();
-    //TemporadasDatesHandler::addDaysToAllLocations();
+    TemporadasDatesHandler::addDaysToAllLocations();
   }
 }

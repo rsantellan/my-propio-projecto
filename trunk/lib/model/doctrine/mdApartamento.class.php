@@ -15,6 +15,12 @@ class mdApartamento extends BasemdApartamento {
   const PORCENTAJESIMPLE = 0.125;
   const PORCENTAJECOMPLETO = 0.125;
   
+  const TEMPORADAINVIERNO = "Invierno";
+  const TEMPORADAAUTUMNSPRING = "Primavera / Otoño";
+  const TEMPORADAREVELLION = "Reveillon";
+  const TEMPORADAENERO = "Enero";
+  const TEMPORADAFEBRERO = "Febrero";
+  
   /**
    * retorna la clase, se usa para los behaviors
    *
@@ -75,14 +81,20 @@ class mdApartamento extends BasemdApartamento {
     foreach($resultadosDias as $dias)
     {
       switch ($dias["tipo"]) {
-        case "A":
+        case self::TEMPORADAENERO:
             $precio += ($this->getPrecioAlta() * (int) $dias['cantidad']);
           break;
-        case "M":
+        case self::TEMPORADAAUTUMNSPRING:
             $precio += ($this->getPrecioMedia() * (int) $dias['cantidad']);
           break;
-        case "B":
+        case self::TEMPORADAINVIERNO:
             $precio += ($this->getPrecioBaja() * (int) $dias['cantidad']);
+          break;
+        case self::TEMPORADAFEBRERO:
+            $precio += ($this->getPrecioFebrero() * (int) $dias['cantidad']);
+          break;
+        case self::TEMPORADAREVELLION:
+            $precio += ($this->getPrecioRevellion() * (int) $dias['cantidad']);
           break;
       }
     }
@@ -147,14 +159,20 @@ class mdApartamento extends BasemdApartamento {
     {
       $aux = $resultadosDias[0];
       switch ($aux["tipo"]) {
-        case "A":
-            $precio = $this->getPrecioAlta();
+        case self::TEMPORADAENERO:
+            $precio = ($this->getPrecioAlta());
           break;
-        case "M":
-            $precio = $this->getPrecioMedia();
+        case self::TEMPORADAAUTUMNSPRING:
+            $precio = ($this->getPrecioMedia());
           break;
-        case "B":
-            $precio = $this->getPrecioBaja();
+        case self::TEMPORADAINVIERNO:
+            $precio = ($this->getPrecioBaja());
+          break;
+        case self::TEMPORADAFEBRERO:
+            $precio = ($this->getPrecioFebrero());
+          break;
+        case self::TEMPORADAREVELLION:
+            $precio = ($this->getPrecioRevellion());
           break;
       }
     }
@@ -200,19 +218,25 @@ class mdApartamento extends BasemdApartamento {
       $mdApartamentoSearch->setMdLocacionId($this->getMdLocacionId());
       $mdApartamentoSearch->setCantidadPersonas($this->getCantidadPersonas());
 
-      if ($this->getMdCurrencyId() != 1) {
+      if ($this->getMdCurrencyId() != 2) {
         $mdCurrency = Doctrine::getTable('mdCurrency')->find(1);
         $precioAlta = mdCurrencyConvertion::convert($this->getMdCurrency()->getCode(), $mdCurrency->getCode(), $this->getPrecioAlta());
         $precioBaja = mdCurrencyConvertion::convert($this->getMdCurrency()->getCode(), $mdCurrency->getCode(), $this->getPrecioBaja());
         $precioMedia = mdCurrencyConvertion::convert($this->getMdCurrency()->getCode(), $mdCurrency->getCode(), $this->getPrecioMedia());
+        $precioRebellion = mdCurrencyConvertion::convert($this->getMdCurrency()->getCode(), $mdCurrency->getCode(), $this->getPrecioRevellion());
+        $precioFebrero = mdCurrencyConvertion::convert($this->getMdCurrency()->getCode(), $mdCurrency->getCode(), $this->getPrecioFebrero());
       } else {
         $precioAlta = $this->getPrecioAlta();
         $precioBaja = $this->getPrecioBaja();
         $precioMedia = $this->getPrecioMedia();
+        $precioRebellion = $this->getPrecioRevellion();
+        $precioFebrero = $this->getPrecioFebrero();
       }
       $mdApartamentoSearch->setPrecioAlta($precioAlta);
       $mdApartamentoSearch->setPrecioBaja($precioBaja);
       $mdApartamentoSearch->setPrecioMedia($precioMedia);
+      $mdApartamentoSearch->setPrecioRevellion($precioRebellion);
+      $mdApartamentoSearch->setPrecioFebrero($precioFebrero);
       $mdApartamentoSearch->save();
     } else {
       if ($mdApartamentoSearch)

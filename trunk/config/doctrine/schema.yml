@@ -45,10 +45,22 @@ mdApartamento:
     precio_baja:
       type: float
       notnull: true
+    precio_febrero:
+      type: float
+      notnull: true
+      default: 0
+    precio_revellion:
+      type: float
+      notnull: true
+      default: 0
     cantidad_personas:
       type: integer(4)
       notnull: true
       default: 2
+    contacto:
+      type: string(20)
+      notnull: true
+      default: ''
   relations:
     mdLocacion:
       class: mdLocacion
@@ -132,8 +144,8 @@ mdLocacionTemporada:
       notnull: true    
     tipo:
       type: enum
-      values: ['A', 'M']
-      default: 'A'
+      values: ['Invierno', 'Primavera / Otoño', 'Reveillon', 'Enero', 'Febrero']
+      default: 'Enero'
       notnull: true
   relations:
     mdLocacion:
@@ -155,8 +167,8 @@ temporadaAnual:
       primary: true
     tipo:
       type: enum
-      values: ['A', 'M', 'B']
-      default: 'B'
+      values: ['Invierno', 'Primavera / Otoño', 'Reveillon', 'Enero', 'Febrero']
+      default: 'Enero'
       notnull: true
   relations:
     mdLocacion:
@@ -250,6 +262,14 @@ mdApartamentoSearch:
     precio_baja:
       type: float
       notnull: true
+    precio_febrero:
+      type: float
+      notnull: true
+      default: 0
+    precio_revellion:
+      type: float
+      notnull: true
+      default: 0      
     cantidad_personas:
       type: integer(4)
       notnull: true

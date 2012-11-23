@@ -62,5 +62,13 @@ class mdApartamentoTable extends Doctrine_Table
           $r = $conn->execute($sql, array( $id, $titulo, $copete, $descripcion, $lang));
           return $r;
         }
+        
+        public function getMdUserContactNumbers($md_user_id)
+        {
+          $conn = Doctrine_Manager::getInstance()->getCurrentConnection(); 
+          $sql = "select distinct(contacto) from md_apartamento where md_user_id = ?";
+          $r = $conn->fetchAssoc($sql, array($md_user_id));
+          return $r;
+        }
 
 }
