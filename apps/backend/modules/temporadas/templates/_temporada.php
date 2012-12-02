@@ -56,7 +56,7 @@
             $('#disponiblidad-create-form > select').val('');
             $('#disp-list').html(json.options.table);
             $('#disponiblidad-create').hide();
-            $('#disponiblidad-create').html("");
+            //$('#disponiblidad-create').html("");
           }
           else
           {
