@@ -26,6 +26,8 @@ use_javascript('jquery.scrollTo-min.js');
           <li><?php echo __('Reservas_description') ?>:<span> <?php echo $depto->getCopete() ?></span></li>
           <li><?php echo __('Reservas_city') ?>:<span> <?php echo $depto->getmdLocacion()->getNombre() ?></span></li>
           <li><?php echo __('Reservas_guests') ?>:<span> <?php echo $values['cantidad_personas'] ?></span></li>
+          <li><?php echo __('Reservas_start date') ?>:<span> <?php echo format_date($values['fecha_desde'], 'D'); ?></span></li>
+          <li><?php echo __('Reservas_finish date') ?>:<span> <?php echo format_date($values['fecha_hasta'], 'D'); ?></span></li>
           <li><?php echo __('Reservas_nights') ?>:<span> <?php echo $noches ?></span></li>
         </ul>
         <ul>

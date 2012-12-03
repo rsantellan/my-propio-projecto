@@ -27,6 +27,10 @@ test:
 
 all:
   .settings:
+  
+    # Check for locked apps
+    check_lock:             true
+  
     # Form security secret (CSRF protection)
     csrf_secret:            51872529ab40d3433b4ea5cee1bfa508272ea3bc
 
