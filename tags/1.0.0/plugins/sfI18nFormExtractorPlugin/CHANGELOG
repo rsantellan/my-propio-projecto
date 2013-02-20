@@ -1,0 +1,33 @@
+gbastien -2010-04-18
+
+  - Also translating form's choice values
+
+r29191 - gbastien - 2010-04-18
+  
+  - Added a new plugin extraction task that saves the internationalized strings into the plugin's own catalogue
+  - The forms strings are now extracted recursivel
+
+r22346 - alecs - 2009-09-24 15:00:11
+
+  - added the ChangeLog, removed the throw of the error on '--all' option
+
+r22345 - alecs - 2009-09-24 14:52:44
+
+  - added support for '--all' option 
+
+r22343 - alecs - 2009-09-24 14:20:16 
+
+  - added support for --plugins option 
+
+r22342 - alecs - 2009-09-24 13:51:04
+
+  - small fix. moved the 'Form' content to the extractor class 
+
+
+r22341 - usefulthink - 2009-09-24 13:29:03 
+
+  - added test-directory
+
+r22340 - alecs - 2009-09-24 13:26:08 
+
+  - Initial commit.

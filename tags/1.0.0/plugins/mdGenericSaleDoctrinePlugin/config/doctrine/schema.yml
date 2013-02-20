@@ -1,0 +1,125 @@
+mdGenericSale:
+  actAs:
+    Timestampable: ~
+  columns:
+    id:
+      type: integer(4)
+      primary: true
+      autoincrement: true
+    md_user_id:
+      type: integer(4)
+      notnull: true
+    price:
+      type: float(6,2)
+      notnull: true
+      unsigned: true
+    status:
+      type: integer(4)
+      default: '0'
+      notnull: true
+    md_payment_id:
+      type: integer(4)
+      notnull: true
+  relations:
+    mdUser:
+      class: mdUser
+      local: md_user_id
+      foreign: id
+      type: one
+      onDelete: CASCADE
+    mdGenericPayment:
+      class: mdGenericPayment
+      local: md_payment_id
+      foreign: id
+      type: one
+      onDelete: CASCADE
+
+mdGenericSaleItem:
+  columns:
+    id:
+      type: integer(4)
+      primary: true
+      autoincrement: true
+    object_id:
+      type: integer(4)
+      notnull: true
+    object_class:
+       type: string(128)
+       notnull: true
+    md_generic_sale_id:
+      type: integer(4)
+      notnull: true
+  relations:
+    mdGenericSale:
+      class: mdGenericSale
+      local: md_generic_sale_id
+      foreign: id
+      type: one
+      onDelete: CASCADE
+
+mdGenericPayment:
+  actAs:
+    Timestampable: ~
+  columns:
+    id:
+      type: integer(4)
+      primary: true
+      autoincrement: true
+    object_class:
+       type: string(128)
+       notnull: true
+    object_id:
+       type: integer(4)
+       notnull: true
+
+mdGenericPaymentPaypal:
+  columns:
+    id:
+      type: integer(4)
+      primary: true
+      autoincrement: true
+    token:
+      type: string(128)
+      notnull: false
+    payerId:
+      type: string(128)
+      notnull: false
+
+mdGenericPaymentWestern:
+  columns:
+    id:
+      type: integer(4)
+      primary: true
+      autoincrement: true
+    note:
+      type: string(128)
+      
+mdGenericPaymentAbitab:
+  columns:
+    id:
+      type: integer(4)
+      primary: true
+      autoincrement: true
+    note:
+      type: string(128)
+
+mdGenericPaymentGiroBancario:
+  columns:
+    id:
+      type: integer(4)
+      primary: true
+      autoincrement: true
+    note:
+      type: string(128)
+      notnull: false
+
+mdGenericPaymentOther:
+  actAs: { Timestampable: ~ }
+  columns:
+    id:
+      type: integer(4)
+      primary: true
+      autoincrement: true
+    note:
+      type: string(128)
+      notnull: true  

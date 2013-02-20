@@ -1,0 +1,1 @@
+<button class="select iframe" type="button" id="rent-upload-image-link" href="<?php echo $image_url; ?>"><?php echo __('Apartamento_Select photos') ?></button>

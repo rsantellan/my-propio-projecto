@@ -1,0 +1,158 @@
+
+/*contenet*/
+.content {
+    float: left;
+    width: 1020px;
+	list-style:none;
+	font-family: 'BelloSmCp';
+}
+.content li {
+	display:inline;
+	margin-right:7px;
+}
+.title {
+    float: left;
+    margin-top: 40px;
+	margin-bottom:10px;
+	font-family: 'CourierRegular';
+}
+.title-right {
+    float: right;
+}
+.title-right li{
+	display:list-item;
+}
+.main-content-up {
+	height:	346px;
+	background:#FFF;
+	float:left;
+	width:1020px;
+	margin-bottom:5px;
+}
+.col-left {
+	float:left;
+	width:382px;
+	height:370px;
+}
+
+.col-left a{
+	color: #000;
+}
+.col-left a:hover {
+	color: #00B800;
+}
+.titulo {
+    font-family: 'BelloSmCp';
+    font-size: 68px;
+    line-height: 47px;
+    margin-left: 30px;
+    margin-top: 20px;
+	margin-bottom:20px;
+}
+.form-send {
+	float:left;
+	width:600px;
+}
+input {
+    border: 1px solid #000000;
+    float: left;
+}
+.campos-left {
+	float:left;
+	margin-left:25px;
+	width:250px;
+}
+.campos-left li {
+    display: block;
+    float: left;
+}
+.campos-left li input{
+	float:none;
+	width:244px;
+	height:29px;
+	color:#72D400;
+	font-family: 'CourierRegular';
+}
+.campos-right {
+    float: left;
+    margin-left: 30px;
+    position: relative;
+    top: -2px;
+}
+.campos-right li {
+    display: block;
+    float: left;
+}
+.send {
+    background: url("../images/botton-green.png") no-repeat scroll 0 0 transparent;
+    color: #FFFFFF;
+    height: 62px;
+	font-family: 'BelloProRegular';
+    width: 247px;
+	font-size:23px;
+	padding-left: 25px;
+	border:0px;
+	margin-bottom:10px;
+}
+.div-send {
+	margin-top:10px;
+	float:left;
+}
+
+.col-right {
+	float:right;
+}
+.campos-right li input {
+    color: #72D400;
+    float: none;
+    font-family: 'CourierRegular';
+    height: 29px;
+    width: 244px;
+}
+.campos-right-left {
+	float:left;
+	width:250px;
+	margin-right:10px;
+}
+.campos-right-right {
+	float:left;
+	width:250px;
+}
+.div-send li {
+	font-family: 'CourierRegular';
+	font-size:11px;
+	margin-bottom:10px;
+}
+.property-left {
+    float: left;
+    width: 65px;
+}
+.property-img {
+    float: left;
+	margin-right:10px;
+}
+.property-right {
+    float: left;
+    width: 121px;
+}
+
+.remember {
+	width: 200px;
+	height: 20px;
+	/* [disabled]float: left; */
+	color:#72D400;
+	float: left;
+	font-size:12px;
+	font-family: 'CourierRegular';
+	margin-top: 10px;
+}
+.remeber login_remember {
+	height: 20px;
+	width: 20px;
+}
+.remember label {
+	width: 200px;
+	vertical-align: top;
+	text-align: left;
+	margin-left: 5px;
+}

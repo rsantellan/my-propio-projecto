@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<mails>
+  <titles> 
+    <contact>RentN'Chill Contacto</contact>
+    <automatic>Contacto</automatic>
+  </titles>
+  <from>Rent n' chill</from>
+  <email>info@rentnchill.com</email>
+  <recipient>rsantellan@gmail.com</recipient>
+  <fromClient>0</fromClient>
+</mails>

@@ -1,0 +1,328 @@
+
+/*contenet*/
+.content {
+    float: left;
+    width: 1020px;
+	list-style:none;
+	font-family: 'BelloSmCp';
+}
+.content li {
+	display:inline;
+	margin-right:7px;
+}
+.title {
+    float: left;
+    margin-top: 40px;
+	margin-bottom:10px;
+	font-family: 'CourierRegular';
+}
+.title-right {
+    float: right;
+}
+.title-right li{
+	display:list-item;
+}
+.main-content-up {
+	background:#FFF;
+	float:left;
+	width:1020px;
+	margin-bottom:5px;
+}
+.property-left {
+    float: left;
+    width: 65px;
+}
+.property-img {
+    float: left;
+	margin-right:10px;
+}
+.property-right {
+    float: left;
+    width: 121px;
+}
+.col-left {
+	float:left;
+	width:720px;
+}
+.information {
+    float: left;
+    margin-left: 10px;
+    margin-right: 60px;
+}
+.information li {
+	display:list-item;
+	font-family: 'CourierRegular';
+}
+.back {
+    background: url("../images/back.png") no-repeat scroll 0 0 transparent;
+    border: 0 none;
+    color: #FFFFFF;
+    float: left;
+    font-family: 'BelloProRegular';
+    font-size: 18px;
+    height: 34px;
+    left: 13px;
+    margin-top: 4px;
+    padding-left: 20px;
+    position: relative;
+    width: 152px;
+	margin-right:20px
+}
+.like {
+	float:left;
+	margin-top:12px;
+	margin-left:25px;
+}
+
+
+
+
+.col-right {
+    float: right;
+    width: 284px;
+}
+.pre-precio {
+    background: none repeat scroll 0 0 #EBEBEB;
+    height: 115px;
+    width: 282px;
+}
+.price-pn {
+    float: right;
+    font-family: 'CourierRegular';
+    font-size: 35px;
+    font-weight: bold;
+    line-height: 0;
+    margin-bottom: 0;
+    margin-top: 40px;
+    position: relative;
+}
+.price-pn-details {
+    float: right;
+    margin-top: 30px;
+    position: relative;
+}
+.price-pn-details li {
+    display: list-item;
+    font-family: 'CourierRegular';
+    font-size: 13px;
+    line-height: 16px;
+    list-style: none outside none;
+    text-align: right;
+}
+.search {
+    float: left;
+    margin-bottom: 15px;
+}
+.search-title ul {
+	padding:0px;
+}
+.search-title ul li {
+	margin-left:28px;
+}
+.arrival {
+	width:85px;
+	height:28px;
+	border:1px solid #000;
+	float:left;
+}
+.departure {
+	width:85px;
+	height:28px;
+	border:1px solid #000;
+	float:left;
+	margin-left:5px;
+	margin-right:5px;
+}
+.guests {
+	width:85px;
+	height:28px;
+	border:1px solid #000;
+	float:left;
+}
+.book-it {
+    float: left;
+    margin-bottom: 15px;
+}
+.book {
+    background: url("../images/botton-green.png") no-repeat scroll 0 0 transparent;
+    border: 0 none;
+    color: #FFFFFF;
+    float: left;
+    font-family: 'BelloProRegular';
+    font-size: 23px;
+    height: 62px;
+    left: 20px;
+    margin-top: 35px;
+    padding-left: 50px;
+    position: relative;
+    width: 247px;
+}
+.hosts {
+    float: left;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+.info {
+    float: left;
+    font-family: 'CourierRegular';
+    left: 14px;
+    position: relative;
+}
+.info-img {
+	float:left;
+}
+.info li {
+	display:list-item;
+}
+.info li a {
+	text-decoration:none;
+	color:#72D400;
+}
+.contact {
+    background: url("../images/contact.png") no-repeat scroll 0 0 transparent;
+    border: 0 none;
+    color: #FFFFFF;
+    float: left;
+    font-family: 'BelloProRegular';
+    font-size: 23px;
+    height: 57px;
+    left: 13px;
+    margin-top: 4px;
+    padding-left: 50px;
+    position: relative;
+    width: 145px;
+}
+.row {
+    float: left;
+    margin-top: 15px;
+}
+.buttons {
+    float: left;
+    margin-top: 10px;
+}
+.description {
+    background: url("../images/description.png") repeat scroll 0 0 transparent;
+    border: 0 none;
+    color: #000000;
+    float: left;
+    font-family: 'BelloProRegular' !important;
+    font-size: 23px;
+    height: 57px;
+    left: 13px;
+    margin-top: 4px;
+    position: relative;
+    width: 158px;
+	margin-right:5px;
+}
+.map {
+    background: url("../images/map2.png") no-repeat scroll 0 0 transparent;
+    border: 0 none;
+    float: left;
+    font-family: 'BelloProRegular' !important;
+    font-size: 23px;
+    height: 57px;
+    left: 13px;
+    margin-top: 4px;
+    position: relative;
+    width: 97px;
+	margin-right:5px;
+}
+.reviews {
+    background: url("../images/reviews.png") no-repeat scroll 0 0 transparent;
+    border: 0 none;
+    color: #000000;
+    float: left;
+    font-family: 'BelloProRegular';
+    font-size: 23px;
+    height: 57px;
+    left: 13px;
+    margin-top: 4px;
+    position: relative;
+    width: 127px;
+	margin-right:5px;
+}
+.current-description {
+	background:#000;
+	color:#FFF;
+	border: 0 none;
+    float: left;
+    font-family: 'BelloProRegular' !important;
+    font-size: 23px;
+    height: 51px;
+    left: 13px;
+    margin-top: 10px;
+    position: relative;
+    width: 154px;
+	margin-right:5px;
+}
+.current-map {
+	background:#000;
+	color:#FFF;
+	border: 0 none;
+    float: left;
+    font-family: 'BelloProRegular' !important;
+    font-size: 23px;
+    height: 51px;
+    left: 13px;
+    margin-top: 10px;
+    position: relative;
+    width: 92px;
+	margin-right:5px;
+}
+.current-reviews {
+	background:#000;
+	color:#FFF;
+	border: 0 none;
+    float: left;
+    font-family: 'BelloProRegular';
+    font-size: 23px;
+    height: 51px;
+    left: 13px;
+    margin-top: 10px;
+    position: relative;
+    width: 122px;
+	margin-right:5px;
+}
+.description-text {
+	float:left;
+	font-family: 'CourierRegular';
+	font-size:11px;
+	margin-left:15px;
+	margin-bottom:15px;
+}
+.description-text li {
+	display:list-item;
+}
+.comment {
+	float:left;
+	border-bottom:1px solid;
+}
+.img {
+	float:left;
+	margin-right:10px;
+	margin-top: 7px;
+}
+.name {
+	font-family: 'BelloSmCp';
+	font-size:19px;
+}
+.date {
+	font-size:10px;
+	font-family: 'CourierRegular';
+	color:#CCCCCC;
+}
+.comentario {
+	margin-bottom:10px;
+}
+.new-comment {
+    float: left;
+    font-family: 'BelloProRegular';
+    font-size: 15px;
+    margin-top: 19px;
+}
+textarea {
+    color: #72D400;
+    float: none;
+    height: 88px;
+    width: 667px;
+}

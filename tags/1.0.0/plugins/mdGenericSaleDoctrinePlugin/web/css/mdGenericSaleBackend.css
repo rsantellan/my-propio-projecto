@@ -1,0 +1,16 @@
+/* Colores de los estados de las ventas */
+
+.sale_status_0
+{
+  background-color: #FF8080;
+}
+
+.sale_status_1
+{
+  background-color: #ADC2FF;
+}
+
+.sale_status_2
+{
+  background-color: #D6FFAD;
+}

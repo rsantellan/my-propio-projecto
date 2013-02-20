@@ -1,0 +1,35 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           mdReserva
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          md_reserva
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  
+        md_user_id: { label: Usuario }
+        md_apartamento_id: { label: Apartamento }
+        fecha_desde: { label: Desde, help: Fecha desde que se alquila }
+        fecha_hasta: { label: Hasta, help: Fecha hasta que se alquila }
+        md_currency_id: { label: Moneda, help: Moneda en que se reservo }
+        TotalRedondeado: { label: Total, help: Total pagado }
+        status: { label: Estado, help: Estado de los pagos}
+      list:    
+        title: 'Reservas'
+        hide: [created_at, updated_at]
+        display: [id, _md_user_id, _md_apartamento_id, _fecha_desde, _fecha_hasta, _md_currency_id, Lugar, _comission, total, _status]
+        #sort: [status]
+        object_actions: []
+        table_method: retrieveOnlyNew
+      filter:  
+        display: [md_user_id, md_apartamento_id, fecha_desde, fecha_hasta, md_currency_id, status, lugar]
+      form:    ~
+      edit:    ~
+      new:     ~

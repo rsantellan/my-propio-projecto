@@ -1,0 +1,26 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           mdLocacion
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          md_locacion
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        descripcion:
+          params: { disabled=true size=200x20}
+      list:
+        display:        [ _imagen, =nombre, country]
+        fields:
+          imagen: { name: Imagen }
+      filter:  ~
+      form:    ~
+      edit:    ~
+      new:     ~

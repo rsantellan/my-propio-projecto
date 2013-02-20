@@ -1,0 +1,45 @@
+
+mdCurrency:
+  actAs:
+    Timestampable: ~
+    I18n:
+      fields: [name]
+  columns:
+    id:
+      type: integer(4)
+      primary: true
+      autoincrement: true
+    name:
+      type: string(255)
+      notnull: true
+    code:
+      type: string(16)
+      unique: true
+    symbol:
+      type: string(100)
+      notnull: true
+
+mdCurrencyConvertion:
+  columns:
+    currency_from:
+      primary: true
+      type: integer(4)
+      notnull: true
+    currency_to:
+      primary: true
+      type: integer(4)
+      notnull: true
+    ratio:
+      type: double(18,8)
+      notnull: true
+  relations:
+    mdCurrencyFrom:
+      class: mdCurrency
+      local: currency_from
+      foreign: id
+      type: one
+    mdCurrencyTo:
+      class: mdCurrency
+      local: currency_to
+      foreign: id
+      type: one

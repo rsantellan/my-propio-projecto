@@ -1,0 +1,305 @@
+.fbcampos-left {
+
+	float:left;
+
+	margin-left:25px;
+
+	width:300px;
+
+}
+
+.fbcampos-left li {
+
+	font-family: 'BelloProRegular';
+
+	font-size: 23px;
+
+	display: block;
+
+	float: left;
+
+}
+
+.fbcampos-left .label {
+
+	float: left;
+
+	width: 80px;
+
+	margin-right: 10px;
+
+	/* [disabled]border: 1px solid #F00; */
+
+}
+
+.fbcampos-left .campo {
+
+	float: left;
+
+	width: 200px;
+
+	/* [disabled]border: 1px solid #30F; */
+
+	height: 35px;
+
+	padding-top: 5px;
+
+}
+
+
+
+
+
+.fbcampos-left li input{
+
+	float:left;
+
+	width:180px;
+
+	height:20px;
+
+	color:#FFF;
+
+	font-family: "Courier New", Courier, monospace;
+
+	font-size: 12px;
+
+	background-color: #000;
+
+	border-top-style: none;
+
+	border-right-style: none;
+
+	border-bottom-style: none;
+
+	border-left-style: none;
+
+	padding: 2px;
+
+}
+
+.send {
+
+	background: url("http://www.rentnchill.com/images/botton-black-hand-green.png") no-repeat scroll 0 0 transparent;
+
+	border: 0 none;
+
+	color: #000000;
+
+	float: left;
+
+	font-family: 'BelloProRegular';
+
+	font-size: 23px;
+
+	height: 40px;
+
+	padding-left: 20px;
+
+	position: relative;
+
+	right: 5px;
+
+	width: 129px;
+
+	margin-left: 95px;
+
+	cursor: pointer;
+
+}
+
+#bienvenidos #txt1 {
+
+	font-family: 'BelloProRegular';
+
+	font-size: 38px;
+
+	color: #000;
+
+	height: 50px;
+
+	width: 200px;
+
+	/* [disabled]border: 1px solid #F00; */
+
+	margin-top: 50px;
+
+	margin-left: 420px;
+
+	text-align: center;
+
+}
+
+#bienvenidos #txt2 {
+
+	font-family: "Courier New", Courier, monospace;
+
+	font-size: 12px;
+
+	color: #FFF;
+
+	height: 50px;
+
+	width: 200px;
+
+	text-align: center;
+
+	margin-left: 425px;
+
+	margin-top: 10px;
+
+}
+
+#bienvenidos #txt3 {
+	font-family: 'BelloProRegular';
+	font-size: 41px;
+	color: #000;
+	height: 50px;
+	width: 793px;
+	text-align: center;
+	margin-top: 240px;
+}
+
+#bienvenidos #txt4 {
+	font-family: "Courier New", Courier, monospace;
+	font-size: 18px;
+	color: #000;
+	height: 50px;
+	width: 793px;
+	text-align: center;
+	margin-top: 10px;
+}
+
+#web {
+	font-family: "Courier New", Courier, monospace;
+	font-size: 12px;
+	color: #000;
+	height: 27px;
+	width: 793px;
+	text-align: center;
+	margin-top: 50px;
+	text-decoration: none;
+	line-height: 27px;
+	vertical-align: top;
+}
+
+#web a {
+
+	color: #000;
+
+	vertical-align: top;
+
+}
+
+#web a:hover {
+
+	color: #72D400;
+
+	vertical-align: top;
+
+}
+
+
+
+
+
+#fbcamp {
+
+	width: 300px;
+
+	margin-top: 0px;
+
+	margin-right: auto;
+
+	margin-bottom: 0px;
+
+	margin-left: auto;
+
+}
+
+
+
+
+
+
+
+.div-send {
+
+	margin-top:10px;
+
+	float:left;
+
+}
+
+#idioma {
+	font-family: "Courier New", Courier, monospace;
+	font-size: 12px;
+	color: #000;
+	height: 20px;
+	width: 773px;
+	text-align: right;
+	padding: 10px;
+	margin-right: 10px;
+}
+
+#fball {
+	margin: 0px;
+	height: 747px;
+	width: 793px;
+	/* [disabled]border: 1px solid #F00; */
+}
+
+#idioma a {
+
+	font-family: "Courier New", Courier, monospace;
+
+	color: #000;
+
+	text-decoration: none;
+
+}
+
+#idioma a:hover {
+
+	font-family: "Courier New", Courier, monospace;
+
+	color: #72D400;
+
+	text-decoration: none;
+
+}
+
+#bienvenidos {
+	background-image: url(http://www.rentnchill.com/images/bg.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+	width: 791px;
+	height: 490px;
+	border: 1px solid #F2F2F2;
+}
+
+
+
+
+
+#fball #gris {
+	background-color: #f2f2f2;
+	height: 700px;
+	width: 793px;
+	margin: 10px;
+}
+
+#compart {
+
+	margin-top: 10px;
+
+	margin-bottom: 20px;
+
+}
+body {
+	margin: 0px;
+	padding: 0px;
+}
+
+img#share_button {cursor: pointer;}
+

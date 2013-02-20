@@ -1,0 +1,31 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           mdLocacionTemporada
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          md_locacion_temporada
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  ~
+      list:
+        display:        [desde, hasta, tipo]
+        object_actions:
+          _edit:         ~
+          _delete:       ~
+        actions:
+          _new:       ~
+        batch_actions: {}
+      filter:  ~
+      form:    ~
+      edit:
+        actions:
+          _delete:       ~
+          _save:         ~
+      new:     ~

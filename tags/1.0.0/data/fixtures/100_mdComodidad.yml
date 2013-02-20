@@ -1,0 +1,120 @@
+mdComodidad:
+  aire:
+    imagen: 'aire-acondicionado'
+    Translation:
+      es:
+        nombre: 'Aire acondicionado'
+
+  flias:
+    imagen: 'apto-flias'
+    Translation:
+      es:
+        nombre: 'Apto para familias'
+
+  cable:
+    imagen: 'cable'
+    Translation:
+      es:
+        nombre: 'Cable'
+
+  calefaccion:
+    imagen: 'calefaccion'
+    Translation:
+      es:
+        nombre: 'Calefaccion'
+
+  chimenea:
+    imagen: 'chimenea'
+    Translation:
+      es:
+        nombre: 'Chimenea'
+
+  cocina:
+    imagen: 'cocina'
+    Translation:
+      es:
+        nombre: 'Cocina'
+
+  desayuno:
+    imagen: 'desayuno'
+    Translation:
+      es:
+        nombre: 'Desayuno'
+
+  discapacitados:
+    imagen: 'discapacitados'
+    Translation:
+      es:
+        nombre: 'Discapacitados'
+
+  eventos:
+    imagen: 'eventos'
+    Translation:
+      es:
+        nombre: 'Eventos'
+
+  fumadores:
+    imagen: 'fumadores'
+    Translation:
+      es:
+        nombre: 'Fumadores'
+
+  garage:
+    imagen: 'garage'
+    Translation:
+      es:
+        nombre: 'Garage'
+
+  gimnasio:
+    imagen: 'gimnasio'
+    Translation:
+      es:
+        nombre: 'Gimnasio'
+
+  internet:
+    imagen: 'internet'
+    Translation:
+      es:
+        nombre: 'Internet'
+
+  jacuzzi:
+    imagen: 'jacuzzi'
+    Translation:
+      es:
+        nombre: 'Jacuzzi'
+
+  lavarropa:
+    imagen: 'lavarropa'
+    Translation:
+      es:
+        nombre: 'Lavarropa'
+
+  mascotas:
+    imagen: 'mascotas'
+    Translation:
+      es:
+        nombre: 'Mascotas'
+
+  piscina:
+    imagen: 'piscina'
+    Translation:
+      es:
+        nombre: 'Piscina'
+
+  portero:
+    imagen: 'portero'
+    Translation:
+      es:
+        nombre: 'Portero'
+
+  tv:
+    imagen: 'tv'
+    Translation:
+      es:
+        nombre: 'TV'
+
+  wifi:
+    imagen: 'wifi'
+    Translation:
+      es:
+        nombre: 'WiFi'

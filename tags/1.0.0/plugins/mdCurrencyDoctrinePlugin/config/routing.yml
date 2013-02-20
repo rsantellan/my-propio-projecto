@@ -1,0 +1,3 @@
+changeCurrency:
+  url: /changeCurrency/:code/
+  param: { module: mdCurrency, action: changeCurrent }
