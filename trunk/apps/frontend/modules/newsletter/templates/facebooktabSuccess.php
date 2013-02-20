@@ -97,16 +97,7 @@ $signed_request = $facebook->getSignedRequest();
 	<li><?php echo $error; ?></li>
 	<?php endforeach; ?>
 </div>
-<?php 
-    if($sf_user->hasFlash('ok')):
-      
-  ?>
-  <div class="ok_list">
-    <?php echo __('novedades_gracias por registrarse');?>
-  </div>
-  <?php
-    endif;
-  ?>
+  
 </div>
   <div id="web">
     <?php echo __('novedades_facebook tab contacto') ?>
@@ -204,3 +195,14 @@ message: ''
 </div>
 </div>
 <?php } }?>
+
+<?php 
+    if($sf_user->hasFlash('ok')):
+      
+  ?>
+  <div class="ok_list">
+    <?php echo __('novedades_gracias por registrarse');?>
+  </div>
+  <?php
+    endif;
+  ?>

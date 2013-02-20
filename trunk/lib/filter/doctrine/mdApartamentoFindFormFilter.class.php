@@ -81,11 +81,13 @@ class mdApartamentoFindFormFilter extends BasemdApartamentoSearchFormFilter
   }
 
   protected function addMdLocacionIdColumnQuery(Doctrine_Query $query, $field, $values){
+    return $query;
 		$query->addWhere($query->getRootAlias() . '.md_locacion_id=?', $values);
 		return $query;
 	}
 
   protected function addFechaColumnQuery(Doctrine_Query $query, $field, $values){
+    return $query;
 		if($values['from']!='')
 			$from = date_create_from_format('Y-m-d',$values['from']);
 		if($values['to']!='')
@@ -115,6 +117,7 @@ class mdApartamentoFindFormFilter extends BasemdApartamentoSearchFormFilter
 	}
 
   protected function addFechaHastaColumnQuery(Doctrine_Query $query, $field, $values){
+
 		$date = date_create_from_format('Y-m-d',$values);
 		if(!$query->hasAliasDeclaration('d'))
 			$query->innerJoin($query->getRootAlias() . '.mdDisponibilidad d');
@@ -124,30 +127,29 @@ class mdApartamentoFindFormFilter extends BasemdApartamentoSearchFormFilter
 	}
 
   protected function addMdPriceRangeColumnQuery(Doctrine_Query $query, $field, $values){
-	
+
 		//inicializo los parametros que necesito
 		$rango = explode(' - ', $values);
-        
         $field = $this->getPriceKind();
 
 		if(mdCurrencyHandler::getCurrent()->getId()!=1){
 			$rango[0] = mdCurrencyConvertion::convert(mdCurrencyHandler::getCurrentCode(), 'EUR', $rango[0]);
 			$rango[1] = mdCurrencyConvertion::convert(mdCurrencyHandler::getCurrentCode(), 'EUR', $rango[1]);
 		}
-		
+
 		$query->addWhere($query->getRootAlias() . '.' . $field . ' between ' . $rango[0] . ' and ' . $rango[1]);
 
 		return $query;	
 	}
   protected function addTipoPropiedadColumnQuery(Doctrine_Query $query, $field, $values){
-
+//return $query;
 		$query->addWhere($query->getRootAlias() . '.' . $field . ' in (\'' . implode("','", $values) . '\')');
 		
 		return $query;
 	}
 
   protected function addOrderByColumnQuery(Doctrine_Query $query, $field, $values){
-		
+//		return $query;
 		switch($values){
 			case 'cuartos':
 			case 'metraje':
@@ -163,6 +165,7 @@ class mdApartamentoFindFormFilter extends BasemdApartamentoSearchFormFilter
 	}
 
   protected function addCantidadPersonasColumnQuery(Doctrine_Query $query, $field, $values){
+//    return $query;
       if($values['text']>0)
 			$query->addWhere($query->getRootAlias() . '.' . $field . ' >= ?', $values['text']);
 				
@@ -193,14 +196,20 @@ class mdApartamentoFindFormFilter extends BasemdApartamentoSearchFormFilter
         {
           $aux = $resultadosDias[0];
           switch ($aux["tipo"]) {
-            case "A":
+            case mdApartamento::TEMPORADAENERO:
                 $field = 'precio_alta';
               break;
-            case "M":
+            case mdApartamento::TEMPORADAAUTUMNSPRING:
                 $field = 'precio_media';
               break;
-            case "B":
+            case mdApartamento::TEMPORADAINVIERNO:
                 $field = 'precio_baja';
+              break;
+            case mdApartamento::TEMPORADAFEBRERO:
+                $field = 'precio_febrero';
+              break;
+            case mdApartamento::TEMPORADAREVELLION:
+                $field = 'precio_revellion';
               break;
           }
         }
