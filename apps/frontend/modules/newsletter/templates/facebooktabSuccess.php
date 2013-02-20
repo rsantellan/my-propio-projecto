@@ -39,7 +39,22 @@ $signed_request = $facebook->getSignedRequest();
 		}
 		return false; 
 	}
+$user_has_flash_ok = false;
 
+if($sf_user->hasFlash('ok')){
+  $user_has_flash_ok = true;
+  $signed_request = true;
+}
+else
+{
+  $signed_request = parsePageSignedRequest();
+
+}
+/*
+var_dump($user_has_flash_ok);
+echo '<hr/>';
+var_dump($signed_request);
+*/
 ?>
 
 <div id="fb-root"></div>
@@ -52,8 +67,8 @@ $signed_request = $facebook->getSignedRequest();
 			ref.parentNode.insertBefore(js, ref);
 		}(document));
 	</script>
-<?php if ($signed_request = parsePageSignedRequest()) {
-				if(!$signed_request->page->liked) { ?>
+<?php if ($signed_request) {
+				if(!$user_has_flash_ok && !$signed_request->page->liked) { ?>
 			<div class="fangate">
 			    <?php if($sf_user->getCulture() == "pt"): ?>
 				<img src="http://www.rentnchill.com/fbtab/pretab-por.jpg" width="790" height="790" />
@@ -97,7 +112,16 @@ $signed_request = $facebook->getSignedRequest();
 	<li><?php echo $error; ?></li>
 	<?php endforeach; ?>
 </div>
-  
+<?php 
+    if($user_has_flash_ok):
+      
+  ?>
+  <div class="ok_list">
+    <?php echo __('novedades_gracias por registrarse');?>
+  </div>
+  <?php
+    endif;
+  ?>
 </div>
   <div id="web">
     <?php echo __('novedades_facebook tab contacto') ?>
@@ -195,14 +219,3 @@ message: ''
 </div>
 </div>
 <?php } }?>
-
-<?php 
-    if($sf_user->hasFlash('ok')):
-      
-  ?>
-  <div class="ok_list">
-    <?php echo __('novedades_gracias por registrarse');?>
-  </div>
-  <?php
-    endif;
-  ?>
