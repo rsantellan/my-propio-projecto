@@ -89,7 +89,10 @@ class mdMetaTagsHandler{
 		}
 			
 		$sources_default = sfConfig::get('app_Metas_sources',array('title'=>'title', 'description'=>'description'));
-		
+		//var_dump($sources_default);
+        //var_dump($tags);
+        //var_dump($debug);
+        //var_dump($preserveActionMetas);
 		foreach($tags as $tag){
 			if(!isset($sources[$tag]))
 				$sources[$tag] = $sources_default[$tag];

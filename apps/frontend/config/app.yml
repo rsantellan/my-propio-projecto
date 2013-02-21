@@ -32,3 +32,15 @@ all:
     #API_PASSWORD: P7UPQTR6LJBQX5VM
     #DEBUG: false
     #API_USERNAME: info_api1.rentnchill.com
+    
+# default values
+# all:
+  Metas:
+    prefix: 'Meta_'
+    tags: ['title','description','keywords']
+    sources:
+      title: 'Titulo'
+      description: 'Descripcion'
+      keywords: 'Keywords'
+    addParameterToSource: true
+    genericSource: 'Global'    
