@@ -5,6 +5,22 @@
     <?php include_metas() ?>
     <?php include_title() ?>
 		<?php include_partial('global/includeAssets') ?>
+        
+<!--<meta name="description" content="">
+
+<meta name="keywords" content="">
+
+<meta name="copyright" content="Copyright 2013">
+
+<meta name="Distribution" content="Global">
+
+<meta name="Robots" content="INDEX,FOLLOW">
+
+<meta name="Revisit-after" content="7 Days"> -->
+
+  <meta name="google-site-verification" content="8GhvcYJz4oWG07H7EN_--v_phvnEGwwjpO_p-nmTElQ" />
+        
+        
 		<script type="text/javascript">
 
   var _gaq = _gaq || [];

@@ -59,7 +59,8 @@ class mdMetaTagsHandler{
 	**/
 	static public function addMetas(sfAction $action, $i18nSource, $options = array()){
 		$lang = sfContext::getInstance()->getI18N();
-		
+        $metas = $action->getResponse()->getMetas();
+		//var_dump(get_class($action->getResponse()));
 		if(!isset($options['prefix']))
 			$prefix = sfConfig::get('app_Metas_prefix','Meta_');
 		else
@@ -77,14 +78,14 @@ class mdMetaTagsHandler{
 			$params = $options['params'];
 		else
 			$params = array();
-		
+
 		$preserveActionMetas = false;
 		if(isset($options['preserveActionMetas'])){
 			$preserveActionMetas = true;
 		}
 		
 		$debug = false;
-		if(isset($options['debug'])){
+		if(isset($options['debug']) && $options['debug']){
 			$debug = true;
 		}
 			
@@ -98,26 +99,41 @@ class mdMetaTagsHandler{
 				$sources[$tag] = $sources_default[$tag];
 		}
 
-		if(sfConfig::get('app_Metas_addParameterToSource', false) and count($params)>0){
+		if(sfConfig::get('app_Metas_addParameterToSource', false) && count($params)>0){
 			$keys = array_keys($params);
 			$keys = implode(' ',$keys);
 			$keys = ' ' . $keys;
 		}else{
 			$keys = '';
 		}
+        
 		foreach($tags as $tag){
 			$inst_source = $prefix . $sources[$tag] . ' ' . $i18nSource .$keys;
 			if($debug) echo $inst_source . ' <=> ' . $lang->__($inst_source);
 			if($lang->__($inst_source) != $inst_source and $lang->__($inst_source) != ''){
 				
 				if($tag == 'title'){
-					if(!$preserveActionMetas or $action->getResponse()->getTitle() == ''){
+                    if(trim($action->getResponse()->getTitle()) == '')
+                    {
+                      $action->getResponse()->setTitle($lang->__($inst_source, $params));
+                      if($debug) echo  '  <=> setup title';
+                    }
+                    else 
+                    {
+                      if(!$preserveActionMetas)
+                      {
+                        $action->getResponse()->setTitle($lang->__($inst_source, $params));
+						if($debug) echo  '  <=> setup title';
+                      }
+                    }
+                    /*
+                    if(!$preserveActionMetas || trim($action->getResponse()->getTitle()) == ''){
 						$action->getResponse()->setTitle($lang->__($inst_source, $params));
 						if($debug) echo  '  <=> setup title';
 					}
-				
+                    */
 				}else{
-					if(!$preserveActionMetas or !in_array($tag, $metas)){
+					if(!$preserveActionMetas || !in_array($tag, $metas)){
 						$action->getResponse()->addMeta($tag, $lang->__($inst_source, $params));
 						if($debug) echo  '  <=> setup ' . $tag;
 					}
@@ -125,6 +141,7 @@ class mdMetaTagsHandler{
 			}
 			if($debug) echo '<br/>';	
 		}
+        if($debug) echo '<hr/>';	
 		return $action;
 	}
 	/**

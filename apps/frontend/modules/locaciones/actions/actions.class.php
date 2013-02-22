@@ -42,6 +42,9 @@ class locacionesActions extends sfActions
 	{
 		$this->locacion = $this->getRoute()->getObject();
 	    $params = array();
+        $params['[locacion]'] = $this->locacion->getNombre();
+        sfContext::getInstance()->getConfiguration()->loadHelpers(array('I18N'));
+        $params['[country]'] = format_country($this->locacion->getCountry());
 	    mdMetaTagsHandler::addMetas($this,'Locacion', array('params'=>$params, 'debug'=>$this->metaDebug));
 	}
 
