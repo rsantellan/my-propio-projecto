@@ -10,6 +10,15 @@
  */
 class apartamentosActions extends sfActions {
 
+
+    private $metaDebug = true;
+    
+    
+    public function postExecute() {
+        parent::postExecute();
+        mdMetaTagsHandler::addGenericMetas($this, null, array('debug'=>$this->metaDebug));
+    }
+    
   /**
    * Executes index action
    *
@@ -17,7 +26,12 @@ class apartamentosActions extends sfActions {
    */
   public function executeIndex(sfWebRequest $request) {
     $filter = new mdApartamentoFindFormFilter();
-
+    if(!$request->isXmlHttpRequest())
+    {
+        $params = array();
+        mdMetaTagsHandler::addMetas($this,'Busqueda', array('params'=>$params, 'debug'=>$this->metaDebug));
+    }
+    
     if ($request->hasParameter($filter->getName())) {
       $this->filter = $filter;
       $parameters = $request->getParameter($filter->getName());
