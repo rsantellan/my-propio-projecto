@@ -10,12 +10,24 @@
  */
 class mdContactActions extends sfActions {
 
+  private $metaDebug = true;
+    
+    public function postExecute() {
+        parent::postExecute();
+        if(!$this->getRequest()->isXmlHttpRequest())
+        {
+          mdMetaTagsHandler::addGenericMetas($this, null, array('debug'=>$this->metaDebug));
+        }
+    }
+    
   /**
    * Executes index action
    *
    * @param sfRequest $request A request object
    */
   public function executeIndex(sfWebRequest $request) {
+    $params = array();
+    mdMetaTagsHandler::addMetas($this,'Contacto', array('params'=>$params, 'debug'=>$this->metaDebug));
     $this->form = new mdContactForm();
 
     if ($request->isMethod('post')) {

@@ -16,7 +16,11 @@ class apartamentosActions extends sfActions {
     
     public function postExecute() {
         parent::postExecute();
-        mdMetaTagsHandler::addGenericMetas($this, null, array('debug'=>$this->metaDebug));
+        if(!$this->getRequest()->isXmlHttpRequest())
+        {
+          mdMetaTagsHandler::addGenericMetas($this, null, array('debug'=>$this->metaDebug));
+        }
+        
     }
     
   /**
@@ -76,6 +80,8 @@ class apartamentosActions extends sfActions {
   public function executeDetalle(sfWebRequest $request) {
     $this->depto = $this->getRoute()->getObject();
     $this->comodidades = Doctrine::getTable('mdComodidad')->findAll();
+    $params = array();
+    mdMetaTagsHandler::addMetas($this,'Apartamento', array('params'=>$params, 'debug'=>$this->metaDebug));
   }
 
   public function executeEdit(sfWebRequest $request) {
@@ -98,7 +104,8 @@ class apartamentosActions extends sfActions {
 
   public function executeSubmit(sfWebRequest $request) {
     $this->form = new apartamentaPublicar();
-
+    $params = array();
+    mdMetaTagsHandler::addMetas($this,'Publicar', array('params'=>$params, 'debug'=>$this->metaDebug));
     if ($request->getParameter('type', false)) {
       $this->type = $request->getParameter('type');
     } else {
