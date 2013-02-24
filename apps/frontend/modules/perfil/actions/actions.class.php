@@ -10,6 +10,17 @@
  */
 class perfilActions extends sfActions
 {
+    
+   private $metaDebug = false;
+    
+    public function postExecute() {
+        parent::postExecute();
+        if(!$this->getRequest()->isXmlHttpRequest())
+        {
+          mdMetaTagsHandler::addGenericMetas($this, null, array('debug'=>$this->metaDebug));
+        }
+    }
+       
  /**
   * Executes index action
   *
@@ -17,11 +28,17 @@ class perfilActions extends sfActions
   */
   public function executeIndex(sfWebRequest $request)
   {
-    	$this->mdUser = $this->getRoute()->getObject();
-		$this->deptos = Doctrine::getTable('mdApartamento')->findBymd_user_id($this->mdUser->getId());
-		
-		$this->reservados = Doctrine::getTable('mdApartamento')->findReservedBy($this->mdUser->getId());
-		$this->visitados = Doctrine::getTable('mdApartamento')->findVisitedBy($this->mdUser->getId());
+        $this->mdUser = $this->getRoute()->getObject();
+	
+	$params = array();
+	$params["[nombre]"] = $this->mdUser->getMdUserProfile()->getFullName();
+        mdMetaTagsHandler::addMetas($this,'Ver o Editar Usuario', array('params'=>$params, 'debug'=>$this->metaDebug));
+    	
+	
+	$this->deptos = Doctrine::getTable('mdApartamento')->findBymd_user_id($this->mdUser->getId());
+	
+	$this->reservados = Doctrine::getTable('mdApartamento')->findReservedBy($this->mdUser->getId());
+	$this->visitados = Doctrine::getTable('mdApartamento')->findVisitedBy($this->mdUser->getId());
   }
   
   public function executeRetrieveUserAvatar(sfWebRequest $request)

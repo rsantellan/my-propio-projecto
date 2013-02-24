@@ -10,7 +10,7 @@
  */
 class mdContactActions extends sfActions {
 
-  private $metaDebug = true;
+  private $metaDebug = false;
     
     public function postExecute() {
         parent::postExecute();

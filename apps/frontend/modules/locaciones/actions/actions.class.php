@@ -11,7 +11,7 @@
 class locacionesActions extends sfActions
 {
     
-    private $metaDebug = true;
+    private $metaDebug = false;
     
     
     public function postExecute() {

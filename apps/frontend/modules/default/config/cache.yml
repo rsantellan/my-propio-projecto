@@ -1,0 +1,7 @@
+_userMenu:
+  enabled:     false
+  lifetime:    3600
+
+_currencyMenu:
+  enabled:     true
+  lifetime:    3600

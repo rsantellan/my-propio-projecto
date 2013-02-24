@@ -1,0 +1,7 @@
+_footer:
+  enabled:     true
+  lifetime:    3600
+
+_smallInfoLocacion:
+  enabled:     true
+  lifetime:    3600

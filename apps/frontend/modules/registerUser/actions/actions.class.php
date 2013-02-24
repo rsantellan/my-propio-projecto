@@ -11,7 +11,19 @@
 class registerUserActions extends sfActions
 {
   
+  private $metaDebug = false;
+    
+    public function postExecute() {
+        parent::postExecute();
+        if(!$this->getRequest()->isXmlHttpRequest())
+        {
+          mdMetaTagsHandler::addGenericMetas($this, null, array('debug'=>$this->metaDebug));
+        }
+    }  
+  
 	public function executeIndex($request){
+        $params = array();
+        mdMetaTagsHandler::addMetas($this,'Registro Usuario', array('params'=>$params, 'debug'=>$this->metaDebug));        
 		$this->loginForm = new mdPassportLoginForm ( );
 	}
 

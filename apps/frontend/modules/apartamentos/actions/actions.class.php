@@ -11,7 +11,7 @@
 class apartamentosActions extends sfActions {
 
 
-    private $metaDebug = true;
+    private $metaDebug = false;
     
     
     public function postExecute() {
@@ -81,6 +81,7 @@ class apartamentosActions extends sfActions {
     $this->depto = $this->getRoute()->getObject();
     $this->comodidades = Doctrine::getTable('mdComodidad')->findAll();
     $params = array();
+    $params["[apartamento]"] = $this->depto->getTitulo();
     mdMetaTagsHandler::addMetas($this,'Apartamento', array('params'=>$params, 'debug'=>$this->metaDebug));
   }
 
@@ -98,8 +99,13 @@ class apartamentosActions extends sfActions {
           //$this->redirect('user_edit');
         }
       }
+      $params = array();
+      $params["[apartamento]"] = $this->depto->getTitulo();
+      mdMetaTagsHandler::addMetas($this,'Editar apartamento', array('params'=>$params, 'debug'=>$this->metaDebug));
     }else
+    {
       $this->redirect('apartamento', $this->depto);
+    }
   }
 
   public function executeSubmit(sfWebRequest $request) {
