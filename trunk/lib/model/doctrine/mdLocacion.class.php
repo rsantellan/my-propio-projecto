@@ -79,6 +79,12 @@ class mdLocacion extends BasemdLocacion
          TemporadasDatesHandler::insertLocationFirstYear($this->getId());
          TemporadasDatesHandler::generateSeasons();
        }
+       else
+       {
+	   fileCacheHandler::clearCacheWithKey('locacion_'.$this->getId());
+       }
+       
+       fileCacheHandler::clearCacheWithKey("locaciones_");
    }
 
 	public function getSlug(){

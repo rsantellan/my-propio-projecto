@@ -17,7 +17,7 @@
 
         <div class="bdiv">
 
-            <?php include_component("locaciones", "footer");?>
+            <?php include_component("locaciones", "footer", array( 'sf_cache_key' => 'locaciones_cultura_'.$sf_user->getCulture()));?>
 
         </div>  <div class="beba"><a href="http://www.bebapaezvilaro.com/" target="_blank"><img src="/images/logobeba.jpg" width="99" height="80" border="0" /></a></div>      
 
